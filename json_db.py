@@ -1,6 +1,7 @@
 import json
 import urllib.parse
 import urllib.request
+import re
 
 def error(msg, log):
     log.error(msg)
@@ -16,15 +17,16 @@ Fetch file from given region.
     
     url = "https://global.api.pvp.net/api/lol/static-data/"+region+ \
           "/v1.2/item?itemListData=all&api_key=" + api_key
-
-    response = urllib.request.urlopen(url)
-
-    if (response.status != 200):
-        error(response.status)
+    html = ""
+    
+    with urllib.request.urlopen(url) as response:
+        if (response.status != 200):
+            error(response.status)
+        html = response.read()
         
     log.debug("Succesfully fetched items for "+region)
 
-    return response.read().decode("UTF-8")
+    return html.decode("UTF-8")
 
 
 def get_all_items(region_list, api_key, log):
@@ -35,19 +37,38 @@ Fetch all the items! (as json files)
     log.info("Beginning download for all items as json files for all regions")
 
     for region in region_list:   
-        new_items_json = get_items(region, api_key, log)
-        
-        new_items_file = open("./items_json/"+region,mode='w')
-        new_items_file.write(new_items_json)
-        
-        new_items_file.close()
-        
+        net_items_string = get_items(region, api_key, log)
+
+        if (check_items_version(net_items_string, region, log)):
+            net_items_file = open("items_json/"+region,mode='w')
+            net_items_file.write(net_items_string)
+            net_items_file.close()
+        else:
+            log.debug(region+" skipped because it was up to date.")
+       
     log.info("Downloaded all items as json files for all regions")
 
     
-def check_items_version():
+def check_items_version(net_items_string, region, log):
     '''
-Check current version of files versus whats online.
+Compare local version of file to the one on the net.
     '''
-    pass
+    log.info("Checking file versions for "+region)
     
+    try:
+        local_items_file = open("items_json/"+region,'r')
+    except FileNotFoundError:
+        return True
+    
+    local_items_json = json.load(local_items_file)
+
+    log.debug("Local version: "+local_items_json["version"])
+
+    net_items_json = json.loads(net_items_string)
+
+    log.debug("Net version: "+net_items_json["version"])
+
+    if (local_items_json["version"] == net_items_json["version"]):
+        return False
+    else:
+        return True

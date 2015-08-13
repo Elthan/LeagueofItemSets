@@ -18,8 +18,6 @@ import logging as log
 #######################################
 
 
-
-
 if __name__ == "__main__":
     region_list = ["br","eune","euw","kr","lan","las","na","oce","ru","tr","pbe"]
     
@@ -33,5 +31,5 @@ if __name__ == "__main__":
     api_key = api_key_file.read()
     api_key_file.close()
 
-    if (True):
-        json_db.get_all_items(region_list, api_key, log)
+    # Get all the json file from all the different regions
+    json_db.get_all_items(region_list, api_key, log)
