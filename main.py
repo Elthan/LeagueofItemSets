@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import django
+
 #######################################
 # 
 #   League of Item Sets
@@ -17,4 +19,5 @@
 
 if __name__ == "__main__":
 
-    print("Main works! Hello world!")
+    print(django.get_version())
+    
