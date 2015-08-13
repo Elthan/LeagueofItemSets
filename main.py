@@ -18,21 +18,7 @@ import logging as log
 #######################################
 
 
-def get_all_items(region_list):
-    log.info("Beginning download for all items as json files for all regions")
-    for region in region_list:   
-        new_items_json = json_db.get_items(region,api_key,log)
-        
-        new_items_file = open("./items_json/"+region,mode='w')
-        new_items_file.write(new_items_json)
-        
-        new_items_file.close()
-        
-    log.info("Downloaded all items as json files for all regions")
 
-def check_items_version():
-    pass
-    
 
 if __name__ == "__main__":
     region_list = ["br","eune","euw","kr","lan","las","na","oce","ru","tr","pbe"]
@@ -47,5 +33,5 @@ if __name__ == "__main__":
     api_key = api_key_file.read()
     api_key_file.close()
 
-    if (False):
-        get_all_items(region_list)
+    if (True):
+        json_db.get_all_items(region_list, api_key, log)
