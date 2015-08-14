@@ -20,7 +20,7 @@ import re
 
 
 if __name__ == "__main__":
-    
+  
     # Set level of logging to be done
     log.basicConfig(format="%(levelname)s: %(message)s",level="DEBUG")
 
