@@ -15,10 +15,9 @@ Download icon file and save it in icons/
     
     url = "http://ddragon.leagueoflegends.com/cdn/"+version+"/img/item/"+icon_id
     
-    icon_file, headers = urllib.request.urlretrieve(url)
-    icon_file_content = open(icon_file)
-    icon_file_save = open("icons/"+ic_id,'wb')
-    icon_file_save.write(icon_file_content)
+    icon_file = open("icons/"+icon_id,'wb')
+    icon_file.write( urllib.request.urlopen(url).read() )
+    icon_file.close()    
     
     log.debug("Successfully saved icon image")
     
