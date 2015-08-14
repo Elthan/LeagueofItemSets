@@ -2,6 +2,7 @@
 
 import json_db
 import logging as log
+import re
 
 #######################################
 # 
@@ -29,7 +30,7 @@ if __name__ == "__main__":
     # Get the api_key, which is hidden for git purposes
     with open("settings") as api_key_file:
         api_key_string = api_key_file.read()
-        api_key = re.find(r'API_KEY:\s*([?\d-]+)\s', api_key_string).group(1)
+        api_key = re.findall(r'API_KEY:\s*([?\d-]+)\s', api_key_string).group(1)
 
-    # Get all the json file from all the different regions
+    # Get all the json files from all the different regions
     json_db.get_all_items(region_list, api_key, log)
