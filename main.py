@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
-import json_db
+import update
 import logging as log
+import re
 
 #######################################
 # 
@@ -19,8 +20,7 @@ import logging as log
 
 
 if __name__ == "__main__":
-    region_list = ["br","eune","euw","kr","lan","las","na","oce","ru","tr","pbe"]
-    
+  
     # Set level of logging to be done
     log.basicConfig(format="%(levelname)s: %(message)s",level="DEBUG")
 
@@ -29,7 +29,7 @@ if __name__ == "__main__":
     # Get the api_key, which is hidden for git purposes
     with open("settings") as api_key_file:
         api_key_string = api_key_file.read()
-        api_key = re.find(r'API_KEY:\s*([?\d-]+)\s', api_key_string).group(1)
+        api_key = re.search(r'API_KEY:\s*([?\w\d\-]+)\s', api_key_string).group(1)
 
-    # Get all the json file from all the different regions
-    json_db.get_all_items(region_list, api_key, log)
+    # Update all the json file from all the different regions
+    update.get_all_items(api_key, log)
