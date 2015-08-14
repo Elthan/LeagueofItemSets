@@ -27,9 +27,8 @@ if __name__ == "__main__":
     print("League of Item Sets v0.1")
     
     # Get the api_key, which is hidden for git purposes
-    api_key_file = open("api_key")
-    api_key = api_key_file.read()
-    api_key_file.close()
+    with open("api_key") as api_key_file:
+        api_key = api_key_file.read()
 
     # Get all the json file from all the different regions
     json_db.get_all_items(region_list, api_key, log)
