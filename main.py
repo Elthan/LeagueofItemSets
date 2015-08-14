@@ -7,7 +7,7 @@ import logging as log
 # 
 #   League of Item Sets
 #
-#   Version: 0.0
+#   Version: 0.1
 #
 #   By: Jonas Sandbekk & Ole Harbosen
 # 
