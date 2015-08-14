@@ -7,19 +7,6 @@ def error(msg, log):
     log.error(msg)
     exit(-1)
 
-def get_icon(version, icon_id):
-    '''
-Download icon file and save it in icons/
-    '''
-    log.debug("Fetching icon with id: "+icon_id+", version: "+version)
-    
-    url = "http://ddragon.leagueoflegends.com/cdn/"+version+"/img/item/"+icon_id
-    
-    with open("icons/"+icon_id,'wb') as icon_file:
-        icon_file.write( urllib.request.urlopen(url).read() )
-    
-    log.debug("Successfully saved icon image")
-    
 def get_items(region, api_key, log):  
     '''
 Fetch file from given region.
