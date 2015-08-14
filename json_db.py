@@ -15,9 +15,8 @@ Download icon file and save it in icons/
     
     url = "http://ddragon.leagueoflegends.com/cdn/"+version+"/img/item/"+icon_id
     
-    icon_file = open("icons/"+icon_id,'wb')
-    icon_file.write( urllib.request.urlopen(url).read() )
-    icon_file.close()    
+    with open("icons/"+icon_id,'wb') as icon_file:
+        icon_file.write( urllib.request.urlopen(url).read() )
     
     log.debug("Successfully saved icon image")
     
@@ -47,7 +46,7 @@ def get_all_items(region_list, api_key, log):
 Fetch all the items! (as json files)
     '''
     
-    log.info("Beginning download for all items as json files for all regions")
+    log.debug("Beginning download for all items as json files for all regions")
 
     for region in region_list:   
         net_items_string = get_items(region, api_key, log)
@@ -59,14 +58,14 @@ Fetch all the items! (as json files)
         else:
             log.debug(region+" skipped because it was up to date.")
        
-    log.info("Downloaded all items as json files for all regions")
+    log.debug("Downloaded all items as json files for all regions")
 
     
 def check_items_version(net_items_string, region, log):
     '''
 Compare local version of file to the one on the net.
     '''
-    log.info("Checking file versions for "+region)
+    log.debug("Checking file versions for "+region)
     
     try:
         local_items_file = open("items_json/"+region,'r')
