@@ -1,3 +1,5 @@
+
+
 """
 Django settings for django_site project.
 
@@ -8,7 +10,9 @@ https://docs.djangoproject.com/en/1.8/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
+
 """
+import re
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
@@ -20,8 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'auqko!jf)piln&=j5#89zyso9g08^h9vr((6htamm&tgsglktk'
-
+with open("../settings") as settings_file:
+	SECRET_KEY = re.search(r'SECRET_KEY:(.+)\n', settings_file.read()).group(1)
+	
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -37,6 +42,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'polls',
+    'database',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -55,7 +62,7 @@ ROOT_URLCONF = 'django_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
