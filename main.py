@@ -32,4 +32,4 @@ if __name__ == "__main__":
         api_key = re.search(r'API_KEY:\s*([?\w\d\-]+)\s', api_key_string).group(1)
 
     # Update all the json file from all the different regions
-    update.get_all_items(api_key, log)
+    update.get_all_items(api_key, "DEBUG")
