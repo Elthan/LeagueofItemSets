@@ -27,9 +27,9 @@ Check current version of the region.
 Parameters
 -------------
 region : str
-    Region to be examined
+    Region to be examined.
 api_key : str
-    Api_key to use in request
+    Api_key to use in request.
 local_version : str
     Local version for region in format 5.15.1
 
@@ -66,13 +66,12 @@ current_version : str
 
 
 if __name__ == "__main__":
-  
     # Set level of logging to be done
     log.basicConfig(format="%(levelname)s: %(message)s",level="DEBUG")
 
     print("League of Item Sets v0.1")
     
-    # Get the api_key, which is hidden for git purposes
+    # Get the api_key, which is hidden for git purposes.
     try:
         with open("settings") as settings_file:
             settings_string = settings_file.read()
@@ -86,7 +85,7 @@ if __name__ == "__main__":
                 api_key = api_key.group(1)
 
             # This is temporary. Will be exchanged once we have a db with a table
-            # which contains all versions for all regions
+            # which contains all versions for all regions.
             current_version = re.search(r'CURRENT_VERSION: ([?\d\.]+\s)', settings_string)
 
             if (current_version is None):
@@ -100,7 +99,7 @@ if __name__ == "__main__":
             if (check_version( "eune", api_key, current_version )):
                 log.debug("We are up to date!")
             else:
-                # Update all the json file from all the different regions
+                # Update all the json file from all the different regions.
                 update.update_all(api_key, current_version, "DEBUG")
                 
     except FileNotFoundError:

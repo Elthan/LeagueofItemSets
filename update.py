@@ -16,14 +16,14 @@ Download all icons.
 Parameters
 -------------
 img_type : str
-    What type of icon should we fetch (ex. champion or item)
+    What type of icon should we fetch (ex. champion or item).
 id_list : list[str]
-    List of all the icon ids to fetch
+    List of all the icon ids to fetch.
 version : str
     Version to download in format 5.15.1
 overwrite : bool
     If we want to overwrite icons if 
-    it already exists
+    it already exists.
     '''
     log.debug("Fetching " + img_type + " icons, using version " + version)
     
@@ -33,7 +33,7 @@ overwrite : bool
         
         try:
             with urllib.request.urlopen(url) as response:
-                # Check if it already exists and if we're to overwrite existing files
+                # Check if it already exists and if we're to overwrite existing files.
                 if (os.path.exists("icons/" + img_type + "/" + icon_id + ".png") and not overwrite):
                     log.debug("Skipping file - icons/" + img_type + "/" + icon_id + ".png")
                 else:
@@ -54,9 +54,9 @@ Fetch json file.
 Parameters
 -------------
 json_type : str
-    What type of json we want to fetch (ex. champion or item)
+    What type of json we want to fetch (ex. champion or item).
 url : str
-    URL to fetch json from
+    URL to fetch json from.
 region : str
     Region code for which region we
     want to fetch from.
@@ -78,7 +78,7 @@ html : str
         return None
         
     # Temporary way of getting item icons
-    # will be replaced later when db is up and running
+    # will be replaced later when db is up and running.
     if ("na" in region):
         html_json = json.loads( html )
 
@@ -108,11 +108,11 @@ Returns
 -------------
 is_new_version : bool
     True if there is a newer version or
-    no local version. False else
+    no local version. False else.
     '''
     log.debug("Checking file versions for " + region)
     
-    # If we can't find the file, we want to save it
+    # If we can't find the file, we want to save it.
     try:
         local_json_file = open("json/" + json_type + "/" + region,'r')
     except FileNotFoundError:
@@ -142,7 +142,7 @@ url_list : list[str]
     List of all the different types we want
     and url that comes we fetch from.
 region_list : list[str]
-    List of all the different regions we fetch
+    List of all the different regions we fetch.
     '''
     log.debug("Beginning fetching for all json files for all regions")
         
