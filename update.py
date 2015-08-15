@@ -32,14 +32,14 @@ current_version : str
     '''
     log.debug("Checking version for "+region)
     
-    url = "https://global.api.pvp.net/api/lol/static-data/"+region+\
-          "/v1.2/versions?api_key="+api_key
+    url = "https://global.api.pvp.net/api/lol/static-data/" + region + \
+          "/v1.2/versions?api_key=" + api_key
     
     try:
         with urllib.request.urlopen(url) as response:
             net_version = response.read()
     except urllib.error.HTTPError:
-        error("HTTPError when version checking for "+region)
+        error("HTTPError when version checking for " + region)
         return False, current_version
 
     net_version = json.loads(net_version)[0]
@@ -54,37 +54,42 @@ current_version : str
     return is_new_version, current_version
 
 
-def get_item_icons(item_id_list, version, overwrite=False):
+def get_icons(img_type, id_list, version, overwrite=False):
     '''
-Download all item icons.
+Download all icons.
 
 Parameters
 -------------
-item_id_list : list[str]
-    List of all the item ids
+img_type : str
+    What type of icon should we fetch (ex. champion or item)
+id_list : list[str]
+    List of all the icon ids to fetch
 version : str
     Version to download in format 5.15.1
 overwrite : bool
     If we want to overwrite icons if 
     it already exists
     '''
-    log.debug("Fetching item icons, using version "+version)
-    # For im
-    for item_id in item_id_list:
-        url = "http://ddragon.leagueoflegends.com/cdn/"+version+"/img/item/"+ \
-              item_id+".png"
+    log.debug("Fetching " + img_type + " icons, using version " + version)
+    
+    for icon_id in id_list:
+        url = "http://ddragon.leagueoflegends.com/cdn/" + version + \
+              "/img/" + img_type + "/" + icon_id+".png"
+        
         try:
             with urllib.request.urlopen(url) as response:
                 # Check if it already exists and if we're to overwrite existing files
-                if (os.path.exists("icons/items/"+item_id+".png") and not overwrite):
-                    log.debug("Skipping file - icons/items/"+item_id+".png")
+                if (os.path.exists("icons/" + img_type + "/" + icon_id + ".png") and not overwrite):
+                    log.debug("Skipping file - icons/" + img_type + "/" + icon_id + ".png")
                 else:
-                    log.debug("Writing icon id "+item_id)
-                    with open("icons/items/"+item_id+".png",'wb') as image_file:
+                    log.debug("Writing icon id " + icon_id)
+                    with open("icons/" + img_type + "/" + icon_id + ".png",'wb') as image_file:
                         image_file.write(response.read())
+                        
         except urllib.error.HTTPError:
-            error("Error when downloading item id "+item_id)
-    log.debug("Done fetching all item icons")
+            error("Error when downloading icon id " + icon_id)
+
+    log.debug("Done fetching all icons")
 
     
 def get_items(region, api_key):  
@@ -106,28 +111,29 @@ html : str
     the items for the given region.
     '''
     items_id_list = []
-    log.debug("Fetching items for "+region)
+    log.debug("Fetching items for " + region)
     
-    url = "https://global.api.pvp.net/api/lol/static-data/"+region+ \
+    url = "https://global.api.pvp.net/api/lol/static-data/" + region + \
           "/v1.2/item?itemListData=all&api_key=" + api_key
 
     try:
         with urllib.request.urlopen(url) as response:
             html = response.read().decode("UTF-8")
     except urllib.error.HTTPError:
-        error("HTTPError when trying to access "+url)
+        error("HTTPError when trying to access " + url)
         return None
         
     # Temporary way of getting item icons
     # will be replaced later when db is up and running
     if ("na" in region):
         html_json = json.loads( html )
+
         for image_id in html_json["data"]:
             items_id_list.append(image_id)
-        log.debug("Fetching item icons")
-        get_item_icons(items_id_list, "5.15.1")
+
+        get_icons("item", items_id_list, "5.15.1")
                              
-    log.debug("Succesfully fetched items for "+region)
+    log.debug("Succesfully fetched items for " + region)
     
     return html
 
@@ -150,21 +156,21 @@ is_new_version : bool
     True if there is a newer version or
     no local version. False else
     '''
-    log.debug("Checking file versions for "+region)
+    log.debug("Checking file versions for " + region)
     
     # If we can't find the file, we want to save it
     try:
-        local_items_file = open("items_json/"+region,'r')
+        local_items_file = open("items_json/" + region,'r')
     except FileNotFoundError:
         return True
     
     local_items_json = json.load(local_items_file)
 
-    log.debug("Local version: "+local_items_json["version"])
+    log.debug("Local version: " + local_items_json["version"])
 
     net_items_json = json.loads(net_items_string)
 
-    log.debug("Net version: "+net_items_json["version"])
+    log.debug("Net version: " + net_items_json["version"])
 
     if (local_items_json["version"] == net_items_json["version"]):
         is_new_version = False
@@ -188,21 +194,21 @@ loglvl : str
     #region_list = ["br","eune","euw","kr","lan","las","na","oce","ru","tr","pbe"]
     region_list = ["na"]
     
-    log.basicConfig(format="%(levelname)s: %(message)s",level=loglvl)
+    log.basicConfig(format="%(levelname)s: %(message)s", level=loglvl)
     
     log.debug("Beginning fetching for all items as json files for all regions")
         
     for region in region_list:   
-        items_string = get_items(region, api_key)
+        items_string = get_items( region, api_key )
 
         if (items_string is None):
-            log.error("Error occured when trying to fetch items for "+region)
+            log.error("Error occured when trying to fetch items for " + region)
             continue
         
-        if (check_items_version(items_string, region)):
-            with open("json/items/"+region,'w') as items_file:
-                items_file.write(items_string)
+        if (check_items_version( items_string, region )):
+            with open("json/items/" + region, 'w') as items_file:
+                items_file.write( items_string )
         else:
-            log.debug(region+" skipped because it was up to date.")
+            log.debug(region + " skipped because it was up to date.")
        
     log.debug("Fetched all items as json files for all regions")
