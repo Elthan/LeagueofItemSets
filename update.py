@@ -119,12 +119,10 @@ is_new_version : bool
         return True
     
     local_json_version = json.load(local_json_file)
-
-    log.debug("Local version: " + local_json_version["version"])
-
     net_json_version = json.loads(net_json_string)
 
-    log.debug("Net version: " + net_json_version["version"])
+    log.debug("Net version: " + net_json_version["version"] + \
+              "\tLocal version: " + local_json_version["version"])
 
     if (local_json_version["version"] == net_json_version["version"]):
         is_new_version = False
@@ -170,8 +168,8 @@ region_list : list[str]
 def update_all(api_key, current_version, loglvl):
     log.basicConfig(format="%(levelname)s: %(message)s", level=loglvl)
     
-    #region_list = ["br","eune","euw","kr","lan","las","na","oce","ru","tr","pbe"]
-    region_list = ["na"]
+    region_list = ["br","eune","euw","kr","lan","las","na","oce","ru","tr","pbe"]
+    #region_list = ["na"]
     url_list = {"item":"https://global.api.pvp.net/api/lol/static-data/eune/v1.2/item?itemListData=all&api_key="+api_key,
                 "champion":"https://global.api.pvp.net/api/lol/static-data/eune/v1.2/champion?champData=all&api_key="+api_key}
     
