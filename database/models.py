@@ -2,13 +2,13 @@ from django.db import models
 from django.utils import timezone
 
 class PlayerItemSet(models.Model):
-        item_set_id = models.CharField(max_length=200, default="000") #or other field
-        item_set_file = models.FileField(default="")
-        item_set_date = models.DateTimeField('date created', default=timezone.now)
+        ItemSetID = models.CharField(max_length=200, default="000") #or other field
+        ItemSetFile = models.FileField(default="")
+        ItemSetDate = models.DateTimeField('date created', default=timezone.now)
 
         #to determine returned value
         def __str__(self): 
-                return self.item_set_id
+                return self.ItemSetID
 
         
 class ItemStat(models.Model):
@@ -66,47 +66,47 @@ class Item(models.Model):
         
         #to determine returned value 
         def __str__(self): 
-                return self.item_id
+                return self.ItemID
         
 class ChampionStat(models.Model):
-        champ_id = models.IntegerField(default=0) 
-        armor = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        armor_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        attack_damage = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        attack_damage_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        attack_range = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        attack_speed_offset = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        attack_speed_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        crit = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        crit_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        hp = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        hp_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        hp_regen = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        hp_regen_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        move_speed = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        mp = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        mp_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        mp_regen = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        mp_regen_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        spell_block = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        spell_block_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)        
+        ChampID = models.IntegerField(default=0) 
+        Armor = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        ArmorPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        AttackDamage = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        AttackDamagePerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        AttackRange = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        AttackSpeedOffset = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        AttackSpeedPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        Crit = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        CritPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        HP = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        HPPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        HPRegen = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        HPRegenPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        MoveSpeed = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        MP = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        MPPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        MPRegen = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        MPRegenPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        SpellBlock = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        SpellBlockPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)        
 
         #to determine returned value 
         def __str__(self):
-                return self.champ_id
+                return self.ChampID
         
 class Champion(models.Model):
-        champ_id = models.IntegerField(default=0)
-        name = models.CharField(max_length=200, default="Tweemo")
-        icon = models.CharField(max_length=200, default="icons/champion/Unknown.png")
+        ChampID = models.IntegerField(default=0)
+        Name = models.CharField(max_length=200, default="Tweemo")
+        Icon = models.CharField(max_length=200, default="icons/champion/Unknown.png")
 
         #to determine returned value 
         def __str__(self):
                 return self.ChampID
         
 class Version(models.Model):
-        region = models.CharField(max_length=200, default="eune")
-        version = models.CharField(max_length=200, default="1.0.0")
+        Region = models.CharField(max_length=200, default="eune")
+        Version = models.CharField(max_length=200, default="1.0.0")
 
         #to determine returned value 
         def __str__(self):  
