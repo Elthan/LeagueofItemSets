@@ -72,27 +72,27 @@ class ChampionStat(models.Model):
 	HP = models.DecimalField(max_digits=11, decimal_places=5, default=0)
 	HPPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
 	HPRegen = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	HPRegenPerLevelhp_regen_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	move_speed = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	mp = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	mp_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	mp_regen = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	mp_regen_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	spell_block = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	spell_block_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	HPRegenPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	MoveSpeed = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	MP = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	MPPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	MPRegen = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	MPRegenPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	SpellBlock = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	SpellBlockPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
 	def __str__(self):              #to determine returned value 
        	 		return self.champ_id  
        	 		
 class Champion(models.Model):
-	champ_id = models.CharField(max_length=200, default="000")
-	name = models.CharField(max_length=200, default="Tweemo")
-	icon = models.CharField(max_length=200, default="../icons/champion/Unknown.png")
+	ChampID = models.CharField(max_length=200, default="000")
+	Name = models.CharField(max_length=200, default="Tweemo")
+	Icon = models.CharField(max_length=200, default="../icons/champion/Unknown.png")
 	def __str__(self):              #to determine returned value 
        	 		return self.champ_id
        	 		
 class Version(models.Model):
-	region = models.CharField(max_length=200, default="eune")
-	version = models.CharField(max_length=200, default="1.0.0")
+	Region = models.CharField(max_length=200, default="eune")
+	Version = models.CharField(max_length=200, default="1.0.0")
 	def __str__(self):              #to determine returned value 
        	 		return self.region		
 
