@@ -1,16 +1,15 @@
 from django.db import models
 from django.utils import timezone
 
-# Create your models here.
 class PlayerItemSet(models.Model):
-	item_set_id = models.CharField(max_length=200, default="000") #or other field
-	item_set_file = models.FileField(default="")
-	item_set_date = models.DateTimeField('date created', default=timezone.now)
+	ItemSetID= models.CharField(max_length=200, default="000") #or other field
+	ItemSetFile = models.FileField(default="")
+	ItemSetDate = models.DateTimeField('date created', default=timezone.now)
 	def __str__(self):              #to determine returned value 
        	 		return self.item_set_id
        	 		
 class ItemStat(models.Model):
-	item_id = models.CharField(max_length=200, default="000")
+	ItemID = models.CharField(max_length=200, default="000")
 	FlatArmorMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
 	FlatAttackSpeedMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
 	FlatBlockMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
@@ -48,33 +47,32 @@ class ItemStat(models.Model):
        	 		return self.item_id
        	 		
 class Item(models.Model):
-	item_id = models.CharField(max_length=200, default="000")
-	description = models.CharField(max_length=200, default="Describe me!")
-	gold_total = models.SmallIntegerField(default=0)
-	gold_base = models.SmallIntegerField(default=0)
-	on_map = models.CharField(max_length=200, default='all')
-	name = models.CharField(max_length=200, default="itemname")
-	tags = models.CharField(max_length=200, default=["all", "them", "tags"])
-	icon = models.CharField(max_length=200, default="../icons/item/3460.png")
-	stacks = models.BooleanField(default=1)
+	ItemID = models.CharField(max_length=200, default="000")
+	Description = models.CharField(max_length=200, default="Describe me!")
+	GoldTotal= models.SmallIntegerField(default=0)
+	GoldBase = models.SmallIntegerField(default=0)
+	Name = models.CharField(max_length=200, default="itemname")
+	Tags = models.CharField(max_length=200, default=["all", "them", "tags"])
+	Icon = models.CharField(max_length=200, default="../icons/item/3460.png")
+	Stacks = models.BooleanField(default=1)
 	def __str__(self):              #to determine returned value 
        	 		return self.item_id
         	 		
 class ChampionStat(models.Model):
-	champ_id = models.CharField(max_length=200, default="000") 
-	armor = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	armor_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	attack_damage = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	attack_damage_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	attack_range = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	attack_speed_offset = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	attack_speed_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	crit = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	crit_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	hp = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	hp_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	hp_regen = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-	hp_regen_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	ChampID = models.CharField(max_length=200, default="000") 
+	Armor = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	ArmorPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	AttackDamage = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	AttackDamagePerLeve = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	AttackRange = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	AttackSpeedOffset = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	AttackSpeedPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	Crit = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	CritPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	HP = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	HPPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	HPRegen = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+	HPRegenPerLevelhp_regen_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
 	move_speed = models.DecimalField(max_digits=11, decimal_places=5, default=0)
 	mp = models.DecimalField(max_digits=11, decimal_places=5, default=0)
 	mp_per_level = models.DecimalField(max_digits=11, decimal_places=5, default=0)
