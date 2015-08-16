@@ -57,7 +57,6 @@ class Item(models.Model):
 	tags = models.CharField(max_length=200, default=["all", "them", "tags"])
 	icon = models.CharField(max_length=200, default="../icons/item/3460.png")
 	stacks = models.BooleanField(default=1)
-	stats = models.ForeignKey(ItemStat, default="000") 
 	def __str__(self):              #to determine returned value 
        	 		return self.item_id
         	 		
@@ -90,7 +89,6 @@ class Champion(models.Model):
 	champ_id = models.CharField(max_length=200, default="000")
 	name = models.CharField(max_length=200, default="Tweemo")
 	icon = models.CharField(max_length=200, default="../icons/champion/Unknown.png")
-	stats = models.ForeignKey(ChampionStat, default="000") 
 	def __str__(self):              #to determine returned value 
        	 		return self.champ_id
        	 		
