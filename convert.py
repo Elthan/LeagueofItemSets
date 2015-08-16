@@ -88,21 +88,32 @@ hide_if_summoner : str
     
     return block_json
 
-def create_db_json_item_stats(item_json, region, log):
+def create_db_json_item_stats(item_json, region, log, overwrite=False):
     '''
 Create a django friendly json file for item stats.
 
 Parameters
 -------------
+item_json : file
+    JSON file of item we create stats for.
 region : str
     Region we should convert from.
 log : logging
     So we can log what is happening.
+overwrite : bool
+    If we should write over existing files.
     '''
     item_id = str(item_json["id"])
     log.debug("Creating json file for item stats for item " + item_id)
     os.makedirs("json/item_stats/" + region, exist_ok=True)
-    with open("json/item_stats/" + region + "/" + item_id + ".json", 'w') as item_stats_file:
+
+    path = "json/item_stats/" + region + "/" + item_id + ".json"
+    
+    if (os.path.exists(path) and not overwrite):
+        log.debug("Item stats for " + item_id + " of region " + region + " skipped.")
+        return
+    
+    with open(path, 'w') as item_stats_file:
         json_db_string = """[
     {{
         "pk": {},
@@ -146,8 +157,18 @@ overwrite : bool
             for item_id in items_json["data"]:
                 item_json = items_json["data"][item_id]
 
+                create_db_json_item_stats(item_json, region, log)
+                
                 log.debug("Creating json file for item " + item_id)
-                with  open("json/item/" + region + "/" + item_id + ".json", 'w') as item_json_file:
+
+                path = "json/item/" + region + "/" + item_id + ".json"
+
+                
+                if (os.path.exists(path) and not overwrite):
+                    log.debug("Item " + item_id + " for region " + region + " skipped.")
+                    continue
+                
+                with open(path, 'w') as item_json_file:
                     json_db_string = """[
     {{
         "pk" : {item_id},
@@ -185,7 +206,6 @@ overwrite : bool
 """
                     item_json_file.write(json_db_string)
 
-                    create_db_json_item_stats(item_json, region, log)
                     
     except FileNotFoundError:
         log.error("Could not find json file for region " + region)
