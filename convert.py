@@ -34,7 +34,7 @@ mode : str
     }
 
     # Add each block with a , inbetween unless its the last one.
-    block_list_len = len(block_list)
+    block_list_len = len(block_list)-1
     for index, block in enumerate(block_list):
         item_set_string = item_set_string + block + ("," if index < block_list_len else "")
     
@@ -78,7 +78,7 @@ hide_if_summoner : str
     }
 
     # Add each item to the string with , inbetween unless it's the last one.
-    item_list_len = len(item_list)
+    item_list_len = len(item_list)-1
     for index, item in enumerate(item_list):
         block_string = block_string + item + ("," if index < item_list_len else "")
     block_string = block_string + "]"

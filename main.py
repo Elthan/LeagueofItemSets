@@ -10,7 +10,7 @@ import json
 # 
 #   League of Item Sets
 #
-#   Version: 0.1
+#   Version: 0.2
 #
 #   By: Jonas Sandbekk & Ole Harbosen
 # 
