@@ -1,7 +1,7 @@
 [
     {
-        "pk": {item_id},
-        "model": "database.Item",
+        "pk": 1322,
+        "model": "database.ItemStat",
         "fields": {
 		"FlatSpellBlockMod": 25.0,
 		"FlatMovementSpeedMod": 45.0

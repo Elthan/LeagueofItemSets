@@ -3,15 +3,15 @@
         "pk" : 3117,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3117,
-            "name": "Boots of Mobility",
-            "description": "UNIQUE Passive - Enhanced Movement: +25 Movement Speed. Increases to +105 Movement Speed when out of combat for 5 seconds. (Unique Passives with the same name don't stack.)",
-            "gold_total": 800,
-            "gold_base": 475,
-            "purchable": True,
-            "icon": "icons/item/3117.png" ,
-	 "into": ['1326', '1328', '1325', '1327', '1329', '1340'] ,
-	 "tags": ['Boots'] 
+            "ItemID": 3117,
+            "Name": "Boots of Mobility",
+            "Description": "UNIQUE Passive - Enhanced Movement: +25 Movement Speed. Increases to +105 Movement Speed when out of combat for 5 seconds. (Unique Passives with the same name don't stack.)",
+            "GoldTotal": 800,
+            "GoldBase": 475,
+            "Purchasable": "True",
+            "Icon": "icons/item/3117.png" ,
+	 "Into": ["1326", "1328", "1325", "1327", "1329", "1340"] ,
+	 "Tags": ["Boots"] 
         }
     }
 ]

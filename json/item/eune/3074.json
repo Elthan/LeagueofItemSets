@@ -3,14 +3,14 @@
         "pk" : 3074,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3074,
-            "name": "Ravenous Hydra (Melee Only)",
-            "description": "+75 Attack Damage +100% Base Health Regen +12% Life Steal Passive: Life Steal applies to damage dealt by this item. UNIQUE Passive - Cleave: Basic attacks deal 20% to 60% of total Attack Damage as bonus physical damage to enemies near the target on hit (enemies closest to the target take the most damage). UNIQUE Active - Crescent: Deals 60% to 100% of total Attack Damage as physical damage to nearby enemy units (closest enemies take the most damage) (10 second cooldown). (Unique Passives with the same name don't stack.)",
-            "gold_total": 3300,
-            "gold_base": 600,
-            "purchable": True,
-            "icon": "icons/item/3074.png" ,
-	 "tags": ['Active', 'Damage', 'HealthRegen', 'LifeSteal', 'OnHit'] 
+            "ItemID": 3074,
+            "Name": "Ravenous Hydra (Melee Only)",
+            "Description": "+75 Attack Damage +100% Base Health Regen +12% Life Steal Passive: Life Steal applies to damage dealt by this item. UNIQUE Passive - Cleave: Basic attacks deal 20% to 60% of total Attack Damage as bonus physical damage to enemies near the target on hit (enemies closest to the target take the most damage). UNIQUE Active - Crescent: Deals 60% to 100% of total Attack Damage as physical damage to nearby enemy units (closest enemies take the most damage) (10 second cooldown). (Unique Passives with the same name don't stack.)",
+            "GoldTotal": 3300,
+            "GoldBase": 600,
+            "Purchasable": "True",
+            "Icon": "icons/item/3074.png" ,
+	 "Tags": ["Active", "Damage", "HealthRegen", "LifeSteal", "OnHit"] 
         }
     }
 ]

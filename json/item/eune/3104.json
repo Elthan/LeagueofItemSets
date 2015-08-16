@@ -3,14 +3,14 @@
         "pk" : 3104,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3104,
-            "name": "Lord Van Damm's Pillager",
-            "description": "+80 Attack Damage +25% Critical Strike Chance UNIQUE Passive: Critical Strikes cause enemies to bleed for an additional 150% of bonus Attack Damage as magic damage over 3 seconds and reveal them for the duration.",
-            "gold_total": 3800,
-            "gold_base": 995,
-            "purchable": True,
-            "icon": "icons/item/3104.png" ,
-	 "tags": ['CriticalStrike', 'Damage'] 
+            "ItemID": 3104,
+            "Name": "Lord Van Damm's Pillager",
+            "Description": "+80 Attack Damage +25% Critical Strike Chance UNIQUE Passive: Critical Strikes cause enemies to bleed for an additional 150% of bonus Attack Damage as magic damage over 3 seconds and reveal them for the duration.",
+            "GoldTotal": 3800,
+            "GoldBase": 995,
+            "Purchasable": "True",
+            "Icon": "icons/item/3104.png" ,
+	 "Tags": ["CriticalStrike", "Damage"] 
         }
     }
 ]

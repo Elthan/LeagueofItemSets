@@ -3,14 +3,14 @@
         "pk" : 3744,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3744,
-            "name": "Staff of Flowing Water",
-            "description": "+40 Ability Power +25 Magic Resist +50% Base Mana Regen UNIQUE Passive - Mana Font: Restores 2% of missing Mana every 5 seconds. UNIQUE Passive: Gain 30% Movement Speed and 10 Mana Regen per 5 seconds while in the river. (Unique Passives with the same name do not stack.) ''News travels fast along the Ionian riverside.''",
-            "gold_total": 1635,
-            "gold_base": 300,
-            "purchable": True,
-            "icon": "icons/item/3744.png" ,
-	 "tags": ['Active', 'Bilgewater', 'CooldownReduction', 'SpellDamage'] 
+            "ItemID": 3744,
+            "Name": "Staff of Flowing Water",
+            "Description": "+40 Ability Power +25 Magic Resist +50% Base Mana Regen UNIQUE Passive - Mana Font: Restores 2% of missing Mana every 5 seconds. UNIQUE Passive: Gain 30% Movement Speed and 10 Mana Regen per 5 seconds while in the river. (Unique Passives with the same name do not stack.) ''News travels fast along the Ionian riverside.''",
+            "GoldTotal": 1635,
+            "GoldBase": 300,
+            "Purchasable": "True",
+            "Icon": "icons/item/3744.png" ,
+	 "Tags": ["Active", "Bilgewater", "CooldownReduction", "SpellDamage"] 
         }
     }
 ]

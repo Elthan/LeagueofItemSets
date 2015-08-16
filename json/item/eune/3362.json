@@ -3,14 +3,14 @@
         "pk" : 3362,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3362,
-            "name": "Greater Vision Totem (Trinket)",
-            "description": "Limited to 1 Trinket. *Level 9+ required to upgrade. UNIQUE Active: Places a visible ward that reveals the surrounding area and invisible units in the area until killed (120 second cooldown). Limit 1 Vision Ward on the map per player. (Trinkets cannot be used in the first 30 seconds of a game. Selling a Trinket will disable Trinket use for 120 seconds).",
-            "gold_total": 250,
-            "gold_base": 250,
-            "purchable": True,
-            "icon": "icons/item/3362.png" ,
-	 "tags": ['Active', 'Trinket', 'Vision'] 
+            "ItemID": 3362,
+            "Name": "Greater Vision Totem (Trinket)",
+            "Description": "Limited to 1 Trinket. *Level 9+ required to upgrade. UNIQUE Active: Places a visible ward that reveals the surrounding area and invisible units in the area until killed (120 second cooldown). Limit 1 Vision Ward on the map per player. (Trinkets cannot be used in the first 30 seconds of a game. Selling a Trinket will disable Trinket use for 120 seconds).",
+            "GoldTotal": 250,
+            "GoldBase": 250,
+            "Purchasable": "True",
+            "Icon": "icons/item/3362.png" ,
+	 "Tags": ["Active", "Trinket", "Vision"] 
         }
     }
 ]

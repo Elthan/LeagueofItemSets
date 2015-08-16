@@ -1,7 +1,7 @@
 [
     {
-        "pk": {item_id},
-        "model": "database.Item",
+        "pk": 3801,
+        "model": "database.ItemStat",
         "fields": {
 		"FlatHPPoolMod": 200.0
         }

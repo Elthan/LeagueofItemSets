@@ -3,14 +3,14 @@
         "pk" : 3181,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3181,
-            "name": "Sanguine Blade",
-            "description": "+45 Attack Damage +10% Life Steal UNIQUE Passive: Basic attacks grant +6 Attack Damage and +1% Life Steal for 8 seconds on hit (effect stacks up to 5 times).",
-            "gold_total": 2275,
-            "gold_base": 600,
-            "purchable": True,
-            "icon": "icons/item/3181.png" ,
-	 "tags": ['Damage', 'LifeSteal'] 
+            "ItemID": 3181,
+            "Name": "Sanguine Blade",
+            "Description": "+45 Attack Damage +10% Life Steal UNIQUE Passive: Basic attacks grant +6 Attack Damage and +1% Life Steal for 8 seconds on hit (effect stacks up to 5 times).",
+            "GoldTotal": 2275,
+            "GoldBase": 600,
+            "Purchasable": "True",
+            "Icon": "icons/item/3181.png" ,
+	 "Tags": ["Damage", "LifeSteal"] 
         }
     }
 ]

@@ -3,14 +3,14 @@
         "pk" : 3046,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3046,
-            "name": "Phantom Dancer",
-            "description": "+50% Attack Speed +35% Critical Strike Chance +5% Movement Speed UNIQUE Passive: Champion can move through units.",
-            "gold_total": 2800,
-            "gold_base": 520,
-            "purchable": True,
-            "icon": "icons/item/3046.png" ,
-	 "tags": ['AttackSpeed', 'CriticalStrike', 'NonbootsMovement'] 
+            "ItemID": 3046,
+            "Name": "Phantom Dancer",
+            "Description": "+50% Attack Speed +35% Critical Strike Chance +5% Movement Speed UNIQUE Passive: Champion can move through units.",
+            "GoldTotal": 2800,
+            "GoldBase": 520,
+            "Purchasable": "True",
+            "Icon": "icons/item/3046.png" ,
+	 "Tags": ["AttackSpeed", "CriticalStrike", "NonbootsMovement"] 
         }
     }
 ]

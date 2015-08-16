@@ -3,14 +3,14 @@
         "pk" : 3042,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3042,
-            "name": "Muramana",
-            "description": "+25 Attack Damage +1000 Mana +25% Base Mana Regen UNIQUE Passive - Awe: Grants bonus Attack Damage equal to 2% of maximum Mana. UNIQUE Toggle: Single target spells and attacks (on hit) consume 3% of current Mana to deal bonus physical damage equal to twice the amount of Mana consumed. (Unique Passives with the same name don't stack.)",
-            "gold_total": 2200,
-            "gold_base": 2200,
-            "purchable": False,
-            "icon": "icons/item/3042.png" ,
-	 "tags": ['OnHit'] 
+            "ItemID": 3042,
+            "Name": "Muramana",
+            "Description": "+25 Attack Damage +1000 Mana +25% Base Mana Regen UNIQUE Passive - Awe: Grants bonus Attack Damage equal to 2% of maximum Mana. UNIQUE Toggle: Single target spells and attacks (on hit) consume 3% of current Mana to deal bonus physical damage equal to twice the amount of Mana consumed. (Unique Passives with the same name don't stack.)",
+            "GoldTotal": 2200,
+            "GoldBase": 2200,
+            "Purchasable": "False",
+            "Icon": "icons/item/3042.png" ,
+	 "Tags": ["OnHit"] 
         }
     }
 ]

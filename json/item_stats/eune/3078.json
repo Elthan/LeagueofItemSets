@@ -1,15 +1,15 @@
 [
     {
-        "pk": {item_id},
-        "model": "database.Item",
+        "pk": 3078,
+        "model": "database.ItemStat",
         "fields": {
-		"PercentAttackSpeedMod": 0.3,
 		"FlatPhysicalDamageMod": 30.0,
-		"FlatMPPoolMod": 200.0,
-		"FlatHPPoolMod": 250.0,
+		"PercentAttackSpeedMod": 0.3,
 		"FlatMagicDamageMod": 30.0,
+		"FlatMPPoolMod": 200.0,
+		"FlatCritChanceMod": 0.1,
 		"PercentMovementSpeedMod": 0.08,
-		"FlatCritChanceMod": 0.1
+		"FlatHPPoolMod": 250.0
         }
     }
 ]

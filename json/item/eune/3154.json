@@ -3,14 +3,14 @@
         "pk" : 3154,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3154,
-            "name": "Wriggle's Lantern",
-            "description": "+12 Attack Damage +30% Attack Speed UNIQUE Passive - Maim: Basic attacks against monsters deal 75 bonus magic damage and heal 10 Health on hit. UNIQUE Passive: Gain 30% increased Gold from monsters. UNIQUE Active: Places a Stealth Ward that reveals the surrounding area for 180 seconds (180 second cooldown). Transforms into Feral Flare at 30 kills, assists and large monster kills. (Champions and monsters killed with Hunter's Machete and Madred's Razors count toward this transformation) Limited to 1 Gold Income item",
-            "gold_total": 1775,
-            "gold_base": 215,
-            "purchable": True,
-            "icon": "icons/item/3154.png" ,
-	 "tags": ['Active', 'AttackSpeed', 'Damage', 'GoldPer', 'OnHit', 'Vision'] 
+            "ItemID": 3154,
+            "Name": "Wriggle's Lantern",
+            "Description": "+12 Attack Damage +30% Attack Speed UNIQUE Passive - Maim: Basic attacks against monsters deal 75 bonus magic damage and heal 10 Health on hit. UNIQUE Passive: Gain 30% increased Gold from monsters. UNIQUE Active: Places a Stealth Ward that reveals the surrounding area for 180 seconds (180 second cooldown). Transforms into Feral Flare at 30 kills, assists and large monster kills. (Champions and monsters killed with Hunter's Machete and Madred's Razors count toward this transformation) Limited to 1 Gold Income item",
+            "GoldTotal": 1775,
+            "GoldBase": 215,
+            "Purchasable": "True",
+            "Icon": "icons/item/3154.png" ,
+	 "Tags": ["Active", "AttackSpeed", "Damage", "GoldPer", "OnHit", "Vision"] 
         }
     }
 ]

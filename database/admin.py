@@ -6,7 +6,7 @@ class PlayerItemSetAdmin(admin.ModelAdmin):
 	list_display = ['item_set_id', 'item_set_date']
 
 class ItemAdmin(admin.ModelAdmin):
-	list_display = ['item_id', 'name']
+	list_display = ['ItemID', 'Name']
 	
 class ChampionAdmin(admin.ModelAdmin):
 	list_display = ['champ_id', 'name']

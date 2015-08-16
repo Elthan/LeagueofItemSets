@@ -3,14 +3,14 @@
         "pk" : 3023,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3023,
-            "name": "Twin Shadows",
-            "description": "+80 Ability Power +10% Cooldown Reduction +6% Movement Speed UNIQUE Active - Hunt: Summons up to 2 invulnerable ghosts that seek out the 2 nearest enemy champions for 6 seconds. If a ghost reaches its target, it reveals the target and reduces their Movement Speed by 40% for 2.5 seconds. If a ghost cannot find a target, it tries to return to the caster. Ghosts that successfully return in this way reduce the item's cooldown by 40 seconds (120 second cooldown).",
-            "gold_total": 2400,
-            "gold_base": 730,
-            "purchable": True,
-            "icon": "icons/item/3023.png" ,
-	 "tags": ['Active', 'CooldownReduction', 'NonbootsMovement', 'Slow', 'SpellDamage'] 
+            "ItemID": 3023,
+            "Name": "Twin Shadows",
+            "Description": "+80 Ability Power +10% Cooldown Reduction +6% Movement Speed UNIQUE Active - Hunt: Summons up to 2 invulnerable ghosts that seek out the 2 nearest enemy champions for 6 seconds. If a ghost reaches its target, it reveals the target and reduces their Movement Speed by 40% for 2.5 seconds. If a ghost cannot find a target, it tries to return to the caster. Ghosts that successfully return in this way reduce the item's cooldown by 40 seconds (120 second cooldown).",
+            "GoldTotal": 2400,
+            "GoldBase": 730,
+            "Purchasable": "True",
+            "Icon": "icons/item/3023.png" ,
+	 "Tags": ["Active", "CooldownReduction", "NonbootsMovement", "Slow", "SpellDamage"] 
         }
     }
 ]

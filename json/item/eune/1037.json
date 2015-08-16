@@ -3,15 +3,15 @@
         "pk" : 1037,
         "model" : "database.Item",
         "fields" : {
-            item_id": 1037,
-            "name": "Pickaxe",
-            "description": "+25 Attack Damage",
-            "gold_total": 875,
-            "gold_base": 875,
-            "purchable": True,
-            "icon": "icons/item/1037.png" ,
-	 "into": ['3035', '3124', '3031', '3156', '3077', '3104', '3184', '3004', '3008', '3022', '3150', '3172', '3181', '3652'] ,
-	 "tags": ['Damage'] 
+            "ItemID": 1037,
+            "Name": "Pickaxe",
+            "Description": "+25 Attack Damage",
+            "GoldTotal": 875,
+            "GoldBase": 875,
+            "Purchasable": "True",
+            "Icon": "icons/item/1037.png" ,
+	 "Into": ["3035", "3124", "3031", "3156", "3077", "3104", "3184", "3004", "3008", "3022", "3150", "3172", "3181", "3652"] ,
+	 "Tags": ["Damage"] 
         }
     }
 ]

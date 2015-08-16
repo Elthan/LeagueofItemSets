@@ -3,14 +3,14 @@
         "pk" : 3187,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3187,
-            "name": "Hextech Sweeper",
-            "description": "+225 Health +250 Mana +25 Armor +20% Cooldown Reduction UNIQUE Passive - Trap Detection: Nearby stealthed enemy traps are revealed. UNIQUE Active - Hunter's Sight: A stealth-detecting mist grants vision in the target area for 5 seconds, revealing enemy champions that enter for 3 seconds (60 second cooldown).",
-            "gold_total": 2130,
-            "gold_base": 330,
-            "purchable": True,
-            "icon": "icons/item/3187.png" ,
-	 "tags": ['Active', 'Armor', 'CooldownReduction', 'Health', 'Mana', 'Stealth', 'Vision'] 
+            "ItemID": 3187,
+            "Name": "Hextech Sweeper",
+            "Description": "+225 Health +250 Mana +25 Armor +20% Cooldown Reduction UNIQUE Passive - Trap Detection: Nearby stealthed enemy traps are revealed. UNIQUE Active - Hunter's Sight: A stealth-detecting mist grants vision in the target area for 5 seconds, revealing enemy champions that enter for 3 seconds (60 second cooldown).",
+            "GoldTotal": 2130,
+            "GoldBase": 330,
+            "Purchasable": "True",
+            "Icon": "icons/item/3187.png" ,
+	 "Tags": ["Active", "Armor", "CooldownReduction", "Health", "Mana", "Stealth", "Vision"] 
         }
     }
 ]

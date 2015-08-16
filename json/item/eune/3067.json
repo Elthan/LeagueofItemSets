@@ -3,15 +3,15 @@
         "pk" : 3067,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3067,
-            "name": "Kindlegem",
-            "description": "+200 Health UNIQUE Passive: +10% Cooldown Reduction",
-            "gold_total": 850,
-            "gold_base": 450,
-            "purchable": True,
-            "icon": "icons/item/3067.png" ,
-	 "into": ['3187', '3190', '3401', '3065', '3056', '3071', '3745', '3911'] ,
-	 "tags": ['CooldownReduction', 'Health'] 
+            "ItemID": 3067,
+            "Name": "Kindlegem",
+            "Description": "+200 Health UNIQUE Passive: +10% Cooldown Reduction",
+            "GoldTotal": 850,
+            "GoldBase": 450,
+            "Purchasable": "True",
+            "Icon": "icons/item/3067.png" ,
+	 "Into": ["3187", "3190", "3401", "3065", "3056", "3071", "3745", "3911"] ,
+	 "Tags": ["CooldownReduction", "Health"] 
         }
     }
 ]

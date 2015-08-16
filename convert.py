@@ -104,11 +104,11 @@ log : logging
     os.makedirs("json/item_stats/" + region, exist_ok=True)
     with open("json/item_stats/" + region + "/" + item_id + ".json", 'w') as item_stats_file:
         json_db_string = """[
-    {
-        "pk": {item_id},
-        "model": "database.Item",
-        "fields": {
-"""
+    {{
+        "pk": {},
+        "model": "database.ItemStat",
+        "fields": {{
+""".format(item_id)
         stats_len = len(item_json["stats"])-1
         index = 0
         for key, value in item_json["stats"].items():
@@ -153,29 +153,29 @@ overwrite : bool
         "pk" : {item_id},
         "model" : "database.Item",
         "fields" : {{
-            item_id": {item_id},
-            "name": "{name}",
-            "description": "{description}",
-            "gold_total": {gold_total},
-            "gold_base": {gold_base},
-            "purchable": {purchable},
-            "icon": "{icon}" """.format(
+            "ItemID": {item_id},
+            "Name": "{name}",
+            "Description": "{description}",
+            "GoldTotal": {gold_total},
+            "GoldBase": {gold_base},
+            "Purchasable": "{purchasable}",
+            "Icon": "{icon}" """.format(
                 item_id = item_id,
                 name = item_json["name"],
                 description = item_json["sanitizedDescription"],
                 gold_total = item_json["gold"]["total"],
                 gold_base = item_json["gold"]["base"],
-                purchable = item_json["gold"]["purchasable"],
+                purchasable = item_json["gold"]["purchasable"],
                 icon = "icons/item/" + item_id + ".png"
             )
                     try:
                         into = item_json["into"]
-                        json_db_string += ",\n\t" + """ "into": {} """.format(into)
+                        json_db_string += ",\n\t" + """ "Into": {} """.format(json.dumps(into))
                     except KeyError:
                         pass
                     try:
                         tags = item_json["tags"]
-                        json_db_string += ",\n\t" + """ "tags": {} """.format(tags)
+                        json_db_string += ",\n\t" + """ "Tags": {} """.format(json.dumps(tags))
                     except KeyError:
                         pass
                     json_db_string = json_db_string + """

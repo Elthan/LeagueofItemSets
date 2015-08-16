@@ -3,15 +3,15 @@
         "pk" : 2049,
         "model" : "database.Item",
         "fields" : {
-            item_id": 2049,
-            "name": "Sightstone",
-            "description": "+150 Health UNIQUE Passive - Ward Refresh: Holds 4 charges and refills upon visiting the shop. UNIQUE Active - Ghost Ward: Consumes a charge to place a Stealth Ward that reveals the surrounding area for 3 minutes. A player may only have 3 Stealth Wards on the map at one time. (Unique Passives with the same name don't stack.)",
-            "gold_total": 800,
-            "gold_base": 400,
-            "purchable": True,
-            "icon": "icons/item/2049.png" ,
-	 "into": ['2045'] ,
-	 "tags": ['Active', 'Health', 'Vision'] 
+            "ItemID": 2049,
+            "Name": "Sightstone",
+            "Description": "+150 Health UNIQUE Passive - Ward Refresh: Holds 4 charges and refills upon visiting the shop. UNIQUE Active - Ghost Ward: Consumes a charge to place a Stealth Ward that reveals the surrounding area for 3 minutes. A player may only have 3 Stealth Wards on the map at one time. (Unique Passives with the same name don't stack.)",
+            "GoldTotal": 800,
+            "GoldBase": 400,
+            "Purchasable": "True",
+            "Icon": "icons/item/2049.png" ,
+	 "Into": ["2045"] ,
+	 "Tags": ["Active", "Health", "Vision"] 
         }
     }
 ]

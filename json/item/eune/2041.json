@@ -3,14 +3,14 @@
         "pk" : 2041,
         "model" : "database.Item",
         "fields" : {
-            item_id": 2041,
-            "name": "Crystalline Flask",
-            "description": "UNIQUE Passive: Holds 3 charges and refills upon visiting the shop. UNIQUE Active: Consumes a charge to restore 120 Health and 60 Mana over 12 seconds.",
-            "gold_total": 345,
-            "gold_base": 345,
-            "purchable": True,
-            "icon": "icons/item/2041.png" ,
-	 "tags": ['Active', 'Consumable', 'HealthRegen', 'Lane', 'ManaRegen'] 
+            "ItemID": 2041,
+            "Name": "Crystalline Flask",
+            "Description": "UNIQUE Passive: Holds 3 charges and refills upon visiting the shop. UNIQUE Active: Consumes a charge to restore 120 Health and 60 Mana over 12 seconds.",
+            "GoldTotal": 345,
+            "GoldBase": 345,
+            "Purchasable": "True",
+            "Icon": "icons/item/2041.png" ,
+	 "Tags": ["Active", "Consumable", "HealthRegen", "Lane", "ManaRegen"] 
         }
     }
 ]

@@ -3,15 +3,15 @@
         "pk" : 1006,
         "model" : "database.Item",
         "fields" : {
-            item_id": 1006,
-            "name": "Rejuvenation Bead",
-            "description": "+50% Base Health Regen",
-            "gold_total": 180,
-            "gold_base": 180,
-            "purchable": True,
-            "icon": "icons/item/1006.png" ,
-	 "into": ['3077', '3112', '2051', '2053', '3105', '3801'] ,
-	 "tags": ['HealthRegen'] 
+            "ItemID": 1006,
+            "Name": "Rejuvenation Bead",
+            "Description": "+50% Base Health Regen",
+            "GoldTotal": 180,
+            "GoldBase": 180,
+            "Purchasable": "True",
+            "Icon": "icons/item/1006.png" ,
+	 "Into": ["3077", "3112", "2051", "2053", "3105", "3801"] ,
+	 "Tags": ["HealthRegen"] 
         }
     }
 ]

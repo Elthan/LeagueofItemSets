@@ -3,14 +3,14 @@
         "pk" : 3089,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3089,
-            "name": "Rabadon's Deathcap",
-            "description": "+120 Ability Power UNIQUE Passive: Increases Ability Power by 35%.",
-            "gold_total": 3500,
-            "gold_base": 965,
-            "purchable": True,
-            "icon": "icons/item/3089.png" ,
-	 "tags": ['SpellDamage'] 
+            "ItemID": 3089,
+            "Name": "Rabadon's Deathcap",
+            "Description": "+120 Ability Power UNIQUE Passive: Increases Ability Power by 35%.",
+            "GoldTotal": 3500,
+            "GoldBase": 965,
+            "Purchasable": "True",
+            "Icon": "icons/item/3089.png" ,
+	 "Tags": ["SpellDamage"] 
         }
     }
 ]

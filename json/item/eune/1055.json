@@ -3,14 +3,14 @@
         "pk" : 1055,
         "model" : "database.Item",
         "fields" : {
-            item_id": 1055,
-            "name": "Doran's Blade",
-            "description": "+70 Health +7 Attack Damage +3% Life Steal",
-            "gold_total": 440,
-            "gold_base": 440,
-            "purchable": True,
-            "icon": "icons/item/1055.png" ,
-	 "tags": ['Damage', 'Health', 'Lane', 'LifeSteal'] 
+            "ItemID": 1055,
+            "Name": "Doran's Blade",
+            "Description": "+70 Health +7 Attack Damage +3% Life Steal",
+            "GoldTotal": 440,
+            "GoldBase": 440,
+            "Purchasable": "True",
+            "Icon": "icons/item/1055.png" ,
+	 "Tags": ["Damage", "Health", "Lane", "LifeSteal"] 
         }
     }
 ]

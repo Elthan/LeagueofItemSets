@@ -3,15 +3,15 @@
         "pk" : 3711,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3711,
-            "name": "Poacher's Knife",
-            "description": "+30 Bonus Gold per Large Monster Kill Passive - Scavenging Smite: When you Smite a large monster in the enemy jungle, you gain half a charge of Smite. If you kill that monster, you gain +20 bonus Gold, and you gain 175% increased Movement Speed decaying over 2 seconds. Passive - Jungler: Deal 45 additional magic damage to monsters over 2 seconds and gain 10 Health Regen and 5 Mana Regen per second while under attack from neutral monsters. Limited to 1 Jungle item",
-            "gold_total": 850,
-            "gold_base": 450,
-            "purchable": True,
-            "icon": "icons/item/3711.png" ,
-	 "into": ['3719', '3720', '3721', '3722'] ,
-	 "tags": ['Damage', 'HealthRegen', 'Jungle', 'ManaRegen', 'NonbootsMovement', 'OnHit'] 
+            "ItemID": 3711,
+            "Name": "Poacher's Knife",
+            "Description": "+30 Bonus Gold per Large Monster Kill Passive - Scavenging Smite: When you Smite a large monster in the enemy jungle, you gain half a charge of Smite. If you kill that monster, you gain +20 bonus Gold, and you gain 175% increased Movement Speed decaying over 2 seconds. Passive - Jungler: Deal 45 additional magic damage to monsters over 2 seconds and gain 10 Health Regen and 5 Mana Regen per second while under attack from neutral monsters. Limited to 1 Jungle item",
+            "GoldTotal": 850,
+            "GoldBase": 450,
+            "Purchasable": "True",
+            "Icon": "icons/item/3711.png" ,
+	 "Into": ["3719", "3720", "3721", "3722"] ,
+	 "Tags": ["Damage", "HealthRegen", "Jungle", "ManaRegen", "NonbootsMovement", "OnHit"] 
         }
     }
 ]

@@ -176,6 +176,6 @@ def update_all(api_key, current_version, loglvl):
     
     #get_all_json(url_list, region_list)
     
-    log.debug("Converting json files to db friendly json files.")
+    log.debug("Converting json files to django friendly json files.")
     for region in region_list:
         create_db_json_items(region, log)

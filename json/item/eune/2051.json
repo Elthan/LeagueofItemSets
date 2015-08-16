@@ -3,14 +3,14 @@
         "pk" : 2051,
         "model" : "database.Item",
         "fields" : {
-            item_id": 2051,
-            "name": "Guardian's Horn",
-            "description": "+200 Health +125% Base Health Regeneration UNIQUE Passive: Enemy spellcasts reduce the cooldown of Battle Cry by 1 second. UNIQUE Active - Battle Cry: Gain 30% Movement Speed, 20 Armor, and 20 Magic Resist for 3 seconds. 25 second cooldown.",
-            "gold_total": 1015,
-            "gold_base": 435,
-            "purchable": True,
-            "icon": "icons/item/2051.png" ,
-	 "tags": ['Active', 'Armor', 'Health', 'HealthRegen', 'NonbootsMovement', 'SpellBlock'] 
+            "ItemID": 2051,
+            "Name": "Guardian's Horn",
+            "Description": "+200 Health +125% Base Health Regeneration UNIQUE Passive: Enemy spellcasts reduce the cooldown of Battle Cry by 1 second. UNIQUE Active - Battle Cry: Gain 30% Movement Speed, 20 Armor, and 20 Magic Resist for 3 seconds. 25 second cooldown.",
+            "GoldTotal": 1015,
+            "GoldBase": 435,
+            "Purchasable": "True",
+            "Icon": "icons/item/2051.png" ,
+	 "Tags": ["Active", "Armor", "Health", "HealthRegen", "NonbootsMovement", "SpellBlock"] 
         }
     }
 ]

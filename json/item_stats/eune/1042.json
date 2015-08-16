@@ -1,7 +1,7 @@
 [
     {
-        "pk": {item_id},
-        "model": "database.Item",
+        "pk": 1042,
+        "model": "database.ItemStat",
         "fields": {
 		"PercentAttackSpeedMod": 0.15
         }

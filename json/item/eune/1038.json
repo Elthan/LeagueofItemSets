@@ -3,15 +3,15 @@
         "pk" : 1038,
         "model" : "database.Item",
         "fields" : {
-            item_id": 1038,
-            "name": "B. F. Sword",
-            "description": "+50 Attack Damage",
-            "gold_total": 1550,
-            "gold_base": 1550,
-            "purchable": True,
-            "icon": "icons/item/1038.png" ,
-	 "into": ['3031', '3072', '3139', '3508'] ,
-	 "tags": ['Damage'] 
+            "ItemID": 1038,
+            "Name": "B. F. Sword",
+            "Description": "+50 Attack Damage",
+            "GoldTotal": 1550,
+            "GoldBase": 1550,
+            "Purchasable": "True",
+            "Icon": "icons/item/1038.png" ,
+	 "Into": ["3031", "3072", "3139", "3508"] ,
+	 "Tags": ["Damage"] 
         }
     }
 ]

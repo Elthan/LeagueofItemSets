@@ -3,15 +3,15 @@
         "pk" : 3024,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3024,
-            "name": "Glacial Shroud",
-            "description": "+20 Armor +250 Mana UNIQUE Passive: +10% Cooldown Reduction",
-            "gold_total": 950,
-            "gold_base": 250,
-            "purchable": True,
-            "icon": "icons/item/3024.png" ,
-	 "into": ['3110', '3025', '3050', '3187'] ,
-	 "tags": ['Armor', 'CooldownReduction', 'Mana'] 
+            "ItemID": 3024,
+            "Name": "Glacial Shroud",
+            "Description": "+20 Armor +250 Mana UNIQUE Passive: +10% Cooldown Reduction",
+            "GoldTotal": 950,
+            "GoldBase": 250,
+            "Purchasable": "True",
+            "Icon": "icons/item/3024.png" ,
+	 "Into": ["3110", "3025", "3050", "3187"] ,
+	 "Tags": ["Armor", "CooldownReduction", "Mana"] 
         }
     }
 ]

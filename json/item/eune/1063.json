@@ -3,14 +3,14 @@
         "pk" : 1063,
         "model" : "database.Item",
         "fields" : {
-            item_id": 1063,
-            "name": "Prospector's Ring",
-            "description": "+35 Ability Power Passive : +6 Mana Regen per 5 seconds UNIQUE Passive - Prospector: +150 Health (Unique Passives with the same name don't stack.)",
-            "gold_total": 950,
-            "gold_base": 950,
-            "purchable": True,
-            "icon": "icons/item/1063.png" ,
-	 "tags": ['Health', 'ManaRegen', 'SpellDamage'] 
+            "ItemID": 1063,
+            "Name": "Prospector's Ring",
+            "Description": "+35 Ability Power Passive : +6 Mana Regen per 5 seconds UNIQUE Passive - Prospector: +150 Health (Unique Passives with the same name don't stack.)",
+            "GoldTotal": 950,
+            "GoldBase": 950,
+            "Purchasable": "True",
+            "Icon": "icons/item/1063.png" ,
+	 "Tags": ["Health", "ManaRegen", "SpellDamage"] 
         }
     }
 ]

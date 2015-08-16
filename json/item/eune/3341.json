@@ -3,15 +3,15 @@
         "pk" : 3341,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3341,
-            "name": "Sweeping Lens (Trinket)",
-            "description": "Limited to 1 Trinket. Active: Reveals and disables nearby invisible traps and invisible wards for 6 seconds in a small radius (120 second cooldown). At level 9, cast range and sweep radius increase by 50% each and the cooldown is reduced to 75 seconds. (Trinkets cannot be used in the first 30 seconds of a game. Selling a Trinket will disable Trinket use for 120 seconds).",
-            "gold_total": 0,
-            "gold_base": 0,
-            "purchable": True,
-            "icon": "icons/item/3341.png" ,
-	 "into": ['3364'] ,
-	 "tags": ['Active', 'Jungle', 'Trinket', 'Vision'] 
+            "ItemID": 3341,
+            "Name": "Sweeping Lens (Trinket)",
+            "Description": "Limited to 1 Trinket. Active: Reveals and disables nearby invisible traps and invisible wards for 6 seconds in a small radius (120 second cooldown). At level 9, cast range and sweep radius increase by 50% each and the cooldown is reduced to 75 seconds. (Trinkets cannot be used in the first 30 seconds of a game. Selling a Trinket will disable Trinket use for 120 seconds).",
+            "GoldTotal": 0,
+            "GoldBase": 0,
+            "Purchasable": "True",
+            "Icon": "icons/item/3341.png" ,
+	 "Into": ["3364"] ,
+	 "Tags": ["Active", "Jungle", "Trinket", "Vision"] 
         }
     }
 ]

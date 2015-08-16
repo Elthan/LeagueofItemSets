@@ -3,13 +3,13 @@
         "pk" : 3901,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3901,
-            "name": "Fire at Will",
-            "description": "Requires 500 Silver Serpents. UNIQUE Passive: Cannon Barrage fires at an increasing rate over time (additional 6 waves over the duration).",
-            "gold_total": 0,
-            "gold_base": 0,
-            "purchable": True,
-            "icon": "icons/item/3901.png" 
+            "ItemID": 3901,
+            "Name": "Fire at Will",
+            "Description": "Requires 500 Silver Serpents. UNIQUE Passive: Cannon Barrage fires at an increasing rate over time (additional 6 waves over the duration).",
+            "GoldTotal": 0,
+            "GoldBase": 0,
+            "Purchasable": "True",
+            "Icon": "icons/item/3901.png" 
         }
     }
 ]

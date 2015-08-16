@@ -1,7 +1,7 @@
 [
     {
-        "pk": {item_id},
-        "model": "database.Item",
+        "pk": 1051,
+        "model": "database.ItemStat",
         "fields": {
 		"FlatCritChanceMod": 0.08
         }

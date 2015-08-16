@@ -3,14 +3,14 @@
         "pk" : 3001,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3001,
-            "name": "Abyssal Scepter",
-            "description": "+70 Ability Power +50 Magic Resist UNIQUE Aura: Reduces the Magic Resist of nearby enemies by 20.",
-            "gold_total": 2430,
-            "gold_base": 730,
-            "purchable": True,
-            "icon": "icons/item/3001.png" ,
-	 "tags": ['Aura', 'SpellBlock', 'SpellDamage'] 
+            "ItemID": 3001,
+            "Name": "Abyssal Scepter",
+            "Description": "+70 Ability Power +50 Magic Resist UNIQUE Aura: Reduces the Magic Resist of nearby enemies by 20.",
+            "GoldTotal": 2430,
+            "GoldBase": 730,
+            "Purchasable": "True",
+            "Icon": "icons/item/3001.png" ,
+	 "Tags": ["Aura", "SpellBlock", "SpellDamage"] 
         }
     }
 ]

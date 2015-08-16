@@ -3,14 +3,14 @@
         "pk" : 3022,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3022,
-            "name": "Frozen Mallet",
-            "description": "+700 Health +30 Attack Damage UNIQUE Passive - Icy: Basic attacks slow the target's Movement Speed for 1.5 seconds on hit (40% slow for melee attacks, 30% slow for ranged attacks). (Unique Passives with the same name don't stack.)",
-            "gold_total": 3300,
-            "gold_base": 1025,
-            "purchable": True,
-            "icon": "icons/item/3022.png" ,
-	 "tags": ['Damage', 'Health', 'OnHit', 'Slow'] 
+            "ItemID": 3022,
+            "Name": "Frozen Mallet",
+            "Description": "+700 Health +30 Attack Damage UNIQUE Passive - Icy: Basic attacks slow the target's Movement Speed for 1.5 seconds on hit (40% slow for melee attacks, 30% slow for ranged attacks). (Unique Passives with the same name don't stack.)",
+            "GoldTotal": 3300,
+            "GoldBase": 1025,
+            "Purchasable": "True",
+            "Icon": "icons/item/3022.png" ,
+	 "Tags": ["Damage", "Health", "OnHit", "Slow"] 
         }
     }
 ]

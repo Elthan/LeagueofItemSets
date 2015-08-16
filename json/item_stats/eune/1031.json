@@ -1,7 +1,7 @@
 [
     {
-        "pk": {item_id},
-        "model": "database.Item",
+        "pk": 1031,
+        "model": "database.ItemStat",
         "fields": {
 		"FlatArmorMod": 40.0
         }

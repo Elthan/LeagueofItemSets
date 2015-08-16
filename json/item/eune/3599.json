@@ -3,14 +3,14 @@
         "pk" : 3599,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3599,
-            "name": "The Black Spear",
-            "description": "Active: Offer to bind with an ally for the remainder of the game, becoming Oathsworn Allies. Oathsworn empowers you both while near one another.",
-            "gold_total": 0,
-            "gold_base": 0,
-            "purchable": True,
-            "icon": "icons/item/3599.png" ,
-	 "tags": ['Active'] 
+            "ItemID": 3599,
+            "Name": "The Black Spear",
+            "Description": "Active: Offer to bind with an ally for the remainder of the game, becoming Oathsworn Allies. Oathsworn empowers you both while near one another.",
+            "GoldTotal": 0,
+            "GoldBase": 0,
+            "Purchasable": "True",
+            "Icon": "icons/item/3599.png" ,
+	 "Tags": ["Active"] 
         }
     }
 ]

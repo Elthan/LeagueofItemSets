@@ -3,14 +3,14 @@
         "pk" : 2003,
         "model" : "database.Item",
         "fields" : {
-            item_id": 2003,
-            "name": "Health Potion",
-            "description": "Limited to 5 at one time. Click to Consume: Restores 150 Health over 15 seconds.",
-            "gold_total": 35,
-            "gold_base": 35,
-            "purchable": True,
-            "icon": "icons/item/2003.png" ,
-	 "tags": ['Consumable', 'Jungle', 'Lane'] 
+            "ItemID": 2003,
+            "Name": "Health Potion",
+            "Description": "Limited to 5 at one time. Click to Consume: Restores 150 Health over 15 seconds.",
+            "GoldTotal": 35,
+            "GoldBase": 35,
+            "Purchasable": "True",
+            "Icon": "icons/item/2003.png" ,
+	 "Tags": ["Consumable", "Jungle", "Lane"] 
         }
     }
 ]

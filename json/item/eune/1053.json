@@ -3,15 +3,15 @@
         "pk" : 1053,
         "model" : "database.Item",
         "fields" : {
-            item_id": 1053,
-            "name": "Vampiric Scepter",
-            "description": "+10 Attack Damage +8% Life Steal",
-            "gold_total": 800,
-            "gold_base": 440,
-            "purchable": True,
-            "icon": "icons/item/1053.png" ,
-	 "into": ['3144', '3181', '3072', '3074', '3508', '3150', '3924'] ,
-	 "tags": ['Damage', 'LifeSteal'] 
+            "ItemID": 1053,
+            "Name": "Vampiric Scepter",
+            "Description": "+10 Attack Damage +8% Life Steal",
+            "GoldTotal": 800,
+            "GoldBase": 440,
+            "Purchasable": "True",
+            "Icon": "icons/item/1053.png" ,
+	 "Into": ["3144", "3181", "3072", "3074", "3508", "3150", "3924"] ,
+	 "Tags": ["Damage", "LifeSteal"] 
         }
     }
 ]

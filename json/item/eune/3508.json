@@ -3,14 +3,14 @@
         "pk" : 3508,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3508,
-            "name": "Essence Reaver",
-            "description": "+80 Attack Damage +10% Life Steal +10% Cooldown Reduction UNIQUE Passive: Restores 2% to 8% of the damage dealt by basic attacks as Mana. This effect increases based on missing Mana.",
-            "gold_total": 3200,
-            "gold_base": 850,
-            "purchable": True,
-            "icon": "icons/item/3508.png" ,
-	 "tags": ['CooldownReduction', 'Damage', 'LifeSteal', 'ManaRegen'] 
+            "ItemID": 3508,
+            "Name": "Essence Reaver",
+            "Description": "+80 Attack Damage +10% Life Steal +10% Cooldown Reduction UNIQUE Passive: Restores 2% to 8% of the damage dealt by basic attacks as Mana. This effect increases based on missing Mana.",
+            "GoldTotal": 3200,
+            "GoldBase": 850,
+            "Purchasable": "True",
+            "Icon": "icons/item/3508.png" ,
+	 "Tags": ["CooldownReduction", "Damage", "LifeSteal", "ManaRegen"] 
         }
     }
 ]

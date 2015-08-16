@@ -3,14 +3,14 @@
         "pk" : 2045,
         "model" : "database.Item",
         "fields" : {
-            item_id": 2045,
-            "name": "Ruby Sightstone",
-            "description": "+400 Health UNIQUE Passive - Ward Refresh: Holds 5 charges and refills upon visiting the shop. UNIQUE Active - Ghost Ward: Consumes a charge to place a Stealth Ward that reveals the surrounding area for 3 minutes. A player may only have 3 Stealth Wards on the map at one time. (Unique Passives with the same name don't stack.)",
-            "gold_total": 1600,
-            "gold_base": 400,
-            "purchable": True,
-            "icon": "icons/item/2045.png" ,
-	 "tags": ['Active', 'Health', 'Vision'] 
+            "ItemID": 2045,
+            "Name": "Ruby Sightstone",
+            "Description": "+400 Health UNIQUE Passive - Ward Refresh: Holds 5 charges and refills upon visiting the shop. UNIQUE Active - Ghost Ward: Consumes a charge to place a Stealth Ward that reveals the surrounding area for 3 minutes. A player may only have 3 Stealth Wards on the map at one time. (Unique Passives with the same name don't stack.)",
+            "GoldTotal": 1600,
+            "GoldBase": 400,
+            "Purchasable": "True",
+            "Icon": "icons/item/2045.png" ,
+	 "Tags": ["Active", "Health", "Vision"] 
         }
     }
 ]

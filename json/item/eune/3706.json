@@ -3,15 +3,15 @@
         "pk" : 3706,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3706,
-            "name": "Stalker's Blade",
-            "description": "+30 Bonus Gold per Large Monster Kill Passive - Chilling Smite: Smite can be cast on enemy champions, dealing reduced true damage and stealing 20% movement speed for 2 seconds. Passive - Jungler: Deal 45 additional magic damage to monsters over 2 seconds and gain 10 Health Regen and 5 Mana Regen per second while under attack from neutral monsters. Limited to 1 Jungle item",
-            "gold_total": 850,
-            "gold_base": 450,
-            "purchable": True,
-            "icon": "icons/item/3706.png" ,
-	 "into": ['3707', '3708', '3709', '3710'] ,
-	 "tags": ['Damage', 'HealthRegen', 'Jungle', 'ManaRegen', 'OnHit'] 
+            "ItemID": 3706,
+            "Name": "Stalker's Blade",
+            "Description": "+30 Bonus Gold per Large Monster Kill Passive - Chilling Smite: Smite can be cast on enemy champions, dealing reduced true damage and stealing 20% movement speed for 2 seconds. Passive - Jungler: Deal 45 additional magic damage to monsters over 2 seconds and gain 10 Health Regen and 5 Mana Regen per second while under attack from neutral monsters. Limited to 1 Jungle item",
+            "GoldTotal": 850,
+            "GoldBase": 450,
+            "Purchasable": "True",
+            "Icon": "icons/item/3706.png" ,
+	 "Into": ["3707", "3708", "3709", "3710"] ,
+	 "Tags": ["Damage", "HealthRegen", "Jungle", "ManaRegen", "OnHit"] 
         }
     }
 ]

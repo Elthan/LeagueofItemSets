@@ -3,15 +3,15 @@
         "pk" : 3101,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3101,
-            "name": "Stinger",
-            "description": "+40% Attack Speed UNIQUE Passive: +10% Cooldown Reduction",
-            "gold_total": 1250,
-            "gold_base": 350,
-            "purchable": True,
-            "icon": "icons/item/3101.png" ,
-	 "into": ['3115', '3172', '3137'] ,
-	 "tags": ['AttackSpeed', 'CooldownReduction'] 
+            "ItemID": 3101,
+            "Name": "Stinger",
+            "Description": "+40% Attack Speed UNIQUE Passive: +10% Cooldown Reduction",
+            "GoldTotal": 1250,
+            "GoldBase": 350,
+            "Purchasable": "True",
+            "Icon": "icons/item/3101.png" ,
+	 "Into": ["3115", "3172", "3137"] ,
+	 "Tags": ["AttackSpeed", "CooldownReduction"] 
         }
     }
 ]

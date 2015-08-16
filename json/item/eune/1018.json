@@ -3,15 +3,15 @@
         "pk" : 1018,
         "model" : "database.Item",
         "fields" : {
-            item_id": 1018,
-            "name": "Cloak of Agility",
-            "description": "+15% Critical Strike Chance",
-            "gold_total": 730,
-            "gold_base": 730,
-            "purchable": True,
-            "icon": "icons/item/1018.png" ,
-	 "into": ['3046', '3031', '3104', '3185', '3150'] ,
-	 "tags": ['CriticalStrike'] 
+            "ItemID": 1018,
+            "Name": "Cloak of Agility",
+            "Description": "+15% Critical Strike Chance",
+            "GoldTotal": 730,
+            "GoldBase": 730,
+            "Purchasable": "True",
+            "Icon": "icons/item/1018.png" ,
+	 "Into": ["3046", "3031", "3104", "3185", "3150"] ,
+	 "Tags": ["CriticalStrike"] 
         }
     }
 ]

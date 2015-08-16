@@ -3,14 +3,14 @@
         "pk" : 3069,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3069,
-            "name": "Talisman of Ascension",
-            "description": "+100% Base Health Regen +100% Base Mana Regen +20 Movement Speed +10% Cooldown Reduction +2 Gold per 10 seconds UNIQUE Passive - Favor: Being near a minion death without dealing the killing blow grants 4 Gold and 10 Health. UNIQUE Active: Grants nearby allies +40% Movement Speed for 3 seconds (40 second cooldown). Limited to 1 Gold Income item ''Praise the sun.'' - Historian Shurelya, 22 September, 25 CLE",
-            "gold_total": 2100,
-            "gold_base": 635,
-            "purchable": True,
-            "icon": "icons/item/3069.png" ,
-	 "tags": ['Active', 'CooldownReduction', 'GoldPer', 'HealthRegen', 'ManaRegen', 'NonbootsMovement'] 
+            "ItemID": 3069,
+            "Name": "Talisman of Ascension",
+            "Description": "+100% Base Health Regen +100% Base Mana Regen +20 Movement Speed +10% Cooldown Reduction +2 Gold per 10 seconds UNIQUE Passive - Favor: Being near a minion death without dealing the killing blow grants 4 Gold and 10 Health. UNIQUE Active: Grants nearby allies +40% Movement Speed for 3 seconds (40 second cooldown). Limited to 1 Gold Income item ''Praise the sun.'' - Historian Shurelya, 22 September, 25 CLE",
+            "GoldTotal": 2100,
+            "GoldBase": 635,
+            "Purchasable": "True",
+            "Icon": "icons/item/3069.png" ,
+	 "Tags": ["Active", "CooldownReduction", "GoldPer", "HealthRegen", "ManaRegen", "NonbootsMovement"] 
         }
     }
 ]

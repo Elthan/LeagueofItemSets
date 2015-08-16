@@ -3,13 +3,13 @@
         "pk" : 1339,
         "model" : "database.Item",
         "fields" : {
-            item_id": 1339,
-            "name": "Enchantment: Teleport",
-            "description": "Limited to 1 of each enchantment type. Enchants boots to have Teleport Active. UNIQUE Active - Teleport: Teleport to target allied object (240s CD) (60s CD on purchase)",
-            "gold_total": 1800,
-            "gold_base": 600,
-            "purchable": True,
-            "icon": "icons/item/1339.png" 
+            "ItemID": 1339,
+            "Name": "Enchantment: Teleport",
+            "Description": "Limited to 1 of each enchantment type. Enchants boots to have Teleport Active. UNIQUE Active - Teleport: Teleport to target allied object (240s CD) (60s CD on purchase)",
+            "GoldTotal": 1800,
+            "GoldBase": 600,
+            "Purchasable": "True",
+            "Icon": "icons/item/1339.png" 
         }
     }
 ]

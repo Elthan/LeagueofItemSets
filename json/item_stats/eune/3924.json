@@ -1,7 +1,7 @@
 [
     {
-        "pk": {item_id},
-        "model": "database.Item",
+        "pk": 3924,
+        "model": "database.ItemStat",
         "fields": {
 		"PercentLifeStealMod": 0.1,
 		"FlatPhysicalDamageMod": 20.0

@@ -3,15 +3,15 @@
         "pk" : 1039,
         "model" : "database.Item",
         "fields" : {
-            item_id": 1039,
-            "name": "Hunter's Machete",
-            "description": "+15 Bonus Gold per Large Monster Kill Passive - Jungler: Deal 30 magic damage on hit to monsters over 2 seconds and gain 7 Health and 4 Mana per second while under attack from neutral monsters. Limited to 1 Jungle item",
-            "gold_total": 400,
-            "gold_base": 400,
-            "purchable": True,
-            "icon": "icons/item/1039.png" ,
-	 "into": ['3706', '3711', '3715', '3713'] ,
-	 "tags": ['Damage', 'HealthRegen', 'Jungle', 'ManaRegen', 'OnHit'] 
+            "ItemID": 1039,
+            "Name": "Hunter's Machete",
+            "Description": "+15 Bonus Gold per Large Monster Kill Passive - Jungler: Deal 30 magic damage on hit to monsters over 2 seconds and gain 7 Health and 4 Mana per second while under attack from neutral monsters. Limited to 1 Jungle item",
+            "GoldTotal": 400,
+            "GoldBase": 400,
+            "Purchasable": "True",
+            "Icon": "icons/item/1039.png" ,
+	 "Into": ["3706", "3711", "3715", "3713"] ,
+	 "Tags": ["Damage", "HealthRegen", "Jungle", "ManaRegen", "OnHit"] 
         }
     }
 ]

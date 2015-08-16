@@ -3,15 +3,15 @@
         "pk" : 1031,
         "model" : "database.Item",
         "fields" : {
-            item_id": 1031,
-            "name": "Chain Vest",
-            "description": "+40 Armor",
-            "gold_total": 750,
-            "gold_base": 450,
-            "purchable": True,
-            "icon": "icons/item/1031.png" ,
-	 "into": ['3075', '3068', '3026', '3742'] ,
-	 "tags": ['Armor'] 
+            "ItemID": 1031,
+            "Name": "Chain Vest",
+            "Description": "+40 Armor",
+            "GoldTotal": 750,
+            "GoldBase": 450,
+            "Purchasable": "True",
+            "Icon": "icons/item/1031.png" ,
+	 "Into": ["3075", "3068", "3026", "3742"] ,
+	 "Tags": ["Armor"] 
         }
     }
 ]

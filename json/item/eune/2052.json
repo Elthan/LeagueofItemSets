@@ -3,13 +3,13 @@
         "pk" : 2052,
         "model" : "database.Item",
         "fields" : {
-            item_id": 2052,
-            "name": "Poro-Snax",
-            "description": "This savory blend of free-range, grass-fed Avarosan game hens and organic, non-ZMO Freljordian herbs contains the essential nutrients necessary to keep your Poro purring with pleasure. All proceeds will be donated towards fighting Noxian animal cruelty.",
-            "gold_total": 0,
-            "gold_base": 0,
-            "purchable": False,
-            "icon": "icons/item/2052.png" 
+            "ItemID": 2052,
+            "Name": "Poro-Snax",
+            "Description": "This savory blend of free-range, grass-fed Avarosan game hens and organic, non-ZMO Freljordian herbs contains the essential nutrients necessary to keep your Poro purring with pleasure. All proceeds will be donated towards fighting Noxian animal cruelty.",
+            "GoldTotal": 0,
+            "GoldBase": 0,
+            "Purchasable": "False",
+            "Icon": "icons/item/2052.png" 
         }
     }
 ]

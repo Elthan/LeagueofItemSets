@@ -1,10 +1,10 @@
 [
     {
-        "pk": {item_id},
-        "model": "database.Item",
+        "pk": 3156,
+        "model": "database.ItemStat",
         "fields": {
-		"FlatSpellBlockMod": 40.0,
-		"FlatPhysicalDamageMod": 60.0
+		"FlatPhysicalDamageMod": 60.0,
+		"FlatSpellBlockMod": 40.0
         }
     }
 ]

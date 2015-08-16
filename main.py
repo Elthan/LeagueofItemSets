@@ -69,7 +69,7 @@ if __name__ == "__main__":
     # Set level of logging to be done
     log.basicConfig(format="%(levelname)s: %(message)s",level="DEBUG")
 
-    print("League of Item Sets v0.1")
+    print("League of Item Sets v0.2")
     
     # Get the api_key, which is hidden for git purposes.
     try:

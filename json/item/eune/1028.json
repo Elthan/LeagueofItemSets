@@ -3,15 +3,15 @@
         "pk" : 1028,
         "model" : "database.Item",
         "fields" : {
-            item_id": 1028,
-            "name": "Ruby Crystal",
-            "description": "+150 Health",
-            "gold_total": 400,
-            "gold_base": 400,
-            "purchable": True,
-            "icon": "icons/item/1028.png" ,
-	 "into": ['1011', '2049', '2045', '2051', '3010', '3022', '3044', '3067', '3105', '3211', '3751', '3801', '3102', '3136', '3829'] ,
-	 "tags": ['Health'] 
+            "ItemID": 1028,
+            "Name": "Ruby Crystal",
+            "Description": "+150 Health",
+            "GoldTotal": 400,
+            "GoldBase": 400,
+            "Purchasable": "True",
+            "Icon": "icons/item/1028.png" ,
+	 "Into": ["1011", "2049", "2045", "2051", "3010", "3022", "3044", "3067", "3105", "3211", "3751", "3801", "3102", "3136", "3829"] ,
+	 "Tags": ["Health"] 
         }
     }
 ]

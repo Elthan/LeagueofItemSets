@@ -3,14 +3,14 @@
         "pk" : 2140,
         "model" : "database.Item",
         "fields" : {
-            item_id": 2140,
-            "name": "Elixir of Wrath",
-            "description": "Level 9 required to purchase. Click to Consume: Grants +25 Attack Damage and Bloodlust for 3 minutes. Bloodlust: Dealing physical damage to champions heals for 10% of the damage dealt. Scoring a Kill or Assist extends the duration of this Flask by 30 seconds. (Only one Flask effect may be active at a time.)",
-            "gold_total": 400,
-            "gold_base": 400,
-            "purchable": True,
-            "icon": "icons/item/2140.png" ,
-	 "tags": ['Consumable', 'Damage', 'LifeSteal', 'SpellVamp'] 
+            "ItemID": 2140,
+            "Name": "Elixir of Wrath",
+            "Description": "Level 9 required to purchase. Click to Consume: Grants +25 Attack Damage and Bloodlust for 3 minutes. Bloodlust: Dealing physical damage to champions heals for 10% of the damage dealt. Scoring a Kill or Assist extends the duration of this Flask by 30 seconds. (Only one Flask effect may be active at a time.)",
+            "GoldTotal": 400,
+            "GoldBase": 400,
+            "Purchasable": "True",
+            "Icon": "icons/item/2140.png" ,
+	 "Tags": ["Consumable", "Damage", "LifeSteal", "SpellVamp"] 
         }
     }
 ]

@@ -1,7 +1,7 @@
 [
     {
-        "pk": {item_id},
-        "model": "database.Item",
+        "pk": 3098,
+        "model": "database.ItemStat",
         "fields": {
 		"FlatMagicDamageMod": 10.0
         }

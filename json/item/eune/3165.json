@@ -3,14 +3,14 @@
         "pk" : 3165,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3165,
-            "name": "Morellonomicon",
-            "description": "+80 Ability Power +20% Cooldown Reduction +100% Base Mana Regen UNIQUE Passive: Dealing magic damage to enemy champions below 40% Health inflicts Grievous Wounds for 4 seconds. (Grievous Wounds reduces incoming healing and regeneration effects by 50%.)",
-            "gold_total": 2300,
-            "gold_base": 445,
-            "purchable": True,
-            "icon": "icons/item/3165.png" ,
-	 "tags": ['CooldownReduction', 'ManaRegen', 'SpellDamage'] 
+            "ItemID": 3165,
+            "Name": "Morellonomicon",
+            "Description": "+80 Ability Power +20% Cooldown Reduction +100% Base Mana Regen UNIQUE Passive: Dealing magic damage to enemy champions below 40% Health inflicts Grievous Wounds for 4 seconds. (Grievous Wounds reduces incoming healing and regeneration effects by 50%.)",
+            "GoldTotal": 2300,
+            "GoldBase": 445,
+            "Purchasable": "True",
+            "Icon": "icons/item/3165.png" ,
+	 "Tags": ["CooldownReduction", "ManaRegen", "SpellDamage"] 
         }
     }
 ]

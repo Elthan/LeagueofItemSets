@@ -3,14 +3,14 @@
         "pk" : 3090,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3090,
-            "name": "Wooglet's Witchcap",
-            "description": "+100 Ability Power +45 Armor UNIQUE Passive: Increases Ability Power by 25% UNIQUE Active: Champion becomes invulnerable and untargetable for 2.5 seconds, but is unable to move, attack, cast spells, or use items during this time (90 second cooldown).",
-            "gold_total": 3500,
-            "gold_base": 1050,
-            "purchable": True,
-            "icon": "icons/item/3090.png" ,
-	 "tags": ['Active', 'Armor', 'SpellDamage'] 
+            "ItemID": 3090,
+            "Name": "Wooglet's Witchcap",
+            "Description": "+100 Ability Power +45 Armor UNIQUE Passive: Increases Ability Power by 25% UNIQUE Active: Champion becomes invulnerable and untargetable for 2.5 seconds, but is unable to move, attack, cast spells, or use items during this time (90 second cooldown).",
+            "GoldTotal": 3500,
+            "GoldBase": 1050,
+            "Purchasable": "True",
+            "Icon": "icons/item/3090.png" ,
+	 "Tags": ["Active", "Armor", "SpellDamage"] 
         }
     }
 ]

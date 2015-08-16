@@ -3,14 +3,14 @@
         "pk" : 3431,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3431,
-            "name": "Netherstride Grimoire",
-            "description": "+100 Ability Power +100% Base Mana Regen +20% Cooldown Reduction UNIQUE Passive - Malice: Gain 20% movement speed for 2 seconds when hitting an enemy with a damaging spell. ''Walking our path, you make fast progress.''",
-            "gold_total": 3000,
-            "gold_base": 765,
-            "purchable": True,
-            "icon": "icons/item/3431.png" ,
-	 "tags": ['Bilgewater', 'CooldownReduction', 'OnHit', 'SpellDamage'] 
+            "ItemID": 3431,
+            "Name": "Netherstride Grimoire",
+            "Description": "+100 Ability Power +100% Base Mana Regen +20% Cooldown Reduction UNIQUE Passive - Malice: Gain 20% movement speed for 2 seconds when hitting an enemy with a damaging spell. ''Walking our path, you make fast progress.''",
+            "GoldTotal": 3000,
+            "GoldBase": 765,
+            "Purchasable": "True",
+            "Icon": "icons/item/3431.png" ,
+	 "Tags": ["Bilgewater", "CooldownReduction", "OnHit", "SpellDamage"] 
         }
     }
 ]

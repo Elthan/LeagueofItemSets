@@ -3,14 +3,14 @@
         "pk" : 3285,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3285,
-            "name": "Luden's Echo",
-            "description": "+100 Ability Power +10% Movement Speed UNIQUE Passive: Gain charges upon moving or casting. At 100 charges, the next spell hit expends all charges to deal 100 (+10% AP) bonus magic damage to up to 4 targets on hit.",
-            "gold_total": 3000,
-            "gold_base": 900,
-            "purchable": True,
-            "icon": "icons/item/3285.png" ,
-	 "tags": ['NonbootsMovement', 'OnHit', 'SpellDamage'] 
+            "ItemID": 3285,
+            "Name": "Luden's Echo",
+            "Description": "+100 Ability Power +10% Movement Speed UNIQUE Passive: Gain charges upon moving or casting. At 100 charges, the next spell hit expends all charges to deal 100 (+10% AP) bonus magic damage to up to 4 targets on hit.",
+            "GoldTotal": 3000,
+            "GoldBase": 900,
+            "Purchasable": "True",
+            "Icon": "icons/item/3285.png" ,
+	 "Tags": ["NonbootsMovement", "OnHit", "SpellDamage"] 
         }
     }
 ]

@@ -3,14 +3,14 @@
         "pk" : 3085,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3085,
-            "name": "Runaan's Hurricane (Ranged Only)",
-            "description": "+70% Attack Speed UNIQUE Passive: When basic attacking, bolts are fired at up to 2 enemies near the target, each dealing (50% of Attack Damage) physical damage. These bolts apply on-hit effects. UNIQUE Passive: Basic attacks deal an additional 10 physical damage on hit.",
-            "gold_total": 2500,
-            "gold_base": 500,
-            "purchable": True,
-            "icon": "icons/item/3085.png" ,
-	 "tags": ['AttackSpeed', 'OnHit'] 
+            "ItemID": 3085,
+            "Name": "Runaan's Hurricane (Ranged Only)",
+            "Description": "+70% Attack Speed UNIQUE Passive: When basic attacking, bolts are fired at up to 2 enemies near the target, each dealing (50% of Attack Damage) physical damage. These bolts apply on-hit effects. UNIQUE Passive: Basic attacks deal an additional 10 physical damage on hit.",
+            "GoldTotal": 2500,
+            "GoldBase": 500,
+            "Purchasable": "True",
+            "Icon": "icons/item/3085.png" ,
+	 "Tags": ["AttackSpeed", "OnHit"] 
         }
     }
 ]

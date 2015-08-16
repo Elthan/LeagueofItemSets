@@ -3,13 +3,13 @@
         "pk" : 3621,
         "model" : "database.Item",
         "fields" : {
-            item_id": 3621,
-            "name": "Offense Upgrade 1",
-            "description": "Your mercenary permanently gains +10 Attack Damage (+10 total).",
-            "gold_total": 0,
-            "gold_base": 0,
-            "purchable": True,
-            "icon": "icons/item/3621.png" 
+            "ItemID": 3621,
+            "Name": "Offense Upgrade 1",
+            "Description": "Your mercenary permanently gains +10 Attack Damage (+10 total).",
+            "GoldTotal": 0,
+            "GoldBase": 0,
+            "Purchasable": "True",
+            "Icon": "icons/item/3621.png" 
         }
     }
 ]
