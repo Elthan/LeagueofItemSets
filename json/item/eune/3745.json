@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3745,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3745,
+            "name": "Puppeteer",
+            "description": "+250 Health +25 Magic Resist +50% Base Mana Regen +20% Cooldown Reduction UNIQUE Passive - Mana Font: Restores 2% of missing Mana every 5 seconds. UNIQUE Passive: Basic attacks mark champions with a string for 6 seconds. Moving further than 1000 range away from marked champions will break the string. UNIQUE Active: Pull all champions Marked by Puppeteer within 1000 range towards you. Units move a maximum of 250 distance (45 second cooldown). ''Perhaps reading this wasn't your idea.''",
+            "gold_total": 2200,
+            "gold_base": 450,
+            "purchable": True,
+            "icon": "icons/item/3745.png" ,
+	 "tags": ['Active', 'Bilgewater', 'CooldownReduction', 'Health', 'ManaRegen', 'OnHit', 'SpellBlock', 'SpellDamage'] 
+        }
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3084,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3084,
+            "name": "Overlord's Bloodmail",
+            "description": "+800 Health +100% Base Health Regen UNIQUE Passive: Upon champion kill or assist, restores 300 Health over 5 seconds.",
+            "gold_total": 2500,
+            "gold_base": 900,
+            "purchable": True,
+            "icon": "icons/item/3084.png" ,
+	 "tags": ['Health', 'HealthRegen'] 
+        }
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3911,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3911,
+            "name": "Martyr's Gambit",
+            "description": "+400 Health +100% Base Health Regen +10% Cooldown Reduction UNIQUE Active: Binds yourself to target champion for the next 3 seconds, redirecting 60% of all damage dealt to them to yourself (30 second cooldown). ''Battle is not a test of strength. It is a test of will.'' - Buhru Proverb",
+            "gold_total": 1850,
+            "gold_base": 400,
+            "purchable": True,
+            "icon": "icons/item/3911.png" ,
+	 "tags": ['Bilgewater', 'CooldownReduction', 'Health', 'HealthRegen'] 
+        }
+    }
+]

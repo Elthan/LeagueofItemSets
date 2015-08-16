@@ -4,6 +4,7 @@ import urllib.request
 import re
 import logging as log
 import os.path
+from convert import create_db_json_items
 
 def error(msg):
     log.error(msg)
@@ -79,7 +80,7 @@ html : str
         
     # Temporary way of getting item icons
     # will be replaced later when db is up and running.
-    if ("na" in region):
+    if ("eune" in region):
         html_json = json.loads( html )
 
         for icon_id in html_json["data"]:
@@ -114,7 +115,7 @@ is_new_version : bool
     
     # If we can't find the file, we want to save it.
     try:
-        local_json_file = open("json/" + json_type + "/" + region,'r')
+        local_json_file = open("json/" + json_type + "/" + region + ".json",'r')
     except FileNotFoundError:
         return True
     
@@ -157,7 +158,7 @@ region_list : list[str]
                 continue
             else:
                 if (check_json_version( json_type, json_string, region )):
-                    with open("json/" + json_type + "/" + region, 'w') as json_file:
+                    with open("json/" + json_type + "/" + region + ".json", 'w') as json_file:
                         json_file.write( json_string )
                 else:
                     log.debug(region + " skipped because it was up to date.")
@@ -168,9 +169,13 @@ region_list : list[str]
 def update_all(api_key, current_version, loglvl):
     log.basicConfig(format="%(levelname)s: %(message)s", level=loglvl)
     
-    region_list = ["br","eune","euw","kr","lan","las","na","oce","ru","tr","pbe"]
-    #region_list = ["na"]
+    #region_list = ["br","eune","euw","kr","lan","las","na","oce","ru","tr","pbe"]
+    region_list = ["eune"]
     url_list = {"item":"https://global.api.pvp.net/api/lol/static-data/eune/v1.2/item?itemListData=all&api_key="+api_key,
                 "champion":"https://global.api.pvp.net/api/lol/static-data/eune/v1.2/champion?champData=all&api_key="+api_key}
     
-    get_all_json(url_list, region_list)
+    #get_all_json(url_list, region_list)
+    
+    log.debug("Converting json files to db friendly json files.")
+    for region in region_list:
+        create_db_json_items(region, log)

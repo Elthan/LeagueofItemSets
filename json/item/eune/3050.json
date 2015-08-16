@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3050,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3050,
+            "name": "Zeke's Harbinger",
+            "description": "+250 Mana +35 Armor +50 Ability Power +10% Cooldown Reduction UNIQUE Active - Conduit: Bind to target ally (60 second cooldown). UNIQUE Passive: When within 1000 units of each other, you and your ally generate Charges. Attacking or casting spells generates extra Charges. At 100 Charges, causing damage consumes them, increasing your and your ally's Ability Power by 20% and Critical Strike Chance by 50% for 8 seconds.",
+            "gold_total": 2300,
+            "gold_base": 480,
+            "purchable": True,
+            "icon": "icons/item/3050.png" ,
+	 "tags": ['Armor', 'Aura', 'CooldownReduction', 'Mana', 'SpellDamage'] 
+        }
+    }
+]

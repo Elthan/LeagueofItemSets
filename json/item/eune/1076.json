@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 1076,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 1076,
+            "name": "Doran's Ring (Showdown)",
+            "description": "+60 Health +15 Ability Power +3 Mana Regen per 5 seconds Passive: Restores 4 Mana upon killing a unit. Limited to 2 Doran's items on Showdown",
+            "gold_total": 400,
+            "gold_base": 400,
+            "purchable": True,
+            "icon": "icons/item/1076.png" ,
+	 "tags": ['Health', 'ManaRegen', 'SpellDamage'] 
+        }
+    }
+]

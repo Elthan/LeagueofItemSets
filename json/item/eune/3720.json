@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3720,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3720,
+            "name": "Enchantment: Runeglaive",
+            "description": "+50 Ability Power +200 Mana +10% Cooldown Reduction UNIQUE Passive - Spellblade: After using an ability, the next basic attack deals 100% Base Attack Damage (+30% of Ability Power) bonus magic damage on hit (1.5 second cooldown). When directly attacking a monster, the bonus damage is reapplied in an AoE around the target, and 8% of your missing Mana is restored.",
+            "gold_total": 2250,
+            "gold_base": 200,
+            "purchable": True,
+            "icon": "icons/item/3720.png" ,
+	 "tags": ['CooldownReduction', 'Jungle', 'Mana', 'SpellDamage'] 
+        }
+    }
+]

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import json
+import os
 
 def create_item_set_json(name, block_list, set_map="any", mode="any"):
     '''
@@ -26,12 +27,12 @@ mode : str
     "priority": false,
     "sortrank": 0,
     "blocks": [
-    """.format{
+    """.format(
         name = title,
         set_map = set_map,
         mode = mode,
         blocks = block_list
-    }
+    )
 
     # Add each block with a , inbetween unless its the last one.
     block_list_len = len(block_list)-1
@@ -70,12 +71,12 @@ hide_if_summoner : str
         "showIfSummonerSpell": "{show}",
         "hideIfSummonerSpell": "{hide}",
         "items": [
-    """.format{
+    """.format(
         block_type = block_type,
         recMath = recMath,
         show = show_if_summoner,
         hide = hide_if_summoner
-    }
+    )
 
     # Add each item to the string with , inbetween unless it's the last one.
     item_list_len = len(item_list)-1
@@ -86,3 +87,110 @@ hide_if_summoner : str
     block_json = json.dumps(block_string)
     
     return block_json
+
+def create_db_json_item_stats(item_json, region, log):
+    '''
+Create a django friendly json file for item stats.
+
+Parameters
+-------------
+region : str
+    Region we should convert from.
+log : logging
+    So we can log what is happening.
+    '''
+    item_id = str(item_json["id"])
+    log.debug("Creating json file for item stats for item " + item_id)
+    os.makedirs("json/item_stats/" + region, exist_ok=True)
+    with open("json/item_stats/" + region + "/" + item_id + ".json", 'w') as item_stats_file:
+        json_db_string = """[
+    {
+        "pk": {item_id},
+        "model": "database.Item",
+        "fields": {
+"""
+        stats_len = len(item_json["stats"])-1
+        index = 0
+        for key, value in item_json["stats"].items():
+            json_db_string += "\t\t\"" + key + "\": " + str(value) + \
+                              (",\n" if index < stats_len else "")
+            index += 1
+        json_db_string += """
+        }
+    }
+]
+"""
+        item_stats_file.write(json_db_string)
+
+def create_db_json_items(region, log, overwrite=False):
+    '''
+Create a django friendly json file for items.
+
+Parameters
+-------------
+region : str
+    Region we should convert from.
+log : logging
+    So we can log what is happening.
+overwrite : bool
+    If we should write over existing files.
+    '''
+    log.debug("Opening json/item/" + region + ".json")
+    try:
+        with open("json/item/"+ region + ".json", 'r') as items_file:
+            items_json = json.load(items_file)
+
+            # Check if path exists, else create it.
+            os.makedirs("json/item/" + region, exist_ok=True)
+
+            for item_id in items_json["data"]:
+                item_json = items_json["data"][item_id]
+
+                log.debug("Creating json file for item " + item_id)
+                with  open("json/item/" + region + "/" + item_id + ".json", 'w') as item_json_file:
+                    json_db_string = """[
+    {{
+        "pk" : {item_id},
+        "model" : "database.Item",
+        "fields" : {{
+            item_id": {item_id},
+            "name": "{name}",
+            "description": "{description}",
+            "gold_total": {gold_total},
+            "gold_base": {gold_base},
+            "purchable": {purchable},
+            "icon": "{icon}" """.format(
+                item_id = item_id,
+                name = item_json["name"],
+                description = item_json["sanitizedDescription"],
+                gold_total = item_json["gold"]["total"],
+                gold_base = item_json["gold"]["base"],
+                purchable = item_json["gold"]["purchasable"],
+                icon = "icons/item/" + item_id + ".png"
+            )
+                    try:
+                        into = item_json["into"]
+                        json_db_string += ",\n\t" + """ "into": {} """.format(into)
+                    except KeyError:
+                        pass
+                    try:
+                        tags = item_json["tags"]
+                        json_db_string += ",\n\t" + """ "tags": {} """.format(tags)
+                    except KeyError:
+                        pass
+                    json_db_string = json_db_string + """
+        }
+    }
+]
+"""
+                    item_json_file.write(json_db_string)
+
+                    create_db_json_item_stats(item_json, region, log)
+                    
+    except FileNotFoundError:
+        log.error("Could not find json file for region " + region)
+
+
+def create_db_json_champ():
+    
+    pass

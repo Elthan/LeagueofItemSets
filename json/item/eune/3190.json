@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3190,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3190,
+            "name": "Locket of the Iron Solari",
+            "description": "+400 Health +20 Magic Resist +10% Cooldown Reduction UNIQUE Active: Grants a shield to nearby allies for 5 seconds that absorbs up to 50 (+10 per level) damage (60 second cooldown). UNIQUE Aura - Legion: Grants nearby allies +20 Magic Resist and +75% Base Health Regen. (Unique Auras with the same name don't stack.)",
+            "gold_total": 2800,
+            "gold_base": 50,
+            "purchable": True,
+            "icon": "icons/item/3190.png" ,
+	 "tags": ['Active', 'Aura', 'CooldownReduction', 'Health', 'HealthRegen', 'SpellBlock'] 
+        }
+    }
+]

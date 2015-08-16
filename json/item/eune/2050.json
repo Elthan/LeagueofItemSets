@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 2050,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 2050,
+            "name": "Explorer's Ward",
+            "description": "Click to Consume: Places an invisible ward that reveals the surrounding area for 60 seconds.",
+            "gold_total": 0,
+            "gold_base": 0,
+            "purchable": False,
+            "icon": "icons/item/2050.png" ,
+	 "tags": ['Consumable'] 
+        }
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 3047,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3047,
+            "name": "Ninja Tabi",
+            "description": "+25 Armor UNIQUE Passive: Blocks 10% of the damage from basic attacks. UNIQUE Passive - Enhanced Movement: +45 Movement Speed (Unique Passives with the same name don't stack.)",
+            "gold_total": 1000,
+            "gold_base": 375,
+            "purchable": True,
+            "icon": "icons/item/3047.png" ,
+	 "into": ['1316', '1318', '1315', '1317', '1319', '1338'] ,
+	 "tags": ['Armor', 'Boots'] 
+        }
+    }
+]

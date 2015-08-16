@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3041,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3041,
+            "name": "Mejai's Soulstealer",
+            "description": "+20 Ability Power UNIQUE Passive: Grants +8 Ability Power per stack and 5 stacks upon first purchase. Grants 2 stacks for a kill or 1 stack for an assist (max 20 stacks). Half of the stacks are lost upon death. At 20 stacks, grants +15% Cooldown Reduction.",
+            "gold_total": 1400,
+            "gold_base": 965,
+            "purchable": True,
+            "icon": "icons/item/3041.png" ,
+	 "tags": ['SpellDamage'] 
+        }
+    }
+]

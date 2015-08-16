@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3146,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3146,
+            "name": "Hextech Gunblade",
+            "description": "+40 Attack Damage +80 Ability Power +10% Life Steal UNIQUE Passive: +20% Spell Vamp UNIQUE Passive: Basic attacks (on hit) and single-target spells against champions reduce the cooldown of this item by 3 seconds. UNIQUE Active: Deals 150 (+40% of Ability Power) magic damage and slows the target champion's Movement Speed by 40% for 2 seconds (60 second cooldown). (Spell Vamp: Abilities heal for a percentage of the damage they deal. Area of Effect spells only grant one-third of the healing from Spell Vamp.)",
+            "gold_total": 3400,
+            "gold_base": 800,
+            "purchable": True,
+            "icon": "icons/item/3146.png" ,
+	 "tags": ['Active', 'Damage', 'LifeSteal', 'Slow', 'SpellDamage', 'SpellVamp'] 
+        }
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 1004,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 1004,
+            "name": "Faerie Charm",
+            "description": "+25% Base Mana Regen",
+            "gold_total": 180,
+            "gold_base": 180,
+            "purchable": True,
+            "icon": "icons/item/1004.png" ,
+	 "into": ['3028', '3070', '3073', '3114'] ,
+	 "tags": ['ManaRegen'] 
+        }
+    }
+]

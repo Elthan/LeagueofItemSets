@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3345,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3345,
+            "name": "Soul Anchor (Trinket)",
+            "description": "Limited to 1 Trinket. Active: Consumes a charge to instantly revive at your Summoner Platform and grants 125% Movement Speed that decays over 12 seconds. Additional charges are gained at levels 9 and 14. (Max: 2 charges)",
+            "gold_total": 0,
+            "gold_base": 0,
+            "purchable": False,
+            "icon": "icons/item/3345.png" ,
+	 "tags": ['Active', 'Trinket', 'Vision'] 
+        }
+    }
+]

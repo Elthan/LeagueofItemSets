@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 3006,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3006,
+            "name": "Berserker's Greaves",
+            "description": "+25% Attack Speed UNIQUE Passive - Enhanced Movement: +45 Movement Speed (Unique Passives with the same name don't stack.)",
+            "gold_total": 1000,
+            "gold_base": 225,
+            "purchable": True,
+            "icon": "icons/item/3006.png" ,
+	 "into": ['1301', '1303', '1300', '1302', '1304', '1335'] ,
+	 "tags": ['AttackSpeed', 'Boots'] 
+        }
+    }
+]

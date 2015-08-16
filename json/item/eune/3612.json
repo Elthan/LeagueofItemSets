@@ -1,0 +1,15 @@
+[
+    {
+        "pk" : 3612,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3612,
+            "name": "Ironback",
+            "description": "Melee: Tanky siege. Ironbacks can take reduced damage from minions and gain a shield that blocks attacks as they're upgraded. They can also deal extra damage to structures. All Ironbacks take 25% reduced damage from enemy turrets. Upgrade your Ironback's abilities after hiring, by spending Krakens below.",
+            "gold_total": 0,
+            "gold_base": 0,
+            "purchable": True,
+            "icon": "icons/item/3612.png" 
+        }
+    }
+]

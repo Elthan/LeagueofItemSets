@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 1056,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 1056,
+            "name": "Doran's Ring",
+            "description": "+60 Health +15 Ability Power Passive: +3 Mana Regen per 5 seconds. Passive: Restores 4 Mana upon killing a unit.",
+            "gold_total": 400,
+            "gold_base": 400,
+            "purchable": True,
+            "icon": "icons/item/1056.png" ,
+	 "tags": ['Health', 'Lane', 'ManaRegen', 'SpellDamage'] 
+        }
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 1011,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 1011,
+            "name": "Giant's Belt",
+            "description": "+380 Health",
+            "gold_total": 1000,
+            "gold_base": 600,
+            "purchable": True,
+            "icon": "icons/item/1011.png" ,
+	 "into": ['3083', '3143', '3116', '3022', '3084', '3742'] ,
+	 "tags": ['Health'] 
+        }
+    }
+]

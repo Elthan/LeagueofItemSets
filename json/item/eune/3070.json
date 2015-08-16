@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 3070,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3070,
+            "name": "Tear of the Goddess",
+            "description": "+250 Mana +25% Base Mana Regen UNIQUE Passive - Mana Charge: Grants 4 maximum Mana on spell cast or Mana expenditure (up to 2 times per 8 seconds). Grants 1 maximum Mana every 8 seconds. Caps at +750 Mana. (Unique Passives with the same name don't stack.)",
+            "gold_total": 720,
+            "gold_base": 140,
+            "purchable": True,
+            "icon": "icons/item/3070.png" ,
+	 "into": ['3003', '3004'] ,
+	 "tags": ['Mana', 'ManaRegen'] 
+        }
+    }
+]

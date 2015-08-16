@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 2139,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 2139,
+            "name": "Elixir of Sorcery",
+            "description": "Level 9 required to purchase. Click to Consume: Grants +40 Ability Power, 15 bonus Mana Regen per 5 seconds and Sorcery for 3 minutes. Sorcery: Damaging a champion or turret deals 25 bonus True Damage. This effect has a 5 second cooldown versus champions but no cooldown versus turrets. (Only one Flask effect may be active at a time.)",
+            "gold_total": 400,
+            "gold_base": 400,
+            "purchable": True,
+            "icon": "icons/item/2139.png" ,
+	 "tags": ['Consumable', 'ManaRegen', 'SpellDamage'] 
+        }
+    }
+]

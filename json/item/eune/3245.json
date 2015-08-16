@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3245,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3245,
+            "name": "Enchantment: Teleport",
+            "description": "Limited to 1 of each enchantment type. Enchants boots to have Teleport Active. UNIQUE Active - Teleport: Teleport to target allied object (240s CD) (60s CD on purchase)",
+            "gold_total": 600,
+            "gold_base": 600,
+            "purchable": True,
+            "icon": "icons/item/3245.png" ,
+	 "into": ['3006', '3047', '3020', '3158', '3111', '3117', '3009'] 
+        }
+    }
+]

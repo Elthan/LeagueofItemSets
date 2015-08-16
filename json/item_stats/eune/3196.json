@@ -1,0 +1,10 @@
+[
+    {
+        "pk": {item_id},
+        "model": "database.Item",
+        "fields": {
+		"FlatMagicDamageMod": 20.0,
+		"FlatMPPoolMod": 150.0
+        }
+    }
+]

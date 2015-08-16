@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 3751,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3751,
+            "name": "Bami's Cinder",
+            "description": "+300 Health UNIQUE Passive - Immolate: Deals 5 (+1 per champion level) magic damage per second to nearby enemies. Deals 50% bonus damage to minions and monsters.",
+            "gold_total": 1000,
+            "gold_base": 600,
+            "purchable": True,
+            "icon": "icons/item/3751.png" ,
+	 "into": ['3068', '3709', '3717', '3721', '3725'] ,
+	 "tags": ['Health'] 
+        }
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 2137,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 2137,
+            "name": "Elixir of Ruin",
+            "description": "Level 9 required to purchase. Click to Consume: Grants +250 Health, 15% Bonus Damage to Towers and Siege Commander for 3 minutes. Siege Commander: Nearby minions gain 15% Bonus Damage to Towers and gain Movement Speed based on champion's Movement Speed. (Only one Flask effect may be active at a time.)",
+            "gold_total": 400,
+            "gold_base": 400,
+            "purchable": True,
+            "icon": "icons/item/2137.png" ,
+	 "tags": ['Consumable', 'Health'] 
+        }
+    }
+]

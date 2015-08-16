@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3100,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3100,
+            "name": "Lich Bane",
+            "description": "+80 Ability Power +5% Movement Speed +250 Mana UNIQUE Passive - Spellblade: After using an ability, the next basic attack deals 75% Base Attack Damage (+50% of Ability Power) bonus magic damage on hit (1.5 second cooldown). (Unique Passives with the same name don't stack.)",
+            "gold_total": 3000,
+            "gold_base": 950,
+            "purchable": True,
+            "icon": "icons/item/3100.png" ,
+	 "tags": ['Mana', 'NonbootsMovement', 'SpellDamage'] 
+        }
+    }
+]

@@ -1,0 +1,15 @@
+[
+    {
+        "pk" : 1320,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 1320,
+            "name": "Enchantment: Furor",
+            "description": "Limited to 1 of each enchantment type. Enchants boots to have Furor bonus. UNIQUE Passive - Furor: Upon dealing damage with a single target spell or attack (on hit), grants +12% Movement Speed that decays over 2 seconds. (Unique Passives with the same name don't stack.)",
+            "gold_total": 1675,
+            "gold_base": 475,
+            "purchable": True,
+            "icon": "icons/item/1320.png" 
+        }
+    }
+]

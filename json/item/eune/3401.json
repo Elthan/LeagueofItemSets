@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3401,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3401,
+            "name": "Face of the Mountain",
+            "description": "+500 Health +100% Base Health Regen +10% Cooldown Reduction UNIQUE Passive - Spoils of War: Melee basic attacks execute minions below 400 Health. Killing a minion heals the owner and the nearest allied champion for 50 (+1% of your maximum Health) and grants them kill Gold. These effects require a nearby allied champion. Recharges every 30 seconds. Max 4 charges. UNIQUE Active: Shield target ally for 10% of your maximum Health for 4 seconds. After 4 seconds, the target explodes dealing 100% of their total Attack Damage plus 30% of their Ability Power as magic damage in an area (60 second cooldown). Limited to 1 Gold Income item",
+            "gold_total": 2200,
+            "gold_base": 485,
+            "purchable": True,
+            "icon": "icons/item/3401.png" ,
+	 "tags": ['CooldownReduction', 'GoldPer', 'Health', 'HealthRegen'] 
+        }
+    }
+]

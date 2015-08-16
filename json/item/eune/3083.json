@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3083,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3083,
+            "name": "Warmog's Armor",
+            "description": "+800 Health UNIQUE Passive: Restores 1% of maximum Health every 5 seconds. Health restore increases to 3% of maximum Health if damage hasn't been taken within 8 seconds.",
+            "gold_total": 2500,
+            "gold_base": 300,
+            "purchable": True,
+            "icon": "icons/item/3083.png" ,
+	 "tags": ['Health', 'HealthRegen'] 
+        }
+    }
+]

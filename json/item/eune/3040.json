@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3040,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3040,
+            "name": "Seraph's Embrace",
+            "description": "+80 Ability Power +1000 Mana +50% Base Mana Regen UNIQUE Passive - Insight: Grants Ability Power equal to 3% of maximum Mana. UNIQUE Active - Mana Shield: Consumes 20% of current Mana to grant a shield for 3 seconds that absorbs damage equal to 150 plus the amount of Mana consumed (120 second cooldown). (Unique Passives with the same name don't stack.)",
+            "gold_total": 3000,
+            "gold_base": 3000,
+            "purchable": False,
+            "icon": "icons/item/3040.png" ,
+	 "tags": ['Active'] 
+        }
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3116,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3116,
+            "name": "Rylai's Crystal Scepter",
+            "description": "+400 Health +100 Ability Power UNIQUE Passive: Damaging spells and abilities apply a Movement Speed reduction to enemies based on the spell type: Single Target: 40% reduction for 1.5 seconds. Area of Effect: 40% reduction for 1 seconds Damage over Time or Multi-hit: 20% reduction for 1 seconds. Summoned Minions: 20% reduction for 1 seconds. (If a spell fits in more than one category, it uses the weakest slow value.)",
+            "gold_total": 3000,
+            "gold_base": 315,
+            "purchable": True,
+            "icon": "icons/item/3116.png" ,
+	 "tags": ['Health', 'Slow', 'SpellDamage'] 
+        }
+    }
+]

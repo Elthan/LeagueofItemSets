@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 3302,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3302,
+            "name": "Relic Shield",
+            "description": "+75 Health UNIQUE Passive - Spoils of War: Melee basic attacks execute minions below 200 Health. Killing a minion heals the owner and the nearest allied champion for 40 Health and grants them kill Gold. These effects require a nearby allied champion. Recharges every 60 seconds. Max 2 charges. Limited to 1 Gold Income item",
+            "gold_total": 365,
+            "gold_base": 365,
+            "purchable": True,
+            "icon": "icons/item/3302.png" ,
+	 "into": ['3097'] ,
+	 "tags": ['Aura', 'GoldPer', 'Health', 'Lane'] 
+        }
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 3108,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3108,
+            "name": "Fiendish Codex",
+            "description": "+30 Ability Power UNIQUE Passive: +10% Cooldown Reduction",
+            "gold_total": 820,
+            "gold_base": 385,
+            "purchable": True,
+            "icon": "icons/item/3108.png" ,
+	 "into": ['3174', '3092', '3115', '3023', '3165', '3152', '3060', '3290', '3433'] ,
+	 "tags": ['CooldownReduction', 'SpellDamage'] 
+        }
+    }
+]

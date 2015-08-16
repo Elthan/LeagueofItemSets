@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 3106,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3106,
+            "name": "Madred's Razors",
+            "description": "+15% Attack Speed UNIQUE Passive - Maim: Basic attacks against monsters deal 50 bonus magic damage and heal 8 Health on hit. (Unique Passives with the same name don't stack.)",
+            "gold_total": 750,
+            "gold_base": 300,
+            "purchable": True,
+            "icon": "icons/item/3106.png" ,
+	 "into": ['3154', '3159'] ,
+	 "tags": ['AttackSpeed', 'OnHit'] 
+        }
+    }
+]

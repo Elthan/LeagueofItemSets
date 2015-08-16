@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 1042,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 1042,
+            "name": "Dagger",
+            "description": "+15% Attack Speed",
+            "gold_total": 450,
+            "gold_base": 450,
+            "purchable": True,
+            "icon": "icons/item/1042.png" ,
+	 "into": ['3006', '3106', '3086', '3101', '1043', '3085', '3046', '3154', '3091', '3159', '3652'] ,
+	 "tags": ['AttackSpeed'] 
+        }
+    }
+]

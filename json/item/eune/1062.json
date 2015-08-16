@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 1062,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 1062,
+            "name": "Prospector's Blade",
+            "description": "+16 Attack Damage +15% Attack Speed UNIQUE Passive - Prospector: +150 Health (Unique Passives with the same name don't stack.)",
+            "gold_total": 950,
+            "gold_base": 950,
+            "purchable": True,
+            "icon": "icons/item/1062.png" ,
+	 "tags": ['AttackSpeed', 'Damage', 'Health'] 
+        }
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 3211,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3211,
+            "name": "Spectre's Cowl",
+            "description": "+200 Health +35 Magic Resist UNIQUE Passive: Grants 150% Base Health Regen for up to 10 seconds after taking damage from an enemy champion.",
+            "gold_total": 1200,
+            "gold_base": 300,
+            "purchable": True,
+            "icon": "icons/item/3211.png" ,
+	 "into": ['3065', '3102'] ,
+	 "tags": ['Health', 'HealthRegen', 'SpellBlock'] 
+        }
+    }
+]

@@ -1,0 +1,15 @@
+[
+    {
+        "pk" : 3902,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3902,
+            "name": "Death's Daughter",
+            "description": "Requires 500 Silver Serpents. UNIQUE Passive: Cannon Barrage additionally fires a mega-cannonball at center of the Barrage, dealing 300% true damage and slowing them by 60% for 1.5 seconds.",
+            "gold_total": 0,
+            "gold_base": 0,
+            "purchable": True,
+            "icon": "icons/item/3902.png" 
+        }
+    }
+]

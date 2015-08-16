@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3714,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3714,
+            "name": "Enchantment: Warrior",
+            "description": "+40 Attack Damage +10% Cooldown Reduction +10 Armor Penetration",
+            "gold_total": 2250,
+            "gold_base": 63,
+            "purchable": True,
+            "icon": "icons/item/3714.png" ,
+	 "tags": ['ArmorPenetration', 'CooldownReduction', 'Damage', 'Jungle'] 
+        }
+    }
+]

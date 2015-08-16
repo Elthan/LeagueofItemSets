@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 3718,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3718,
+            "name": "Enchantment: Devourer",
+            "description": "+50% Attack Speed +30 Magic Damage on Hit Passive - Devouring Spirit: Takedowns on large monsters and Champions increase the magic damage of this item by +1. Takedowns on Rift Scuttlers increase the magic damage of this item by +2. Takedowns on epic monsters increase the magic damage of this item by +5. At 30 Stacks, your Devourer becomes Sated, granting extra on Hit effects.",
+            "gold_total": 2250,
+            "gold_base": 300,
+            "purchable": True,
+            "icon": "icons/item/3718.png" ,
+	 "into": ['3931'] ,
+	 "tags": ['AttackSpeed', 'Damage', 'Jungle', 'OnHit'] 
+        }
+    }
+]

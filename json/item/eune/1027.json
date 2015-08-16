@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 1027,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 1027,
+            "name": "Sapphire Crystal",
+            "description": "+200 Mana",
+            "gold_total": 400,
+            "gold_base": 400,
+            "purchable": True,
+            "icon": "icons/item/1027.png" ,
+	 "into": ['3057', '3070', '3073', '3010', '3024'] ,
+	 "tags": ['Mana'] 
+        }
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3434,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3434,
+            "name": "Pox Arcana",
+            "description": "+100 Ability Power +100% Base Mana Regen +20% Cooldown Reduction UNIQUE Passive - Pox: Damaging spells apply a stack of Pox (max of 5) to enemy champions hit for 10 seconds. UNIQUE Active - Disease Harvest: Deals 100 magic damage plus 20 (+5% of Ability Power) per stack of Pox to all nearby enemies affected by Pox, and restores 5% of maximum mana to the caster per stack of Pox on enemies hit (60 second cooldown). ''Wealth, land, secrets, love; how little they cherish when their bodies betray them.''",
+            "gold_total": 3000,
+            "gold_base": 765,
+            "purchable": True,
+            "icon": "icons/item/3434.png" ,
+	 "tags": ['Bilgewater', 'CooldownReduction', 'OnHit', 'SpellDamage'] 
+        }
+    }
+]

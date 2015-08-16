@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 3303,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3303,
+            "name": "Spellthief's Edge",
+            "description": "+5 Ability Power +2 Gold per 10 seconds +25% Base Mana Regen UNIQUE Passive - Tribute: Spells and basic attacks against champions or buildings deal 10 additional damage and grant 5 Gold. This can occur up to 3 times every 30 seconds. Killing a minion disables this passive for 12 seconds. Limited to 1 Gold Income item",
+            "gold_total": 365,
+            "gold_base": 365,
+            "purchable": True,
+            "icon": "icons/item/3303.png" ,
+	 "into": ['3098'] ,
+	 "tags": ['GoldPer', 'Lane', 'ManaRegen', 'SpellDamage'] 
+        }
+    }
+]

@@ -1,0 +1,11 @@
+[
+    {
+        "pk": {item_id},
+        "model": "database.Item",
+        "fields": {
+		"PercentMovementSpeedMod": 0.05,
+		"PercentAttackSpeedMod": 0.5,
+		"FlatCritChanceMod": 0.35
+        }
+    }
+]

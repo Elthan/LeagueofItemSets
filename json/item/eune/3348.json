@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3348,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3348,
+            "name": "Hextech Sweeper",
+            "description": "UNIQUE Active - Hunter's Sight: A stealth-detecting mist grants vision in the target area for 5 seconds, revealing traps and enemy champions that enter for 3 seconds (90 second cooldown).",
+            "gold_total": 0,
+            "gold_base": 0,
+            "purchable": False,
+            "icon": "icons/item/3348.png" ,
+	 "tags": ['Active', 'Stealth', 'Trinket', 'Vision'] 
+        }
+    }
+]

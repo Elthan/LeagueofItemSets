@@ -1,0 +1,15 @@
+[
+    {
+        "pk" : 1322,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 1322,
+            "name": "Enchantment: Captain",
+            "description": "Limited to 1 of each enchantment type. Enchants boots to have Captain bonus. UNIQUE Passive - Captain: Grants +10% Movement Speed to nearby approaching allied champions. (Unique Passives with the same name don't stack.)",
+            "gold_total": 1800,
+            "gold_base": 600,
+            "purchable": True,
+            "icon": "icons/item/1322.png" 
+        }
+    }
+]

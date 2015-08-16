@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 3113,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3113,
+            "name": "Aether Wisp",
+            "description": "+30 Ability Power UNIQUE Passive: +5% Movement Speed",
+            "gold_total": 850,
+            "gold_base": 415,
+            "purchable": True,
+            "icon": "icons/item/3113.png" ,
+	 "into": ['3023', '3290', '3100', '3285', '3504'] ,
+	 "tags": ['NonbootsMovement', 'SpellDamage'] 
+        }
+    }
+]

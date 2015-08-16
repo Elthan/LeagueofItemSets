@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 3096,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3096,
+            "name": "Nomad's Medallion",
+            "description": "+25% Base Health Regen +50% Base Mana Regen +10 Movement Speed +2 Gold per 10 seconds UNIQUE Passive - Favor: Being near a minion death without dealing the killing blow grants 4 Gold and 10 Health. Limited to 1 Gold Income item ''The medallion shines with the glory of a thousand voices when exposed to the sun.'' - Historian Shurelya, 22 June, 24 CLE",
+            "gold_total": 865,
+            "gold_base": 500,
+            "purchable": True,
+            "icon": "icons/item/3096.png" ,
+	 "into": ['3069'] ,
+	 "tags": ['Active', 'GoldPer', 'HealthRegen', 'ManaRegen', 'NonbootsMovement'] 
+        }
+    }
+]

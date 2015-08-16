@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 1052,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 1052,
+            "name": "Amplifying Tome",
+            "description": "+20 Ability Power",
+            "gold_total": 435,
+            "gold_base": 435,
+            "purchable": True,
+            "icon": "icons/item/1052.png" ,
+	 "into": ['3108', '3191', '3057', '3136', '3135', '3145', '3113', '3090', '3116', '3041', '3050', '3089', '3165', '3174', '3430', '3431', '3434', '3744'] ,
+	 "tags": ['SpellDamage'] 
+        }
+    }
+]

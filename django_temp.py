@@ -1,18 +1,8 @@
 #!/usr/bin/env python3
 
-import os, tempfile, json
-from django.http import HttpResponse
-from django.core.servers.basehttp import FileWrapper
+import json
+
 from django.db import connection
-
-# Method for sending files to users
-def send_file(request):
-    json_file = __file__ # Select file
-    wrapper = FileWrapper(file(json_file, 'rb'))
-    response = HttpResponse(wrapper, content_type='application/json')
-    response["Content-Length"] = os.path.getsize(json_file)
-    return response
-
 
 def error(msg):
     pass
@@ -59,14 +49,14 @@ def import_items(region_list):
                         for index, value in enumerate(value_list):
                             test_string = ex_string + value + \
                                           (", " if index < len(value_list)-1 else ");")
-                            
-                        cursor.execute(ex_string)
+                        print(ex_string)
+                        #cursor.execute(ex_string)
                         
                     
                     item_db = Item(item_id=item_id, description=desc, gold_total=gt,
                                    gold_base=gb, name=name, tags=tags, icon=icon,
                                    stacks=stacks, stats=stats)
-                    item_db.save()
+                    #item_db.save()
                 
         except FileNotFoundError:
             error("Did not find file for region "+region)        

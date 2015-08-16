@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3512,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3512,
+            "name": "Zz'Rot Portal",
+            "description": "+60 Armor +60 Magic Resist +100% Base Health Regen UNIQUE Passive - Point Runner: Builds up to +30% Movement Speed over 2 seconds while near turrets or Void Gates (including fallen turrets). UNIQUE Active: Spawns a Void Gate at target location for 150 seconds. Every 4 seconds the gate makes a Voidspawn that travels down the nearest lane and decays over time. Voidspawn explodes when attacking structures. Voidspawn ignore champions and void targets (150 second cooldown). The first and every fourth Voidspawn gain 100% of Armor and Magic Resist as damage.",
+            "gold_total": 2800,
+            "gold_base": 950,
+            "purchable": True,
+            "icon": "icons/item/3512.png" ,
+	 "tags": ['Armor', 'HealthRegen', 'NonbootsMovement', 'SpellBlock'] 
+        }
+    }
+]

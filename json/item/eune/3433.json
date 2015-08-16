@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 3433,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3433,
+            "name": "Lost Chapter",
+            "description": "+50 Ability Power +100% Base Mana Regen UNIQUE Passive: +20% Cooldown Reduction",
+            "gold_total": 1800,
+            "gold_base": 380,
+            "purchable": True,
+            "icon": "icons/item/3433.png" ,
+	 "into": ['3430', '3431', '3434'] ,
+	 "tags": ['Bilgewater', 'CooldownReduction', 'ManaRegen', 'SpellDamage'] 
+        }
+    }
+]

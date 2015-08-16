@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3068,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3068,
+            "name": "Sunfire Cape",
+            "description": "+450 Health +45 Armor UNIQUE Passive - Immolate: Deals 25 (+1 per champion level) magic damage per second to nearby enemies.",
+            "gold_total": 2600,
+            "gold_base": 850,
+            "purchable": True,
+            "icon": "icons/item/3068.png" ,
+	 "tags": ['Armor', 'Health'] 
+        }
+    }
+]

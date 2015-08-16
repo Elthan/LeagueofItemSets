@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 3140,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3140,
+            "name": "Quicksilver Sash",
+            "description": "+30 Magic Resist UNIQUE Active - Quicksilver: Removes all debuffs (90 second cooldown).",
+            "gold_total": 1250,
+            "gold_base": 750,
+            "purchable": True,
+            "icon": "icons/item/3140.png" ,
+	 "into": ['3139', '3137'] ,
+	 "tags": ['Active', 'SpellBlock'] 
+        }
+    }
+]

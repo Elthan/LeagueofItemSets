@@ -1,0 +1,15 @@
+[
+    {
+        "pk" : 3624,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3624,
+            "name": "Defense Upgrade 1",
+            "description": "Your mercenary permanently gains +100 HP (+100 total).",
+            "gold_total": 0,
+            "gold_base": 0,
+            "purchable": True,
+            "icon": "icons/item/3624.png" 
+        }
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 3098,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3098,
+            "name": "Frostfang",
+            "description": "+10 Ability Power +2 Gold per 10 seconds +50% Base Mana Regen UNIQUE Passive - Tribute: Spells and basic attacks against champions or buildings deal 15 additional damage and grant 10 Gold. This can occur up to 3 times every 30 seconds. Killing a minion disables this passive for 12 seconds. Limited to 1 Gold Income item",
+            "gold_total": 865,
+            "gold_base": 500,
+            "purchable": True,
+            "icon": "icons/item/3098.png" ,
+	 "into": ['3092'] ,
+	 "tags": ['Active', 'GoldPer', 'ManaRegen', 'SpellDamage'] 
+        }
+    }
+]

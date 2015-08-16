@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3430,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3430,
+            "name": "Rite of Ruin",
+            "description": "+100 Ability Power +100% Base Mana Regen +20% Cooldown Reduction UNIQUE Passive - Razing: Gain charges upon moving or killing enemies (200 charges max). Attacking a structure expends 50 charges to deal 100 (+15% AP) bonus true damage. ''When all their works have crumbled, their hearts will be laid bare.''",
+            "gold_total": 3000,
+            "gold_base": 765,
+            "purchable": True,
+            "icon": "icons/item/3430.png" ,
+	 "tags": ['Bilgewater', 'CooldownReduction', 'OnHit', 'SpellDamage'] 
+        }
+    }
+]

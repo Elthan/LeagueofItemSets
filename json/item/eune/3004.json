@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 3004,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3004,
+            "name": "Manamune",
+            "description": "+25 Attack Damage +250 Mana +25% Base Mana Regen UNIQUE Passive - Awe: Grants bonus Attack Damage equal to 2% of maximum Mana. UNIQUE Passive - Mana Charge: Grants +4 maximum Mana (max +750 Mana) for each basic attack, spell cast, and Mana expenditure (occurs up to 2 times every 8 seconds). Transforms into Muramana at +750 Mana. (Unique Passives with the same name don't stack.)",
+            "gold_total": 2200,
+            "gold_base": 605,
+            "purchable": True,
+            "icon": "icons/item/3004.png" ,
+	 "into": ['3042'] ,
+	 "tags": ['Damage', 'Mana', 'ManaRegen', 'OnHit'] 
+        }
+    }
+]

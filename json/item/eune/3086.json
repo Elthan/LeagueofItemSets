@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 3086,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3086,
+            "name": "Zeal",
+            "description": "+20% Attack Speed +10% Critical Strike Chance +5% Movement Speed",
+            "gold_total": 1100,
+            "gold_base": 250,
+            "purchable": True,
+            "icon": "icons/item/3086.png" ,
+	 "into": ['3046', '3078', '3087'] ,
+	 "tags": ['AttackSpeed', 'CriticalStrike', 'NonbootsMovement'] 
+        }
+    }
+]

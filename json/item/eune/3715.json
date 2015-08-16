@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 3715,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3715,
+            "name": "Skirmisher's Sabre",
+            "description": "+30 Bonus Gold per Large Monster Kill Passive - Challenging Smite: Smite can be cast on enemy champions, marking them for 4 seconds. While marked, basic attacks deal true damage over 3 seconds, you have vision of them, and their damage to you is reduced by 20%. Passive - Jungler: Deal 45 additional magic damage to monsters over 2 seconds and gain 10 Health Regen and 5 Mana Regen per second while under attack from neutral monsters. Limited to 1 Jungle item",
+            "gold_total": 850,
+            "gold_base": 450,
+            "purchable": True,
+            "icon": "icons/item/3715.png" ,
+	 "into": ['3714', '3716', '3717', '3718'] ,
+	 "tags": ['Damage', 'HealthRegen', 'Jungle', 'ManaRegen', 'OnHit'] 
+        }
+    }
+]

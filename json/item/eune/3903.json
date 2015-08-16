@@ -1,0 +1,15 @@
+[
+    {
+        "pk" : 3903,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3903,
+            "name": "Raise Morale",
+            "description": "Requires 500 Silver Serpents. UNIQUE Passive: Allies in the Cannon Barrage gain 30% Movement Speed for 2 seconds.",
+            "gold_total": 0,
+            "gold_base": 0,
+            "purchable": True,
+            "icon": "icons/item/3903.png" 
+        }
+    }
+]

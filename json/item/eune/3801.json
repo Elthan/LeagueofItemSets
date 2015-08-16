@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 3801,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3801,
+            "name": "Crystalline Bracer",
+            "description": "+200 Health +50% Base Health Regen",
+            "gold_total": 600,
+            "gold_base": 20,
+            "purchable": True,
+            "icon": "icons/item/3801.png" ,
+	 "into": ['3083', '3084', '3800', '3911'] ,
+	 "tags": ['Health', 'HealthRegen'] 
+        }
+    }
+]

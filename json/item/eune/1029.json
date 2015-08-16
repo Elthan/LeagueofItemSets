@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 1029,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 1029,
+            "name": "Cloth Armor",
+            "description": "+15 Armor",
+            "gold_total": 300,
+            "gold_base": 300,
+            "purchable": True,
+            "icon": "icons/item/1029.png" ,
+	 "into": ['3047', '1031', '3191', '3024', '3082', '3075', '2053'] ,
+	 "tags": ['Armor'] 
+        }
+    }
+]

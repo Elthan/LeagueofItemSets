@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3159,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3159,
+            "name": "Grez's Spectral Lantern",
+            "description": "+15 Attack Damage +30% Attack Speed UNIQUE Passive - Maim: Basic attacks against monsters deal 75 bonus magic damage and heal 10 Health on hit. UNIQUE Passive: Gain 30% increased Gold from monsters. UNIQUE Passive - Trap Detection: Nearby stealthed enemy traps are revealed. UNIQUE Active - Hunter's Sight: A stealth-detecting mist grants vision in the target area for 5 seconds, revealing enemy champions that enter for 3 seconds (60 second cooldown).",
+            "gold_total": 1740,
+            "gold_base": 180,
+            "purchable": True,
+            "icon": "icons/item/3159.png" ,
+	 "tags": ['Active', 'AttackSpeed', 'Damage', 'GoldPer', 'OnHit', 'Stealth', 'Vision'] 
+        }
+    }
+]

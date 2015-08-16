@@ -1,0 +1,17 @@
+[
+    {
+        "pk" : 1043,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 1043,
+            "name": "Recurve Bow",
+            "description": "+30% Attack Speed UNIQUE Passive: Basic attacks deal an additional 10 physical damage on hit.",
+            "gold_total": 1100,
+            "gold_base": 200,
+            "purchable": True,
+            "icon": "icons/item/1043.png" ,
+	 "into": ['3091', '3153', '3085', '3710', '3718', '3726', '3722'] ,
+	 "tags": ['AttackSpeed'] 
+        }
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "pk" : 3035,
+        "model" : "database.Item",
+        "fields" : {
+            item_id": 3035,
+            "name": "Last Whisper",
+            "description": "+40 Attack Damage UNIQUE Passive: Physical damage ignores 35% of the target's Armor (applies before Armor Penetration).",
+            "gold_total": 2300,
+            "gold_base": 1065,
+            "purchable": True,
+            "icon": "icons/item/3035.png" ,
+	 "tags": ['ArmorPenetration', 'Damage'] 
+        }
+    }
+]
