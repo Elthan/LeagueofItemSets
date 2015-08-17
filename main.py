@@ -5,6 +5,7 @@ import logging as log
 import re
 import urllib.request
 import json
+from database.models import Version
 
 #######################################
 # 
@@ -50,10 +51,17 @@ current_version : str
         with urllib.request.urlopen(url) as response:
             net_version = response.read().decode("UTF-8")
     except urllib.error.HTTPError:
-        error("HTTPError when version checking for " + region)
+        error("HTTPError when checking version for " + region)
         return False, current_version
 
     net_version = json.loads(net_version)[0]
+    
+    try:
+        query = Version.objects.get(Region=region)
+    except DoesNotExist:
+        pass
+    except MultipleObjectsReturned:
+        pass
     
     if (local_version == net_version):
         current_version = local_version
