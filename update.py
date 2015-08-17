@@ -5,12 +5,13 @@ import re
 import logging as log
 import os.path
 from convert import create_db_json_items
+from convert import create_db_json_champ
 
 def error(msg):
     log.error(msg)
 
     
-def get_icons(img_type, id_list, version, overwrite=False):
+def get_icons(img_type, id_list):
     '''
 Download all icons.
 
@@ -20,30 +21,31 @@ img_type : str
     What type of icon should we fetch (ex. champion or item).
 id_list : list[str]
     List of all the icon ids to fetch.
-version : str
-    Version to download in format 5.15.1
-overwrite : bool
-    If we want to overwrite icons if 
-    it already exists.
     '''
-    log.debug("Fetching " + img_type + " icons, using version " + version)
+    if (skip_icons):
+        log.debug("Skipping all icons")
+        return
+    
+    log.debug("Fetching " + img_type + " icons, using version " + current_version)
     
     for icon_id in id_list:
-        url = "http://ddragon.leagueoflegends.com/cdn/" + version + \
+        url = "http://ddragon.leagueoflegends.com/cdn/" + current_version + \
               "/img/" + img_type + "/" + icon_id+".png"
         
         try:
             with urllib.request.urlopen(url) as response:
+                path = "icons/" + img_type + "/" + icon_id + ".png"
+                
                 # Check if it already exists and if we're to overwrite existing files.
-                if (os.path.exists("icons/" + img_type + "/" + icon_id + ".png") and not overwrite):
-                    log.debug("Skipping file - icons/" + img_type + "/" + icon_id + ".png")
+                if (os.path.exists(path) and not overwrite):
+                    log.debug("Skipping icon " + img_type + "/" + icon_id)
                 else:
                     log.debug("Writing icon id " + icon_id)
-                    with open("icons/" + img_type + "/" + icon_id + ".png",'wb') as image_file:
+                    with open(path,'wb') as image_file:
                         image_file.write(response.read())
                         
         except urllib.error.HTTPError:
-            error("Error when downloading icon id " + icon_id)
+            error("Error when downloading icon id " + icon_id + "\nUsing url " + url)
 
     log.debug("Done fetching all icons")
 
@@ -86,7 +88,7 @@ html : str
         for icon_id in html_json["data"]:
             icon_id_list.append(icon_id)
 
-        get_icons(json_type, icon_id_list, "5.15.1")
+        get_icons(json_type, icon_id_list)
                              
     log.debug("Succesfully fetched items for " + region)
     
@@ -116,7 +118,7 @@ is_new_version : bool
     # If we can't find the file, we want to save it.
     try:
         local_json_file = open("json/" + json_type + "/" + region + ".json",'r')
-    except FileNotFoundError:
+    except OSError:
         return True
     
     local_json_version = json.load(local_json_file)
@@ -154,28 +156,40 @@ region_list : list[str]
             json_string = get_json(json_type, url, region)
             
             if (json_string is None):
-                log.error("Error occured when trying to fetch items for " + region)
+                error("Error occured when trying to fetch items for " + region)
                 continue
             else:
-                if (check_json_version( json_type, json_string, region )):
+                if (check_json_version( json_type, json_string, region ) and overwrite
+                    or not skip_json):
                     with open("json/" + json_type + "/" + region + ".json", 'w') as json_file:
-                        json_file.write( json_string )
+                        json_file.write(json_string)
                 else:
                     log.debug(region + " skipped because it was up to date.")
                     
     log.debug("Fetched all items as json files for all regions")
 
     
-def update_all(api_key, current_version, loglvl):
+def update_all(api_key, cur_ver, loglvl, ow=False, skip_ic=False, skip_js=False):
     log.basicConfig(format="%(levelname)s: %(message)s", level=loglvl)
     
     #region_list = ["br","eune","euw","kr","lan","las","na","oce","ru","tr","pbe"]
     region_list = ["eune"]
+
     url_list = {"item":"https://global.api.pvp.net/api/lol/static-data/eune/v1.2/item?itemListData=all&api_key="+api_key,
                 "champion":"https://global.api.pvp.net/api/lol/static-data/eune/v1.2/champion?champData=all&api_key="+api_key}
+
+    global current_version
+    current_version = cur_ver.strip()
+    global overwrite
+    overwrite = ow
+    global skip_icons
+    skip_icons = skip_ic
+    global skip_json
+    skip_json = skip_js
     
     #get_all_json(url_list, region_list)
     
     log.debug("Converting json files to django friendly json files.")
     for region in region_list:
-        create_db_json_items(region, log)
+        #create_db_json_items(region, log, overwrite=overwrite)
+        create_db_json_champ(region, log, overwrite=overwrite)

@@ -1,0 +1,29 @@
+[
+    {
+        "pk": "25",
+        "model": "database.ChampionStat",
+        "fields": {
+            "Armor": 25.384,
+            "ArmorPerLevel": 3.8,
+            "AttackDamage": 55.46,
+            "AttackDamagePerLevel": 3.5,
+            "AttackRange": 450.0,
+            "AttackSpeedOffset": 0.0,
+            "AttackSpeedPerLevel": 1.53,
+            "Crit": 0.0,
+            "CritPerLevel": 0.0,
+            "HP": 547.48,
+            "HPPerLevel": 86.0,
+            "HPRegen": 5.705, 
+            "HPRegenPerLevel": 0.6,
+            "MoveSpeed": 335.0,
+            "MP": 340.8,
+            "MPPerLevel": 60.0,
+            "MPRegen": 6.0,
+            "MPRegenPerLevel": 0.8,
+            "SpellBlock": 30.0,
+            "SpellBlockPerLevel": 0.0
+        }
+    }
+]
+          

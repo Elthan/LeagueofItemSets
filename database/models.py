@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 class PlayerItemSet(models.Model):
-        ItemSetID = models.CharField(max_length=200, default="000") #or other field
+        ItemSetID = models.CharField(max_length=200, default="A0") #or other field
         ItemSetFile = models.FileField(default="")
         ItemSetDate = models.DateTimeField('date created', default=timezone.now)
 
@@ -49,7 +49,7 @@ class ItemStat(models.Model):
 
         #to determine returned value 
         def __str__(self):
-                return self.ItemID
+                return str(self.ItemID)
         
         
 class Item(models.Model):
@@ -66,7 +66,8 @@ class Item(models.Model):
         
         #to determine returned value 
         def __str__(self): 
-                return self.ItemID
+                return str(self.ItemID)
+        
         
 class ChampionStat(models.Model):
         ChampID = models.IntegerField(default=0) 
@@ -93,7 +94,8 @@ class ChampionStat(models.Model):
 
         #to determine returned value 
         def __str__(self):
-                return self.ChampID
+                return str(self.ChampID)
+
         
 class Champion(models.Model):
         ChampID = models.IntegerField(default=0)
@@ -102,12 +104,12 @@ class Champion(models.Model):
 
         #to determine returned value 
         def __str__(self):
-                return self.ChampID
+                return str(self.ChampID)
         
 class Version(models.Model):
         Region = models.CharField(max_length=200, default="eune")
         Version = models.CharField(max_length=200, default="1.0.0")
 
         #to determine returned value 
-        def __str__(self):  
+        def __str__(self): 
                 return self.Region

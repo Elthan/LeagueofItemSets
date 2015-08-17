@@ -5,7 +5,7 @@ import logging as log
 import re
 import urllib.request
 import json
-from database.models import Version
+#from database.models import Version
 
 #######################################
 # 
@@ -55,13 +55,14 @@ current_version : str
         return False, current_version
 
     net_version = json.loads(net_version)[0]
-    
+    '''
     try:
         query = Version.objects.get(Region=region)
     except DoesNotExist:
         pass
     except MultipleObjectsReturned:
         pass
+    '''
     
     if (local_version == net_version):
         current_version = local_version
@@ -108,7 +109,8 @@ if __name__ == "__main__":
                 log.debug("We are up to date!")
             else:
                 # Update all the json file from all the different regions.
-                update.update_all(api_key, current_version, "DEBUG")
+                update.update_all(api_key, current_version, "DEBUG", ow=True, skip_ic=True, skip_js=True)
                 
-    except FileNotFoundError:
+    except OSError as oserr:
+        print(oserr)
         log.error("Settings file not found. Please create a settings file.")

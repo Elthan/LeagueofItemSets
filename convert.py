@@ -3,8 +3,6 @@
 import json
 import os
 
-def error(msg):
-    log.error(msg)
 
 # This can possibly replaced with GeoJSON in Django.
 def create_item_set_json(name, block_list, set_map="any", mode="any"):
@@ -164,7 +162,7 @@ overwrite : bool
             for item_id in items_json["data"]:
                 item_json = items_json["data"][item_id]
 
-                create_db_json_item_stats(item_json, region, log)
+                create_db_json_item_stats(item_json, region, log, overwrite)
 
                 path = "json/item/" + region + "/" + item_id + ".json"
 
@@ -215,8 +213,8 @@ overwrite : bool
                     item_json_file.write(json_db_string)
 
                     
-    except FileNotFoundError:
-        error("Could not find items JSON file for region " + region)
+    except OSError:
+        log.error("Could not find items JSON file for region " + region)
 
 def create_db_json_champ_stats(champ_json, region, log, overwrite=False):
       '''
@@ -233,23 +231,26 @@ log : logging
 overwrite : bool
     If we should write over existing files.
     '''
-    champ_id = champ_json["id"]
+      champ_id = champ_json["id"]
+      champ_name = champ_json["name"]
+      
+      log.debug("Creating JSON file for champion stats for champion " + champ_name)
     
-    log.debug("Creating JSON file for champion stats for champion " + champ_id)
-    
-    os.makedirs("json/champ_stats/" + region, exist_ok=True)
+      os.makedirs("json/champ_stats/" + region, exist_ok=True)
 
-    path = "json/champ_stats/" + region + "/" + champ_id + ".json"
+      path = "json/champ_stats/" + region + "/" + champ_name + ".json"
+      
+      if (os.path.exists(path) and not overwrite):
+          log.debug("Champion stats for " + champ_name + " of region " + region + " skipped.")
+          return
     
-    if (os.path.exists(path) and not overwrite):
-        log.debug("Champion stats for " + champ_id + " of region " + region + " skipped.")
-        return
-    
-    with open(path, 'w') as champ_stats_file:
-        json_db_string = """[
+      with open(path, 'w') as champ_stats_file:
+          champ_stats = champ_json["stats"]
+          # JSON that django can read
+          json_db_string = """[
     {{
-        "pk": {champ_id},
-        "model": "database.ChampStats",
+        "pk": "{champ_id}",
+        "model": "database.ChampionStat",
         "fields": {{
             "Armor": {armor},
             "ArmorPerLevel": {armorlvl},
@@ -274,31 +275,31 @@ overwrite : bool
         }}
     }}
 ]
-        """.format(
-            champ_id = champ_id,
-            armor = champ_json["armor"]
-            armorlvl = champ_json["armorperlevel"]
-            ad = champ_json["attackdamage"]
-            adlvl = champ_json["attackdamageperlevel"]
-            ar = champ_json["attackrange"]
-            asoff = champ_json["attackspeedoffset"]
-            aslvl = champ_json["attackspeedperlevel"]
-            crit = champ_json["crit"]
-            critlvl = champ_json["critperlevel"]
-            hp = champ_json["hp"]
-            hplvl = champ_json["hpperlevel"]
-            hpreg = champ_json["hpperregen"]
-            hpreglvl = champ_json["hpregenperlevel"]
-            ms = champ_json["movementspeed"]
-            mp = champ_json["mp"]
-            mplvl = champ_json["mpperlevel"]
-            mpreg = champ_json["mpregen"]
-            mpreglvl = champ_json["mpregenperlevel"]
-            mr = champ_json["spellblock"]
-            mrlvl = champ_json["spellblockperlevel"]
-        )
-        
-        champ_stats_file.write(json_db_string)
+          """.format(
+              champ_id = champ_id,
+              armor = champ_stats["armor"],
+              armorlvl = champ_stats["armorperlevel"],
+              ad = champ_stats["attackdamage"],
+              adlvl = champ_stats["attackdamageperlevel"],
+              ar = champ_stats["attackrange"],
+              asoff = champ_stats["attackspeedoffset"],
+              aslvl = champ_stats["attackspeedperlevel"],
+              crit = champ_stats["crit"],
+              critlvl = champ_stats["critperlevel"],
+              hp = champ_stats["hp"],
+              hplvl = champ_stats["hpperlevel"],
+              hpreg = champ_stats["hpregen"],
+              hpreglvl = champ_stats["hpregenperlevel"],
+              ms = champ_stats["movespeed"],
+              mp = champ_stats["mp"],
+              mplvl = champ_stats["mpperlevel"],
+              mpreg = champ_stats["mpregen"],
+              mpreglvl = champ_stats["mpregenperlevel"],
+              mr = champ_stats["spellblock"],
+              mrlvl = champ_stats["spellblockperlevel"]
+          )
+          
+          champ_stats_file.write(json_db_string)
     
         
 def create_db_json_champ(region, log, overwrite=False):
@@ -314,17 +315,17 @@ log : logging
 overwrite : bool
     If we should write over existing files.
     '''
-    log.debug("Opening json/champion/" + region)
+    log.debug("Opening json/champion/" + region + ".json")
     try:
-        with open("json/champion/" + region, 'r') as champs_file:
+        with open("json/champion/" + region + ".json", 'r') as champs_file:
             champs_json = json.load(champs_file)
 
-            os.makedirs("json/champion/" + region, exists_ok=True)
+            os.makedirs("json/champion/" + region, exist_ok=True)
 
             for champ_name in champs_json["data"]:
                 champ_json = champs_json["data"][champ_name]
 
-                create_db_json_champ_stats(region, log, champ_json, overwrite=False)
+                create_db_json_champ_stats(champ_json, region, log, overwrite)
 
                 path = "json/champion/" + region + "/" + champ_name + ".json"
                 
@@ -337,12 +338,12 @@ overwrite : bool
                 with open(path, 'w') as champ_json_file:
                     json_db_string = """[
     {{
-        "pk" : {champ_id},
+        "pk" : "{champ_id}",
         "model" : "database.Champion",
         "fields" : {{
                     "ChampID": {champ_id},
-                    "Name": {champ_name},
-                    "Icon": {icon_path}
+                    "Name": "{champ_name}",
+                    "Icon": "{icon_path}"
                     """.format(
                         champ_id = champ_json["id"],
                         champ_name = champ_name,
@@ -354,5 +355,5 @@ overwrite : bool
 ]"""
                     champ_json_file.write(json_db_string)
                 
-    except FileNotFoundError:
-        error("Could not find champion JSON file for region " + region)
+    except OSError:
+        log.error("Could not find champion JSON file for region " + region)
