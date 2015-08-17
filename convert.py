@@ -3,6 +3,9 @@
 import json
 import os
 
+def error(msg):
+    log.error(msg)
+
 def create_item_set_json(name, block_list, set_map="any", mode="any"):
     '''
 Create a item set json file.
@@ -158,15 +161,14 @@ overwrite : bool
                 item_json = items_json["data"][item_id]
 
                 create_db_json_item_stats(item_json, region, log)
-                
-                log.debug("Creating json file for item " + item_id)
 
                 path = "json/item/" + region + "/" + item_id + ".json"
 
-                
                 if (os.path.exists(path) and not overwrite):
                     log.debug("Item " + item_id + " for region " + region + " skipped.")
                     continue
+                
+                log.debug("Creating json file for item " + item_id)
                 
                 with open(path, 'w') as item_json_file:
                     json_db_string = """[
@@ -199,18 +201,149 @@ overwrite : bool
                         json_db_string += ",\n\t" + """ "Tags": {} """.format(json.dumps(tags))
                     except KeyError:
                         pass
-                    json_db_string = json_db_string + """
+                    json_db_string += """
         }
     }
-]
-"""
+]"""
                     item_json_file.write(json_db_string)
 
                     
     except FileNotFoundError:
-        log.error("Could not find json file for region " + region)
+        error("Could not find items JSON file for region " + region)
 
+def create_db_json_champ_stats(champ_json, region, log, overwrite=False):
+      '''
+Create a django friendly json file for champion stats.
 
-def create_db_json_champ():
+Parameters
+-------------
+champ_json : file
+    JSON file of champ we create stats for.
+region : str
+    Region we should convert from.
+log : logging
+    So we can log what is happening.
+overwrite : bool
+    If we should write over existing files.
+    '''
+    champ_id = item_json["id"]
     
-    pass
+    log.debug("Creating JSON file for champion stats for champion " + champ_id)
+    
+    os.makedirs("json/champ_stats/" + region, exist_ok=True)
+
+    path = "json/champ_stats/" + region + "/" + champ_id + ".json"
+    
+    if (os.path.exists(path) and not overwrite):
+        log.debug("Champion stats for " + champ_id + " of region " + region + " skipped.")
+        return
+    
+    with open(path, 'w') as champ_stats_file:
+        json_db_string = """[
+    {{
+        "pk": {champ_id},
+        "model": "database.ChampStats",
+        "fields": {{
+        "AttackRange": {ar},
+        "MPPerLeve": {mplvl},
+        "AttackDamage": {ad},
+        "HP": {hp},
+        "HPPerLevel": {hplvl},
+        "AttackDamagePerLevel": {adlvl},
+        "Armor": {armor},
+        "MPRegenPerLevel": {mpreglvl},
+        "HPRegen": {hpreg},
+        "CritPerLevel": {critlvl},
+        "SpellBlockPerLevel": {mrlvl},
+        "MPRegen": {mpreg},
+        "AttackSpeedPerLevel": {aslvl},
+        "SpellBlock": {mr},
+        "MoveSpeed": {ms},
+        "AttackSpeedOffset": {asoff},
+        "Crit": {crit},
+        "HPRegenPerLevel": {hpreglvl},
+        "ArmorPerLevel": {armorlvl}
+        }}
+    }}
+]
+        """.format(
+            champ_id
+            ar
+            mplvl
+            ad
+            hp
+            hplvl
+            adlvl
+            armor
+            mpreglvl
+            hpreg
+            critlvl
+            mrlvl
+            mpreg
+            aslvl
+            mr
+            ms
+            asoff
+            crit
+            hpreglvl
+            armorlvl
+        )
+        
+        champ_stats_file.write(json_db_string)
+    
+        
+def create_db_json_champ(region, log, overwrite=False):
+    '''
+Create a django friendly json file for champions.
+
+Parameters
+-------------
+region : str
+    Region we should convert from.
+log : logging
+    So we can log what is happening.
+overwrite : bool
+    If we should write over existing files.
+    '''
+    log.debug("Opening json/champion/" + region)
+    try:
+        with open("json/champion/" + region, 'r') as champs_file:
+            champs_json = json.load(champs_file)
+
+            os.makedirs("json/champion/" + region, exists_ok=True)
+
+            for champ_name in champs_json["data"]:
+                champ_json = champs_json["data"][champ_name]
+
+                create_db_json_champ_stats(region, log, champ_json, overwrite=False)
+
+                path = "json/champion/" + region + "/" + champ_name + ".json"
+                
+                if (os.path.exists(path) and not overwrite):
+                    log.debug("Champion "+ champ_name + " for region " + region + " skipped.")
+                    continue
+
+                log.debug("Creating JSON file for " + champ_name + " in region " + region)
+                
+                with open(path, 'w') as champ_json_file:
+                    json_db_string = """[
+    {{
+        "pk" : {champ_id},
+        "model" : "database.Champion",
+        "fields" : {{
+                    "ChampID": {champ_id},
+                    "Name": {champ_name},
+                    "Icon": {icon_path}
+                    """.format(
+                        champ_id = champ_json["id"],
+                        champ_name = champ_name,
+                        icon_path = "icons/champion/" + champ_name
+                    )
+                    json_db_string +=  """
+        }
+    }
+]"""
+                    champ_json_file.write(json_db_string)
+                
+    except FileNotFoundError:
+        error("Could not find champion JSON file for region " + region)
