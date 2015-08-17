@@ -6,6 +6,7 @@ import os
 def error(msg):
     log.error(msg)
 
+# This can possibly replaced with GeoJSON in Django.
 def create_item_set_json(name, block_list, set_map="any", mode="any"):
     '''
 Create a item set json file.
@@ -47,6 +48,7 @@ mode : str
     
     return item_set_json
 
+# See note above.
 def create_block_json(block_type, item_list, recMath="false", show_if_summoner="",
                       hide_if_summoner=""):
     '''
