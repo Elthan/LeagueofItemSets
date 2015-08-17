@@ -125,6 +125,8 @@ overwrite : bool
 """.format(item_id)
         stats_len = len(item_json["stats"])-1
         index = 0
+        
+        # Add all the stats the item has. Don't add ,\n on last stat.
         for key, value in item_json["stats"].items():
             json_db_string += "\t\t\"" + key + "\": " + str(value) + \
                               (",\n" if index < stats_len else "")
@@ -191,11 +193,14 @@ overwrite : bool
                 purchasable = item_json["gold"]["purchasable"],
                 icon = "icons/item/" + item_id + ".png"
             )
+                    # Not all items build into something.
                     try:
                         into = item_json["into"]
                         json_db_string += ",\n\t" + """ "Into": {} """.format(json.dumps(into))
                     except KeyError:
                         pass
+                    
+                    # Not all items have a tag.
                     try:
                         tags = item_json["tags"]
                         json_db_string += ",\n\t" + """ "Tags": {} """.format(json.dumps(tags))
@@ -226,7 +231,7 @@ log : logging
 overwrite : bool
     If we should write over existing files.
     '''
-    champ_id = item_json["id"]
+    champ_id = champ_json["id"]
     
     log.debug("Creating JSON file for champion stats for champion " + champ_id)
     
@@ -244,49 +249,51 @@ overwrite : bool
         "pk": {champ_id},
         "model": "database.ChampStats",
         "fields": {{
-        "AttackRange": {ar},
-        "MPPerLeve": {mplvl},
-        "AttackDamage": {ad},
-        "HP": {hp},
-        "HPPerLevel": {hplvl},
-        "AttackDamagePerLevel": {adlvl},
-        "Armor": {armor},
-        "MPRegenPerLevel": {mpreglvl},
-        "HPRegen": {hpreg},
-        "CritPerLevel": {critlvl},
-        "SpellBlockPerLevel": {mrlvl},
-        "MPRegen": {mpreg},
-        "AttackSpeedPerLevel": {aslvl},
-        "SpellBlock": {mr},
-        "MoveSpeed": {ms},
-        "AttackSpeedOffset": {asoff},
-        "Crit": {crit},
-        "HPRegenPerLevel": {hpreglvl},
-        "ArmorPerLevel": {armorlvl}
+            "Armor": {armor},
+            "ArmorPerLevel": {armorlvl},
+            "AttackDamage": {ad},
+            "AttackDamagePerLevel": {adlvl},
+            "AttackRange": {ar},
+            "AttackSpeedOffset": {asoff},
+            "AttackSpeedPerLevel": {aslvl},
+            "Crit": {crit},
+            "CritPerLevel": {critlvl},
+            "HP": {hp},
+            "HPPerLevel": {hplvl},
+            "HPRegen": {hpreg}, 
+            "HPRegenPerLevel": {hpreglvl},
+            "MoveSpeed": {ms},
+            "MP": {mp},
+            "MPPerLevel": {mplvl},
+            "MPRegen": {mpreg},
+            "MPRegenPerLevel": {mpreglvl},
+            "SpellBlock": {mr},
+            "SpellBlockPerLevel": {mrlvl}
         }}
     }}
 ]
         """.format(
-            champ_id
-            ar
-            mplvl
-            ad
-            hp
-            hplvl
-            adlvl
-            armor
-            mpreglvl
-            hpreg
-            critlvl
-            mrlvl
-            mpreg
-            aslvl
-            mr
-            ms
-            asoff
-            crit
-            hpreglvl
-            armorlvl
+            champ_id = champ_id,
+            armor = champ_json["armor"]
+            armorlvl = champ_json["armorperlevel"]
+            ad = champ_json["attackdamage"]
+            adlvl = champ_json["attackdamageperlevel"]
+            ar = champ_json["attackrange"]
+            asoff = champ_json["attackspeedoffset"]
+            aslvl = champ_json["attackspeedperlevel"]
+            crit = champ_json["crit"]
+            critlvl = champ_json["critperlevel"]
+            hp = champ_json["hp"]
+            hplvl = champ_json["hpperlevel"]
+            hpreg = champ_json["hpperregen"]
+            hpreglvl = champ_json["hpregenperlevel"]
+            ms = champ_json["movementspeed"]
+            mp = champ_json["mp"]
+            mplvl = champ_json["mpperlevel"]
+            mpreg = champ_json["mpregen"]
+            mpreglvl = champ_json["mpregenperlevel"]
+            mr = champ_json["spellblock"]
+            mrlvl = champ_json["spellblockperlevel"]
         )
         
         champ_stats_file.write(json_db_string)
