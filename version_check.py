@@ -40,7 +40,10 @@ current_version : str
     try:
         query = Version.objects.get(Region=region)
     except Version.DoesNotExist:
-        log.error("Could not find " + region + " in DB when checking for region")
+        log.debug("Could not find " + region + " in DB when checking for region")
+        log.debug("Creating " + region + " in DB with version " + net_version)
+        new_entry = Version(Region=region, Version=net_version)
+        new_entry.save()
         return True, net_version
     except Version.MultipleObjectsReturned:
         log.error("Multiple objects returned when checking for region version")
