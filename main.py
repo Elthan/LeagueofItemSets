@@ -23,7 +23,7 @@ if __name__ == "__main__":
     # Set level of logging to be done
     log.basicConfig(format="%(levelname)s: %(message)s",level="DEBUG")
 
-    force_update = False
+    force_update = True
 
     # Temporary use only eune
     #region_list = ["br","eune","euw","kr","lan","las","na","oce","ru","tr","pbe"]

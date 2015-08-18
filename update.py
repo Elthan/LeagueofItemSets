@@ -249,7 +249,7 @@ def update_all(api_key, cur_ver, loglvl, region, ow=False, skip_ic=False, skip_j
     global skip_json
     skip_json = skip_js
     
-    get_all_json(url_list, region_list)
+    get_all_json(url_list, region)
     
     log.debug("Converting json files to django friendly json files.")
     create_db_json_items(region, log, overwrite=overwrite)
