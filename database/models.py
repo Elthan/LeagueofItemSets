@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 class PlayerItemSet(models.Model):
-        ItemSetID = models.CharField(max_length=200, default="A0") #or other field
+        ItemSetID = models.AutoField(primary_key=True) #or other field
         ItemSetFile = models.FileField(default="")
         ItemSetDate = models.DateTimeField('date created', default=timezone.now)
 
