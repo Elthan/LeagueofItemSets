@@ -34,8 +34,8 @@ if __name__ == "__main__":
     try:
         with open("settings") as settings_file:
             settings_string = settings_file.read()
-            api_key = re.search(r'API_KEY:\s*([?\w\d\-]+)\s', settings_string)
 
+            api_key = re.search(r'API_KEY:\s*([?\w\d\-]+)\s', settings_string)
             if (api_key is None):
                 log.error("""Could not locate api_key inside settings file.
                 Please input an api_key in the settings file in the format:
@@ -43,19 +43,8 @@ if __name__ == "__main__":
             else:
                 api_key = api_key.group(1)
 
-            # This is temporary. Will be exchanged once we have a db with a table
-            # which contains all versions for all regions.
-            current_version = re.search(r'CURRENT_VERSION: ([?\d\.]+\s)', settings_string)
-
-            if (current_version is None):
-                log.error("""Could not locate the current version inside the settings file.
-                Please input the current version inside the settings file in format:
-                CURRENT_VERSION: <VERSION>""")
-            else:
-                current_version = current_version.group(1)
-
             # Temporary just use eune
-            if (version_check.check_version( "eune", api_key, current_version, log )):
+            if (version_check.check_version( "eune", api_key, log )):
                 log.debug("We are up to date!")
             else:
                 # Update all the json file from all the different regions.

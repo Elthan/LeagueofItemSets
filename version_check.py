@@ -2,7 +2,7 @@ import urllib.request
 import json
 from database.models import Version
 
-def check_version(region, api_key, local_version, log):
+def check_version(region, api_key, log):
     '''
 Check current version of the region.
 
@@ -50,8 +50,6 @@ current_version : str
         return True, net_version
 
     local_version = query.Version
-
-    print(local_version)
 
     if (local_version == net_version):
         current_version = local_version
