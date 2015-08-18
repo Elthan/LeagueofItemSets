@@ -49,7 +49,7 @@ current_version : str
         log.error("Multiple objects returned when checking for region version")
         return True, net_version
 
-    print(query)
+    local_version = query.Version
 
     if (local_version == net_version):
         current_version = local_version
