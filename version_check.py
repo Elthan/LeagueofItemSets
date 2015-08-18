@@ -1,7 +1,7 @@
 import django.db
 from database.models import Version
 
-def check_version(region, api_key, local_version):
+def check_version(region, api_key, local_version, log):
     '''
 Check current version of the region.
 
