@@ -6,7 +6,7 @@ import re
 import urllib.request
 import json
 import django.db
-from database.models import Version
+from database.models import version
 
 #######################################
 # 
