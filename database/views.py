@@ -8,8 +8,11 @@ from django.shortcuts import render
 
 
 # Method for sending files to users
-def send_json_file(file_path, filename):
-    json_file = open("file_path", 'rb')
+def index(request):
+	return render(request, 'database/index.html')
+
+def send_json_file (emptyarg, file_path="database", filename="test.json"):
+    json_file = open('{}/{}'.format(file_path, filename), 'rb')
     response = HttpResponse(json_file, content_type ='application/json')
     response["Content-Disposition"] = 'attachment; filename="' + filename + '"'
 
