@@ -1,6 +1,10 @@
 import urllib.request
 import json
+import os
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "LeagueofItemSets.settings")
+
 from database.models import Version
+
 
 
 def check_version(region, api_key, log):

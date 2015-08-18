@@ -135,7 +135,7 @@ is_new_version : bool
     return is_new_version
 
 
-def get_all_json(url_list, region_list):
+def get_all_json(url_list, region):
     '''
 Fetch all the json.
 
@@ -144,37 +144,33 @@ Parameters
 url_list : list[str]
     List of all the different types we want
     and url that comes we fetch from.
-region_list : list[str]
-    List of all the different regions we fetch.
+region : str
+    Region we should fetch for.
     '''
-    log.debug("Beginning fetching for all json files for all regions")
+    log.debug("Beginning fetching for all json files for region " + region)
         
     for json_type in url_list:
-        for region in region_list:
-            
-            url = url_list[json_type]
-            json_string = get_json(json_type, url, region)
-            
-            if (json_string is None):
-                error("Error occured when trying to fetch items for " + region)
-                continue
+        url = url_list[json_type]
+        json_string = get_json(json_type, url, region)
+        
+        if (json_string is None):
+            error("Error occured when trying to fetch items for " + region)
+            continue
+        else:
+            if (check_json_version( json_type, json_string, region ) and overwrite
+                or not skip_json):
+                with open("json/" + json_type + "/" + region + ".json", 'w') as json_file:
+                    json_file.write(json_string)
             else:
-                if (check_json_version( json_type, json_string, region ) and overwrite
-                    or not skip_json):
-                    with open("json/" + json_type + "/" + region + ".json", 'w') as json_file:
-                        json_file.write(json_string)
-                else:
-                    log.debug(region + " skipped because it was up to date.")
-                    
-    log.debug("Fetched all items as json files for all regions")
+                log.debug(region + " skipped because it was up to date.")
+                
+    log.debug("Fetched all items as json files for region " + region)
 
     
-def update_all(api_key, cur_ver, loglvl, ow=False, skip_ic=False, skip_js=False):
+def update_all(api_key, cur_ver, loglvl, region, ow=False, skip_ic=False, skip_js=False):
     log.basicConfig(format="%(levelname)s: %(message)s", level=loglvl)
     
-    #region_list = ["br","eune","euw","kr","lan","las","na","oce","ru","tr","pbe"]
-    region_list = ["eune"]
-
+ 
     url_list = {"item":"https://global.api.pvp.net/api/lol/static-data/eune/v1.2/item?itemListData=all&api_key="+api_key,
                 "champion":"https://global.api.pvp.net/api/lol/static-data/eune/v1.2/champion?champData=all&api_key="+api_key}
 
@@ -190,6 +186,5 @@ def update_all(api_key, cur_ver, loglvl, ow=False, skip_ic=False, skip_js=False)
     #get_all_json(url_list, region_list)
     
     log.debug("Converting json files to django friendly json files.")
-    for region in region_list:
-        #create_db_json_items(region, log, overwrite=overwrite)
-        create_db_json_champ(region, log, overwrite=overwrite)
+    create_db_json_items(region, log, overwrite=overwrite)
+    create_db_json_champ(region, log, overwrite=overwrite)

@@ -4,7 +4,6 @@ import update
 import logging as log
 import re
 import version_check
-import os
 
 #######################################
 #
@@ -27,9 +26,10 @@ if __name__ == "__main__":
 
     force_update = False
 
-    # This might not work, may have to set the env var manually.
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "LeagueofItemSets.settings")
-
+    # Temporary use only eune
+    #region_list = ["br","eune","euw","kr","lan","las","na","oce","ru","tr","pbe"]
+    region_list = ["eune"]
+    
     print("League of Item Sets v0.2")
 
     # Get the api_key, which is hidden.
@@ -45,13 +45,14 @@ if __name__ == "__main__":
             else:
                 api_key = api_key.group(1)
 
-            is_new_version, current_version = version_check.check_version("eune", api_key, log)
-            # Temporary just use eune
-            if (is_new_version or force_update):
-                # Update all the json file from all the different regions.
-                update.update_all(api_key, current_version, "DEBUG")
-            else:
-                log.debug("We are up to date!")
+            for region in region_list:
+                is_new_version, current_version = version_check.check_version(region, api_key, log)
+                
+                if (is_new_version or force_update):
+                    # Update all the json file from all the different regions.
+                    update.update_all(api_key, current_version, "DEBUG", region)
+                else:
+                    log.debug("We are up to date for " + region + "!")
 
     except OSError as oserr:
         print(oserr)
