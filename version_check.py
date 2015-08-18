@@ -51,6 +51,8 @@ current_version : str
 
     local_version = query.Version
 
+    print(local_version)
+
     if (local_version == net_version):
         current_version = local_version
         is_new_version = False
