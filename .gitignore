@@ -7,3 +7,4 @@ django_site/Django cheat sheet.txt
 database/migrations
 *.docx
 \#*
+*.pyc

@@ -5,7 +5,6 @@ import logging as log
 import re
 import urllib.request
 import json
-import django.db
 import version_check
 
 #######################################
