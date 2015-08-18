@@ -1,4 +1,5 @@
-import django.db
+import urllib.request
+import json
 from database.models import Version
 
 def check_version(region, api_key, local_version, log):

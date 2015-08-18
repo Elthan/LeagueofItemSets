@@ -3,8 +3,6 @@
 import update
 import logging as log
 import re
-import urllib.request
-import json
 import version_check
 import os
 
