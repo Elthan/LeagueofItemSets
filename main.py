@@ -79,6 +79,8 @@ if __name__ == "__main__":
     # Set level of logging to be done
     log.basicConfig(format="%(levelname)s: %(message)s",level="DEBUG")
 
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "LeagueofItemSets.settings")
+    
     print("League of Item Sets v0.2")
     
     # Get the api_key, which is hidden for git purposes.
