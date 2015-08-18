@@ -43,7 +43,7 @@ if __name__ == "__main__":
             else:
                 api_key = api_key.group(1)
 
-            current_version, is_new_version = version_check.check_version("eune", api_key, log)
+            is_new_version, current_version = version_check.check_version("eune", api_key, log)
             # Temporary just use eune
             if (is_new_version):
                 # Update all the json file from all the different regions.
