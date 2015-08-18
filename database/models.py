@@ -66,7 +66,7 @@ class Item(models.Model):
         
         #to determine returned value 
         def __str__(self): 
-                return str(self.ItemID)
+                return self.Name
         
         
 class ChampionStat(models.Model):
@@ -104,7 +104,7 @@ class Champion(models.Model):
 
         #to determine returned value 
         def __str__(self):
-                return str(self.ChampID)
+                return self.Name
         
 class Version(models.Model):
         Region = models.CharField(primary_key=True, max_length=200, default="eune")

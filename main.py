@@ -3,6 +3,7 @@
 import update
 import logging as log
 import re
+import argparse
 
 #######################################
 #
@@ -20,11 +21,23 @@ import re
 
 
 if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument('-f', '--force', default=False, action="store_true",
+                        help="Force update even if it's up to date.")
+    parser.add_argument('-v', '--verbose', action="store_const", const="DEBUG",
+                        default="LOG", help="Set output level to DEBUG")
+
+    args = parser.parse_args()
+    loglvl = args.verbose
+
+    print(loglvl)
     # Set level of logging to be done
     log.basicConfig(format="%(levelname)s: %(message)s",level="DEBUG")
-
-    force_update = False
-
+    
+    force_update = args.force
+    
     # Temporary use only eune
     #region_list = ["br","eune","euw","kr","lan","las","na","oce","ru","tr","pbe"]
     region_list = ["eune"]

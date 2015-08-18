@@ -10,6 +10,8 @@ from convert import create_db_json_champ
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "LeagueofItemSets.settings")
 
 from database.models import Version
+from database.models import Champion
+from database.models import Item
 
 
 def error(msg):
@@ -46,7 +48,7 @@ current_version : str
         with urllib.request.urlopen(url) as response:
             net_version = response.read().decode("UTF-8")
     except urllib.error.HTTPError as err:
-        error("HTTPError " + err + "when checking version for " + \
+        log.warning("HTTPError " + err + "when checking version for " + \
             region + ". Version set to 5.15.1")
         net_version = "5.15.1"
 
@@ -56,7 +58,7 @@ current_version : str
         # Read local version in DB
         query = Version.objects.get(Region=region)
     except Version.DoesNotExist:
-        log.debug("Could not find " + region + " in DB when checking for region")
+        log.warning("Could not find " + region + " in DB when checking for region")
         log.debug("Creating " + region + " in DB with version " + net_version)
         new_entry = Version(Region=region, Version=net_version)
         new_entry.save()
@@ -88,6 +90,20 @@ img_type : str
 id_list : list[str]
     List of all the icon ids to fetch.
     '''
+
+    if (img_type == "item"):
+        query = Item.objects.all()
+    elif (img_type == "champion"):
+        query = Item.objects.all()
+    else:
+        error("Image type not supported for " + img_type + ". Unable to fetch icons.")
+        return
+
+    for icon_id in query:
+        print(icon_id.ItemID)
+
+    return
+    
     if (skip_icons):
         log.debug("Skipping all icons")
         return
@@ -148,6 +164,7 @@ html : str
         
     # Temporary way of getting item icons
     # will be replaced later when db is up and running.
+    '''
     if ("eune" in region):
         html_json = json.loads( html )
 
@@ -155,7 +172,8 @@ html : str
             icon_id_list.append(icon_id)
 
         get_icons(json_type, icon_id_list)
-                             
+    '''
+    
     log.debug("Succesfully fetched items for " + region)
     
     return html
@@ -248,9 +266,10 @@ def update_all(api_key, cur_ver, loglvl, region, ow=False, skip_ic=False, skip_j
     skip_icons = skip_ic
     global skip_json
     skip_json = skip_js
+
+    get_icons("item", [""])
+    #get_all_json(url_list, region_list)
     
-    get_all_json(url_list, region_list)
-    
-    log.debug("Converting json files to django friendly json files.")
-    create_db_json_items(region, log, overwrite=overwrite)
-    create_db_json_champ(region, log, overwrite=overwrite)
+    #log.log("Converting json files to django friendly json files.")
+    #create_db_json_items(region, log, overwrite=overwrite)
+    #create_db_json_champ(region, log, overwrite=overwrite)
