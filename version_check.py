@@ -32,9 +32,9 @@ current_version : str
     try:
         with urllib.request.urlopen(url) as response:
             net_version = response.read().decode("UTF-8")
-    except urllib.error.HTTPError:
-        error("HTTPError when checking version for " + region + \
-                ". Version set to 5.15.1")
+    except urllib.error.HTTPError as err:
+        log.error("HTTPError " + err + "when checking version for " + \
+            region + ". Version set to 5.15.1")
         net_version = "5.15.1"
 
     net_version = json.loads(net_version)[0]
