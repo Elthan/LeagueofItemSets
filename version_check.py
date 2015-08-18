@@ -39,10 +39,10 @@ current_version : str
 
     try:
         query = Version.objects.get(Region=region)
-    except DoesNotExist:
+    except Version.DoesNotExist:
         log.error("Could not find " + region + " in DB when checking for region")
         return True, net_version
-    except MultipleObjectsReturned:
+    except Version.MultipleObjectsReturned:
         log.error("Multiple objects returned when checking for region version")
         return True, net_version
 
