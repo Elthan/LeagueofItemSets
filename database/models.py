@@ -12,7 +12,7 @@ class PlayerItemSet(models.Model):
 
         
 class ItemStat(models.Model):
-        ItemID = models.IntegerField(default=0)
+        ItemID = models.IntegerField(primary_key=True, default=0)
         FlatArmorMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
         FlatAttackSpeedMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
         FlatBlockMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
@@ -53,7 +53,7 @@ class ItemStat(models.Model):
         
         
 class Item(models.Model):
-        ItemID = models.IntegerField(default=0)
+        ItemID = models.IntegerField(primary_key=True, default=0)
         Description = models.CharField(max_length=200, default="Describe me!")
         GoldTotal = models.SmallIntegerField(default=0)
         GoldBase = models.SmallIntegerField(default=0)
@@ -70,7 +70,7 @@ class Item(models.Model):
         
         
 class ChampionStat(models.Model):
-        ChampID = models.IntegerField(default=0) 
+        ChampID = models.IntegerField(primary_key=True, default=0) 
         Armor = models.DecimalField(max_digits=11, decimal_places=5, default=0)
         ArmorPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
         AttackDamage = models.DecimalField(max_digits=11, decimal_places=5, default=0)
@@ -98,7 +98,7 @@ class ChampionStat(models.Model):
 
         
 class Champion(models.Model):
-        ChampID = models.IntegerField(default=0)
+        ChampID = models.IntegerField(primary_key=True, default=0)
         Name = models.CharField(max_length=200, default="Tweemo")
         Icon = models.CharField(max_length=200, default="icons/champion/Unknown.png")
 
@@ -107,7 +107,7 @@ class Champion(models.Model):
                 return str(self.ChampID)
         
 class Version(models.Model):
-        Region = models.CharField(max_length=200, default="eune")
+        Region = models.CharField(primary_key=True, max_length=200, default="eune")
         Version = models.CharField(max_length=200, default="1.0.0")
 
         #to determine returned value 

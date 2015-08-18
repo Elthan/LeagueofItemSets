@@ -3,7 +3,6 @@
 import update
 import logging as log
 import re
-import version_check
 
 #######################################
 #
@@ -30,7 +29,7 @@ if __name__ == "__main__":
     #region_list = ["br","eune","euw","kr","lan","las","na","oce","ru","tr","pbe"]
     region_list = ["eune"]
     
-    print("League of Item Sets v0.2")
+    print("League of Item Sets v0.3")
 
     # Get the api_key, which is hidden.
     try:
@@ -46,7 +45,7 @@ if __name__ == "__main__":
                 api_key = api_key.group(1)
 
             for region in region_list:
-                is_new_version, current_version = version_check.check_version(region, api_key, log)
+                is_new_version, current_version = update.check_version(region, api_key, log)
                 
                 if (is_new_version or force_update):
                     # Update all the json file from all the different regions.
