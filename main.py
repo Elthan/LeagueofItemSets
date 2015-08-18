@@ -5,7 +5,7 @@ import logging as log
 import re
 import urllib.request
 import json
-#from database.models import Version
+from database.models import Version
 
 #######################################
 # 
@@ -105,11 +105,11 @@ if __name__ == "__main__":
                 current_version = current_version.group(1)
 
             # Temporary just use eune
-            if (not check_version( "eune", api_key, current_version )):
+            if (check_version( "eune", api_key, current_version )):
                 log.debug("We are up to date!")
             else:
                 # Update all the json file from all the different regions.
-                update.update_all(api_key, current_version, "DEBUG", ow=True, skip_ic=True, skip_js=True)
+                update.update_all(api_key, current_version, "DEBUG")
                 
     except OSError as oserr:
         print(oserr)
