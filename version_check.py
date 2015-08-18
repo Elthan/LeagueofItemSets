@@ -2,6 +2,7 @@ import urllib.request
 import json
 from database.models import Version
 
+
 def check_version(region, api_key, log):
     '''
 Check current version of the region.
@@ -32,12 +33,14 @@ current_version : str
         with urllib.request.urlopen(url) as response:
             net_version = response.read().decode("UTF-8")
     except urllib.error.HTTPError:
-        error("HTTPError when checking version for " + region)
-        return False, current_version
+        error("HTTPError when checking version for " + region + \
+                ". Version set to 5.15.1")
+        net_version = "5.15.1"
 
     net_version = json.loads(net_version)[0]
 
     try:
+        # Read local version in DB
         query = Version.objects.get(Region=region)
     except Version.DoesNotExist:
         log.debug("Could not find " + region + " in DB when checking for region")

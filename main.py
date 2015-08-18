@@ -10,7 +10,7 @@ import os
 #
 #   League of Item Sets
 #
-#   Version: 0.2
+#   Version: 0.3
 #
 #   By: Jonas Sandbekk & Ole Harbosen
 #
@@ -24,6 +24,8 @@ import os
 if __name__ == "__main__":
     # Set level of logging to be done
     log.basicConfig(format="%(levelname)s: %(message)s",level="DEBUG")
+
+    force_update = False
 
     # This might not work, may have to set the env var manually.
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "LeagueofItemSets.settings")
@@ -45,7 +47,7 @@ if __name__ == "__main__":
 
             is_new_version, current_version = version_check.check_version("eune", api_key, log)
             # Temporary just use eune
-            if (is_new_version):
+            if (is_new_version or force_update):
                 # Update all the json file from all the different regions.
                 update.update_all(api_key, current_version, "DEBUG")
             else:
