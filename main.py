@@ -6,6 +6,7 @@ import re
 import urllib.request
 import json
 import version_check
+import os
 
 #######################################
 #
@@ -26,6 +27,7 @@ if __name__ == "__main__":
     # Set level of logging to be done
     log.basicConfig(format="%(levelname)s: %(message)s",level="DEBUG")
 
+    # This might not work, may have to set the env var manually.
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "LeagueofItemSets.settings")
 
     print("League of Item Sets v0.2")

@@ -35,14 +35,14 @@ current_version : str
         return False, current_version
 
     net_version = json.loads(net_version)[0]
-    '''
+
     try:
-        query = Version.objects.get(Region=region)
+        query = Version.objects.all()
     except DoesNotExist:
         pass
     except MultipleObjectsReturned:
         pass
-    '''
+
 
     if (local_version == net_version):
         current_version = local_version
