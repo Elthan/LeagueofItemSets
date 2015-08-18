@@ -1,4 +1,4 @@
-
+from database.models import Version
 
 def check_version(region, api_key, local_version):
     '''
