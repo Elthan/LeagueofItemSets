@@ -1,3 +1,4 @@
+import django.db
 from database.models import Version
 
 def check_version(region, api_key, local_version):
@@ -22,10 +23,10 @@ current_version : str
     in the format 5.15.1
     '''
     log.debug("Checking version for "+region)
-    
+
     url = "https://global.api.pvp.net/api/lol/static-data/" + region + \
           "/v1.2/versions?api_key=" + api_key
-    
+
     try:
         with urllib.request.urlopen(url) as response:
             net_version = response.read().decode("UTF-8")
@@ -42,7 +43,7 @@ current_version : str
     except MultipleObjectsReturned:
         pass
     '''
-    
+
     if (local_version == net_version):
         current_version = local_version
         is_new_version = False

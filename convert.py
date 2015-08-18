@@ -40,10 +40,10 @@ mode : str
     block_list_len = len(block_list)-1
     for index, block in enumerate(block_list):
         item_set_string = item_set_string + block + ("," if index < block_list_len else "")
-    
+
     item_set_string = item_set_string + "]\n}"
     item_set_json = json.dumps(item_set_string)
-    
+
     return item_set_json
 
 # See note above.
@@ -86,10 +86,11 @@ hide_if_summoner : str
     for index, item in enumerate(item_list):
         block_string = block_string + item + ("," if index < item_list_len else "")
     block_string = block_string + "]"
-        
+
     block_json = json.dumps(block_string)
-    
+
     return block_json
+
 
 def create_db_json_item_stats(item_json, region, log, overwrite=False):
     '''
@@ -111,11 +112,11 @@ overwrite : bool
     os.makedirs("json/item_stats/" + region, exist_ok=True)
 
     path = "json/item_stats/" + region + "/" + item_id + ".json"
-    
+
     if (os.path.exists(path) and not overwrite):
         log.debug("Item stats for " + item_id + " of region " + region + " skipped.")
         return
-    
+
     with open(path, 'w') as item_stats_file:
         json_db_string = """[
     {{
@@ -125,7 +126,7 @@ overwrite : bool
 """.format(item_id)
         stats_len = len(item_json["stats"])-1
         index = 0
-        
+
         # Add all the stats the item has. Don't add ,\n on last stat.
         for key, value in item_json["stats"].items():
             json_db_string += "\t\t\"" + key + "\": " + str(value) + \
@@ -137,6 +138,7 @@ overwrite : bool
 ]
 """
         item_stats_file.write(json_db_string)
+
 
 def create_db_json_items(region, log, overwrite=False):
     '''
@@ -169,9 +171,9 @@ overwrite : bool
                 if (os.path.exists(path) and not overwrite):
                     log.debug("Item " + item_id + " for region " + region + " skipped.")
                     continue
-                
+
                 log.debug("Creating json file for item " + item_id)
-                
+
                 with open(path, 'w') as item_json_file:
                     json_db_string = """[
     {{
@@ -199,7 +201,7 @@ overwrite : bool
                         json_db_string += ",\n\t" + """ "Into": {} """.format(json.dumps(into))
                     except KeyError:
                         pass
-                    
+
                     # Not all items have a tag.
                     try:
                         tags = item_json["tags"]
@@ -212,9 +214,10 @@ overwrite : bool
 ]"""
                     item_json_file.write(json_db_string)
 
-                    
+
     except OSError:
         log.error("Could not find items JSON file for region " + region)
+
 
 def create_db_json_champ_stats(champ_json, region, log, overwrite=False):
       '''
@@ -233,17 +236,17 @@ overwrite : bool
     '''
       champ_id = champ_json["id"]
       champ_name = champ_json["name"]
-      
+
       log.debug("Creating JSON file for champion stats for champion " + champ_name)
-    
+
       os.makedirs("json/champ_stats/" + region, exist_ok=True)
 
       path = "json/champ_stats/" + region + "/" + champ_name + ".json"
-      
+
       if (os.path.exists(path) and not overwrite):
           log.debug("Champion stats for " + champ_name + " of region " + region + " skipped.")
           return
-    
+
       with open(path, 'w') as champ_stats_file:
           champ_stats = champ_json["stats"]
           # JSON that django can read
@@ -263,7 +266,7 @@ overwrite : bool
             "CritPerLevel": {critlvl},
             "HP": {hp},
             "HPPerLevel": {hplvl},
-            "HPRegen": {hpreg}, 
+            "HPRegen": {hpreg},
             "HPRegenPerLevel": {hpreglvl},
             "MoveSpeed": {ms},
             "MP": {mp},
@@ -298,10 +301,10 @@ overwrite : bool
               mr = champ_stats["spellblock"],
               mrlvl = champ_stats["spellblockperlevel"]
           )
-          
+
           champ_stats_file.write(json_db_string)
-    
-        
+
+
 def create_db_json_champ(region, log, overwrite=False):
     '''
 Create a django friendly json file for champions.
@@ -328,13 +331,13 @@ overwrite : bool
                 create_db_json_champ_stats(champ_json, region, log, overwrite)
 
                 path = "json/champion/" + region + "/" + champ_name + ".json"
-                
+
                 if (os.path.exists(path) and not overwrite):
                     log.debug("Champion "+ champ_name + " for region " + region + " skipped.")
                     continue
 
                 log.debug("Creating JSON file for " + champ_name + " in region " + region)
-                
+
                 with open(path, 'w') as champ_json_file:
                     json_db_string = """[
     {{
@@ -354,6 +357,6 @@ overwrite : bool
     }
 ]"""
                     champ_json_file.write(json_db_string)
-                
+
     except OSError:
         log.error("Could not find champion JSON file for region " + region)

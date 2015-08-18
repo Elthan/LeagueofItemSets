@@ -9,13 +9,13 @@ import django.db
 import version_check
 
 #######################################
-# 
+#
 #   League of Item Sets
 #
 #   Version: 0.2
 #
 #   By: Jonas Sandbekk & Ole Harbosen
-# 
+#
 #   In collaberation with Riot Games
 #
 #   For the Riot API Challenge 2.0
@@ -28,10 +28,10 @@ if __name__ == "__main__":
     log.basicConfig(format="%(levelname)s: %(message)s",level="DEBUG")
 
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "LeagueofItemSets.settings")
-    
+
     print("League of Item Sets v0.2")
-    
-    # Get the api_key, which is hidden for git purposes.
+
+    # Get the api_key, which is hidden.
     try:
         with open("settings") as settings_file:
             settings_string = settings_file.read()
@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
             if (api_key is None):
                 log.error("""Could not locate api_key inside settings file.
-                Please input an api_key in the settings file in the format: 
+                Please input an api_key in the settings file in the format:
                 API_KEY: <API_KEY>""")
             else:
                 api_key = api_key.group(1)
@@ -61,7 +61,7 @@ if __name__ == "__main__":
             else:
                 # Update all the json file from all the different regions.
                 update.update_all(api_key, current_version, "DEBUG")
-                
+
     except OSError as oserr:
         print(oserr)
         log.error("Settings file not found. Please create a settings file.")
