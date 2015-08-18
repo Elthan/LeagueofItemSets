@@ -43,12 +43,13 @@ if __name__ == "__main__":
             else:
                 api_key = api_key.group(1)
 
+            current_version, is_new_version = version_check.check_version("eune", api_key, log)
             # Temporary just use eune
-            if (version_check.check_version( "eune", api_key, log )):
-                log.debug("We are up to date!")
-            else:
+            if (is_new_version):
                 # Update all the json file from all the different regions.
                 update.update_all(api_key, current_version, "DEBUG")
+            else:
+                log.debug("We are up to date!")
 
     except OSError as oserr:
         print(oserr)
