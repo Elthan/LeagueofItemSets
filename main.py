@@ -56,7 +56,7 @@ if __name__ == "__main__":
                 current_version = current_version.group(1)
 
             # Temporary just use eune
-            if (check_version( "eune", api_key, current_version )):
+            if (version_check.check_version( "eune", api_key, current_version )):
                 log.debug("We are up to date!")
             else:
                 # Update all the json file from all the different regions.
