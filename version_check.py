@@ -38,12 +38,15 @@ current_version : str
     net_version = json.loads(net_version)[0]
 
     try:
-        query = Version.objects.all()
+        query = Version.objects.get(Region=region)
     except DoesNotExist:
-        pass
+        log.error("Could not find " + region + " in DB when checking for region")
+        return True, net_version
     except MultipleObjectsReturned:
-        pass
+        log.error("Multiple objects returned when checking for region version")
+        return True, net_version
 
+    print(query)
 
     if (local_version == net_version):
         current_version = local_version
