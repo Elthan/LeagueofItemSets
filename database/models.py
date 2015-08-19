@@ -2,41 +2,43 @@ from django.db import models
 from django.utils import timezone
 
 
-class BlockItem(models.Model):
-        ItemID = models.IntegerField(default=0)
-        Count = models.IntegerField(default=1)
+class PlayerItemSet(models.Model):
+        ItemSetID = models.CharField(primary_key=True, max_length=50, default="0") #or other field
+        Title = models.CharField(max_length=200, default="Made by LoIS")
+        ItemSetDate = models.DateTimeField('date created', default=timezone.now)
+        ItemSetType = models.CharField(max_length=6, default="custom")
+        Map = models.CharField(max_length=3, default="any")
+        Mode = models.CharField(max_length=7, default="any")
+        Priority = models.BooleanField(default="false")
+        SortRank = models.SmallIntegerField(default=0)
+
+        #to determine returned value
+        def __str__(self): 
+                return str(self.ItemSetID)
+
         
-        # to determine return value
-        def __str__(self):
-                return str(self.ID)
-
-
 class Block(models.Model):
-        BlockType = models.CharField(max_length=200, default="1")
+        BlockType = models.CharField(max_length=200, default="Custom made")
         RecMath = models.BooleanField(default="false")
         MinSummonerLevel = models.SmallIntegerField(default=-1)
         MaxSummonerLevel = models.SmallIntegerField(default=-1)
         ShowIfSummonerSpell = models.CharField(max_length=50, default="")
         HideIfSummonerSpell = models.CharField(max_length=50, default="")
-        Items = models.ManyToManyField(BlockItem)
+        PlayerItemSet = models.ForeignKey(PlayerItemSet)
 
         def __str_(self):
                 return self.Type
-        
 
-class PlayerItemSet(models.Model):
-        ItemSetID = models.AutoField(primary_key=True) #or other field
-        ItemSetDate = models.DateTimeField('date created', default=timezone.now)
-        ItemSetType = models.CharField(max_length=6, default="custom")
-        Mode = models.CharField(max_length=7, default="any")
-        Priority = models.BooleanField(default="false")
-        SortRank = models.SmallIntegerField(default=0)
-        Blocks = models.ForeignKey(Block)
-
-        #to determine returned value
-        def __str__(self): 
-                return self.ItemSetID
         
+class BlockItem(models.Model):
+        ItemID = models.IntegerField(default=0)
+        Count = models.IntegerField(default=1)
+        Block = models.ForeignKey(Block)
+        
+        # to determine return value
+        def __str__(self):
+                return str(self.ItemID)
+
         
 class ItemStat(models.Model):
         ItemID = models.IntegerField(primary_key=True, default=0)

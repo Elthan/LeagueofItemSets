@@ -2,24 +2,81 @@
 
 import json
 import os
-from database.models import PlayerItemSet
+from database.models import PlayerItemSet, Block, BlockItem
+import django
 
 def create_json_from_db(item_set_id):
+    '''
+Convert information from the database to a item set JSON file.
 
-    query = PlayerItemSet.objects.get(ItemSetID=item_set_id)
+Parameters
+-------------
+item_set_id : int
+    Item set ID that we should convert.
+    '''
+    django.setup()
 
-    
-    
-    json_string = """{{
-    "title": "{name}"",
+    try:
+        item_set = PlayerItemSet.objects.get(ItemSetID=item_set_id)
+    except PlayerItemSet.DoesNotExist:
+        log.error("Could not find the item set with given ID: " + item_set_id)
+        return
+    except PlayerItemSet.MultipleObjectsReturned:
+        log.error("Multiple objects returned when querying for ID: " + item_set_id)
+        
+    item_set_string = """{{
+    "title": "{name}"", 
     "type": "custom",
     "map": "{set_map}",
     "mode": "{mode}",
     "priority": false,
     "sortrank": 0,
     "blocks": [
-    """.format()
+    """.format(
+        name = item_set.Title,
+        set_map = item_set.Map,
+        mode = item_set.Mode
+    )
     
+    blocks = item_set.block_set.all()
+    blocks_len = len(blocks) - 1 
+    for index_blocks, block in enumerate(blocks):
+        block_string = """{{
+        "type": "{block_type}",
+        "minSummonerLevel": {min_sum_lvl},
+        "maxSummonerLevel": {max_sum_lvl},
+        "showIfSummonerSpell": "{show_sum}",
+        "hideIfSummonerSpell": "{hide_sum}",
+        "items": [
+        """.format(
+            block_type = block.BlockType,
+            min_sum_lvl = block.MinSummonerLevel,
+            max_sum_lvl = block.MaxSummonerLevel,
+            show_sum = block.ShowIfSummonerSpell,
+            hide_sum = block.HideIfSummonerSpell
+        )
+
+        items = block.blockitem_set.all()
+        items_len = len(items) - 1
+        for index_items, item in enumerate(items):
+            item_string = """{{
+            "id": "{item_id}",
+            "count": {count}
+            """.format(
+                item_id = item.ItemID,
+                count = item.Count
+            )
+            item_string += "},\n" if index_items < items_len else "}\n"
+            block_string += item_string
+        block_string += "\t]\n"
+        block_string += "},\n" if index_blocks < blocks_len else "}"
+        item_set_string += block_string
+
+    item_set_string += "\n]\n}"
+
+    # Temporary solution
+    with open("database/test.json", 'w') as item_set_file:
+        item_set_file.write(item_set_string)
 
 '''
 def create_item_set_json(name, block_list, set_map="any", mode="any"):

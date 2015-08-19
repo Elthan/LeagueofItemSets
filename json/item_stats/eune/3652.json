@@ -4,8 +4,8 @@
         "model": "database.ItemStat",
         "fields": {
 		"PercentMovementSpeedMod": 0.04,
-		"PercentAttackSpeedMod": 0.2,
-		"FlatPhysicalDamageMod": 30.0
+		"FlatPhysicalDamageMod": 30.0,
+		"PercentAttackSpeedMod": 0.2
         }
     }
 ]

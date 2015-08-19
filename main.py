@@ -9,6 +9,7 @@ import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "LeagueofItemSets.settings")
 
 import update
+import convert
 
 #######################################
 #
@@ -48,11 +49,11 @@ if __name__ == "__main__":
     skip_json = args.skipjson
     skip_convert = args.skipconvert
     skip_write_db = args.database
+    force_update = args.force
     
     # Set level of logging to be done
     log.basicConfig(format="%(levelname)s: %(message)s",level=loglvl)
     
-    force_update = args.force
     
     # Temporary use only eune
     #region_list = ["br","eune","euw","kr","lan","las","na","oce","ru","tr","pbe"]
