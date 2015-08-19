@@ -1,15 +1,42 @@
 from django.db import models
 from django.utils import timezone
 
+
+class BlockItem(models.Model):
+        ItemID = models.IntegerField(default=0)
+        Count = models.IntegerField(default=1)
+        
+        # to determine return value
+        def __str__(self):
+                return str(self.ID)
+
+
+class Block(models.Model):
+        BlockType = models.CharField(max_length=200, default="1")
+        RecMath = models.BooleanField(default="false")
+        MinSummonerLevel = models.SmallIntegerField(default=-1)
+        MaxSummonerLevel = models.SmallIntegerField(default=-1)
+        ShowIfSummonerSpell = models.CharField(max_length=50, default="")
+        HideIfSummonerSpell = models.CharField(max_length=50, default="")
+        Items = models.ManyToManyField(BlockItem)
+
+        def __str_(self):
+                return self.Type
+        
+
 class PlayerItemSet(models.Model):
         ItemSetID = models.AutoField(primary_key=True) #or other field
-        ItemSetFile = models.FileField(default="")
         ItemSetDate = models.DateTimeField('date created', default=timezone.now)
+        ItemSetType = models.CharField(max_length=6, default="custom")
+        Mode = models.CharField(max_length=7, default="any")
+        Priority = models.BooleanField(default="false")
+        SortRank = models.SmallIntegerField(default=0)
+        Blocks = models.ForeignKey(Block)
 
         #to determine returned value
         def __str__(self): 
                 return self.ItemSetID
-
+        
         
 class ItemStat(models.Model):
         ItemID = models.IntegerField(primary_key=True, default=0)

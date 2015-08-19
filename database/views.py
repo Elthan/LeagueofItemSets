@@ -7,10 +7,10 @@ from django.shortcuts import render
 # Create your views here.
 
 
-# Method for sending files to users
 def index(request):
 	return render(request, 'database/index.html')
 
+# Method for sending files to users
 def send_json_file (emptyarg, file_path="database", filename="test.json"):
     json_file = open('{}/{}'.format(file_path, filename), 'rb')
     response = HttpResponse(json_file, content_type ='application/json')
