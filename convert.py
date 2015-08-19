@@ -25,7 +25,7 @@ item_set_id : int
         log.error("Multiple objects returned when querying for ID: " + item_set_id)
         
     item_set_string = """{{
-    "title": "{name}"", 
+    "title": "{name}", 
     "type": "custom",
     "map": "{set_map}",
     "mode": "{mode}",
