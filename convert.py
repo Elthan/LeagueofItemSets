@@ -2,8 +2,6 @@
 
 import json
 import os
-from database.models import PlayerItemSet, Block, BlockItem
-import django
 
 def create_json_from_db(item_set_id):
     '''
@@ -14,6 +12,8 @@ Parameters
 item_set_id : int
     Item set ID that we should convert.
     '''
+    from database.models import PlayerItemSet, Block, BlockItem
+    import django
     django.setup()
 
     try:
@@ -38,6 +38,7 @@ item_set_id : int
         mode = item_set.Mode
     )
     
+    blocks_string_list = []
     blocks = item_set.block_set.all()
     blocks_len = len(blocks) - 1 
     for index_blocks, block in enumerate(blocks):
@@ -55,7 +56,8 @@ item_set_id : int
             show_sum = block.ShowIfSummonerSpell,
             hide_sum = block.HideIfSummonerSpell
         )
-
+        
+        items_string_list = []
         items = block.blockitem_set.all()
         items_len = len(items) - 1
         for index_items, item in enumerate(items):
@@ -67,11 +69,13 @@ item_set_id : int
                 count = item.Count
             )
             item_string += "},\n" if index_items < items_len else "}\n"
-            block_string += item_string
+            items_string_list.append(item_string)
+        block_string = block_string.join(item_string_list)
         block_string += "\t]\n"
         block_string += "},\n" if index_blocks < blocks_len else "}"
-        item_set_string += block_string
+        blocks_string_list.append(block_string)
 
+    item_set_string = item_set_string.join(block_string_list)
     item_set_string += "\n]\n}"
 
     # Temporary solution
