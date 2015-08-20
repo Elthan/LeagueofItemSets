@@ -1,0 +1,16 @@
+[
+            {
+                "pk" : 3135,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3135,
+                    "Name": "Void Staff",
+                    "Description": "+80 Ability Power UNIQUE Passive: Magic damage ignores 35% of the target's Magic Resist (applies before Magic Penetration).",
+                    "GoldTotal": 2500,
+                    "GoldBase": 1215,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3135.png" ,
+	 "Tags": ["MagicPenetration", "SpellDamage"] 
+            }
+        }
+]

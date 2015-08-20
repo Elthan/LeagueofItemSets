@@ -1,0 +1,10 @@
+[
+    {
+        "pk": 1074,
+        "model": "database.ItemStat",
+        "fields": {
+		"FlatHPPoolMod": 100.0,
+		"FlatHPRegenMod": 2.0
+        }
+    }
+]

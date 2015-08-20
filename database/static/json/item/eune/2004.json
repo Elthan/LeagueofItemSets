@@ -1,0 +1,16 @@
+[
+            {
+                "pk" : 2004,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 2004,
+                    "Name": "Mana Potion",
+                    "Description": "Limited to 5 at one time. Click to Consume: Restores 100 Mana over 15 seconds.",
+                    "GoldTotal": 35,
+                    "GoldBase": 35,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/2004.png" ,
+	 "Tags": ["Consumable", "Lane"] 
+            }
+        }
+]

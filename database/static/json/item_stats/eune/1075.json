@@ -1,0 +1,11 @@
+[
+    {
+        "pk": 1075,
+        "model": "database.ItemStat",
+        "fields": {
+		"FlatHPPoolMod": 70.0,
+		"FlatPhysicalDamageMod": 7.0,
+		"PercentLifeStealMod": 0.03
+        }
+    }
+]

@@ -1,0 +1,17 @@
+[
+            {
+                "pk" : 3301,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3301,
+                    "Name": "Ancient Coin",
+                    "Description": "+25% Base Mana Regen UNIQUE Passive - Favor: Being near a minion death without dealing the killing blow grants 3 Gold and 5 Health. Limited to 1 Gold Income item ''Gold dust rises from the desert and clings to the coin.'' - Historian Shurelya, 11 November, 23 CLE",
+                    "GoldTotal": 365,
+                    "GoldBase": 365,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3301.png" ,
+	 "Into": ["3096"] ,
+	 "Tags": ["GoldPer", "Lane", "ManaRegen"] 
+            }
+        }
+]

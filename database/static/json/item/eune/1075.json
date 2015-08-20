@@ -1,0 +1,16 @@
+[
+            {
+                "pk" : 1075,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 1075,
+                    "Name": "Doran's Blade (Showdown)",
+                    "Description": "+70 Health +7 Attack Damage +3% Life Steal Limited to 2 Doran's items on Showdown",
+                    "GoldTotal": 440,
+                    "GoldBase": 440,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/1075.png" ,
+	 "Tags": ["Damage", "Health", "LifeSteal", "OnHit"] 
+            }
+        }
+]

@@ -1,0 +1,16 @@
+[
+            {
+                "pk" : 3141,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3141,
+                    "Name": "Sword of the Occult",
+                    "Description": "+10 Attack Damage UNIQUE Passive: Grants +5 Attack Damage per stack and 5 stacks upon first purchase. Grants 2 stacks for a kill or 1 stack for an assist (max 20 stacks). Half of the stacks are lost upon death. At 20 stacks, grants +20% bonus Attack Speed.",
+                    "GoldTotal": 1400,
+                    "GoldBase": 1040,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3141.png" ,
+	 "Tags": ["Damage"] 
+            }
+        }
+]

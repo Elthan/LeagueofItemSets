@@ -8,8 +8,9 @@ import os
 # Required that DJANGO_SETTINGS_MODULE is not set already.
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "LeagueofItemSets.settings")
 
-import update
-import convert
+
+import database.update as update
+import database.convert as convert
 
 #######################################
 #
@@ -60,7 +61,7 @@ if __name__ == "__main__":
     region_list = ["eune"]
     
     log.info("League of Item Sets v0.3")
-
+    
     # Get the api_key, which is hidden.
     try:
         with open("settings") as settings_file:
@@ -85,5 +86,4 @@ if __name__ == "__main__":
                     log.info("We are up to date for " + region + "!")
                 
     except OSError as oserr:
-        print(oserr)
-        log.error("Settings file not found. Please create a settings file.")
+        log.error("Got an error message when trying to update:\n" + str(oserr))

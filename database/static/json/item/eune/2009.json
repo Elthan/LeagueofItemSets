@@ -1,0 +1,15 @@
+[
+            {
+                "pk" : 2009,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 2009,
+                    "Name": "Total Biscuit of Rejuvenation",
+                    "Description": "Click to Consume: Restores 80 Health and 50 Mana over 10 seconds.",
+                    "GoldTotal": 0,
+                    "GoldBase": 0,
+                    "Purchasable": "False",
+                    "Icon": "database/static/icons/item/2009.png" 
+            }
+        }
+]

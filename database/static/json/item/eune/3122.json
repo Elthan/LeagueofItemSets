@@ -1,0 +1,17 @@
+[
+            {
+                "pk" : 3122,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3122,
+                    "Name": "Wicked Hatchet",
+                    "Description": "+20 Attack Damage +10% Critical Strike Chance UNIQUE Passive: Critical Strikes cause your target to bleed for an additional 60% of your bonus Attack Damage as magic damage over 3 seconds.",
+                    "GoldTotal": 1200,
+                    "GoldBase": 440,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3122.png" ,
+	 "Into": ["3104", "3185"] ,
+	 "Tags": ["CriticalStrike", "Damage", "OnHit"] 
+            }
+        }
+]

@@ -1,0 +1,16 @@
+[
+            {
+                "pk" : 3142,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3142,
+                    "Name": "Youmuu's Ghostblade",
+                    "Description": "+30 Attack Damage +15% Critical Strike Chance +10% Cooldown Reduction UNIQUE Passive: +20 Armor Penetration UNIQUE Active: Grants +20% Movement Speed and +40% Attack Speed for 6 seconds (45 second cooldown). (Armor Penetration: Physical damage is increased by ignoring an amount of the target's Armor equal to Armor Penetration.)",
+                    "GoldTotal": 2700,
+                    "GoldBase": 563,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3142.png" ,
+	 "Tags": ["Active", "ArmorPenetration", "AttackSpeed", "CooldownReduction", "CriticalStrike", "Damage", "NonbootsMovement"] 
+            }
+        }
+]

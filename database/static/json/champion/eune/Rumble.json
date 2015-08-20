@@ -1,0 +1,12 @@
+[
+            {
+                "pk" : "68",
+                "model" : "database.Champion",
+                "fields" : {
+                    "ChampID": 68,
+                    "Name": "Rumble",
+                    "Icon": "static/icons/champion/Rumble"
+                    
+                }
+            }
+        ]

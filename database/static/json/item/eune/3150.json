@@ -1,0 +1,16 @@
+[
+            {
+                "pk" : 3150,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3150,
+                    "Name": "Mirage Blade",
+                    "Description": "+60 Attack Damage +15% Critical Strike +12% Life Steal UNIQUE Passive - Mark of the Sands: Basic Attacks apply a Sand Mark on the target revealing them for 3 seconds. Only one enemy can be Marked at any time. UNIQUE Active - Mirage Step: Teleport 350 units directly away from the Sand Marked target (60 second cooldown). ''Shurimans exploit every aspect of the desert.''",
+                    "GoldTotal": 3200,
+                    "GoldBase": 795,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3150.png" ,
+	 "Tags": ["Active", "Bilgewater", "CriticalStrike", "Damage", "LifeSteal", "NonbootsMovement"] 
+            }
+        }
+]

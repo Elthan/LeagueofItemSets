@@ -1,0 +1,16 @@
+[
+            {
+                "pk" : 3112,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3112,
+                    "Name": "Orb of Winter",
+                    "Description": "+70 Magic Resist +100% Base Health Regeneration UNIQUE Passive: Grants a shield that absorbs up to 30 (+10 per level) damage. The shield will refresh after 9 seconds without receiving damage.",
+                    "GoldTotal": 2200,
+                    "GoldBase": 990,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3112.png" ,
+	 "Tags": ["HealthRegen", "SpellBlock"] 
+            }
+        }
+]

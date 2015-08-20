@@ -1,0 +1,12 @@
+[
+            {
+                "pk" : "101",
+                "model" : "database.Champion",
+                "fields" : {
+                    "ChampID": 101,
+                    "Name": "Xerath",
+                    "Icon": "static/icons/champion/Xerath"
+                    
+                }
+            }
+        ]

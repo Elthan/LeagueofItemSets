@@ -1,0 +1,17 @@
+[
+            {
+                "pk" : 1037,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 1037,
+                    "Name": "Pickaxe",
+                    "Description": "+25 Attack Damage",
+                    "GoldTotal": 875,
+                    "GoldBase": 875,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/1037.png" ,
+	 "Into": ["3035", "3124", "3031", "3156", "3077", "3104", "3184", "3004", "3008", "3022", "3150", "3172", "3181", "3652"] ,
+	 "Tags": ["Damage"] 
+            }
+        }
+]

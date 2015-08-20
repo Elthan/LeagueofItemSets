@@ -1,0 +1,17 @@
+[
+            {
+                "pk" : 3057,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3057,
+                    "Name": "Sheen",
+                    "Description": "+25 Ability Power +200 Mana UNIQUE Passive - Spellblade: After using an ability, the next basic attack deals bonus physical damage equal to 100% base Attack Damage on hit (1.5 second cooldown). (Unique Passives with the same name don't stack.)",
+                    "GoldTotal": 1200,
+                    "GoldBase": 365,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3057.png" ,
+	 "Into": ["3078", "3100", "3025", "3708", "3716", "3720", "3724"] ,
+	 "Tags": ["Mana", "SpellDamage"] 
+            }
+        }
+]

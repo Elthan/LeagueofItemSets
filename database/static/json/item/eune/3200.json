@@ -1,0 +1,16 @@
+[
+            {
+                "pk" : 3200,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3200,
+                    "Name": "Prototype Hex Core",
+                    "Description": "+3 Ability Power per level UNIQUE Passive - Progress: This item can be upgraded three times to enhance Viktor's basic abilities.",
+                    "GoldTotal": 0,
+                    "GoldBase": 0,
+                    "Purchasable": "False",
+                    "Icon": "database/static/icons/item/3200.png" ,
+	 "Into": ["3196"] 
+            }
+        }
+]

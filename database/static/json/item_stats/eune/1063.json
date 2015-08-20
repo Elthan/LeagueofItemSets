@@ -1,0 +1,10 @@
+[
+    {
+        "pk": 1063,
+        "model": "database.ItemStat",
+        "fields": {
+		"FlatMPRegenMod": 1.2,
+		"FlatMagicDamageMod": 35.0
+        }
+    }
+]

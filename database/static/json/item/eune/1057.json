@@ -1,0 +1,17 @@
+[
+            {
+                "pk" : 1057,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 1057,
+                    "Name": "Negatron Cloak",
+                    "Description": "+45 Magic Resist",
+                    "GoldTotal": 850,
+                    "GoldBase": 350,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/1057.png" ,
+	 "Into": ["3001", "3026", "3112", "3170", "3180", "3512"] ,
+	 "Tags": ["SpellBlock"] 
+            }
+        }
+]

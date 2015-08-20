@@ -1,0 +1,16 @@
+[
+            {
+                "pk" : 3924,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3924,
+                    "Name": "Flesheater (Melee Only)",
+                    "Description": "+20 Attack Damage +10% Life Steal UNIQUE Passive: Basic attacks build Flesh charges. After 5 basic attacks, the Flesheater active will be ready. UNIQUE Active - Flesheater: Rip the flesh from target enemy minion dealing 200 (+75% AD) true damage to the target, healing the user for 50 (+75% AD) health and adding 1 Flesh stack to the item. UNIQUE Passive: Each stack on Flesheater adds 1 AD to the wielder. ''No need to sharpen after use.''",
+                    "GoldTotal": 1460,
+                    "GoldBase": 300,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3924.png" ,
+	 "Tags": ["Active", "Bilgewater", "Damage", "LifeSteal"] 
+            }
+        }
+]

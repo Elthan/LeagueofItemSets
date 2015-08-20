@@ -1,0 +1,16 @@
+[
+            {
+                "pk" : 3137,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3137,
+                    "Name": "Dervish Blade",
+                    "Description": "+50% Attack Speed +45 Magic Resist +10% Cooldown Reduction UNIQUE Active - Quicksilver: Removes all debuffs, and if champion is melee, also grants +50% bonus Movement Speed for 1 second (90 second cooldown).",
+                    "GoldTotal": 2700,
+                    "GoldBase": 200,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3137.png" ,
+	 "Tags": ["Active", "AttackSpeed", "CooldownReduction", "NonbootsMovement", "SpellBlock"] 
+            }
+        }
+]

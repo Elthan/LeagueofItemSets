@@ -1,0 +1,17 @@
+[
+            {
+                "pk" : 3028,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3028,
+                    "Name": "Chalice of Harmony",
+                    "Description": "+25 Magic Resist +50% Base Mana Regen UNIQUE Passive - Mana Font: Restores 2% of missing Mana every 5 seconds. (Unique Passives with the same name don't stack.)",
+                    "GoldTotal": 900,
+                    "GoldBase": 40,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3028.png" ,
+	 "Into": ["3174", "3222", "3744", "3745"] ,
+	 "Tags": ["ManaRegen", "SpellBlock"] 
+            }
+        }
+]

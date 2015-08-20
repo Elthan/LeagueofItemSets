@@ -1,0 +1,17 @@
+[
+            {
+                "pk" : 1051,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 1051,
+                    "Name": "Brawler's Gloves",
+                    "Description": "+8% Critical Strike Chance",
+                    "GoldTotal": 400,
+                    "GoldBase": 400,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/1051.png" ,
+	 "Into": ["3086", "3093", "3122"] ,
+	 "Tags": ["CriticalStrike"] 
+            }
+        }
+]

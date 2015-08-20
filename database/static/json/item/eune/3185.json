@@ -1,0 +1,16 @@
+[
+            {
+                "pk" : 3185,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3185,
+                    "Name": "The Lightbringer",
+                    "Description": "+30 Attack Damage +30% Critical Strike Chance UNIQUE Passive: Critical Strikes cause enemies to bleed for an additional 90% of bonus Attack Damage as magic damage over 3 seconds and reveal them for the duration. UNIQUE Passive - Trap Detection: Nearby stealthed enemy traps are revealed. UNIQUE Active - Hunter's Sight: A stealth-detecting mist grants vision in the target area for 5 seconds, revealing enemy champions that enter for 3 seconds (60 second cooldown). (Unique Passives with the same name don't stack.)",
+                    "GoldTotal": 2280,
+                    "GoldBase": 350,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3185.png" ,
+	 "Tags": ["Active", "CriticalStrike", "Damage", "OnHit", "Stealth", "Vision"] 
+            }
+        }
+]

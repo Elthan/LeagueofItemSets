@@ -1,0 +1,16 @@
+[
+            {
+                "pk" : 2044,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 2044,
+                    "Name": "Stealth Ward",
+                    "Description": "Can only carry 3 Stealth Wards in inventory. Click to Consume: Places an invisible ward that reveals the surrounding area for 3 minutes. Limit 3 Stealth Wards on the map per player.",
+                    "GoldTotal": 75,
+                    "GoldBase": 75,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/2044.png" ,
+	 "Tags": ["Consumable", "Lane", "Vision"] 
+            }
+        }
+]

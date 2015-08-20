@@ -1,0 +1,15 @@
+[
+            {
+                "pk" : 1334,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 1334,
+                    "Name": "Enchantment: Homeguard",
+                    "Description": "Limited to 1 of each enchantment type. Enchants boots to have Homeguard bonus. UNIQUE Passive - Homeguard: Visiting the shop vastly increases Health and Mana Regeneration and grants 200% bonus Movement Speed that decays over 8 seconds. Bonus Movement Speed and regeneration are disabled for 6 seconds upon dealing or taking damage. (Unique Passives with the same name don't stack.)",
+                    "GoldTotal": 1475,
+                    "GoldBase": 475,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/1334.png" 
+            }
+        }
+]

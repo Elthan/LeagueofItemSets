@@ -1,0 +1,11 @@
+[
+    {
+        "pk": 3652,
+        "model": "database.ItemStat",
+        "fields": {
+		"FlatPhysicalDamageMod": 30.0,
+		"PercentMovementSpeedMod": 0.04,
+		"PercentAttackSpeedMod": 0.2
+        }
+    }
+]

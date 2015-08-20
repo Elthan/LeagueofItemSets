@@ -1,0 +1,11 @@
+[
+    {
+        "pk": 3100,
+        "model": "database.ItemStat",
+        "fields": {
+		"FlatMPPoolMod": 250.0,
+		"FlatMagicDamageMod": 80.0,
+		"PercentMovementSpeedMod": 0.05
+        }
+    }
+]

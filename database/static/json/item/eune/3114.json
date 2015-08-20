@@ -1,0 +1,17 @@
+[
+            {
+                "pk" : 3114,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3114,
+                    "Name": "Forbidden Idol",
+                    "Description": "+50% Base Mana Regen UNIQUE Passive: +10% Cooldown Reduction",
+                    "GoldTotal": 600,
+                    "GoldBase": 240,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3114.png" ,
+	 "Into": ["3069", "3165", "3222", "3433", "3504", "3840"] ,
+	 "Tags": ["CooldownReduction", "ManaRegen"] 
+            }
+        }
+]

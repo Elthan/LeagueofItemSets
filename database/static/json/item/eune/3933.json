@@ -1,0 +1,16 @@
+[
+            {
+                "pk" : 3933,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3933,
+                    "Name": "Enchantment: Sated Devourer",
+                    "Description": "+50% Attack Speed +60 Magic Damage on Hit Passive - Phantom Hit: Every other basic attack will trigger on Hit effects an additional time.",
+                    "GoldTotal": 2250,
+                    "GoldBase": 2250,
+                    "Purchasable": "False",
+                    "Icon": "database/static/icons/item/3933.png" ,
+	 "Tags": ["AttackSpeed", "Damage", "Jungle", "OnHit"] 
+            }
+        }
+]

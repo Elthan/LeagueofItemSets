@@ -1,0 +1,16 @@
+[
+            {
+                "pk" : 3364,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3364,
+                    "Name": "Oracle's Lens (Trinket)",
+                    "Description": "Limited to 1 Trinket. *Level 9+ required to upgrade. UNIQUE Active: Reveals and disables nearby invisible traps and invisible wards for 6 seconds in a medium radius and grants detection of nearby invisible units for 10 seconds (75 second cooldown). (Trinkets cannot be used in the first 30 seconds of a game. Selling a Trinket will disable Trinket use for 120 seconds).",
+                    "GoldTotal": 250,
+                    "GoldBase": 250,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3364.png" ,
+	 "Tags": ["Active", "Trinket", "Vision"] 
+            }
+        }
+]

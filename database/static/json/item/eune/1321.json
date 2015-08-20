@@ -1,0 +1,15 @@
+[
+            {
+                "pk" : 1321,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 1321,
+                    "Name": "Enchantment: Alacrity",
+                    "Description": "Limited to 1 of each enchantment type. Enchants boots to have Alacrity bonus. UNIQUE Passive - Alacrity: +20 Movement Speed (Unique Passives with the same name don't stack.)",
+                    "GoldTotal": 1675,
+                    "GoldBase": 475,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/1321.png" 
+            }
+        }
+]

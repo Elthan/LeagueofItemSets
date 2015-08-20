@@ -1,0 +1,17 @@
+[
+            {
+                "pk" : 3093,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3093,
+                    "Name": "Avarice Blade",
+                    "Description": "+10% Critical Strike Chance UNIQUE Passive - Avarice: +3 Gold per 10 seconds UNIQUE Passive - Greed: Grants 2 Gold upon killing a unit. May be bought with another Gold Income item",
+                    "GoldTotal": 800,
+                    "GoldBase": 400,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3093.png" ,
+	 "Into": ["3087", "3142"] ,
+	 "Tags": ["CriticalStrike", "GoldPer"] 
+            }
+        }
+]

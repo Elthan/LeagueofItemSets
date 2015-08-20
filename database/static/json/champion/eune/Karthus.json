@@ -1,0 +1,12 @@
+[
+            {
+                "pk" : "30",
+                "model" : "database.Champion",
+                "fields" : {
+                    "ChampID": 30,
+                    "Name": "Karthus",
+                    "Icon": "static/icons/champion/Karthus"
+                    
+                }
+            }
+        ]

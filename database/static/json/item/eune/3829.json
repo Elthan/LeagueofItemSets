@@ -1,0 +1,16 @@
+[
+            {
+                "pk" : 3829,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3829,
+                    "Name": "Trickster's Glass",
+                    "Description": "+60 Ability Power +400 Health UNIQUE Passive - Eyes of Pain: +15 Magic Penetration UNIQUE Active - Disguise: Teleport to target ally and take on their appearance for 30 seconds. Casting a spell or attacking breaks the deception (90 second cooldown). ''Faces can not but lie.''",
+                    "GoldTotal": 2115,
+                    "GoldBase": 215,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3829.png" ,
+	 "Tags": ["Active", "Bilgewater", "Health", "MagicPenetration", "NonbootsMovement", "SpellDamage"] 
+            }
+        }
+]

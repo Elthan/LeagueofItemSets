@@ -1,0 +1,15 @@
+[
+            {
+                "pk" : 3243,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3243,
+                    "Name": "Enchantment: Distortion",
+                    "Description": "Limited to 1 of each enchantment type. Enchants boots to have Distortion bonus. UNIQUE Passive - Distortion: Teleport, Flash, and Ghost summoner spell cooldowns are reduced by 20% and are granted additional mobility: Ghost: Grants 40% Movement Speed from 27%. Flash: 20% Movement Speed bonus for 1 second after cast. Teleport: 30% Movement Speed bonus for 3 seconds after use. (Unique Passives with the same name don't stack.)",
+                    "GoldTotal": 475,
+                    "GoldBase": 475,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3243.png" 
+            }
+        }
+]

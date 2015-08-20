@@ -1,0 +1,17 @@
+[
+            {
+                "pk" : 1058,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 1058,
+                    "Name": "Needlessly Large Rod",
+                    "Description": "+60 Ability Power",
+                    "GoldTotal": 1250,
+                    "GoldBase": 1250,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/1058.png" ,
+	 "Into": ["3089", "3157", "3003", "3007", "3090", "3116", "3285"] ,
+	 "Tags": ["SpellDamage"] 
+            }
+        }
+]

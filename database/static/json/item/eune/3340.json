@@ -1,0 +1,17 @@
+[
+            {
+                "pk" : 3340,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3340,
+                    "Name": "Warding Totem (Trinket)",
+                    "Description": "Limited to 1 Trinket. Active: Places a Stealth Ward that lasts 60 seconds (120 second cooldown). At level 9, this ward's duration increases to 120 seconds. Limit 3 Stealth Wards on the map per player. (Trinkets cannot be used in the first 30 seconds of a game. Selling a Trinket will disable Trinket use for 120 seconds).",
+                    "GoldTotal": 0,
+                    "GoldBase": 0,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3340.png" ,
+	 "Into": ["3361", "3362"] ,
+	 "Tags": ["Active", "Jungle", "Lane", "Trinket", "Vision"] 
+            }
+        }
+]

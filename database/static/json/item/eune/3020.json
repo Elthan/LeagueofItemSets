@@ -1,0 +1,17 @@
+[
+            {
+                "pk" : 3020,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3020,
+                    "Name": "Sorcerer's Shoes",
+                    "Description": "+15 Magic Penetration UNIQUE Passive - Enhanced Movement: +45 Movement Speed (Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.) (Unique Passives with the same name don't stack.)",
+                    "GoldTotal": 1100,
+                    "GoldBase": 775,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3020.png" ,
+	 "Into": ["1311", "1313", "1310", "1312", "1314", "1337"] ,
+	 "Tags": ["Boots", "MagicPenetration"] 
+            }
+        }
+]

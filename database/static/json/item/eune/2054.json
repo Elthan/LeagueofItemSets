@@ -1,0 +1,15 @@
+[
+            {
+                "pk" : 2054,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 2054,
+                    "Name": "Diet Poro-Snax",
+                    "Description": "All the flavor of regular Poro-Snax, without the calories! Keeps your Poro happy AND healthy. Click to Consume: Gives your Poros a delicious healthy treat.",
+                    "GoldTotal": 0,
+                    "GoldBase": 0,
+                    "Purchasable": "False",
+                    "Icon": "database/static/icons/item/2054.png" 
+            }
+        }
+]
