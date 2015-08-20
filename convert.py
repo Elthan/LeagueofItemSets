@@ -78,9 +78,7 @@ item_set_id : int
     item_set_string = item_set_string.join(block_string_list)
     item_set_string += "\n]\n}"
 
-    # Temporary solution
-    with open("database/test.json", 'w') as item_set_file:
-        item_set_file.write(item_set_string)
+    return item_set_string
 
 
 def create_db_json_item_stats(item_json, region, log):
