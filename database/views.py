@@ -4,6 +4,7 @@ import json
 from django.http import HttpResponse
 from django.core.servers.basehttp import FileWrapper
 from django.shortcuts import render
+from .models import *
 # Create your views here.
 
 
@@ -23,3 +24,8 @@ def send_json_file (emptyarg, file_path="database", filename="test.json"):
     response["Content-Length"] = os.path.getsize(json_file)
     '''
     return response
+
+def rend(request):
+	dicti = Version.objects.all()
+	context = {'dicti': dicti}
+	return render(request, 'database/index2.html', context)
