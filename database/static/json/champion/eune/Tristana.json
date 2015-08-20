@@ -1,12 +1,12 @@
 [
-    {
-        "pk" : "18",
-        "model" : "database.Champion",
-        "fields" : {
+            {
+                "pk" : "18",
+                "model" : "database.Champion",
+                "fields" : {
                     "ChampID": 18,
                     "Name": "Tristana",
-                    "Icon": "icons/champion/Tristana"
+                    "Icon": "static/icons/champion/Tristana"
                     
-        }
-    }
-]
+                }
+            }
+        ]

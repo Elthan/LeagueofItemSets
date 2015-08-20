@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3026,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3026,
-            "Name": "Guardian Angel",
-            "Description": "+50 Armor +50 Magic Resist UNIQUE Passive: Upon taking lethal damage, restores 30% of maximum Health and Mana after 4 seconds of stasis (300 second cooldown).",
-            "GoldTotal": 2800,
-            "GoldBase": 1200,
-            "Purchasable": "True",
-            "Icon": "icons/item/3026.png" ,
+            {
+                "pk" : 3026,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3026,
+                    "Name": "Guardian Angel",
+                    "Description": "+50 Armor +50 Magic Resist UNIQUE Passive: Upon taking lethal damage, restores 30% of maximum Health and Mana after 4 seconds of stasis (300 second cooldown).",
+                    "GoldTotal": 2800,
+                    "GoldBase": 1200,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3026.png" ,
 	 "Tags": ["Armor", "SpellBlock"] 
+            }
         }
-    }
 ]

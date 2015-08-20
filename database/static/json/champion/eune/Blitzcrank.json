@@ -1,12 +1,12 @@
 [
-    {
-        "pk" : "53",
-        "model" : "database.Champion",
-        "fields" : {
+            {
+                "pk" : "53",
+                "model" : "database.Champion",
+                "fields" : {
                     "ChampID": 53,
                     "Name": "Blitzcrank",
-                    "Icon": "icons/champion/Blitzcrank"
+                    "Icon": "static/icons/champion/Blitzcrank"
                     
-        }
-    }
-]
+                }
+            }
+        ]

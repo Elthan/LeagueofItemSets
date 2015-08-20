@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3504,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3504,
-            "Name": "Ardent Censer",
-            "Description": "+40 Ability Power +10% Cooldown Reduction +100% Base Mana Regen UNIQUE Passive: +8% Movement Speed UNIQUE Passive: Your heals and shields on another allied champion grant them 15% Attack Speed and 30 magic damage on-hit for 6 seconds. (This does not include regeneration effects or effects on yourself.)",
-            "GoldTotal": 2100,
-            "GoldBase": 650,
-            "Purchasable": "True",
-            "Icon": "icons/item/3504.png" ,
+            {
+                "pk" : 3504,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3504,
+                    "Name": "Ardent Censer",
+                    "Description": "+40 Ability Power +10% Cooldown Reduction +100% Base Mana Regen UNIQUE Passive: +8% Movement Speed UNIQUE Passive: Your heals and shields on another allied champion grant them 15% Attack Speed and 30 magic damage on-hit for 6 seconds. (This does not include regeneration effects or effects on yourself.)",
+                    "GoldTotal": 2100,
+                    "GoldBase": 650,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3504.png" ,
 	 "Tags": ["CooldownReduction", "ManaRegen", "NonbootsMovement", "SpellDamage"] 
+            }
         }
-    }
 ]

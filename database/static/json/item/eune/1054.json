@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 1054,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 1054,
-            "Name": "Doran's Shield",
-            "Description": "+80 Health Passive: Restores 6 Health every 5 seconds. UNIQUE Passive: Blocks 8 damage from single target attacks and spells from champions.",
-            "GoldTotal": 440,
-            "GoldBase": 440,
-            "Purchasable": "True",
-            "Icon": "icons/item/1054.png" ,
+            {
+                "pk" : 1054,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 1054,
+                    "Name": "Doran's Shield",
+                    "Description": "+80 Health Passive: Restores 6 Health every 5 seconds. UNIQUE Passive: Blocks 8 damage from single target attacks and spells from champions.",
+                    "GoldTotal": 440,
+                    "GoldBase": 440,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/1054.png" ,
 	 "Tags": ["Health", "HealthRegen", "Lane"] 
+            }
         }
-    }
 ]

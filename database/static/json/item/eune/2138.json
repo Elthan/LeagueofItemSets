@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 2138,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 2138,
-            "Name": "Elixir of Iron",
-            "Description": "Level 9 required to purchase. Click to Consume: Grants 25% increased Size, Slow Resistance, Tenacity and Path of Iron for 3 minutes. Path of Iron: Moving leaves a path behind that boosts allied champion's Movement Speed by 15%. (Only one Flask effect may be active at a time.)",
-            "GoldTotal": 400,
-            "GoldBase": 400,
-            "Purchasable": "True",
-            "Icon": "icons/item/2138.png" ,
+            {
+                "pk" : 2138,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 2138,
+                    "Name": "Elixir of Iron",
+                    "Description": "Level 9 required to purchase. Click to Consume: Grants 25% increased Size, Slow Resistance, Tenacity and Path of Iron for 3 minutes. Path of Iron: Moving leaves a path behind that boosts allied champion's Movement Speed by 15%. (Only one Flask effect may be active at a time.)",
+                    "GoldTotal": 400,
+                    "GoldBase": 400,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/2138.png" ,
 	 "Tags": ["Consumable", "NonbootsMovement", "Tenacity"] 
+            }
         }
-    }
 ]

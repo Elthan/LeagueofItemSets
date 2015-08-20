@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3083,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3083,
-            "Name": "Warmog's Armor",
-            "Description": "+800 Health UNIQUE Passive: Restores 1% of maximum Health every 5 seconds. Health restore increases to 3% of maximum Health if damage hasn't been taken within 8 seconds.",
-            "GoldTotal": 2500,
-            "GoldBase": 300,
-            "Purchasable": "True",
-            "Icon": "icons/item/3083.png" ,
+            {
+                "pk" : 3083,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3083,
+                    "Name": "Warmog's Armor",
+                    "Description": "+800 Health UNIQUE Passive: Restores 1% of maximum Health every 5 seconds. Health restore increases to 3% of maximum Health if damage hasn't been taken within 8 seconds.",
+                    "GoldTotal": 2500,
+                    "GoldBase": 300,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3083.png" ,
 	 "Tags": ["Health", "HealthRegen"] 
+            }
         }
-    }
 ]

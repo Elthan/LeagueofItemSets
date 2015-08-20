@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3172,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3172,
-            "Name": "Zephyr",
-            "Description": "+25 Attack Damage +50% Attack Speed +10% Movement Speed +10% Cooldown Reduction UNIQUE Passive - Tenacity: Reduces the duration of stuns, slows, taunts, fears, silences, blinds, polymorphs, and immobilizes by 35%. (Unique Passives with the same name do not stack.)",
-            "GoldTotal": 2850,
-            "GoldBase": 725,
-            "Purchasable": "True",
-            "Icon": "icons/item/3172.png" ,
+            {
+                "pk" : 3172,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3172,
+                    "Name": "Zephyr",
+                    "Description": "+25 Attack Damage +50% Attack Speed +10% Movement Speed +10% Cooldown Reduction UNIQUE Passive - Tenacity: Reduces the duration of stuns, slows, taunts, fears, silences, blinds, polymorphs, and immobilizes by 35%. (Unique Passives with the same name do not stack.)",
+                    "GoldTotal": 2850,
+                    "GoldBase": 725,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3172.png" ,
 	 "Tags": ["AttackSpeed", "CooldownReduction", "Damage", "NonbootsMovement", "Tenacity"] 
+            }
         }
-    }
 ]

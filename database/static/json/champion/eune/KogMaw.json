@@ -1,12 +1,12 @@
 [
-    {
-        "pk" : "96",
-        "model" : "database.Champion",
-        "fields" : {
+            {
+                "pk" : "96",
+                "model" : "database.Champion",
+                "fields" : {
                     "ChampID": 96,
                     "Name": "KogMaw",
-                    "Icon": "icons/champion/KogMaw"
+                    "Icon": "static/icons/champion/KogMaw"
                     
-        }
-    }
-]
+                }
+            }
+        ]

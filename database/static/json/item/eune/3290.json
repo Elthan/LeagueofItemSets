@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3290,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3290,
-            "Name": "Twin Shadows",
-            "Description": "+80 Ability Power +10% Cooldown Reduction +6% Movement Speed UNIQUE Passive - Trap Detection: Nearby stealthed enemy traps are revealed. UNIQUE Active - Hunt: Summons up to 2 invulnerable ghosts that seek out the 2 nearest enemy champions for 6 seconds. If a ghost reaches its target, it reveals the target and reduces their Movement Speed by 40% for 2.5 seconds. If a ghost cannot find a target, it tries to return to the caster. Ghosts that successfully return in this way reduce the item's cooldown by 20 seconds (60 second cooldown).",
-            "GoldTotal": 2400,
-            "GoldBase": 730,
-            "Purchasable": "True",
-            "Icon": "icons/item/3290.png" ,
+            {
+                "pk" : 3290,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3290,
+                    "Name": "Twin Shadows",
+                    "Description": "+80 Ability Power +10% Cooldown Reduction +6% Movement Speed UNIQUE Passive - Trap Detection: Nearby stealthed enemy traps are revealed. UNIQUE Active - Hunt: Summons up to 2 invulnerable ghosts that seek out the 2 nearest enemy champions for 6 seconds. If a ghost reaches its target, it reveals the target and reduces their Movement Speed by 40% for 2.5 seconds. If a ghost cannot find a target, it tries to return to the caster. Ghosts that successfully return in this way reduce the item's cooldown by 20 seconds (60 second cooldown).",
+                    "GoldTotal": 2400,
+                    "GoldBase": 730,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3290.png" ,
 	 "Tags": ["Active", "CooldownReduction", "NonbootsMovement", "Slow", "SpellDamage", "Stealth", "Vision"] 
+            }
         }
-    }
 ]

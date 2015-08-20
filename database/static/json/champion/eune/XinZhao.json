@@ -1,12 +1,12 @@
 [
-    {
-        "pk" : "5",
-        "model" : "database.Champion",
-        "fields" : {
+            {
+                "pk" : "5",
+                "model" : "database.Champion",
+                "fields" : {
                     "ChampID": 5,
                     "Name": "XinZhao",
-                    "Icon": "icons/champion/XinZhao"
+                    "Icon": "static/icons/champion/XinZhao"
                     
-        }
-    }
-]
+                }
+            }
+        ]

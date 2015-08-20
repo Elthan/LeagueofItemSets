@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3056,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3056,
-            "Name": "Ohmwrecker",
-            "Description": "+300 Health +50 Armor +100% Base Health Regen +10% Cooldown Reduction UNIQUE Active: Prevents nearby enemy turrets from attacking for 3 seconds (120 second cooldown). This effect cannot be used against the same turret more than once every 8 seconds. UNIQUE Passive - Point Runner: Builds up to +30% Movement Speed over 2 seconds while near turrets (including fallen turrets).",
-            "GoldTotal": 2600,
-            "GoldBase": 750,
-            "Purchasable": "True",
-            "Icon": "icons/item/3056.png" ,
+            {
+                "pk" : 3056,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3056,
+                    "Name": "Ohmwrecker",
+                    "Description": "+300 Health +50 Armor +100% Base Health Regen +10% Cooldown Reduction UNIQUE Active: Prevents nearby enemy turrets from attacking for 3 seconds (120 second cooldown). This effect cannot be used against the same turret more than once every 8 seconds. UNIQUE Passive - Point Runner: Builds up to +30% Movement Speed over 2 seconds while near turrets (including fallen turrets).",
+                    "GoldTotal": 2600,
+                    "GoldBase": 750,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3056.png" ,
 	 "Tags": ["Active", "Armor", "CooldownReduction", "Health", "HealthRegen", "NonbootsMovement"] 
+            }
         }
-    }
 ]

@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3222,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3222,
-            "Name": "Mikael's Crucible",
-            "Description": "+40 Magic Resist +10% Cooldown Reduction +100% Base Mana Regen UNIQUE Passive - Mana Font: Restores 2% of missing Mana every 5 seconds. UNIQUE Active: Removes all stuns, roots, taunts, fears, silences, and slows on an allied champion and heals that champion for 150 (+10% of maximum Health) (180 second cooldown). (Unique Passives with the same name do not stack.)",
-            "GoldTotal": 2450,
-            "GoldBase": 950,
-            "Purchasable": "True",
-            "Icon": "icons/item/3222.png" ,
+            {
+                "pk" : 3222,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3222,
+                    "Name": "Mikael's Crucible",
+                    "Description": "+40 Magic Resist +10% Cooldown Reduction +100% Base Mana Regen UNIQUE Passive - Mana Font: Restores 2% of missing Mana every 5 seconds. UNIQUE Active: Removes all stuns, roots, taunts, fears, silences, and slows on an allied champion and heals that champion for 150 (+10% of maximum Health) (180 second cooldown). (Unique Passives with the same name do not stack.)",
+                    "GoldTotal": 2450,
+                    "GoldBase": 950,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3222.png" ,
 	 "Tags": ["Active", "CooldownReduction", "ManaRegen", "SpellBlock"] 
+            }
         }
-    }
 ]

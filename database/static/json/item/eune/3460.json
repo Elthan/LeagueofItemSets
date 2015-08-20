@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3460,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3460,
-            "Name": "Golden Transcendence",
-            "Description": "Active: Use this trinket to teleport to one of the battle platforms. Can only be used from the summoning platform. ''It is at this magical precipice where a champion is dismantled, reforged, and empowered.''",
-            "GoldTotal": 0,
-            "GoldBase": 0,
-            "Purchasable": "False",
-            "Icon": "icons/item/3460.png" ,
+            {
+                "pk" : 3460,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3460,
+                    "Name": "Golden Transcendence",
+                    "Description": "Active: Use this trinket to teleport to one of the battle platforms. Can only be used from the summoning platform. ''It is at this magical precipice where a champion is dismantled, reforged, and empowered.''",
+                    "GoldTotal": 0,
+                    "GoldBase": 0,
+                    "Purchasable": "False",
+                    "Icon": "database/static/icons/item/3460.png" ,
 	 "Tags": ["Active", "Trinket"] 
+            }
         }
-    }
 ]

@@ -1,17 +1,17 @@
 [
-    {
-        "pk" : 1029,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 1029,
-            "Name": "Cloth Armor",
-            "Description": "+15 Armor",
-            "GoldTotal": 300,
-            "GoldBase": 300,
-            "Purchasable": "True",
-            "Icon": "icons/item/1029.png" ,
+            {
+                "pk" : 1029,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 1029,
+                    "Name": "Cloth Armor",
+                    "Description": "+15 Armor",
+                    "GoldTotal": 300,
+                    "GoldBase": 300,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/1029.png" ,
 	 "Into": ["3047", "1031", "3191", "3024", "3082", "3075", "2053"] ,
 	 "Tags": ["Armor"] 
+            }
         }
-    }
 ]

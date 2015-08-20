@@ -88,7 +88,7 @@ class Item(models.Model):
         GoldBase = models.SmallIntegerField(default=0)
         Name = models.CharField(max_length=200, default="item_name")
         Tags = models.CharField(max_length=200, default=["all", "them", "tags"])
-        Icon = models.CharField(max_length=200, default="icons/item/3460.png")
+        Icon = models.CharField(max_length=200, default="database/static/icons/item/3460.png")
         Stacks = models.IntegerField(default=1)
         Into = models.CharField(max_length=200, default=[""])
         Purchasable = models.BooleanField(default=False)

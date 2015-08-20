@@ -1,12 +1,12 @@
 [
-    {
-        "pk" : "266",
-        "model" : "database.Champion",
-        "fields" : {
+            {
+                "pk" : "266",
+                "model" : "database.Champion",
+                "fields" : {
                     "ChampID": 266,
                     "Name": "Aatrox",
-                    "Icon": "icons/champion/Aatrox"
+                    "Icon": "static/icons/champion/Aatrox"
                     
-        }
-    }
-]
+                }
+            }
+        ]

@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3075,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3075,
-            "Name": "Thornmail",
-            "Description": "+100 Armor UNIQUE Passive: Upon being hit by a basic attack, returns 30% of the incoming damage (before being reduced by defenses) to the attacker as magic damage.",
-            "GoldTotal": 2100,
-            "GoldBase": 1050,
-            "Purchasable": "True",
-            "Icon": "icons/item/3075.png" ,
+            {
+                "pk" : 3075,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3075,
+                    "Name": "Thornmail",
+                    "Description": "+100 Armor UNIQUE Passive: Upon being hit by a basic attack, returns 30% of the incoming damage (before being reduced by defenses) to the attacker as magic damage.",
+                    "GoldTotal": 2100,
+                    "GoldBase": 1050,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3075.png" ,
 	 "Tags": ["Armor"] 
+            }
         }
-    }
 ]

@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 2043,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 2043,
-            "Name": "Vision Ward",
-            "Description": "Can only carry 2 Vision Wards in inventory. Click to Consume: Places a visible ward that reveals the surrounding area and invisible units in the area until killed. Limit 1 Vision Ward on the map per player. (Revealing a ward in this manner grants a portion of the gold reward when that unit is killed.)",
-            "GoldTotal": 100,
-            "GoldBase": 100,
-            "Purchasable": "True",
-            "Icon": "icons/item/2043.png" ,
+            {
+                "pk" : 2043,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 2043,
+                    "Name": "Vision Ward",
+                    "Description": "Can only carry 2 Vision Wards in inventory. Click to Consume: Places a visible ward that reveals the surrounding area and invisible units in the area until killed. Limit 1 Vision Ward on the map per player. (Revealing a ward in this manner grants a portion of the gold reward when that unit is killed.)",
+                    "GoldTotal": 100,
+                    "GoldBase": 100,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/2043.png" ,
 	 "Tags": ["Consumable", "Lane", "Stealth", "Vision"] 
+            }
         }
-    }
 ]

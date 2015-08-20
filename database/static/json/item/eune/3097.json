@@ -1,17 +1,17 @@
 [
-    {
-        "pk" : 3097,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3097,
-            "Name": "Targon's Brace",
-            "Description": "+175 Health +50% Base Health Regen UNIQUE Passive - Spoils of War: Melee basic attacks execute minions below 240 Health. Killing a minion heals the owner and the nearest allied champion for 50 Health and grants them kill Gold. These effects require a nearby allied champion. Recharges every 30 seconds. Max 3 charges. Limited to 1 Gold Income item",
-            "GoldTotal": 865,
-            "GoldBase": 500,
-            "Purchasable": "True",
-            "Icon": "icons/item/3097.png" ,
+            {
+                "pk" : 3097,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3097,
+                    "Name": "Targon's Brace",
+                    "Description": "+175 Health +50% Base Health Regen UNIQUE Passive - Spoils of War: Melee basic attacks execute minions below 240 Health. Killing a minion heals the owner and the nearest allied champion for 50 Health and grants them kill Gold. These effects require a nearby allied champion. Recharges every 30 seconds. Max 3 charges. Limited to 1 Gold Income item",
+                    "GoldTotal": 865,
+                    "GoldBase": 500,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3097.png" ,
 	 "Into": ["3401"] ,
 	 "Tags": ["Aura", "GoldPer", "Health", "HealthRegen"] 
+            }
         }
-    }
 ]

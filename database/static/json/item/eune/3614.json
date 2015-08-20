@@ -1,15 +1,15 @@
 [
-    {
-        "pk" : 3614,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3614,
-            "Name": "Ocklepod",
-            "Description": "Ranged: Support utility. Ocklepods grant magic shields to allied minions and gain Magic Resistance as they're upgraded. They can also provide vision into nearby Jungles with a moving Clairvoyance. All Ocklepods cast a magic shield on allied minions every 10 seconds, blocking 100 magic damage. Upgrade your Ocklepod's abilities after hiring, by spending Krakens below.",
-            "GoldTotal": 0,
-            "GoldBase": 0,
-            "Purchasable": "True",
-            "Icon": "icons/item/3614.png" 
+            {
+                "pk" : 3614,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3614,
+                    "Name": "Ocklepod",
+                    "Description": "Ranged: Support utility. Ocklepods grant magic shields to allied minions and gain Magic Resistance as they're upgraded. They can also provide vision into nearby Jungles with a moving Clairvoyance. All Ocklepods cast a magic shield on allied minions every 10 seconds, blocking 100 magic damage. Upgrade your Ocklepod's abilities after hiring, by spending Krakens below.",
+                    "GoldTotal": 0,
+                    "GoldBase": 0,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3614.png" 
+            }
         }
-    }
 ]

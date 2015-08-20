@@ -1,17 +1,17 @@
 [
-    {
-        "pk" : 1033,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 1033,
-            "Name": "Null-Magic Mantle",
-            "Description": "+25 Magic Resist",
-            "GoldTotal": 500,
-            "GoldBase": 500,
-            "Purchasable": "True",
-            "Icon": "icons/item/1033.png" ,
+            {
+                "pk" : 1033,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 1033,
+                    "Name": "Null-Magic Mantle",
+                    "Description": "+25 Magic Resist",
+                    "GoldTotal": 500,
+                    "GoldBase": 500,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/1033.png" ,
 	 "Into": ["3111", "3211", "1057", "3028", "3140", "3155", "3105", "3091"] ,
 	 "Tags": ["SpellBlock"] 
+            }
         }
-    }
 ]

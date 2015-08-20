@@ -1,17 +1,17 @@
 [
-    {
-        "pk" : 1036,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 1036,
-            "Name": "Long Sword",
-            "Description": "+10 Attack Damage",
-            "GoldTotal": 360,
-            "GoldBase": 360,
-            "Purchasable": "True",
-            "Icon": "icons/item/1036.png" ,
+            {
+                "pk" : 1036,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 1036,
+                    "Name": "Long Sword",
+                    "Description": "+10 Attack Damage",
+                    "GoldTotal": 360,
+                    "GoldBase": 360,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/1036.png" ,
 	 "Into": ["1053", "3044", "3134", "3155", "3077", "3035", "3154", "3141", "3144", "3122", "3159", "3924"] ,
 	 "Tags": ["Damage", "Lane"] 
+            }
         }
-    }
 ]

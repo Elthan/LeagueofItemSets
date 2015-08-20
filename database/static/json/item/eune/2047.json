@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 2047,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 2047,
-            "Name": "Oracle's Extract",
-            "Description": "Click to Consume: Grants detection of nearby invisible units for up to 5 minutes or until death.",
-            "GoldTotal": 250,
-            "GoldBase": 250,
-            "Purchasable": "True",
-            "Icon": "icons/item/2047.png" ,
+            {
+                "pk" : 2047,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 2047,
+                    "Name": "Oracle's Extract",
+                    "Description": "Click to Consume: Grants detection of nearby invisible units for up to 5 minutes or until death.",
+                    "GoldTotal": 250,
+                    "GoldBase": 250,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/2047.png" ,
 	 "Tags": ["Consumable", "Stealth", "Vision"] 
+            }
         }
-    }
 ]

@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3151,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3151,
-            "Name": "Liandry's Torment",
-            "Description": "+80 Ability Power +300 Health UNIQUE Passive - Eyes of Pain: +15 Magic Penetration UNIQUE Passive: Dealing spell damage applies a damage-over-time effect for 3 seconds that deals bonus magic damage equal to 2% of the target's current Health per second. This bonus damage is doubled against movement-impaired units and capped at 100 damage per second vs. monsters. (A unit is movement-impaired if it is slowed, stunned, taunted, feared, or immobilized.) (Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.) (Unique Passives with the same name don't stack.)",
-            "GoldTotal": 3000,
-            "GoldBase": 650,
-            "Purchasable": "True",
-            "Icon": "icons/item/3151.png" ,
+            {
+                "pk" : 3151,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3151,
+                    "Name": "Liandry's Torment",
+                    "Description": "+80 Ability Power +300 Health UNIQUE Passive - Eyes of Pain: +15 Magic Penetration UNIQUE Passive: Dealing spell damage applies a damage-over-time effect for 3 seconds that deals bonus magic damage equal to 2% of the target's current Health per second. This bonus damage is doubled against movement-impaired units and capped at 100 damage per second vs. monsters. (A unit is movement-impaired if it is slowed, stunned, taunted, feared, or immobilized.) (Magic Penetration: Magic damage is increased by ignoring an amount of the target's Magic Resist equal to Magic Penetration.) (Unique Passives with the same name don't stack.)",
+                    "GoldTotal": 3000,
+                    "GoldBase": 650,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3151.png" ,
 	 "Tags": ["Health", "MagicPenetration", "SpellDamage"] 
+            }
         }
-    }
 ]

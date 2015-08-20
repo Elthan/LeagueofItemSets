@@ -1,17 +1,17 @@
 [
-    {
-        "pk" : 1026,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 1026,
-            "Name": "Blasting Wand",
-            "Description": "+40 Ability Power",
-            "GoldTotal": 850,
-            "GoldBase": 850,
-            "Purchasable": "True",
-            "Icon": "icons/item/1026.png" ,
+            {
+                "pk" : 1026,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 1026,
+                    "Name": "Blasting Wand",
+                    "Description": "+40 Ability Power",
+                    "GoldTotal": 850,
+                    "GoldBase": 850,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/1026.png" ,
 	 "Into": ["3001", "3135", "3027", "3029", "3089", "3124", "3151"] ,
 	 "Tags": ["SpellDamage"] 
+            }
         }
-    }
 ]

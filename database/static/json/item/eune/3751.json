@@ -1,17 +1,17 @@
 [
-    {
-        "pk" : 3751,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3751,
-            "Name": "Bami's Cinder",
-            "Description": "+300 Health UNIQUE Passive - Immolate: Deals 5 (+1 per champion level) magic damage per second to nearby enemies. Deals 50% bonus damage to minions and monsters.",
-            "GoldTotal": 1000,
-            "GoldBase": 600,
-            "Purchasable": "True",
-            "Icon": "icons/item/3751.png" ,
+            {
+                "pk" : 3751,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3751,
+                    "Name": "Bami's Cinder",
+                    "Description": "+300 Health UNIQUE Passive - Immolate: Deals 5 (+1 per champion level) magic damage per second to nearby enemies. Deals 50% bonus damage to minions and monsters.",
+                    "GoldTotal": 1000,
+                    "GoldBase": 600,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3751.png" ,
 	 "Into": ["3068", "3709", "3717", "3721", "3725"] ,
 	 "Tags": ["Health"] 
+            }
         }
-    }
 ]

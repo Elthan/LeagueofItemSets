@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3071,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3071,
-            "Name": "The Black Cleaver",
-            "Description": "+400 Health +40 Attack Damage +20% Cooldown Reduction UNIQUE Passive: Dealing physical damage to an enemy champion Cleaves them, reducing their Armor by 5% for 6 seconds (stacks up to 6 times, up to 30%). UNIQUE Passive - Rage: Dealing physical damage grants 20 movement speed for 2 seconds. Assists on Cleaved enemy champions or kills on any unit grant 60 movement speed for 2 seconds instead. This Movement Speed is halved for ranged champions. (Unique Passives with the same name don't stack.)",
-            "GoldTotal": 3000,
-            "GoldBase": 825,
-            "Purchasable": "True",
-            "Icon": "icons/item/3071.png" ,
+            {
+                "pk" : 3071,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3071,
+                    "Name": "The Black Cleaver",
+                    "Description": "+400 Health +40 Attack Damage +20% Cooldown Reduction UNIQUE Passive: Dealing physical damage to an enemy champion Cleaves them, reducing their Armor by 5% for 6 seconds (stacks up to 6 times, up to 30%). UNIQUE Passive - Rage: Dealing physical damage grants 20 movement speed for 2 seconds. Assists on Cleaved enemy champions or kills on any unit grant 60 movement speed for 2 seconds instead. This Movement Speed is halved for ranged champions. (Unique Passives with the same name don't stack.)",
+                    "GoldTotal": 3000,
+                    "GoldBase": 825,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3071.png" ,
 	 "Tags": ["ArmorPenetration", "CooldownReduction", "Damage", "Health", "NonbootsMovement", "OnHit"] 
+            }
         }
-    }
 ]

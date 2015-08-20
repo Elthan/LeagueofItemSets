@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3157,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3157,
-            "Name": "Zhonya's Hourglass",
-            "Description": "+100 Ability Power +50 Armor UNIQUE Active - Stasis: Champion becomes invulnerable and untargetable for 2.5 seconds, but is unable to move, attack, cast spells, or use items during this time (90 second cooldown).",
-            "GoldTotal": 3000,
-            "GoldBase": 550,
-            "Purchasable": "True",
-            "Icon": "icons/item/3157.png" ,
+            {
+                "pk" : 3157,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3157,
+                    "Name": "Zhonya's Hourglass",
+                    "Description": "+100 Ability Power +50 Armor UNIQUE Active - Stasis: Champion becomes invulnerable and untargetable for 2.5 seconds, but is unable to move, attack, cast spells, or use items during this time (90 second cooldown).",
+                    "GoldTotal": 3000,
+                    "GoldBase": 550,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3157.png" ,
 	 "Tags": ["Active", "Armor", "SpellDamage"] 
+            }
         }
-    }
 ]

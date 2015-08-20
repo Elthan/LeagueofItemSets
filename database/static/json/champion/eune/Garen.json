@@ -1,12 +1,12 @@
 [
-    {
-        "pk" : "86",
-        "model" : "database.Champion",
-        "fields" : {
+            {
+                "pk" : "86",
+                "model" : "database.Champion",
+                "fields" : {
                     "ChampID": 86,
                     "Name": "Garen",
-                    "Icon": "icons/champion/Garen"
+                    "Icon": "static/icons/champion/Garen"
                     
-        }
-    }
-]
+                }
+            }
+        ]

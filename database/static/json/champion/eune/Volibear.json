@@ -1,12 +1,12 @@
 [
-    {
-        "pk" : "106",
-        "model" : "database.Champion",
-        "fields" : {
+            {
+                "pk" : "106",
+                "model" : "database.Champion",
+                "fields" : {
                     "ChampID": 106,
                     "Name": "Volibear",
-                    "Icon": "icons/champion/Volibear"
+                    "Icon": "static/icons/champion/Volibear"
                     
-        }
-    }
-]
+                }
+            }
+        ]

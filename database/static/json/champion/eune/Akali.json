@@ -1,12 +1,12 @@
 [
-    {
-        "pk" : "84",
-        "model" : "database.Champion",
-        "fields" : {
+            {
+                "pk" : "84",
+                "model" : "database.Champion",
+                "fields" : {
                     "ChampID": 84,
                     "Name": "Akali",
-                    "Icon": "icons/champion/Akali"
+                    "Icon": "static/icons/champion/Akali"
                     
-        }
-    }
-]
+                }
+            }
+        ]

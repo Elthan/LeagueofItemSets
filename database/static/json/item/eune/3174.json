@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3174,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3174,
-            "Name": "Athene's Unholy Grail",
-            "Description": "+60 Ability Power +25 Magic Resist +20% Cooldown Reduction +100% Base Mana Regen UNIQUE Passive: Restores 30% of maximum Mana on kill or assist. UNIQUE Passive - Mana Font: Restores 2% of missing Mana every 5 seconds. (Unique Passives with the same name do not stack.)",
-            "GoldTotal": 2700,
-            "GoldBase": 545,
-            "Purchasable": "True",
-            "Icon": "icons/item/3174.png" ,
+            {
+                "pk" : 3174,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3174,
+                    "Name": "Athene's Unholy Grail",
+                    "Description": "+60 Ability Power +25 Magic Resist +20% Cooldown Reduction +100% Base Mana Regen UNIQUE Passive: Restores 30% of maximum Mana on kill or assist. UNIQUE Passive - Mana Font: Restores 2% of missing Mana every 5 seconds. (Unique Passives with the same name do not stack.)",
+                    "GoldTotal": 2700,
+                    "GoldBase": 545,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3174.png" ,
 	 "Tags": ["CooldownReduction", "ManaRegen", "SpellBlock", "SpellDamage"] 
+            }
         }
-    }
 ]

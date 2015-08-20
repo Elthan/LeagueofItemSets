@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3115,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3115,
-            "Name": "Nashor's Tooth",
-            "Description": "+40% Attack Speed +80 Ability Power UNIQUE Passive: +20% Cooldown Reduction UNIQUE Passive: Basic attacks deal 15 (+15% of Ability Power) bonus magic damage on hit.",
-            "GoldTotal": 3000,
-            "GoldBase": 930,
-            "Purchasable": "True",
-            "Icon": "icons/item/3115.png" ,
+            {
+                "pk" : 3115,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3115,
+                    "Name": "Nashor's Tooth",
+                    "Description": "+40% Attack Speed +80 Ability Power UNIQUE Passive: +20% Cooldown Reduction UNIQUE Passive: Basic attacks deal 15 (+15% of Ability Power) bonus magic damage on hit.",
+                    "GoldTotal": 3000,
+                    "GoldBase": 930,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3115.png" ,
 	 "Tags": ["AttackSpeed", "CooldownReduction", "OnHit", "SpellDamage"] 
+            }
         }
-    }
 ]

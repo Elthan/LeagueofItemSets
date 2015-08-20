@@ -1,12 +1,12 @@
 [
-    {
-        "pk" : "103",
-        "model" : "database.Champion",
-        "fields" : {
+            {
+                "pk" : "103",
+                "model" : "database.Champion",
+                "fields" : {
                     "ChampID": 103,
                     "Name": "Ahri",
-                    "Icon": "icons/champion/Ahri"
+                    "Icon": "static/icons/champion/Ahri"
                     
-        }
-    }
-]
+                }
+            }
+        ]

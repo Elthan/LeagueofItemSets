@@ -1,12 +1,12 @@
 [
-    {
-        "pk" : "41",
-        "model" : "database.Champion",
-        "fields" : {
+            {
+                "pk" : "41",
+                "model" : "database.Champion",
+                "fields" : {
                     "ChampID": 41,
                     "Name": "Gangplank",
-                    "Icon": "icons/champion/Gangplank"
+                    "Icon": "static/icons/champion/Gangplank"
                     
-        }
-    }
-]
+                }
+            }
+        ]

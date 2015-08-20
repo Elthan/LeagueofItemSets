@@ -1,17 +1,17 @@
 [
-    {
-        "pk" : 3197,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3197,
-            "Name": "The Hex Core mk-2",
-            "Description": "+5 Ability Power per level +40 Ability Power +300 Mana UNIQUE Passive - Progress: Viktor can upgrade one of his basic spells.",
-            "GoldTotal": 2000,
-            "GoldBase": 1000,
-            "Purchasable": "True",
-            "Icon": "icons/item/3197.png" ,
+            {
+                "pk" : 3197,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3197,
+                    "Name": "The Hex Core mk-2",
+                    "Description": "+5 Ability Power per level +40 Ability Power +300 Mana UNIQUE Passive - Progress: Viktor can upgrade one of his basic spells.",
+                    "GoldTotal": 2000,
+                    "GoldBase": 1000,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3197.png" ,
 	 "Into": ["3198"] ,
 	 "Tags": ["Mana", "SpellDamage"] 
+            }
         }
-    }
 ]

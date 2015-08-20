@@ -1,336 +1,264 @@
-#!/usr/bin/env python3
-
 import json
-import os
+import urllib.parse
+import urllib.request
+import re
+import logging as log
+import os.path
+from database.convert import create_db_json_items
+from database.convert import create_db_json_champ
+from database.models import Version
+from database.models import Champion
+from database.models import Item
 
-def create_json_from_db(item_set_id):
+
+def error(msg, err=""):
+    log.error(msg)
+    log.error(err)
+   
+
+def check_version(region, api_key, log):
     '''
-Convert information from the database to a item set JSON file.
+Check current version of the region.
 
 Parameters
 -------------
-item_set_id : int
-    Item set ID that we should convert.
+region : str
+    Region to be examined.
+api_key : str
+    Api_key to use in request.
+local_version : str
+    Local version for region in format 5.15.1
+
+Returns
+-------------
+new_version : bool
+    True for new version, False else
+current_version : str
+    The current version for the region
+    in the format 5.15.1
     '''
-    from database.models import PlayerItemSet, Block, BlockItem
-    import django
-    django.setup()
+    log.debug("Checking version for "+region)
+
+    url = "https://global.api.pvp.net/api/lol/static-data/" + region + \
+          "/v1.2/versions?api_key=" + api_key
 
     try:
-        item_set = PlayerItemSet.objects.get(ItemSetID=item_set_id)
-    except PlayerItemSet.DoesNotExist:
-        log.error("Could not find the item set with given ID: " + item_set_id)
+        with urllib.request.urlopen(url) as response:
+            net_version = response.read().decode("UTF-8")
+    except urllib.error.HTTPError as err:
+        log.warning("HTTPError " + err + "when checking version for " + \
+            region + ". Version set to 5.15.1")
+        net_version = "5.15.1"
+
+    net_version = json.loads(net_version)[0]
+
+    try:
+        # Read local version in DB
+        query = Version.objects.get(Region=region)
+
+    except Version.DoesNotExist:
+        log.warning("Could not find " + region + " in DB when checking for region")
+        log.debug("Creating " + region + " in DB with version " + net_version)
+        
+        new_entry = Version(Region=region, Version=net_version)
+        new_entry.save()
+
+        return True, net_version
+
+    except Version.MultipleObjectsReturned as err:
+        error("Multiple objects returned when checking for region version", err=err)
+        return True, net_version
+
+    local_version = query.Version
+
+    if (local_version == net_version):
+        current_version = local_version
+        is_new_version = False
+    else:
+        current_version = net_version
+        is_new_version = True
+
+    return is_new_version, current_version
+
+    
+def get_icons(img_type):
+    '''
+Download all icons using ids in DB.
+
+Parameters
+-------------
+img_type : str
+    What type of icon should we fetch (ex. champion or item).
+    '''
+
+    if (img_type == "item"):
+        query = Item.objects.all()
+    elif (img_type == "champion"):
+        query = Champion.objects.all()
+    else:
+        error("Image type not supported for " + img_type + ". Unable to fetch icons.")
         return
-    except PlayerItemSet.MultipleObjectsReturned:
-        log.error("Multiple objects returned when querying for ID: " + item_set_id)
         
-    item_set_string = """{{
-    "title": "{name}", 
-    "type": "custom",
-    "map": "{set_map}",
-    "mode": "{mode}",
-    "priority": false,
-    "sortrank": 0,
-    "blocks": [
-    """.format(
-        name = item_set.Title,
-        set_map = item_set.Map,
-        mode = item_set.Mode
-    )
+    log.debug("Fetching " + img_type + " icons.")
+
+    os.makedirs("database/static/icons/" + img_type, exist_ok=True)
     
-    blocks_string_list = []
-    blocks = item_set.block_set.all()
-    blocks_len = len(blocks) - 1 
-    for index_blocks, block in enumerate(blocks):
-        block_string = """{{
-        "type": "{block_type}",
-        "minSummonerLevel": {min_sum_lvl},
-        "maxSummonerLevel": {max_sum_lvl},
-        "showIfSummonerSpell": "{show_sum}",
-        "hideIfSummonerSpell": "{hide_sum}",
-        "items": [
-        """.format(
-            block_type = block.BlockType,
-            min_sum_lvl = block.MinSummonerLevel,
-            max_sum_lvl = block.MaxSummonerLevel,
-            show_sum = block.ShowIfSummonerSpell,
-            hide_sum = block.HideIfSummonerSpell
-        )
+    for icon_id in query:
+        if (img_type == "item"):
+            icon_id = str(icon_id.pk)
+        elif (img_type == "champion"):
+            icon_id = icon_id.Name
         
-        items_string_list = []
-        items = block.blockitem_set.all()
-        items_len = len(items) - 1
-        for index_items, item in enumerate(items):
-            item_string = """{{
-            "id": "{item_id}",
-            "count": {count}
-            """.format(
-                item_id = item.ItemID,
-                count = item.Count
-            )
-            item_string += "},\n" if index_items < items_len else "}\n"
-            items_string_list.append(item_string)
-        block_string = block_string.join(item_string_list)
-        block_string += "\t]\n"
-        block_string += "},\n" if index_blocks < blocks_len else "}"
-        blocks_string_list.append(block_string)
+        url = "http://ddragon.leagueoflegends.com/cdn/" + current_version + \
+              "/img/" + img_type + "/" + icon_id+".png"
 
-    item_set_string = item_set_string.join(block_string_list)
-    item_set_string += "\n]\n}"
+        try:
+            with urllib.request.urlopen(url) as response:
+                path = "database/static/icons/" + img_type + "/" + icon_id + ".png"
+                                
+                with open(path,'wb') as image_file:
+                    image_file.write(response.read())
+                        
+        except urllib.error.HTTPError as err:
+            error("Error when downloading icon id " + icon_id + "\nUsing url " + url + "\n" + err)
+            continue
 
-    return item_set_string
+    log.info("Done fetching all icons of type " + img_type)
 
-
-def create_db_json_item_stats(item_json, region, log):
+    
+def get_json(json_type, url, region):  
     '''
-Create a django friendly json file for item stats.
+Fetch json file.
 
 Parameters
 -------------
-item_json : file
-    JSON file of item we create stats for.
+json_type : str
+    What type of json we want to fetch (ex. champion or item).
+url : str
+    URL to fetch json from.
 region : str
-    Region we should convert from.
-log : logging
-    So we can log what is happening.
-    '''
-    item_id = str(item_json["id"])
-    
-    log.debug("Creating json file for item stats for item " + item_id)
-    
-    os.makedirs("json/item_stats/" + region, exist_ok=True)
+    Region code for which region we
+    want to fetch from.
 
-    path = "json/item_stats/" + region + "/" + item_id + ".json"
-
-    with open(path, 'w') as item_stats_file:
-        json_db_string = """[
-    {{
-        "pk": {},
-        "model": "database.ItemStat",
-        "fields": {{
-""".format(item_id)
-        stats_len = len(item_json["stats"])-1
-        index = 0
-
-        # Add all the stats the item has. Don't add ,\n on last stat.
-        for key, value in item_json["stats"].items():
-            json_db_string += "\t\t\"" + key + "\": " + str(value) + \
-                              (",\n" if index < stats_len else "")
-            index += 1
-        json_db_string += """
-        }
-    }
-]
-"""
-        item_stats_file.write(json_db_string)
-
-
-def create_db_json_items(region, log):
-    '''
-Create a django friendly json file for items.
-
-Parameters
+Returns
 -------------
-region : str
-    Region we should convert from.
-log : logging
-    So we can log what is happening.
+html : str
+    This is a json file with all
+    the items for the given region.
     '''
-    log.debug("Opening json/item/" + region + ".json")
+    log.debug("Fetching " + json_type + " for " + region)
     
     try:
-        with open("json/item/"+ region + ".json", 'r') as items_file:
-            items_json = json.load(items_file)
-
-            # Check if path exists, else create it.
-            os.makedirs("json/item/" + region, exist_ok=True)
-
-            for item_id in items_json["data"]:
-                item_json = items_json["data"][item_id]
-
-                create_db_json_item_stats(item_json, region, log)
-
-                path = "json/item/" + region + "/" + item_id + ".json"
-
-                log.debug("Creating json file for item " + item_id)
-
-                with open(path, 'w') as item_json_file:
-                    json_db_string = """[
-    {{
-        "pk" : {item_id},
-        "model" : "database.Item",
-        "fields" : {{
-            "ItemID": {item_id},
-            "Name": "{name}",
-            "Description": "{description}",
-            "GoldTotal": {gold_total},
-            "GoldBase": {gold_base},
-            "Purchasable": "{purchasable}",
-            "Icon": "{icon}" """.format(
-                item_id = item_id,
-                name = item_json["name"],
-                description = item_json["sanitizedDescription"],
-                gold_total = item_json["gold"]["total"],
-                gold_base = item_json["gold"]["base"],
-                purchasable = item_json["gold"]["purchasable"],
-                icon = "icons/item/" + item_id + ".png"
-            )
-                    # Not all items build into something.
-                    try:
-                        into = item_json["into"]
-                        json_db_string += ",\n\t" + """ "Into": {} """.format(json.dumps(into))
-                    except KeyError:
-                        pass
-
-                    # Not all items have a tag.
-                    try:
-                        tags = item_json["tags"]
-                        json_db_string += ",\n\t" + """ "Tags": {} """.format(json.dumps(tags))
-                    except KeyError:
-                        pass
-                    json_db_string += """
-        }
-    }
-]"""
-                    item_json_file.write(json_db_string)
-
-
-    except OSError:
-        log.error("Could not find items JSON file for region " + region)
-
-    log.info("Done converting all item JSONs and item stat JSONs to DB friendly JSONs for region " + region)
-
-
-def create_db_json_champ_stats(champ_json, region, log):
-      '''
-Create a django friendly json file for champion stats.
-
-Parameters
--------------
-champ_json : file
-    JSON file of champ we create stats for.
-region : str
-    Region we should convert from.
-log : logging
-    So we can log what is happening.
-    '''
-      champ_id = champ_json["id"]
-      champ_name = champ_json["name"]
-
-      log.debug("Creating JSON file for champion stats for champion " + champ_name)
-
-      os.makedirs("json/champ_stats/" + region, exist_ok=True)
-
-      path = "json/champ_stats/" + region + "/" + champ_name + ".json"
-
-      with open(path, 'w') as champ_stats_file:
-          champ_stats = champ_json["stats"]
-          
-          # JSON that django can read
-          json_db_string = """[
-    {{
-        "pk": "{champ_id}",
-        "model": "database.ChampionStat",
-        "fields": {{
-            "Armor": {armor},
-            "ArmorPerLevel": {armorlvl},
-            "AttackDamage": {ad},
-            "AttackDamagePerLevel": {adlvl},
-            "AttackRange": {ar},
-            "AttackSpeedOffset": {asoff},
-            "AttackSpeedPerLevel": {aslvl},
-            "Crit": {crit},
-            "CritPerLevel": {critlvl},
-            "HP": {hp},
-            "HPPerLevel": {hplvl},
-            "HPRegen": {hpreg},
-            "HPRegenPerLevel": {hpreglvl},
-            "MoveSpeed": {ms},
-            "MP": {mp},
-            "MPPerLevel": {mplvl},
-            "MPRegen": {mpreg},
-            "MPRegenPerLevel": {mpreglvl},
-            "SpellBlock": {mr},
-            "SpellBlockPerLevel": {mrlvl}
-        }}
-    }}
-]
-          """.format(
-              champ_id = champ_id,
-              armor = champ_stats["armor"],
-              armorlvl = champ_stats["armorperlevel"],
-              ad = champ_stats["attackdamage"],
-              adlvl = champ_stats["attackdamageperlevel"],
-              ar = champ_stats["attackrange"],
-              asoff = champ_stats["attackspeedoffset"],
-              aslvl = champ_stats["attackspeedperlevel"],
-              crit = champ_stats["crit"],
-              critlvl = champ_stats["critperlevel"],
-              hp = champ_stats["hp"],
-              hplvl = champ_stats["hpperlevel"],
-              hpreg = champ_stats["hpregen"],
-              hpreglvl = champ_stats["hpregenperlevel"],
-              ms = champ_stats["movespeed"],
-              mp = champ_stats["mp"],
-              mplvl = champ_stats["mpperlevel"],
-              mpreg = champ_stats["mpregen"],
-              mpreglvl = champ_stats["mpregenperlevel"],
-              mr = champ_stats["spellblock"],
-              mrlvl = champ_stats["spellblockperlevel"]
-          )
-
-          champ_stats_file.write(json_db_string)
-
-
-def create_db_json_champ(region, log):
-    '''
-Create a django friendly json file for champions.
-
-Parameters
--------------
-region : str
-    Region we should convert from.
-log : logging
-    So we can log what is happening.
-    '''
-    log.debug("Opening json/champion/" + region + ".json")
+        with urllib.request.urlopen(url) as response:
+            html = response.read().decode("UTF-8")
+    except urllib.error.HTTPError:
+        error("HTTPError when trying to access " + url)
+        return None
+            
+    log.debug("Succesfully fetched items for " + region)
     
-    try:
-        with open("json/champion/" + region + ".json", 'r') as champs_file:
-            champs_json = json.load(champs_file)
+    return html
 
-            os.makedirs("json/champion/" + region, exist_ok=True)
 
-            for champ_name in champs_json["data"]:
-                champ_json = champs_json["data"][champ_name]
+def get_all_json(url_list, region):
+    '''
+Fetch all the json.
 
-                create_db_json_champ_stats(champ_json, region, log)
+Parameters
+-------------
+url_list : list[str]
+    List of all the different types we want
+    and url that comes we fetch from.
+region : str
+    Region we should fetch for.
+    '''
+    log.debug("Beginning fetching for all json files for region " + region)
+        
+    for json_type in url_list:
+        url = url_list[json_type]
+        json_string = get_json(json_type, url, region)
+        
+        if (json_string is None):
+            error("Error occured when trying to fetch items for " + region)
+            continue
+        else:
+            path = "database/static/json/" + json_type + "/"
+            os.makedirs(path, exist_ok=True)
+            with open(path + region + ".json", 'w') as json_file:
+                json_file.write(json_string)
+                
+    log.info("Fetched all items as json files for region " + region)
 
-                path = "json/champion/" + region + "/" + champ_name + ".json"
+    
+def update_all(api_key, cur_ver, loglvl, region, skip_icons, skip_json, skip_convert, skip_write_db):
+    '''
+Master method for updating everything; icons, JSONs and DB.
 
-                log.debug("Creating JSON file for " + champ_name + " in region " + region)
-
-                with open(path, 'w') as champ_json_file:
-                    json_db_string = """[
-    {{
-        "pk" : "{champ_id}",
-        "model" : "database.Champion",
-        "fields" : {{
-                    "ChampID": {champ_id},
-                    "Name": "{champ_name}",
-                    "Icon": "{icon_path}"
-                    """.format(
-                        champ_id = champ_json["id"],
-                        champ_name = champ_name,
-                        icon_path = "icons/champion/" + champ_name
-                    )
-                    json_db_string +=  """
-        }
+Parameters
+-------------
+api_key : str
+    Key to make API calls to Riot servers.
+cur_ver : str
+    Current version in the format 5.15.1
+loglvl : str
+    What level we should log at.
+region : str
+    What region we should update data for. This doesn't matter
+    for icons.
+skip_icons : bool
+    If we should skip downloading icons.
+skip_json : bool
+    If we should skip downloading JSON files.
+skip_convert : bool
+    If we should skip converting JSON files to DB friendly JSON files.
+skip_write_db : bool
+    If we should skip writing JSON files to database.
+    '''
+    log.basicConfig(format="%(levelname)s: %(message)s", level=loglvl)
+     
+    url_list = {
+        "item":"https://global.api.pvp.net/api/lol/static-data/eune/v1.2/item?itemListData=all&api_key=" + api_key,
+        "champion":"https://global.api.pvp.net/api/lol/static-data/eune/v1.2/champion?champData=all&api_key=" + api_key 
     }
-]"""
-                    champ_json_file.write(json_db_string)
-                    
-    except OSError:
-        log.error("Could not find champion JSON file for region " + region)
 
-    log.info("Done converting all champion JSONs and champion stats JSONs to DB friendly JSONs for region " + region)
+    global current_version
+    current_version = cur_ver.strip()
+    
+    if (skip_json):
+        log.info("Skipping all json files.")
+    else:
+        get_all_json(url_list, region)
+
+    if (skip_convert):
+        log.info("Skipping converting JSON files.")
+    else:
+        create_db_json_items(region, log)
+        create_db_json_champ(region, log)
+
+    if (skip_write_db):
+        log.info("Skipping writing JSONs to DB.")
+    else:
+        # Get the command and setup django so we can execute it
+        from django.core.management import call_command
+        import django
+        django.setup()
+
+        log.debug("Creating backup of DB.")
+        call_command("dumpdata", "database", "--output=db_backup.json")
+
+        json_types = ["item", "item_stats", "champion", "champ_stats"]
+        
+        for json_type in json_types:
+            path = "database/static/json/" + json_type + "/" + region + "/"
+            
+            for path, subdirs, files in os.walk(path):
+                for name in files:
+                    call_command("loaddata", path + name, '--ignorenonexistent', verbosity=0)
+             
+            log.info("All " + json_type + " JSON files imported to the DB.")
+            
+    if (skip_icons):
+        log.info("Skipping all icons.")
+    else:
+        for icon_type,url in url_list.items():
+            get_icons(icon_type)

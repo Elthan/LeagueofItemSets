@@ -1,17 +1,17 @@
 [
-    {
-        "pk" : 3113,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3113,
-            "Name": "Aether Wisp",
-            "Description": "+30 Ability Power UNIQUE Passive: +5% Movement Speed",
-            "GoldTotal": 850,
-            "GoldBase": 415,
-            "Purchasable": "True",
-            "Icon": "icons/item/3113.png" ,
+            {
+                "pk" : 3113,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3113,
+                    "Name": "Aether Wisp",
+                    "Description": "+30 Ability Power UNIQUE Passive: +5% Movement Speed",
+                    "GoldTotal": 850,
+                    "GoldBase": 415,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3113.png" ,
 	 "Into": ["3023", "3290", "3100", "3285", "3504"] ,
 	 "Tags": ["NonbootsMovement", "SpellDamage"] 
+            }
         }
-    }
 ]

@@ -1,17 +1,17 @@
 [
-    {
-        "pk" : 3073,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3073,
-            "Name": "Tear of the Goddess (Crystal Scar)",
-            "Description": "+250 Mana +25% Base Mana Regen UNIQUE Passive - Mana Charge: Grants 5 maximum Mana on spell cast or Mana expenditure (up to 2 times per 6 seconds). Grants 1 maximum Mana every 6 seconds. Caps at +750 Mana. (Unique Passives with the same name don't stack.)",
-            "GoldTotal": 720,
-            "GoldBase": 140,
-            "Purchasable": "True",
-            "Icon": "icons/item/3073.png" ,
+            {
+                "pk" : 3073,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3073,
+                    "Name": "Tear of the Goddess (Crystal Scar)",
+                    "Description": "+250 Mana +25% Base Mana Regen UNIQUE Passive - Mana Charge: Grants 5 maximum Mana on spell cast or Mana expenditure (up to 2 times per 6 seconds). Grants 1 maximum Mana every 6 seconds. Caps at +750 Mana. (Unique Passives with the same name don't stack.)",
+                    "GoldTotal": 720,
+                    "GoldBase": 140,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3073.png" ,
 	 "Into": ["3007", "3008"] ,
 	 "Tags": ["Mana", "ManaRegen"] 
+            }
         }
-    }
 ]

@@ -1,12 +1,12 @@
 [
-    {
-        "pk" : "201",
-        "model" : "database.Champion",
-        "fields" : {
+            {
+                "pk" : "201",
+                "model" : "database.Champion",
+                "fields" : {
                     "ChampID": 201,
                     "Name": "Braum",
-                    "Icon": "icons/champion/Braum"
+                    "Icon": "static/icons/champion/Braum"
                     
-        }
-    }
-]
+                }
+            }
+        ]

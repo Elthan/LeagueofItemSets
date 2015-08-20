@@ -1,17 +1,17 @@
 [
-    {
-        "pk" : 3145,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3145,
-            "Name": "Hextech Revolver",
-            "Description": "+40 Ability Power UNIQUE Passive: +12% Spell Vamp (Spell Vamp: Abilities heal for a percentage of the damage they deal. Area of Effect spells only grant one-third of the healing from Spell Vamp.)",
-            "GoldTotal": 1200,
-            "GoldBase": 330,
-            "Purchasable": "True",
-            "Icon": "icons/item/3145.png" ,
+            {
+                "pk" : 3145,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3145,
+                    "Name": "Hextech Revolver",
+                    "Description": "+40 Ability Power UNIQUE Passive: +12% Spell Vamp (Spell Vamp: Abilities heal for a percentage of the damage they deal. Area of Effect spells only grant one-third of the healing from Spell Vamp.)",
+                    "GoldTotal": 1200,
+                    "GoldBase": 330,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3145.png" ,
 	 "Into": ["3146", "3152"] ,
 	 "Tags": ["SpellDamage", "SpellVamp"] 
+            }
         }
-    }
 ]

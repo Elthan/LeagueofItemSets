@@ -1,12 +1,12 @@
 [
-    {
-        "pk" : "101",
-        "model" : "database.Champion",
-        "fields" : {
+            {
+                "pk" : "101",
+                "model" : "database.Champion",
+                "fields" : {
                     "ChampID": 101,
                     "Name": "Xerath",
-                    "Icon": "icons/champion/Xerath"
+                    "Icon": "static/icons/champion/Xerath"
                     
-        }
-    }
-]
+                }
+            }
+        ]

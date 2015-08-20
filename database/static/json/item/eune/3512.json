@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3512,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3512,
-            "Name": "Zz'Rot Portal",
-            "Description": "+60 Armor +60 Magic Resist +100% Base Health Regen UNIQUE Passive - Point Runner: Builds up to +30% Movement Speed over 2 seconds while near turrets or Void Gates (including fallen turrets). UNIQUE Active: Spawns a Void Gate at target location for 150 seconds. Every 4 seconds the gate makes a Voidspawn that travels down the nearest lane and decays over time. Voidspawn explodes when attacking structures. Voidspawn ignore champions and void targets (150 second cooldown). The first and every fourth Voidspawn gain 100% of Armor and Magic Resist as damage.",
-            "GoldTotal": 2800,
-            "GoldBase": 950,
-            "Purchasable": "True",
-            "Icon": "icons/item/3512.png" ,
+            {
+                "pk" : 3512,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3512,
+                    "Name": "Zz'Rot Portal",
+                    "Description": "+60 Armor +60 Magic Resist +100% Base Health Regen UNIQUE Passive - Point Runner: Builds up to +30% Movement Speed over 2 seconds while near turrets or Void Gates (including fallen turrets). UNIQUE Active: Spawns a Void Gate at target location for 150 seconds. Every 4 seconds the gate makes a Voidspawn that travels down the nearest lane and decays over time. Voidspawn explodes when attacking structures. Voidspawn ignore champions and void targets (150 second cooldown). The first and every fourth Voidspawn gain 100% of Armor and Magic Resist as damage.",
+                    "GoldTotal": 2800,
+                    "GoldBase": 950,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3512.png" ,
 	 "Tags": ["Armor", "HealthRegen", "NonbootsMovement", "SpellBlock"] 
+            }
         }
-    }
 ]

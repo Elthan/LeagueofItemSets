@@ -1,17 +1,17 @@
 [
-    {
-        "pk" : 2053,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 2053,
-            "Name": "Raptor Cloak",
-            "Description": "+40 Armor +100% Base Health Regen UNIQUE Passive - Point Runner: Builds up to +30% Movement Speed over 2 seconds while near turrets (including fallen turrets).",
-            "GoldTotal": 1000,
-            "GoldBase": 520,
-            "Purchasable": "True",
-            "Icon": "icons/item/2053.png" ,
+            {
+                "pk" : 2053,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 2053,
+                    "Name": "Raptor Cloak",
+                    "Description": "+40 Armor +100% Base Health Regen UNIQUE Passive - Point Runner: Builds up to +30% Movement Speed over 2 seconds while near turrets (including fallen turrets).",
+                    "GoldTotal": 1000,
+                    "GoldBase": 520,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/2053.png" ,
 	 "Into": ["3056", "3512"] ,
 	 "Tags": ["Armor", "HealthRegen", "NonbootsMovement"] 
+            }
         }
-    }
 ]

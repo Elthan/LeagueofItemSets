@@ -1,15 +1,15 @@
 [
-    {
-        "pk" : 3616,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3616,
-            "Name": "Mercenary Upgrade 2",
-            "Description": "Gives your mercenary the second level upgrade. Razorfin - Each time your Razorfin hits an enemy champion, it applies a mark. On the 3rd mark, Razorfins deal 300% damage to the target. Ironback - Your Ironback deals 250% damage to enemy structures. While your Ironbacks' shield is active, it takes 35% reduced damage from minions. Plundercrab - Your Plundercrab has +100 attack range. Your Plundercrab deals 150% damage on hitting enemy champions. Ocklepod - Your Ocklepod has 20 Magic Resistance. Your Ocklepods' shield now blocks 150 + (1 x Ocklepod's AD) damage.",
-            "GoldTotal": 0,
-            "GoldBase": 0,
-            "Purchasable": "True",
-            "Icon": "icons/item/3616.png" 
+            {
+                "pk" : 3616,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3616,
+                    "Name": "Mercenary Upgrade 2",
+                    "Description": "Gives your mercenary the second level upgrade. Razorfin - Each time your Razorfin hits an enemy champion, it applies a mark. On the 3rd mark, Razorfins deal 300% damage to the target. Ironback - Your Ironback deals 250% damage to enemy structures. While your Ironbacks' shield is active, it takes 35% reduced damage from minions. Plundercrab - Your Plundercrab has +100 attack range. Your Plundercrab deals 150% damage on hitting enemy champions. Ocklepod - Your Ocklepod has 20 Magic Resistance. Your Ocklepods' shield now blocks 150 + (1 x Ocklepod's AD) damage.",
+                    "GoldTotal": 0,
+                    "GoldBase": 0,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3616.png" 
+            }
         }
-    }
 ]

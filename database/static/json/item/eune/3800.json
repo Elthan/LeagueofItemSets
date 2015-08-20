@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3800,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3800,
-            "Name": "Righteous Glory",
-            "Description": "+500 Health +300 Mana +100% Base Health Regen UNIQUE Passive - Valor's Reward: Upon leveling up, restores 150 Health and 200 Mana over 8 seconds. UNIQUE Active: Grants +60% Movement Speed to nearby allies when moving towards enemies or enemy turrets for 3 seconds. After 3 seconds, a shockwave is emitted, slowing nearby enemy champion Movement Speed by 80% for 1 second(s) (90 second cooldown). This effect may be reactivated early to instantly release the shockwave.",
-            "GoldTotal": 2500,
-            "GoldBase": 700,
-            "Purchasable": "True",
-            "Icon": "icons/item/3800.png" ,
+            {
+                "pk" : 3800,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3800,
+                    "Name": "Righteous Glory",
+                    "Description": "+500 Health +300 Mana +100% Base Health Regen UNIQUE Passive - Valor's Reward: Upon leveling up, restores 150 Health and 200 Mana over 8 seconds. UNIQUE Active: Grants +60% Movement Speed to nearby allies when moving towards enemies or enemy turrets for 3 seconds. After 3 seconds, a shockwave is emitted, slowing nearby enemy champion Movement Speed by 80% for 1 second(s) (90 second cooldown). This effect may be reactivated early to instantly release the shockwave.",
+                    "GoldTotal": 2500,
+                    "GoldBase": 700,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3800.png" ,
 	 "Tags": ["Active", "Health", "HealthRegen", "Mana", "NonbootsMovement", "Slow"] 
+            }
         }
-    }
 ]

@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3911,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3911,
-            "Name": "Martyr's Gambit",
-            "Description": "+400 Health +100% Base Health Regen +10% Cooldown Reduction UNIQUE Active: Binds yourself to target champion for the next 3 seconds, redirecting 60% of all damage dealt to them to yourself (30 second cooldown). ''Battle is not a test of strength. It is a test of will.'' - Buhru Proverb",
-            "GoldTotal": 1850,
-            "GoldBase": 400,
-            "Purchasable": "True",
-            "Icon": "icons/item/3911.png" ,
+            {
+                "pk" : 3911,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3911,
+                    "Name": "Martyr's Gambit",
+                    "Description": "+400 Health +100% Base Health Regen +10% Cooldown Reduction UNIQUE Active: Binds yourself to target champion for the next 3 seconds, redirecting 60% of all damage dealt to them to yourself (30 second cooldown). ''Battle is not a test of strength. It is a test of will.'' - Buhru Proverb",
+                    "GoldTotal": 1850,
+                    "GoldBase": 400,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3911.png" ,
 	 "Tags": ["Bilgewater", "CooldownReduction", "Health", "HealthRegen"] 
+            }
         }
-    }
 ]

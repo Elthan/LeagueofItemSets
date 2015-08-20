@@ -1,15 +1,15 @@
 [
-    {
-        "pk" : 3617,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3617,
-            "Name": "Mercenary Upgrade 3",
-            "Description": "Gives your mercenary the third level upgrade. Razorfin - Two Razorfins will spawn for you in each wave. Ironback - Your Ironback deals 325% damage to enemy structures. The shield cooldown is further reduced to 3 seconds, and while active, your Ironback takes 60% reduced damage from minions. Plundercrab - Your Plundercrab has +150 attack range. Your Plundercrab's on-hit bonus now also applies when hitting enemy minions, and it will now shoot an additional cannonball at all nearby enemy champions. Ocklepod - Your Ocklepods have 30 Magic Resistance, and their base shield strength is increased to 300. Your Ocklepods' Clairvoyance are now cast every 10 seconds.",
-            "GoldTotal": 0,
-            "GoldBase": 0,
-            "Purchasable": "True",
-            "Icon": "icons/item/3617.png" 
+            {
+                "pk" : 3617,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3617,
+                    "Name": "Mercenary Upgrade 3",
+                    "Description": "Gives your mercenary the third level upgrade. Razorfin - Two Razorfins will spawn for you in each wave. Ironback - Your Ironback deals 325% damage to enemy structures. The shield cooldown is further reduced to 3 seconds, and while active, your Ironback takes 60% reduced damage from minions. Plundercrab - Your Plundercrab has +150 attack range. Your Plundercrab's on-hit bonus now also applies when hitting enemy minions, and it will now shoot an additional cannonball at all nearby enemy champions. Ocklepod - Your Ocklepods have 30 Magic Resistance, and their base shield strength is increased to 300. Your Ocklepods' Clairvoyance are now cast every 10 seconds.",
+                    "GoldTotal": 0,
+                    "GoldBase": 0,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3617.png" 
+            }
         }
-    }
 ]

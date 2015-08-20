@@ -1,17 +1,17 @@
 [
-    {
-        "pk" : 3158,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3158,
-            "Name": "Ionian Boots of Lucidity",
-            "Description": "UNIQUE Passive: +15% Cooldown Reduction UNIQUE Passive - Enhanced Movement: +45 Movement Speed (Unique Passives with the same name don't stack.) ''This item is dedicated in honor of Ionia's victory over Noxus in the Rematch for the Southern Provinces on 10 December, 20 CLE.''",
-            "GoldTotal": 1000,
-            "GoldBase": 675,
-            "Purchasable": "True",
-            "Icon": "icons/item/3158.png" ,
+            {
+                "pk" : 3158,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3158,
+                    "Name": "Ionian Boots of Lucidity",
+                    "Description": "UNIQUE Passive: +15% Cooldown Reduction UNIQUE Passive - Enhanced Movement: +45 Movement Speed (Unique Passives with the same name don't stack.) ''This item is dedicated in honor of Ionia's victory over Noxus in the Rematch for the Southern Provinces on 10 December, 20 CLE.''",
+                    "GoldTotal": 1000,
+                    "GoldBase": 675,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3158.png" ,
 	 "Into": ["1331", "1333", "1330", "1332", "1334", "1341"] ,
 	 "Tags": ["Boots", "CooldownReduction"] 
+            }
         }
-    }
 ]

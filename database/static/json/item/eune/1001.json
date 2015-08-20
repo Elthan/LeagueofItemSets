@@ -1,17 +1,17 @@
 [
-    {
-        "pk" : 1001,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 1001,
-            "Name": "Boots of Speed",
-            "Description": "Limited to 1. UNIQUE Passive - Enhanced Movement: +25 Movement Speed (Unique Passives with the same name don't stack.)",
-            "GoldTotal": 325,
-            "GoldBase": 325,
-            "Purchasable": "True",
-            "Icon": "icons/item/1001.png" ,
+            {
+                "pk" : 1001,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 1001,
+                    "Name": "Boots of Speed",
+                    "Description": "Limited to 1. UNIQUE Passive - Enhanced Movement: +25 Movement Speed (Unique Passives with the same name don't stack.)",
+                    "GoldTotal": 325,
+                    "GoldBase": 325,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/1001.png" ,
 	 "Into": ["3006", "3047", "3020", "3158", "3111", "3117", "3009"] ,
 	 "Tags": ["Boots"] 
+            }
         }
-    }
 ]

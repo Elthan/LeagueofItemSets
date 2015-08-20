@@ -1,12 +1,12 @@
 [
-    {
-        "pk" : "29",
-        "model" : "database.Champion",
-        "fields" : {
+            {
+                "pk" : "29",
+                "model" : "database.Champion",
+                "fields" : {
                     "ChampID": 29,
                     "Name": "Twitch",
-                    "Icon": "icons/champion/Twitch"
+                    "Icon": "static/icons/champion/Twitch"
                     
-        }
-    }
-]
+                }
+            }
+        ]

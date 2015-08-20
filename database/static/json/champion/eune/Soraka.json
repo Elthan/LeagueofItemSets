@@ -1,12 +1,12 @@
 [
-    {
-        "pk" : "16",
-        "model" : "database.Champion",
-        "fields" : {
+            {
+                "pk" : "16",
+                "model" : "database.Champion",
+                "fields" : {
                     "ChampID": 16,
                     "Name": "Soraka",
-                    "Icon": "icons/champion/Soraka"
+                    "Icon": "static/icons/champion/Soraka"
                     
-        }
-    }
-]
+                }
+            }
+        ]

@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3184,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3184,
-            "Name": "Entropy",
-            "Description": "+275 Health +55 Attack Damage UNIQUE Passive - Rage: Basic attacks grant 20 Movement Speed for 2 seconds on hit. Kills grant 60 Movement Speed for 2 seconds. This Movement Speed bonus is halved for ranged champions. UNIQUE Active: For the next 5 seconds, basic attacks reduce the target's Movement Speed by 30% and deal 80 true damage over 2.5 seconds on hit (60 second cooldown). (Unique Passives with the same name don't stack.)",
-            "GoldTotal": 2700,
-            "GoldBase": 500,
-            "Purchasable": "True",
-            "Icon": "icons/item/3184.png" ,
+            {
+                "pk" : 3184,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3184,
+                    "Name": "Entropy",
+                    "Description": "+275 Health +55 Attack Damage UNIQUE Passive - Rage: Basic attacks grant 20 Movement Speed for 2 seconds on hit. Kills grant 60 Movement Speed for 2 seconds. This Movement Speed bonus is halved for ranged champions. UNIQUE Active: For the next 5 seconds, basic attacks reduce the target's Movement Speed by 30% and deal 80 true damage over 2.5 seconds on hit (60 second cooldown). (Unique Passives with the same name don't stack.)",
+                    "GoldTotal": 2700,
+                    "GoldBase": 500,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3184.png" ,
 	 "Tags": ["Active", "Damage", "Health", "NonbootsMovement", "Slow"] 
+            }
         }
-    }
 ]

@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3087,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3087,
-            "Name": "Statikk Shiv",
-            "Description": "+40% Attack Speed +20% Critical Strike Chance +6% Movement Speed UNIQUE Passive: Grants Static Charges upon moving or attacking. At 100 Charges, basic attacking expends all Charges to deal 100 bonus magic damage to up to 4 targets on hit (this damage can critically strike).",
-            "GoldTotal": 2500,
-            "GoldBase": 600,
-            "Purchasable": "True",
-            "Icon": "icons/item/3087.png" ,
+            {
+                "pk" : 3087,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3087,
+                    "Name": "Statikk Shiv",
+                    "Description": "+40% Attack Speed +20% Critical Strike Chance +6% Movement Speed UNIQUE Passive: Grants Static Charges upon moving or attacking. At 100 Charges, basic attacking expends all Charges to deal 100 bonus magic damage to up to 4 targets on hit (this damage can critically strike).",
+                    "GoldTotal": 2500,
+                    "GoldBase": 600,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3087.png" ,
 	 "Tags": ["AttackSpeed", "CriticalStrike", "NonbootsMovement", "OnHit"] 
+            }
         }
-    }
 ]

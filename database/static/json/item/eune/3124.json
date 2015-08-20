@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3124,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3124,
-            "Name": "Guinsoo's Rageblade",
-            "Description": "+30 Attack Damage +40 Ability Power Passive: Basic attacks (on attack) and spell casts grant +4% Attack Speed and +4 Ability Power for 8 seconds (stacks up to 8 times). UNIQUE Passive: Falling below 50% Health grants +20% Attack Speed, +10% Life Steal, and +10% Spell Vamp until out of combat (30 second cooldown).",
-            "GoldTotal": 2590,
-            "GoldBase": 865,
-            "Purchasable": "True",
-            "Icon": "icons/item/3124.png" ,
+            {
+                "pk" : 3124,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3124,
+                    "Name": "Guinsoo's Rageblade",
+                    "Description": "+30 Attack Damage +40 Ability Power Passive: Basic attacks (on attack) and spell casts grant +4% Attack Speed and +4 Ability Power for 8 seconds (stacks up to 8 times). UNIQUE Passive: Falling below 50% Health grants +20% Attack Speed, +10% Life Steal, and +10% Spell Vamp until out of combat (30 second cooldown).",
+                    "GoldTotal": 2590,
+                    "GoldBase": 865,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3124.png" ,
 	 "Tags": ["AttackSpeed", "Damage", "LifeSteal", "OnHit", "SpellDamage", "SpellVamp"] 
+            }
         }
-    }
 ]

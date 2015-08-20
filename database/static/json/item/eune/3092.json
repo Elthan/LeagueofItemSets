@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3092,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3092,
-            "Name": "Frost Queen's Claim",
-            "Description": "+50 Ability Power +10% Cooldown Reduction +2 Gold per 10 seconds +50% Base Mana Regen UNIQUE Passive - Tribute: Spells and basic attacks against champions or buildings deal 15 additional damage and grant 10 Gold. This can occur up to 3 times every 30 seconds. UNIQUE Active: Fires an ice lance that explodes dealing 50 (+5 per champion level) magic damage to nearby enemies and slowing their Movement Speed by 80%, decaying over 2 seconds (60 second cooldown). Limited to 1 Gold Income item",
-            "GoldTotal": 2200,
-            "GoldBase": 515,
-            "Purchasable": "True",
-            "Icon": "icons/item/3092.png" ,
+            {
+                "pk" : 3092,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3092,
+                    "Name": "Frost Queen's Claim",
+                    "Description": "+50 Ability Power +10% Cooldown Reduction +2 Gold per 10 seconds +50% Base Mana Regen UNIQUE Passive - Tribute: Spells and basic attacks against champions or buildings deal 15 additional damage and grant 10 Gold. This can occur up to 3 times every 30 seconds. UNIQUE Active: Fires an ice lance that explodes dealing 50 (+5 per champion level) magic damage to nearby enemies and slowing their Movement Speed by 80%, decaying over 2 seconds (60 second cooldown). Limited to 1 Gold Income item",
+                    "GoldTotal": 2200,
+                    "GoldBase": 515,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3092.png" ,
 	 "Tags": ["Active", "CooldownReduction", "GoldPer", "ManaRegen", "Slow", "SpellDamage"] 
+            }
         }
-    }
 ]

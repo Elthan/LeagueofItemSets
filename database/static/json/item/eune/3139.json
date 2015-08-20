@@ -1,16 +1,16 @@
 [
-    {
-        "pk" : 3139,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3139,
-            "Name": "Mercurial Scimitar",
-            "Description": "+80 Attack Damage +35 Magic Resist UNIQUE Active - Quicksilver: Removes all debuffs and also grants +50% bonus Movement Speed for 1 second (90 second cooldown).",
-            "GoldTotal": 3700,
-            "GoldBase": 900,
-            "Purchasable": "True",
-            "Icon": "icons/item/3139.png" ,
+            {
+                "pk" : 3139,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3139,
+                    "Name": "Mercurial Scimitar",
+                    "Description": "+80 Attack Damage +35 Magic Resist UNIQUE Active - Quicksilver: Removes all debuffs and also grants +50% bonus Movement Speed for 1 second (90 second cooldown).",
+                    "GoldTotal": 3700,
+                    "GoldBase": 900,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3139.png" ,
 	 "Tags": ["Active", "Damage", "NonbootsMovement", "SpellBlock"] 
+            }
         }
-    }
 ]

@@ -1,17 +1,17 @@
 [
-    {
-        "pk" : 1011,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 1011,
-            "Name": "Giant's Belt",
-            "Description": "+380 Health",
-            "GoldTotal": 1000,
-            "GoldBase": 600,
-            "Purchasable": "True",
-            "Icon": "icons/item/1011.png" ,
+            {
+                "pk" : 1011,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 1011,
+                    "Name": "Giant's Belt",
+                    "Description": "+380 Health",
+                    "GoldTotal": 1000,
+                    "GoldBase": 600,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/1011.png" ,
 	 "Into": ["3083", "3143", "3116", "3022", "3084", "3742"] ,
 	 "Tags": ["Health"] 
+            }
         }
-    }
 ]

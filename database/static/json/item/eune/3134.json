@@ -1,17 +1,17 @@
 [
-    {
-        "pk" : 3134,
-        "model" : "database.Item",
-        "fields" : {
-            "ItemID": 3134,
-            "Name": "The Brutalizer",
-            "Description": "+25 Attack Damage UNIQUE Passive: +10% Cooldown Reduction UNIQUE Passive: +10 Armor Penetration (Armor Penetration: Physical damage is increased by ignoring an amount of the target's Armor equal to Armor Penetration.)",
-            "GoldTotal": 1337,
-            "GoldBase": 617,
-            "Purchasable": "True",
-            "Icon": "icons/item/3134.png" ,
+            {
+                "pk" : 3134,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3134,
+                    "Name": "The Brutalizer",
+                    "Description": "+25 Attack Damage UNIQUE Passive: +10% Cooldown Reduction UNIQUE Passive: +10 Armor Penetration (Armor Penetration: Physical damage is increased by ignoring an amount of the target's Armor equal to Armor Penetration.)",
+                    "GoldTotal": 1337,
+                    "GoldBase": 617,
+                    "Purchasable": "True",
+                    "Icon": "database/static/icons/item/3134.png" ,
 	 "Into": ["3142", "3707", "3714", "3719", "3723"] ,
 	 "Tags": ["ArmorPenetration", "CooldownReduction", "Damage"] 
+            }
         }
-    }
 ]
