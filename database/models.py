@@ -141,4 +141,4 @@ class Version(models.Model):
 
         #to determine returned value 
         def __str__(self): 
-                return self.Region
+                return self.Version

@@ -1,0 +1,87 @@
+
+/* color palette	
+#394264; background (dark purple)
+#394264; section background (medium purple)
+#50597b; selection color (lighter purple)
+#11a8ab; detail color (light blue)
+#e64c65; possible notification number (light red)
+#11A8AB; possible hint of blue  (another blue)
+*/
+
+body {
+	background-color: #1f253d; /* BGcolor */
+	font-family: Merriweather;
+	color: #fff; /* text color */
+}
+
+@font-face {
+	font-family: 'Merriweather', serif;
+	color: #fff;
+}
+
+nav {
+	position: fixed;
+	left: 1%;
+	top: 15;
+	width: 98%;
+	padding-left: 65px;
+	border-radius: 20px 20px 65px 65px;
+	box-shadow: 3px 3px 10px 5px #000;
+	background-color: #394264; 
+	box-sizing: border-box; /* assures the box stays in-screen */
+}
+
+.horizontal-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.horizontal-list li {
+	float: left;
+}
+
+.header-menu-tab {
+	padding: 0 27px;
+	display: block;
+	line-height: 55px;
+	text-decoration: none;
+	color: #fff;
+	border-bottom: 4px solid #50597b;
+}
+
+.header-menu-tab:hover {
+	background: #50597b;
+	border-bottom: 4px solid #11a8ab;
+	text-decoration: none;
+	box-shadow: 3px 3px 10px 5px #000 inset;
+}
+
+section {
+	margin: auto;
+	margin-top: 17px;
+	margin-bottom: 30px;
+	padding: 15px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	border-radius: 5px 35px 15px 35px;
+	background-color: #394264; 
+	box-shadow: 3px 3px 10px 5px #000;
+}
+
+table.page-divider {
+	margin: auto;
+	width: 80%;
+}
+
+.center-column {
+	vertical-align: top;
+	padding: 1%;
+	width: 75%;
+}
+
+.right-column {
+	vertical-align: top;
+	padding: 1%;
+	width: 23%;
+}
