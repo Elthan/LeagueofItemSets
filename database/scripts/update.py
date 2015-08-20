@@ -4,8 +4,8 @@ import urllib.request
 import re
 import logging as log
 import os.path
-from database.convert import create_db_json_items
-from database.convert import create_db_json_champ
+from database.scripts.convert import create_db_json_items
+from database.scripts.convert import create_db_json_champ
 from database.models import Version
 from database.models import Champion
 from database.models import Item

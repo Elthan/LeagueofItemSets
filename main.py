@@ -8,7 +8,6 @@ import os
 # Required that DJANGO_SETTINGS_MODULE is not set already.
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "LeagueofItemSets.settings")
 
-
 import database.scripts.update as update
 import database.scripts.convert as convert
 
