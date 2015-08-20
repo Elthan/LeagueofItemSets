@@ -9,8 +9,8 @@ import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "LeagueofItemSets.settings")
 
 
-import database.update as update
-import database.convert as convert
+import database.scripts.update as update
+import database.scripts.convert as convert
 
 #######################################
 #
