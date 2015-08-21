@@ -23,7 +23,8 @@ item_set_id : int
         return
     except PlayerItemSet.MultipleObjectsReturned:
         log.error("Multiple objects returned when querying for ID: " + item_set_id)
-        
+    
+    # JSON format for item set
     item_set_string = """{{
     "title": "{name}", 
     "type": "custom",
@@ -39,9 +40,14 @@ item_set_id : int
         rank = item_set.SortRank
     )
     
+    # Use a list so we can join them together at the end
     blocks_string_list = []
     blocks = item_set.block_set.all()
-    blocks_len = len(blocks) - 1 
+    
+    # Account for index starting at 0
+    blocks_len = len(blocks) - 1
+    
+    # Add all blocks
     for index_blocks, block in enumerate(blocks):
         block_string = """{{
         "type": "{block_type}",
@@ -58,9 +64,12 @@ item_set_id : int
             hide_sum = block.HideIfSummonerSpell
         )
         
+        # Same as with blocks, join together at the end
         items_string_list = []
         items = block.blockitem_set.all()
         items_len = len(items) - 1
+        
+        # Add all items in the block
         for index_items, item in enumerate(items):
             item_string = """{{
             "id": "{item_id}",
@@ -69,13 +78,17 @@ item_set_id : int
                 item_id = item.ItemID,
                 count = item.Count
             )
+            
+            # If it's the last item, don't add a ,
             item_string += "},\n" if index_items < items_len else "}\n"
             items_string_list.append(item_string)
         block_string = block_string.join(item_string_list)
         block_string += "\t]\n"
+        
+        # If it's the last block, don't add a , 
         block_string += "},\n" if index_blocks < blocks_len else "}"
         blocks_string_list.append(block_string)
-
+    
     item_set_string = item_set_string.join(block_string_list)
     item_set_string += "\n]\n}"
 
