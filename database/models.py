@@ -6,7 +6,6 @@ class PlayerItemSet(models.Model):
         ID = models.CharField(primary_key=True, max_length=50, default="0") #or other field
         Title = models.CharField(max_length=200, default="Made by LoIS")
         Date = models.DateTimeField('date created', default=timezone.now)
-        Type = models.CharField(max_length=6, default="custom")
         Map = models.CharField(max_length=3, default="any")
         Mode = models.CharField(max_length=7, default="any")
         Priority = models.BooleanField(default="false")
