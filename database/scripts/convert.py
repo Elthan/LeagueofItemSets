@@ -17,7 +17,7 @@ item_set_id : int
     django.setup()
 
     try:
-        item_set = PlayerItemSet.objects.get(ItemSetID=item_set_id)
+        item_set = PlayerItemSet.objects.get(ID=item_set_id)
     except PlayerItemSet.DoesNotExist:
         log.error("Could not find the item set with given ID: " + item_set_id)
         return
@@ -30,12 +30,13 @@ item_set_id : int
     "map": "{set_map}",
     "mode": "{mode}",
     "priority": false,
-    "sortrank": 0,
+    "sortrank": {rank},
     "blocks": [
     """.format(
         name = item_set.Title,
         set_map = item_set.Map,
-        mode = item_set.Mode
+        mode = item_set.Mode,
+        rank = item_set.SortRank
     )
     
     blocks_string_list = []
