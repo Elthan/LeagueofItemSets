@@ -8,12 +8,11 @@ class PlayerItemSet(models.Model):
         Date = models.DateTimeField('date created', default=timezone.now)
         Map = models.CharField(max_length=3, default="any")
         Mode = models.CharField(max_length=7, default="any")
-        Priority = models.BooleanField(default="false")
         SortRank = models.SmallIntegerField(default=0)
 
         #to determine returned value
         def __str__(self): 
-                return str(self.ItemSetID)
+                return str(self.ID)
 
         
 class Block(models.Model):
@@ -26,7 +25,7 @@ class Block(models.Model):
         PlayerItemSet = models.ForeignKey(PlayerItemSet)
 
         def __str_(self):
-                return self.Type
+                return self.BlockType
 
         
 class BlockItem(models.Model):

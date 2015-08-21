@@ -13,7 +13,8 @@ from database.models import Item
 
 def error(msg, err=""):
     log.error(msg)
-    log.error(err)
+    if (err != ""):
+        log.error(err)
    
 
 def check_version(region, api_key, log):

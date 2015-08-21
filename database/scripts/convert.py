@@ -30,7 +30,6 @@ item_set_id : int
     "type": "custom",
     "map": "{set_map}",
     "mode": "{mode}",
-    "priority": false,
     "sortrank": {rank},
     "blocks": [
     """.format(
