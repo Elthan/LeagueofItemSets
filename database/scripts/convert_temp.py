@@ -6,7 +6,38 @@ import datetime
 
 
 def modify_item_set(is_title="Made by LoIS", is_map="any", is_mode="any", is_sortrank=0, is_id="", new_entry=False):
-    if (not new_entry):
+    '''
+Create or modify an existing item set.
+
+Parameters
+-------------
+is_title : str
+    Item Set title, what is displayed in-game.
+is_map : str
+    Which maps the item set should be displayed on.
+is_sortrank : int
+    Sort the item set in descending order.
+is_id : str
+    ID for the item set in the database, a randomly generated UUID
+new_entry : bool
+    If it should create a new entry in the database or update an existing one.
+    '''
+    if (new_entry):
+        is_id = uuid.uuid4().hex
+        is_date = datetime.datetime.today()
+        
+        log.debug("Creating new item set with ID: " + is_id)
+        
+        pis = PlayerItemSet(
+            ID = is_id, 
+            Title = is_title,
+            Date = is_date,
+            Map = is_map,
+            Mode = is_mode,
+            SortRank = is_sortrank
+        )
+    else:
+        log.debug("Modifying existing item set with ID: " + is_id)
         # Check if we can find the item set.
         try:
             pis = PlayerItemSet.objects.get(ID=is_id)
@@ -21,23 +52,36 @@ def modify_item_set(is_title="Made by LoIS", is_map="any", is_mode="any", is_sor
             pis.mode = is_mode
         if (is_sortrank is not pis.SortRank):
             pis.SortRank = is_sortrank
-    else:
-        is_id = uuid.uuid4().hex
-        is_date = datetime.datetime.today()
-        pis = PlayerItemSet(
-            ID = is_id, 
-            Title = is_title,
-            Date = is_date,
-            Map = is_map,
-            Mode = is_mode,
-            SortRank = is_sortrank
-        )
     pis.save()
     
 
 def modify_new_block(is_id = "", name="Custom made", rec_math="false", min_sum_lvl=-1, max_sum_lvl=-1,
                         show_sum="", hide_sum="", block_id=-1, new_entry=False):
-    if (not new_entry):
+    '''
+Create or modify an existing new block.
+
+Parameters
+-------------
+is_id : str
+    
+    '''
+    if (new_entry):
+        # Check if item set exists
+        try:
+            PlayerItemSet.objects.get(ID=is_id)
+        except PlayerItemSet.DoesNotExist:
+            log.error("Could not find item set with ID " + is_id + " when creating a new block.")
+            return
+        block = Block(
+            BlockType = name,
+            RecMath = rec_math,
+            MinSummonerLevel = min_sum_lvl,
+            MaxSummonerLevel = max_sum_lvl,
+            ShowSummonerSpell = show_sum,
+            HideSummonerSpell = hide_sum,
+            PlayerItemSet = is_id
+        )
+    else:
         # Check if block with id exists
         try:
             block = Block.objects.get(id=block_id)
@@ -56,22 +100,6 @@ def modify_new_block(is_id = "", name="Custom made", rec_math="false", min_sum_l
             block.ShowSummonerSpell = show_sum
         if (hide_sum is not block.HideSummonerSpell):
             block.HideSummonerSpell = hide_sum
-    else:
-        # Check if item set exists
-        try:
-            PlayerItemSet.objects.get(ID=is_id)
-        except PlayerItemSet.DoesNotExist:
-            log.error("Could not find item set with ID " + is_id + " when creating a new block.")
-            return
-        block = Block(
-            BlockType = name,
-            RecMath = rec_math,
-            MinSummonerLevel = min_sum_lvl,
-            MaxSummonerLevel = max_sum_lvl,
-            ShowSummonerSpell = show_sum,
-            HideSummonerSpell = hide_sum,
-            PlayerItemSet = is_id
-        )
     block.save()
   
   
