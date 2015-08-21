@@ -3,7 +3,7 @@ from .models import PlayerItemSet, Item, ItemStat, Champion, ChampionStat, Versi
 
 # Register your models here.
 class PlayerItemSetAdmin(admin.ModelAdmin):
-	list_display = ['ItemSetID', 'ItemSetDate']
+	list_display = ['ID', 'Date']
 
 class ItemAdmin(admin.ModelAdmin):
 	list_display = ['ItemID', 'Name']

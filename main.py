@@ -53,14 +53,13 @@ if __name__ == "__main__":
     
     # Set level of logging to be done
     log.basicConfig(format="%(levelname)s: %(message)s",level=loglvl)
-    
-    
+
     # Temporary use only eune
     #region_list = ["br","eune","euw","kr","lan","las","na","oce","ru","tr","pbe"]
     region_list = ["eune"]
     
     log.info("League of Item Sets v0.3")
-    
+
     # Get the api_key, which is hidden.
     try:
         with open("settings") as settings_file:
