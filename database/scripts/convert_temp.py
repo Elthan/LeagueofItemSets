@@ -5,38 +5,93 @@ import uuid
 import datetime
 
 
-def create_new_item_set(is_title="Made by LoIS", is_map="any", is_mode="any", is_sortrank=0):
-    is_id = uuid.uuid4().hex
-    is_date = datetime.datetime.today()
+def modify_item_set(is_title="Made by LoIS", is_map="any", is_mode="any", is_sortrank=0, is_id="", new_entry=False):
+    if (not new_entry):
+        # Check if we can find the item set.
+        try:
+            pis = PlayerItemSet.objects.get(ID=is_id)
+        except PlayerItemSet.DoesNotExist:
+            log.error("Could not find item set with id: " + is_id + " when trying to update an item set.")
+            return
+        if (is_title is not pis.Title):
+            pis.Title = is_title
+        if (is_map is not pis.Map):
+            pis.map = is_map
+        if (is_mode is not pis.Mode):
+            pis.mode = is_mode
+        if (is_sortrank is not pis.SortRank):
+            pis.SortRank = is_sortrank
+    else:
+        is_id = uuid.uuid4().hex
+        is_date = datetime.datetime.today()
+        pis = PlayerItemSet(
+            ID = is_id, 
+            Title = is_title,
+            Date = is_date,
+            Map = is_map,
+            Mode = is_mode,
+            SortRank = is_sortrank
+        )
+    pis.save()
     
-    pis = PlayerItemSet(
-      ID = is_id, 
-      Title = is_title,
-      Date = is_date,
-      Map = is_map,
-      Mode = is_mode,
-      SortRank = is_sortrank
-    )
-    pis.save() 
-    
-    
-  def create_new_block(is_id, name="Custom made", rec_math="false", min_sum_lvl=-1, max_sum_lvl=-1, show_sum="", hide_sum=""):
-    block = Block(
-      BlockType = name,
-      RecMath = rec_math,
-      MinSummonerLevel = min_sum_lvl,
-      MaxSummonerLevel = max_sum_lvl,
-      ShowSummonerSpell = show_sum,
-      HideSummonerSpell = hide_sum,
-      PlayerItemSet = is_id
-    )
+
+def modify_new_block(is_id = "", name="Custom made", rec_math="false", min_sum_lvl=-1, max_sum_lvl=-1,
+                        show_sum="", hide_sum="", block_id=-1, new_entry=False):
+    if (not new_entry):
+        # Check if block with id exists
+        try:
+            block = Block.objects.get(id=block_id)
+        except PlayerItemSet.DoesNotExist:
+            log.error("Could not find item set when with id: " + is_id + " when trying to update a Block.")
+            return
+        if (name is not block.Type):
+            block.Type = name
+        if (rec_math is not block.RecMath):
+            block.RecMath = rec_math
+        if (min_sum_lvl is not block.MinSummonerLevel):
+            block.MinSummonerLevel = min_sum_lvl
+        if (max_sum_lvl is not block.MaxSummonerLevel):
+            block.MaxSummonerLevel = max_sum_lvl
+        if (show_sum is not block.ShowSummonerSpell):
+            block.ShowSummonerSpell = show_sum
+        if (hide_sum is not block.HideSummonerSpell):
+            block.HideSummonerSpell = hide_sum
+    else:
+        # Check if item set exists
+        try:
+            PlayerItemSet.objects.get(ID=is_id)
+        except PlayerItemSet.DoesNotExist:
+            log.error("Could not find item set with ID " + is_id + " when creating a new block.")
+            return
+        block = Block(
+            BlockType = name,
+            RecMath = rec_math,
+            MinSummonerLevel = min_sum_lvl,
+            MaxSummonerLevel = max_sum_lvl,
+            ShowSummonerSpell = show_sum,
+            HideSummonerSpell = hide_sum,
+            PlayerItemSet = is_id
+        )
     block.save()
   
   
-def create_new_block_item(block_id, item_id, count=1):
-  item = Item(
-    ItemID = item_id,
-    Count = count,
-    Block = block_id
-  )
-  item.save()
+def modify_new_block_item(item_id, block_id=-1, count=1, block_item_id = -1, new_entry=True):
+    if (not new_entry):
+        # Check if we can find item
+        try:
+            item = BlockItem.objects.get(id = block_item_id)
+        except BlockItem.DoesNotExist:
+            log.error("Could not find item with id " + block_item_id + " when trying to update item.")
+            return
+        item.count = count
+    else:
+        try:
+            Block.objects.get(id = block_id)
+        except Block.DoesNotExist:
+            log.error("Could not find block with id "+ block_id + " when trying to create new item.")
+        item = BlockItem(
+            ItemID = item_id,
+            Count = count,
+            Block = block_id
+        )
+    item.save()
