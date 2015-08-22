@@ -5,7 +5,7 @@
         "fields": {
             "Armor": 26.88,
             "ArmorPerLevel": 3.5,
-            "AttackDamage": 56.004,
+            "AttackDamage": 51.0,
             "AttackDamagePerLevel": 2.8,
             "AttackRange": 125.0,
             "AttackSpeedOffset": -0.02,

@@ -1,10 +1,10 @@
 [
     {
-        "pk": 3143,
+        "pk": 3748,
         "model": "database.ItemStat",
         "fields": {
-		"FlatArmorMod": 60.0,
-		"FlatHPPoolMod": 400.0
+		"FlatHPPoolMod": 400.0,
+		"FlatPhysicalDamageMod": 50.0
         }
     }
 ]

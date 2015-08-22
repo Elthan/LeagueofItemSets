@@ -10,7 +10,7 @@
                     "GoldBase": 180,
                     "Purchasable": "True",
                     "Icon": "database/static/icons/item/1006.png" ,
-	 "Into": ["3077", "3112", "2051", "2053", "3105", "3801"] ,
+	 "Into": ["3077", "3112", "2051", "2053", "3801"] ,
 	 "Tags": ["HealthRegen"] 
             }
         }

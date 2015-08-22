@@ -4,7 +4,7 @@
         "model": "database.ChampionStat",
         "fields": {
             "Armor": 31.384,
-            "ArmorPerLevel": 3.8,
+            "ArmorPerLevel": 4.3,
             "AttackDamage": 55.88,
             "AttackDamagePerLevel": 3.5,
             "AttackRange": 125.0,

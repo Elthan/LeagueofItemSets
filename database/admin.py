@@ -3,17 +3,17 @@ from .models import PlayerItemSet, Item, ItemStat, Champion, ChampionStat, Versi
 
 # Register your models here.
 class PlayerItemSetAdmin(admin.ModelAdmin):
-	list_display = ['ID', 'Date']
+	list_display = ['ID', 'Date', 'block_set']
 
 class ItemAdmin(admin.ModelAdmin):
 	list_display = ['ItemID', 'Name']
-	
+
 class ChampionAdmin(admin.ModelAdmin):
 	list_display = ['ChampID', 'Name']
-	
+
 class VersionAdmin(admin.ModelAdmin):
 	list_display = ['Region', 'Version']
-	
+
 
 admin.site.register(PlayerItemSet, PlayerItemSetAdmin)
 admin.site.register(Item, ItemAdmin)

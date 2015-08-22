@@ -7,7 +7,7 @@
                     "Name": "Quicksilver Sash",
                     "Description": "+30 Magic Resist UNIQUE Active - Quicksilver: Removes all debuffs (90 second cooldown).",
                     "GoldTotal": 1250,
-                    "GoldBase": 750,
+                    "GoldBase": 800,
                     "Purchasable": "True",
                     "Icon": "database/static/icons/item/3140.png" ,
 	 "Into": ["3139", "3137"] ,
