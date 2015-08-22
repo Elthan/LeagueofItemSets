@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.core.servers.basehttp import FileWrapper
 from django.shortcuts import render
 from .models import *
+
 # Create your views here.
 
 
