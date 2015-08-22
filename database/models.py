@@ -11,13 +11,13 @@ class PlayerItemSet(models.Model):
         SortRank = models.SmallIntegerField(default=0)
 
         #to determine returned value
-        def __str__(self): 
+        def __str__(self):
                 return str(self.ID)
 
-        
+
 class Block(models.Model):
         BlockType = models.CharField(max_length=200, default="Custom made")
-        RecMath = models.BooleanField(default="false")
+        RecMath = models.CharField(max_length=10, default="false")
         MinSummonerLevel = models.SmallIntegerField(default=-1)
         MaxSummonerLevel = models.SmallIntegerField(default=-1)
         ShowIfSummonerSpell = models.CharField(max_length=50, default="")
@@ -27,17 +27,17 @@ class Block(models.Model):
         def __str_(self):
                 return self.BlockType
 
-        
+
 class BlockItem(models.Model):
         ItemID = models.IntegerField(default=0)
         Count = models.IntegerField(default=1)
         Block = models.ForeignKey(Block)
-        
+
         # to determine return value
         def __str__(self):
                 return str(self.ItemID)
 
-        
+
 class ItemStat(models.Model):
         ItemID = models.IntegerField(primary_key=True, default=0)
         FlatArmorMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
@@ -62,8 +62,8 @@ class ItemStat(models.Model):
         PercentCritChanceMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
         PercentCritDamageMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
         PercentDodgeMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        PercentExpBonus = models.DecimalField(max_digits=11, decimal_places=5, default=0)    
-        PercentHPPoolMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)    
+        PercentExpBonus = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        PercentHPPoolMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
         PercentHPRegenMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
         PercentLifeStealMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
         PercentMPPoolMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
@@ -74,11 +74,11 @@ class ItemStat(models.Model):
         PercentSpellBlockMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
         PercentSpellVampMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
 
-        #to determine returned value 
+        #to determine returned value
         def __str__(self):
                 return str(self.ItemID)
-        
-        
+
+
 class Item(models.Model):
         ItemID = models.IntegerField(primary_key=True, default=0)
         Description = models.CharField(max_length=200, default="Describe me!")
@@ -86,18 +86,18 @@ class Item(models.Model):
         GoldBase = models.SmallIntegerField(default=0)
         Name = models.CharField(max_length=200, default="item_name")
         Tags = models.CharField(max_length=200, default=["all", "them", "tags"])
-        Icon = models.CharField(max_length=200, default="database/static/icons/item/3460.png")
+        Icon = models.CharField(max_length=200, default="icons/item/3460.png")
         Stacks = models.IntegerField(default=1)
         Into = models.CharField(max_length=200, default=[""])
         Purchasable = models.BooleanField(default=False)
-        
-        #to determine returned value 
-        def __str__(self): 
+
+        #to determine returned value
+        def __str__(self):
                 return self.Name
-        
-        
+
+
 class ChampionStat(models.Model):
-        ChampID = models.IntegerField(primary_key=True, default=0) 
+        ChampID = models.IntegerField(primary_key=True, default=0)
         Armor = models.DecimalField(max_digits=11, decimal_places=5, default=0)
         ArmorPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
         AttackDamage = models.DecimalField(max_digits=11, decimal_places=5, default=0)
@@ -117,26 +117,26 @@ class ChampionStat(models.Model):
         MPRegen = models.DecimalField(max_digits=11, decimal_places=5, default=0)
         MPRegenPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
         SpellBlock = models.DecimalField(max_digits=11, decimal_places=5, default=0)
-        SpellBlockPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)        
+        SpellBlockPerLevel = models.DecimalField(max_digits=11, decimal_places=5, default=0)
 
-        #to determine returned value 
+        #to determine returned value
         def __str__(self):
                 return str(self.ChampID)
 
-        
+
 class Champion(models.Model):
         ChampID = models.IntegerField(primary_key=True, default=0)
         Name = models.CharField(max_length=200, default="Tweemo")
         Icon = models.CharField(max_length=200, default="icons/champion/Unknown.png")
 
-        #to determine returned value 
+        #to determine returned value
         def __str__(self):
                 return self.Name
-        
-class Version(models.Model):
-        Region = models.CharField(primary_key=True, max_length=200, default="eune")
-        Version = models.CharField(max_length=200, default="1.0.0")
 
-        #to determine returned value 
-        def __str__(self): 
+class Version(models.Model):
+        Region = models.CharField(primary_key=True, max_length=10, default="eune")
+        Version = models.CharField(max_length=20, default="1.0.0")
+
+        #to determine returned value
+        def __str__(self):
                 return self.Version

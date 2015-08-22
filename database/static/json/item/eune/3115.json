@@ -9,7 +9,7 @@
                     "GoldTotal": 3000,
                     "GoldBase": 930,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3115.png" ,
+                    "Icon": "icons/item/3115.png" ,
 	 "Tags": ["AttackSpeed", "CooldownReduction", "OnHit", "SpellDamage"] 
             }
         }

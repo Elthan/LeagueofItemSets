@@ -9,7 +9,7 @@
                     "GoldTotal": 3000,
                     "GoldBase": 765,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3430.png" ,
+                    "Icon": "icons/item/3430.png" ,
 	 "Tags": ["Bilgewater", "CooldownReduction", "OnHit", "SpellDamage"] 
             }
         }

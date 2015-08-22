@@ -9,7 +9,7 @@
                     "GoldTotal": 1250,
                     "GoldBase": 800,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3140.png" ,
+                    "Icon": "icons/item/3140.png" ,
 	 "Into": ["3139", "3137"] ,
 	 "Tags": ["Active", "SpellBlock"] 
             }

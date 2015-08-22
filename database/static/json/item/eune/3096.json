@@ -9,7 +9,7 @@
                     "GoldTotal": 865,
                     "GoldBase": 500,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3096.png" ,
+                    "Icon": "icons/item/3096.png" ,
 	 "Into": ["3069"] ,
 	 "Tags": ["Active", "GoldPer", "HealthRegen", "ManaRegen", "NonbootsMovement"] 
             }

@@ -9,7 +9,7 @@
                     "GoldTotal": 2150,
                     "GoldBase": 990,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3112.png" ,
+                    "Icon": "icons/item/3112.png" ,
 	 "Tags": ["HealthRegen", "SpellBlock"] 
             }
         }

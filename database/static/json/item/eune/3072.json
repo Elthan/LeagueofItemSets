@@ -9,7 +9,7 @@
                     "GoldTotal": 3500,
                     "GoldBase": 1150,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3072.png" ,
+                    "Icon": "icons/item/3072.png" ,
 	 "Tags": ["Damage", "LifeSteal"] 
             }
         }

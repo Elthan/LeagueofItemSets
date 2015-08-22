@@ -9,7 +9,7 @@
                     "GoldTotal": 1200,
                     "GoldBase": 330,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3145.png" ,
+                    "Icon": "icons/item/3145.png" ,
 	 "Into": ["3146", "3152"] ,
 	 "Tags": ["SpellDamage", "SpellVamp"] 
             }

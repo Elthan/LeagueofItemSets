@@ -3,7 +3,7 @@ import tempfile
 import json
 from django.http import HttpResponse
 from django.core.servers.basehttp import FileWrapper
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from .models import *
 
 # Create your views here.
@@ -27,6 +27,13 @@ def rend(request):
 
 def test_stuff(request):
 	item_list = Item.objects.all()
-	template = loader.get_template('database/test_page.html')
-	context = RequestContext(request, {'item_list': item_list})
-	return HttpResponse()
+	context = {'item_list': item_list}
+	return render(request, 'database/test_page.html', context)
+
+def item_set(request):
+	champ_list = Champion.objects.all()
+	context = {'champ_list': champ_list}
+	return render(request, 'database/item_set.html', context)
+
+def new_is(request):
+	return render(request, 'database/item_set.html')

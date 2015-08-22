@@ -11,31 +11,20 @@
 </head>
 
 <body>
-<nav>
-<table class="page-divider">
-	<td class="center-column">
-		<!-- content placed here will live in the center column -->
 		<section>
       {% if item_list %}
-				<ul>
+				<form action="{% url 'lois:new_is'}" method="post">
+					{% csrf_token %}
 					{% for item in item_list %}
-						{{ item.Name }}
+							<input type="radio" name="item"	id="ItemID{{ item.ItemID}}"
+								value="{{ item.Name }}" />
+								<label for="ItemID{{ item.ItemID }}"> {{ item.Name }}</label> <br />
 					{% endfor %}
-				</ul>
+					<input type="submit" value="Choose" />
+				</form>
 			{% else %}
 				<p> No items available. </p>
 			{% endif %}
 		</section>
-	</td>
-	<td class="right-column">
-		<!-- content placed here will live in the rightmost column -->
-		<section>
-      Rightmost <br> column
-		</section>
-	</td>
-</table>
-
-
-
 </body>
 </html>

@@ -9,7 +9,7 @@
                     "GoldTotal": 3300,
                     "GoldBase": 600,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3074.png" ,
+                    "Icon": "icons/item/3074.png" ,
 	 "Tags": ["Active", "Damage", "HealthRegen", "LifeSteal", "OnHit"] 
             }
         }

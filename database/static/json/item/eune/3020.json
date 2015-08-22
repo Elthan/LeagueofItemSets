@@ -9,7 +9,7 @@
                     "GoldTotal": 1100,
                     "GoldBase": 775,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3020.png" ,
+                    "Icon": "icons/item/3020.png" ,
 	 "Into": ["1311", "1313", "1310", "1312", "1314", "1337"] ,
 	 "Tags": ["Boots", "MagicPenetration"] 
             }

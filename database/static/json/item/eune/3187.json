@@ -9,7 +9,7 @@
                     "GoldTotal": 2080,
                     "GoldBase": 330,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3187.png" ,
+                    "Icon": "icons/item/3187.png" ,
 	 "Tags": ["Active", "Armor", "CooldownReduction", "Health", "Mana", "Stealth", "Vision"] 
             }
         }

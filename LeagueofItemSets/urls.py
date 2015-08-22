@@ -19,5 +19,5 @@ from database import urls as db_urls
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include(db_urls))
+    url(r'^', include(db_urls, namespace='lois'))
 ]

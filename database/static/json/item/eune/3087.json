@@ -9,7 +9,7 @@
                     "GoldTotal": 2500,
                     "GoldBase": 600,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3087.png" ,
+                    "Icon": "icons/item/3087.png" ,
 	 "Tags": ["AttackSpeed", "CriticalStrike", "NonbootsMovement", "OnHit"] 
             }
         }

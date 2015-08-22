@@ -9,7 +9,7 @@
                     "GoldTotal": 2700,
                     "GoldBase": 545,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3174.png" ,
+                    "Icon": "icons/item/3174.png" ,
 	 "Tags": ["CooldownReduction", "ManaRegen", "SpellBlock", "SpellDamage"] 
             }
         }

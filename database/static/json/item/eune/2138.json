@@ -9,7 +9,7 @@
                     "GoldTotal": 400,
                     "GoldBase": 400,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/2138.png" ,
+                    "Icon": "icons/item/2138.png" ,
 	 "Tags": ["Consumable", "NonbootsMovement", "Tenacity"] 
             }
         }

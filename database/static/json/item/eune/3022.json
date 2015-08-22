@@ -9,7 +9,7 @@
                     "GoldTotal": 3300,
                     "GoldBase": 1025,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3022.png" ,
+                    "Icon": "icons/item/3022.png" ,
 	 "Tags": ["Damage", "Health", "OnHit", "Slow"] 
             }
         }

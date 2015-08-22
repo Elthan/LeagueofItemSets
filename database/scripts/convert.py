@@ -33,11 +33,11 @@ is_id : str
     if (new_entry):
         is_id = uuid.uuid4().hex
         is_date = timezone.now()
-        
+
         log.debug("Creating new item set with ID: " + is_id)
-        
+
         pis = PlayerItemSet(
-            ID = is_id, 
+            ID = is_id,
             Title = is_title,
             Date = is_date,
             Map = is_map,
@@ -64,7 +64,7 @@ is_id : str
 
     pis.save()
     return is_id
-    
+
 
 def block_manager(log, is_id = "", name = "Custom made", rec_math = "false",
                   min_sum_lvl = -1, max_sum_lvl = -1, show_sum = "", hide_sum = "",
@@ -166,7 +166,7 @@ new_entry : bool
             ItemID = item_id,
             Count = count,
             Block = block
-        )        
+        )
     else:
         log.debug("Modifying item with ID " + item_id + " in block with ID " + block_id)
         # Check if we can find item
@@ -200,10 +200,10 @@ item_set_id : int
         return
     except PlayerItemSet.MultipleObjectsReturned:
         log.error("Multiple objects returned when querying for ID: " + item_set_id)
-    
+
     # JSON format for item set
     item_set_string = """{{
-    "title": "{name}", 
+    "title": "{name}",
     "type": "custom",
     "map": "{set_map}",
     "mode": "{mode}",
@@ -215,14 +215,14 @@ item_set_id : int
         mode = item_set.Mode,
         rank = item_set.SortRank
     )
-    
+
     # Use a list so we can join them together at the end
     blocks_string_list = []
     blocks = item_set.block_set.all()
-    
+
     # Account for index starting at 0
     blocks_len = len(blocks) - 1
-    
+
     # Add all blocks
     for index_blocks, block in enumerate(blocks):
         block_string = """{{
@@ -239,12 +239,12 @@ item_set_id : int
             show_sum = block.ShowIfSummonerSpell,
             hide_sum = block.HideIfSummonerSpell
         )
-        
+
         # Same as with blocks, join together at the end
         items_string_list = []
         items = block.blockitem_set.all()
         items_len = len(items) - 1
-        
+
         # Add all items in the block
         for index_items, item in enumerate(items):
             item_string = """{{
@@ -254,17 +254,17 @@ item_set_id : int
                 item_id = item.ItemID,
                 count = item.Count
             )
-            
+
             # If it's the last item, don't add a ,
             item_string += "},\n" if index_items < items_len else "}\n"
             items_string_list.append(item_string)
         block_string = block_string.join(item_string_list)
         block_string += "\t]\n"
-        
-        # If it's the last block, don't add a , 
+
+        # If it's the last block, don't add a ,
         block_string += "},\n" if index_blocks < blocks_len else "}"
         blocks_string_list.append(block_string)
-    
+
     item_set_string = item_set_string.join(block_string_list)
     item_set_string += "\n]\n}"
 
@@ -285,15 +285,15 @@ log : logging
     So we can log what is happening.
     '''
     item_id = str(item_json["id"])
-    
+
     log.debug("Creating json file for item stats for item " + item_id)
 
     path = "database/static/json/item_stats/" + region + "/"
-    
+
     os.makedirs(path, exist_ok=True)
 
     path = path + item_id + ".json"
-        
+
     with open(path, 'w') as item_stats_file:
         json_db_string = """[
     {{
@@ -329,24 +329,24 @@ log : logging
     So we can log what is happening.
     '''
     log.debug("Opening database/static/json/item/" + region + ".json")
-        
+
     try:
         with open("database/static/json/item/"+ region + ".json", 'r') as items_file:
             items_json = json.load(items_file)
 
             # Check if path exists, else create it.
             os.makedirs("database/static/json/item/" + region + "/", exist_ok=True)
-            
+
             for item_id in items_json["data"]:
                 item_json = items_json["data"][item_id]
 
                 create_db_json_item_stats(item_json, region, log)
 
                 path =  "database/static/json/item/" + region + "/" + item_id + ".json"
-                
+
                 log.debug("Creating json file for item " + item_id)
 
-                
+
                 with open(path, 'w') as item_json_file:
                     json_db_string = """[
             {{
@@ -366,7 +366,7 @@ log : logging
                         gold_total = item_json["gold"]["total"],
                         gold_base = item_json["gold"]["base"],
                         purchasable = item_json["gold"]["purchasable"],
-                        icon = "database/static/icons/item/" + item_id + ".png"
+                        icon = "icons/item/" + item_id + ".png"
                     )
                     # Not all items build into something.
                     try:
@@ -374,7 +374,7 @@ log : logging
                         json_db_string += ",\n\t" + """ "Into": {} """.format(json.dumps(into))
                     except KeyError:
                         pass
-                    
+
                     # Not all items have a tag.
                     try:
                         tags = item_json["tags"]
@@ -386,7 +386,7 @@ log : logging
         }
 ]"""
                     item_json_file.write(json_db_string)
-                
+
     except OSError as err:
         log.error("Error when trying to create DB friendly JSON from items.\n" + err)
         return
@@ -414,14 +414,14 @@ log : logging
       log.debug("Creating JSON file for champion stats for champion " + champ_name)
 
       path = "database/static/json/champ_stats/" + region + "/"
-      
+
       os.makedirs(path, exist_ok=True)
 
       path = path + champ_name + ".json"
 
       with open(path, 'w') as champ_stats_file:
           champ_stats = champ_json["stats"]
-          
+
           # JSON that django can read
           json_db_string = """[
     {{
@@ -490,7 +490,7 @@ log : logging
     So we can log what is happening.
     '''
     log.debug("Opening database/static/json/champion/" + region + ".json")
-    
+
     try:
         with open("database/static/json/champion/" + region + ".json", 'r') as champs_file:
             champs_json = json.load(champs_file)
@@ -518,7 +518,7 @@ log : logging
                     """.format(
                         champ_id = champ_json["id"],
                         champ_name = champ_name,
-                        icon_path = "static/icons/champion/" + champ_name
+                        icon_path = "icons/champion/" + champ_name + ".png"
                     )
                     json_db_string +=  """
                 }

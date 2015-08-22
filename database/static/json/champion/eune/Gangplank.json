@@ -5,7 +5,7 @@
                 "fields" : {
                     "ChampID": 41,
                     "Name": "Gangplank",
-                    "Icon": "static/icons/champion/Gangplank"
+                    "Icon": "icons/champion/Gangplank.png"
                     
                 }
             }

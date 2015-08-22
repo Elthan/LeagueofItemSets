@@ -9,7 +9,7 @@
                     "GoldTotal": 800,
                     "GoldBase": 475,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3117.png" ,
+                    "Icon": "icons/item/3117.png" ,
 	 "Into": ["1326", "1328", "1325", "1327", "1329", "1340"] ,
 	 "Tags": ["Boots"] 
             }

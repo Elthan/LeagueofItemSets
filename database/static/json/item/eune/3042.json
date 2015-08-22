@@ -9,7 +9,7 @@
                     "GoldTotal": 2200,
                     "GoldBase": 2200,
                     "Purchasable": "False",
-                    "Icon": "database/static/icons/item/3042.png" ,
+                    "Icon": "icons/item/3042.png" ,
 	 "Tags": ["OnHit"] 
             }
         }

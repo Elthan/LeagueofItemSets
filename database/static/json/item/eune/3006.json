@@ -9,7 +9,7 @@
                     "GoldTotal": 1000,
                     "GoldBase": 225,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3006.png" ,
+                    "Icon": "icons/item/3006.png" ,
 	 "Into": ["1301", "1303", "1300", "1302", "1304", "1335"] ,
 	 "Tags": ["AttackSpeed", "Boots"] 
             }

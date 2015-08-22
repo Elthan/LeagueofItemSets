@@ -9,7 +9,7 @@
                     "GoldTotal": 1000,
                     "GoldBase": 600,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/1011.png" ,
+                    "Icon": "icons/item/1011.png" ,
 	 "Into": ["3083", "3143", "3116", "3022", "3084", "3053", "3742", "3748"] ,
 	 "Tags": ["Health"] 
             }

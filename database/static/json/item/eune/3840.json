@@ -9,7 +9,7 @@
                     "GoldTotal": 2100,
                     "GoldBase": 635,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3840.png" ,
+                    "Icon": "icons/item/3840.png" ,
 	 "Tags": ["Bilgewater", "CooldownReduction", "GoldPer", "ManaRegen"] 
             }
         }

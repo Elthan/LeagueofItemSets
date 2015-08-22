@@ -9,7 +9,7 @@
                     "GoldTotal": 2250,
                     "GoldBase": 400,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3717.png" ,
+                    "Icon": "icons/item/3717.png" ,
 	 "Tags": ["Health", "Jungle"] 
             }
         }

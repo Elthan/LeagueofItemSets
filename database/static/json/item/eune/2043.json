@@ -9,7 +9,7 @@
                     "GoldTotal": 100,
                     "GoldBase": 100,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/2043.png" ,
+                    "Icon": "icons/item/2043.png" ,
 	 "Tags": ["Consumable", "Lane", "Stealth", "Vision"] 
             }
         }

@@ -9,7 +9,7 @@
                     "GoldTotal": 1500,
                     "GoldBase": 665,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3136.png" ,
+                    "Icon": "icons/item/3136.png" ,
 	 "Into": ["3151", "3829"] ,
 	 "Tags": ["Health", "MagicPenetration", "SpellDamage"] 
             }

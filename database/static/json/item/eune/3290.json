@@ -9,7 +9,7 @@
                     "GoldTotal": 2400,
                     "GoldBase": 730,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3290.png" ,
+                    "Icon": "icons/item/3290.png" ,
 	 "Tags": ["Active", "CooldownReduction", "NonbootsMovement", "Slow", "SpellDamage", "Stealth", "Vision"] 
             }
         }

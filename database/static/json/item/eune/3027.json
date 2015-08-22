@@ -9,7 +9,7 @@
                     "GoldTotal": 2700,
                     "GoldBase": 650,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3027.png" ,
+                    "Icon": "icons/item/3027.png" ,
 	 "Tags": ["Health", "HealthRegen", "Mana", "ManaRegen", "SpellDamage"] 
             }
         }

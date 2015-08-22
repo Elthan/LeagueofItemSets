@@ -9,7 +9,7 @@
                     "GoldTotal": 1100,
                     "GoldBase": 620,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/2053.png" ,
+                    "Icon": "icons/item/2053.png" ,
 	 "Into": ["3056", "3512"] ,
 	 "Tags": ["Armor", "HealthRegen", "NonbootsMovement"] 
             }

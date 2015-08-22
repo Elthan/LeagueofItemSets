@@ -9,7 +9,7 @@
                     "GoldTotal": 3200,
                     "GoldBase": 850,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3508.png" ,
+                    "Icon": "icons/item/3508.png" ,
 	 "Tags": ["CooldownReduction", "Damage", "LifeSteal", "ManaRegen"] 
             }
         }

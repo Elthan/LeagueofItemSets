@@ -9,7 +9,7 @@
                     "GoldTotal": 2250,
                     "GoldBase": 300,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3722.png" ,
+                    "Icon": "icons/item/3722.png" ,
 	 "Into": ["3932"] ,
 	 "Tags": ["AttackSpeed", "Damage", "Jungle", "OnHit"] 
             }

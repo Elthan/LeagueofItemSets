@@ -9,7 +9,7 @@
                     "GoldTotal": 365,
                     "GoldBase": 365,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3303.png" ,
+                    "Icon": "icons/item/3303.png" ,
 	 "Into": ["3098"] ,
 	 "Tags": ["GoldPer", "Lane", "ManaRegen", "SpellDamage"] 
             }

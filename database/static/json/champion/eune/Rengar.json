@@ -5,7 +5,7 @@
                 "fields" : {
                     "ChampID": 107,
                     "Name": "Rengar",
-                    "Icon": "static/icons/champion/Rengar"
+                    "Icon": "icons/champion/Rengar.png"
                     
                 }
             }

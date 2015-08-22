@@ -9,7 +9,7 @@
                     "GoldTotal": 2750,
                     "GoldBase": 300,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3190.png" ,
+                    "Icon": "icons/item/3190.png" ,
 	 "Tags": ["Active", "Aura", "CooldownReduction", "Health", "HealthRegen", "SpellBlock"] 
             }
         }
