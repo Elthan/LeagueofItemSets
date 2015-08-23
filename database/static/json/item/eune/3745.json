@@ -9,7 +9,7 @@
                     "GoldTotal": 2200,
                     "GoldBase": 450,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3745.png" ,
+                    "Icon": "icons/item/3745.png" ,
 	 "Tags": ["Active", "Bilgewater", "CooldownReduction", "Health", "ManaRegen", "OnHit", "SpellBlock", "SpellDamage"] 
             }
         }

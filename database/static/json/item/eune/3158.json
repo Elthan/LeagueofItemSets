@@ -9,7 +9,7 @@
                     "GoldTotal": 1000,
                     "GoldBase": 675,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3158.png" ,
+                    "Icon": "icons/item/3158.png" ,
 	 "Into": ["1331", "1333", "1330", "1332", "1334", "1341"] ,
 	 "Tags": ["Boots", "CooldownReduction"] 
             }

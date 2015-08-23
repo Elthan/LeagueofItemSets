@@ -9,7 +9,7 @@
                     "GoldTotal": 345,
                     "GoldBase": 345,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/2041.png" ,
+                    "Icon": "icons/item/2041.png" ,
 	 "Tags": ["Active", "Consumable", "HealthRegen", "Lane", "ManaRegen"] 
             }
         }

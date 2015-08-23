@@ -9,7 +9,7 @@
                     "GoldTotal": 730,
                     "GoldBase": 730,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/1018.png" ,
+                    "Icon": "icons/item/1018.png" ,
 	 "Into": ["3046", "3031", "3104", "3185", "3150"] ,
 	 "Tags": ["CriticalStrike"] 
             }

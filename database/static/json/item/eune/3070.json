@@ -9,7 +9,7 @@
                     "GoldTotal": 720,
                     "GoldBase": 140,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3070.png" ,
+                    "Icon": "icons/item/3070.png" ,
 	 "Into": ["3003", "3004"] ,
 	 "Tags": ["Mana", "ManaRegen"] 
             }

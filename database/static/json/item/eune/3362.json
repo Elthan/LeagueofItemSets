@@ -9,7 +9,7 @@
                     "GoldTotal": 250,
                     "GoldBase": 250,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3362.png" ,
+                    "Icon": "icons/item/3362.png" ,
 	 "Tags": ["Active", "Trinket", "Vision"] 
             }
         }

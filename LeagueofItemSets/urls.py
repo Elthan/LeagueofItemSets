@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from database import urls as db_urls
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^db/', include('database.urls')),   
-    url(r'$', include(admin.site.urls)), 
+    url(r'^', include(db_urls, namespace='lois'))
 ]

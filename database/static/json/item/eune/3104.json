@@ -9,7 +9,7 @@
                     "GoldTotal": 3800,
                     "GoldBase": 995,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3104.png" ,
+                    "Icon": "icons/item/3104.png" ,
 	 "Tags": ["CriticalStrike", "Damage"] 
             }
         }

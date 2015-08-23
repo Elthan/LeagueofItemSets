@@ -9,7 +9,7 @@
                     "GoldTotal": 1400,
                     "GoldBase": 1040,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3141.png" ,
+                    "Icon": "icons/item/3141.png" ,
 	 "Tags": ["Damage"] 
             }
         }

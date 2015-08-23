@@ -5,11 +5,11 @@
                 "fields" : {
                     "ItemID": 3110,
                     "Name": "Frozen Heart",
-                    "Description": "+100 Armor +20% Cooldown Reduction +400 Mana UNIQUE Aura: Reduces the Attack Speed of nearby enemies by 15%.",
-                    "GoldTotal": 2450,
-                    "GoldBase": 450,
+                    "Description": "+90 Armor +20% Cooldown Reduction +400 Mana UNIQUE Aura: Reduces the Attack Speed of nearby enemies by 15%.",
+                    "GoldTotal": 2600,
+                    "GoldBase": 600,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3110.png" ,
+                    "Icon": "icons/item/3110.png" ,
 	 "Tags": ["Armor", "Aura", "CooldownReduction", "Mana"] 
             }
         }

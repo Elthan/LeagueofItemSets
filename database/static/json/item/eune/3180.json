@@ -6,10 +6,10 @@
                     "ItemID": 3180,
                     "Name": "Odyn's Veil",
                     "Description": "+350 Health +350 Mana +50 Magic Resist UNIQUE Passive: Reduces and stores 10% of magic damage received. UNIQUE Active: Deals 200 + (stored magic) (max 400) magic damage to nearby enemy units (90 second cooldown).",
-                    "GoldTotal": 2500,
+                    "GoldTotal": 2450,
                     "GoldBase": 450,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3180.png" ,
+                    "Icon": "icons/item/3180.png" ,
 	 "Tags": ["Active", "Health", "Mana", "SpellBlock"] 
             }
         }

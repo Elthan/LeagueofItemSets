@@ -9,7 +9,7 @@
                     "GoldTotal": 820,
                     "GoldBase": 385,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3108.png" ,
+                    "Icon": "icons/item/3108.png" ,
 	 "Into": ["3174", "3092", "3115", "3023", "3165", "3152", "3060", "3290", "3433"] ,
 	 "Tags": ["CooldownReduction", "SpellDamage"] 
             }

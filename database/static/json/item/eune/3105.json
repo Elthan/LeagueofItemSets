@@ -5,11 +5,11 @@
                 "fields" : {
                     "ItemID": 3105,
                     "Name": "Aegis of the Legion",
-                    "Description": "+200 Health +20 Magic Resist UNIQUE Aura - Legion: Grants nearby allies +20 Magic Resist and +75% Base Health Regen. (Unique Auras with the same name don't stack.)",
-                    "GoldTotal": 1900,
-                    "GoldBase": 820,
+                    "Description": "+200 Health +100% Base Health Regen +20 Magic Resist UNIQUE Aura - Legion: Grants nearby allies +15 Magic Resist. (Unique Auras with the same name don't stack.)",
+                    "GoldTotal": 1600,
+                    "GoldBase": 550,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3105.png" ,
+                    "Icon": "icons/item/3105.png" ,
 	 "Into": ["3190", "3060"] ,
 	 "Tags": ["Aura", "Health", "HealthRegen", "SpellBlock"] 
             }

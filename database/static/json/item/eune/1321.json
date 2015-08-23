@@ -9,7 +9,7 @@
                     "GoldTotal": 1675,
                     "GoldBase": 475,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/1321.png" 
+                    "Icon": "icons/item/1321.png" 
             }
         }
 ]

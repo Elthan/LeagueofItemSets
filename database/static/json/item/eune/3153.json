@@ -9,7 +9,7 @@
                     "GoldTotal": 3200,
                     "GoldBase": 700,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3153.png" ,
+                    "Icon": "icons/item/3153.png" ,
 	 "Tags": ["Active", "AttackSpeed", "Damage", "LifeSteal", "NonbootsMovement", "OnHit"] 
             }
         }

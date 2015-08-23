@@ -5,11 +5,11 @@
                 "fields" : {
                     "ItemID": 3060,
                     "Name": "Banner of Command",
-                    "Description": "+200 Health +60 Ability Power +20 Magic Resist +10% Cooldown Reduction UNIQUE Aura - Legion: Grants nearby allies +20 Magic Resist and +75% Base Health Regen. UNIQUE Active - Promote: Greatly increases the power of a lane minion and grants it immunity to magic damage (120 second cooldown). (Unique Auras with the same name do not stack.)",
-                    "GoldTotal": 3000,
-                    "GoldBase": 280,
+                    "Description": "+200 Health +100% Base Health Regen +60 Ability Power +20 Magic Resist +10% Cooldown Reduction UNIQUE Aura - Legion: Grants nearby allies +15 Magic Resist. UNIQUE Active - Promote: Greatly increases the power of a lane minion and grants it immunity to magic damage (120 second cooldown). (Unique Auras with the same name do not stack.)",
+                    "GoldTotal": 2750,
+                    "GoldBase": 330,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3060.png" ,
+                    "Icon": "icons/item/3060.png" ,
 	 "Tags": ["Active", "Aura", "CooldownReduction", "Health", "HealthRegen", "SpellBlock", "SpellDamage"] 
             }
         }

@@ -9,7 +9,7 @@
                     "GoldTotal": 3500,
                     "GoldBase": 1050,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3090.png" ,
+                    "Icon": "icons/item/3090.png" ,
 	 "Tags": ["Active", "Armor", "SpellDamage"] 
             }
         }

@@ -5,7 +5,7 @@
                 "fields" : {
                     "ChampID": 29,
                     "Name": "Twitch",
-                    "Icon": "static/icons/champion/Twitch"
+                    "Icon": "icons/champion/Twitch.png"
                     
                 }
             }

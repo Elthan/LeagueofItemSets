@@ -9,7 +9,7 @@
                     "GoldTotal": 400,
                     "GoldBase": 400,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/2137.png" ,
+                    "Icon": "icons/item/2137.png" ,
 	 "Tags": ["Consumable", "Health"] 
             }
         }

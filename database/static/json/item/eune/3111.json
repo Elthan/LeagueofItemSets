@@ -7,9 +7,9 @@
                     "Name": "Mercury's Treads",
                     "Description": "+25 Magic Resist UNIQUE Passive - Enhanced Movement: +45 Movement Speed UNIQUE Passive - Tenacity: Reduces the duration of stuns, slows, taunts, fears, silences, blinds, polymorphs, and immobilizes by 35%. (Unique Passives with the same name don't stack.)",
                     "GoldTotal": 1200,
-                    "GoldBase": 375,
+                    "GoldBase": 425,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3111.png" ,
+                    "Icon": "icons/item/3111.png" ,
 	 "Into": ["1321", "1323", "1320", "1322", "1324", "1339"] ,
 	 "Tags": ["Boots", "SpellBlock", "Tenacity"] 
             }

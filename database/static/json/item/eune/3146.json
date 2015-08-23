@@ -9,7 +9,7 @@
                     "GoldTotal": 3400,
                     "GoldBase": 800,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3146.png" ,
+                    "Icon": "icons/item/3146.png" ,
 	 "Tags": ["Active", "Damage", "LifeSteal", "Slow", "SpellDamage", "SpellVamp"] 
             }
         }

@@ -1,0 +1,16 @@
+[
+            {
+                "pk" : 3748,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3748,
+                    "Name": "Titanic Hydra (Melee Only)",
+                    "Description": "+400 Health +50 Attack Damage +100% Base Health Regen UNIQUE Passive - Cleave: Basic attacks deal 5 + 1% of your maximum health as bonus physical damage to your target and 40 + 2.5% of your maximum health as physical damage to other enemies in a cone on hit. UNIQUE Active - Crescent: Cleave damage to all targets is increased to 40 + 10% of your maximum health as bonus physical damage in a larger cone for your next basic attack (20 second cooldown). (Unique Passives with the same name don't stack.)",
+                    "GoldTotal": 3300,
+                    "GoldBase": 400,
+                    "Purchasable": "True",
+                    "Icon": "icons/item/3748.png" ,
+	 "Tags": ["Active", "Damage", "Health", "HealthRegen", "OnHit"] 
+            }
+        }
+]

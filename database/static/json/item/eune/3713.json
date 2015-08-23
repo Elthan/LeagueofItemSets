@@ -9,7 +9,7 @@
                     "GoldTotal": 850,
                     "GoldBase": 450,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3713.png" ,
+                    "Icon": "icons/item/3713.png" ,
 	 "Into": ["3723", "3724", "3725", "3726"] ,
 	 "Tags": ["Damage", "HealthRegen", "Jungle", "ManaRegen", "OnHit"] 
             }

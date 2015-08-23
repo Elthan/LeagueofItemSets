@@ -5,11 +5,11 @@
                 "fields" : {
                     "ItemID": 3198,
                     "Name": "Perfect Hex Core",
-                    "Description": "+6 Ability Power per level +60 Ability Power +500 Mana UNIQUE Passive - Glorious Evolution: Viktor has reached the pinnacle of his power, upgrading Chaos Storm in addition to his basic spells.",
+                    "Description": "+10 Ability Power per level +25 Mana per level UNIQUE Passive - Glorious Evolution: Viktor has reached the pinnacle of his power, upgrading Chaos Storm in addition to his basic spells.",
                     "GoldTotal": 3000,
                     "GoldBase": 1000,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3198.png" ,
+                    "Icon": "icons/item/3198.png" ,
 	 "Tags": ["Mana", "SpellDamage"] 
             }
         }

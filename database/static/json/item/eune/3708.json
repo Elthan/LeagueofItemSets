@@ -9,7 +9,7 @@
                     "GoldTotal": 2250,
                     "GoldBase": 200,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3708.png" ,
+                    "Icon": "icons/item/3708.png" ,
 	 "Tags": ["CooldownReduction", "Jungle", "Mana", "SpellDamage"] 
             }
         }

@@ -9,7 +9,7 @@
                     "GoldTotal": 2700,
                     "GoldBase": 500,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3184.png" ,
+                    "Icon": "icons/item/3184.png" ,
 	 "Tags": ["Active", "Damage", "Health", "NonbootsMovement", "Slow"] 
             }
         }

@@ -1,0 +1,16 @@
+[
+            {
+                "pk" : 3053,
+                "model" : "database.Item",
+                "fields" : {
+                    "ItemID": 3053,
+                    "Name": "Sterak's Gage",
+                    "Description": "+500 Health +25% Base Attack Damage UNIQUE Passive: Upon taking at least 400 to 1800 damage (based on level) within 5 seconds, gain Sterak's Fury for 8 seconds (45 second cooldown). Sterak's Fury: Grow in size and strength, gaining increased Size, +25% additional Base Attack Damage, and a rapidly decaying Shield for 30% of your maximum Health.",
+                    "GoldTotal": 2550,
+                    "GoldBase": 1190,
+                    "Purchasable": "True",
+                    "Icon": "icons/item/3053.png" ,
+	 "Tags": ["Damage", "Health", "LifeSteal"] 
+            }
+        }
+]

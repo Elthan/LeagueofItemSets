@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<!-- ensures proper scaling on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link href="res/style.css" rel="stylesheet" />
+<!-- import below is for the awesome font -->
+<link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+<title>LeagueofItemSets</title>
+</head>
+
+<body>
+		<section>
+      {% if item_list %}
+				<form action="{% url 'lois:new_is'}" method="post">
+					{% csrf_token %}
+					{% for item in item_list %}
+							<input type="radio" name="item"	id="ItemID{{ item.ItemID}}"
+								value="{{ item.Name }}" />
+								<label for="ItemID{{ item.ItemID }}"> {{ item.Name }}</label> <br />
+					{% endfor %}
+					<input type="submit" value="Choose" />
+				</form>
+			{% else %}
+				<p> No items available. </p>
+			{% endif %}
+		</section>
+</body>
+</html>

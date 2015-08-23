@@ -9,7 +9,7 @@
                     "GoldTotal": 1775,
                     "GoldBase": 215,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3154.png" ,
+                    "Icon": "icons/item/3154.png" ,
 	 "Tags": ["Active", "AttackSpeed", "Damage", "GoldPer", "OnHit", "Vision"] 
             }
         }

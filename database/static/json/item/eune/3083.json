@@ -5,11 +5,11 @@
                 "fields" : {
                     "ItemID": 3083,
                     "Name": "Warmog's Armor",
-                    "Description": "+800 Health UNIQUE Passive: Restores 1% of maximum Health every 5 seconds. Health restore increases to 3% of maximum Health if damage hasn't been taken within 8 seconds.",
-                    "GoldTotal": 2500,
-                    "GoldBase": 300,
+                    "Description": "+800 Health +200% Base Health Regen UNIQUE Passive: Grants Warmog's Heart if you have at least 3000 maximum Health. Warmog's Heart: Restores 15% of maximum Health every 5 seconds if damage hasn't been taken within 8 seconds.",
+                    "GoldTotal": 2750,
+                    "GoldBase": 550,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3083.png" ,
+                    "Icon": "icons/item/3083.png" ,
 	 "Tags": ["Health", "HealthRegen"] 
             }
         }

@@ -23,8 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 with open("settings") as settings_file:
-	SECRET_KEY = re.search(r'SECRET_KEY:(.+)\s', settings_file.read()).group(1)
-	
+	SECRET_KEY = re.search(r'SECRET_KEY:\s(.+)\s', settings_file.read()).group(1)
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 

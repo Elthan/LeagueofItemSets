@@ -5,11 +5,11 @@
                 "fields" : {
                     "ItemID": 3065,
                     "Name": "Spirit Visage",
-                    "Description": "+400 Health +55 Magic Resist +100% Base Health Regen +10% Cooldown Reduction UNIQUE Passive: Increases all healing received by 20%.",
-                    "GoldTotal": 2750,
-                    "GoldBase": 700,
+                    "Description": "+400 Health +60 Magic Resist +150% Base Health Regen +10% Cooldown Reduction UNIQUE Passive: Increases all healing received by 20%.",
+                    "GoldTotal": 2700,
+                    "GoldBase": 650,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3065.png" ,
+                    "Icon": "icons/item/3065.png" ,
 	 "Tags": ["CooldownReduction", "Health", "HealthRegen", "SpellBlock"] 
             }
         }

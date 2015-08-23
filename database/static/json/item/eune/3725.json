@@ -5,11 +5,11 @@
                 "fields" : {
                     "ItemID": 3725,
                     "Name": "Enchantment: Cinderhulk",
-                    "Description": "+300 Health +25% Bonus Health UNIQUE Passive - Immolate: Deals 15 (+0.6 per champion level) magic damage a second to nearby enemies. Deals 100% bonus damage to monsters.",
+                    "Description": "+400 Health +15% Bonus Health UNIQUE Passive - Immolate: Deals 15 (+0.6 per champion level) magic damage a second to nearby enemies. Deals 100% bonus damage to monsters.",
                     "GoldTotal": 2250,
                     "GoldBase": 400,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3725.png" ,
+                    "Icon": "icons/item/3725.png" ,
 	 "Tags": ["Health", "Jungle"] 
             }
         }

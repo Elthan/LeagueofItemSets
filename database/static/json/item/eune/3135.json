@@ -9,7 +9,7 @@
                     "GoldTotal": 2500,
                     "GoldBase": 1215,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3135.png" ,
+                    "Icon": "icons/item/3135.png" ,
 	 "Tags": ["MagicPenetration", "SpellDamage"] 
             }
         }

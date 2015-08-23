@@ -7,9 +7,9 @@
                     "Name": "Wit's End",
                     "Description": "+50% Attack Speed +30 Magic Resist UNIQUE Passive: Basic attacks deal 42 bonus magic damage on hit. UNIQUE Passive: Basic attacks steal 5 Magic Resist from the target on hit (stacks up to 5 times.)",
                     "GoldTotal": 2600,
-                    "GoldBase": 550,
+                    "GoldBase": 600,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3091.png" ,
+                    "Icon": "icons/item/3091.png" ,
 	 "Tags": ["AttackSpeed", "OnHit", "SpellBlock"] 
             }
         }

@@ -9,7 +9,7 @@
                     "GoldTotal": 2200,
                     "GoldBase": 485,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3401.png" ,
+                    "Icon": "icons/item/3401.png" ,
 	 "Tags": ["CooldownReduction", "GoldPer", "Health", "HealthRegen"] 
             }
         }

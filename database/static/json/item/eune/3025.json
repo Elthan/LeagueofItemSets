@@ -6,10 +6,10 @@
                     "ItemID": 3025,
                     "Name": "Iceborn Gauntlet",
                     "Description": "+60 Armor +30 Ability Power +10% Cooldown Reduction +500 Mana UNIQUE Passive - Spellblade: After using an ability, the next basic attack (on hit) deals bonus physical damage equal to 125% of base Attack Damage to enemies near the target, and creates a field around the target for 2 seconds that slows enemy Movement Speed by 30% (1.5 second cooldown, half-sized field if ranged). (Unique Passives with the same name don't stack.)",
-                    "GoldTotal": 2900,
+                    "GoldTotal": 2850,
                     "GoldBase": 750,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3025.png" ,
+                    "Icon": "icons/item/3025.png" ,
 	 "Tags": ["Armor", "CooldownReduction", "Mana", "Slow", "SpellDamage"] 
             }
         }

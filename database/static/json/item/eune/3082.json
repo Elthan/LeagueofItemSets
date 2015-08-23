@@ -6,10 +6,10 @@
                     "ItemID": 3082,
                     "Name": "Warden's Mail",
                     "Description": "+45 Armor UNIQUE Passive - Cold Steel: When hit by basic attacks, reduces the attacker's Attack Speed by 15% for 1 seconds. (Unique Passives with the same name don't stack.)",
-                    "GoldTotal": 1050,
-                    "GoldBase": 450,
+                    "GoldTotal": 1100,
+                    "GoldBase": 500,
                     "Purchasable": "True",
-                    "Icon": "database/static/icons/item/3082.png" ,
+                    "Icon": "icons/item/3082.png" ,
 	 "Into": ["3110", "3143"] ,
 	 "Tags": ["Armor", "Slow"] 
             }
