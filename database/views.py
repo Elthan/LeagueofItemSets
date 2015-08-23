@@ -20,20 +20,15 @@ def send_json_file(emptyarg, file_path="database", filename="test.json"):
 
     return response
 
-def rend(request):
-	dicti = Version.objects.all()
-	context = {'dicti': dicti}
-	return render(request, 'database/index2.html', context)
-
 def test_stuff(request):
 	item_list = Item.objects.all()
 	context = {'item_list': item_list}
 	return render(request, 'database/test_page.html', context)
 
-def item_set(request):
+def champ_select(request):
 	champ_list = Champion.objects.all()
 	context = {'champ_list': champ_list}
-	return render(request, 'database/item_set.html', context)
+	return render(request, 'database/champion.html', context)
 
-def new_is(request):
-	return render(request, 'database/item_set.html')
+def item_select(request, champion_id):
+	return render(request, 'database/items.html')
