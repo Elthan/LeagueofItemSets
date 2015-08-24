@@ -6,8 +6,6 @@ from django.core.servers.basehttp import FileWrapper
 from django.shortcuts import get_object_or_404, render
 from .models import *
 
-# Create your views here.
-
 
 def index(request):
 	return render(request, 'database/index.html')
@@ -30,7 +28,18 @@ def champ_select(request):
 	context = {'champ_list': champ_list}
 	return render(request, 'database/champion.html', context)
 
-def item_select(request, champion_id):
-	champ_stats = get_object_or_404(ChampionStat, champion_id)
-	context = {"champ_stats": champ_stats}
+def item_select(request, champ_name):
+	if (champ_name == "Global"):
+		champ_stats = ""
+	else:
+		champion = get_object_or_404(Champion, Name=champ_name)
+		champ_stats = get_object_or_404(ChampionStat, ChampID=champion.ChampID)
+	items = Item.objects.all()
+	item_stats = ItemStat.objects.all()
+	context = {
+		"champ": champion,
+		"champ_stats": champ_stats,
+		"items": items,
+		"item_stats": item_stats
+	}
 	return render(request, 'database/items.html', context)

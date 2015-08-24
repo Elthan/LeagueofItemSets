@@ -3,12 +3,12 @@
         "pk": 3078,
         "model": "database.ItemStat",
         "fields": {
-		"FlatCritChanceMod": 0.1,
-		"FlatMagicDamageMod": 30.0,
-		"FlatPhysicalDamageMod": 30.0,
-		"FlatMPPoolMod": 200.0,
-		"PercentMovementSpeedMod": 0.08,
 		"FlatHPPoolMod": 250.0,
+		"FlatCritChanceMod": 0.1,
+		"FlatMPPoolMod": 200.0,
+		"FlatPhysicalDamageMod": 30.0,
+		"PercentMovementSpeedMod": 0.08,
+		"FlatMagicDamageMod": 30.0,
 		"PercentAttackSpeedMod": 0.3
         }
     }

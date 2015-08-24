@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% load staticfiles %}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/> <!-- ensures proper scaling on mobile devices -->
+<link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
+<!-- import below is for the awesome font -->
+<link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+<title>League of Item Sets</title>
+</head>
+<body>
+  <p> Champion: {{champ.Name}}</p>
+    {% if champ_stats %}
+      <img src="{% static champ.Icon %}" alt={{champ.Name}} height="80" />
+      <br/>
+    {% else %}
+      <img src="{% static 'icons/champion/Unknown.png' %}" alt="Unkown" height="80"/>
+    {% endif %}
+    <p id="stat_table"></p>
+    <br  />
+    {% if items %}
+      {% for item in items %}
+        {% if item.Purchasable == True %}
+          <img src="{% static item.Icon %}" alt={{item.Name}} height="60" />
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      <p> Could not display items! </p>
+    {% endif %}
+</body>
+<script>
+document.getElementById("stat_table").innerHTML = "JAVASCRIPT TABLE HERE"
+</script>
+</html>

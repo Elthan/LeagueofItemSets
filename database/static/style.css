@@ -1,5 +1,5 @@
 
-/* color palette	
+/* color palette
 #394264; background (dark purple)
 #394264; section background (medium purple)
 #50597b; selection color (lighter purple)
@@ -9,16 +9,16 @@
 */
 
 body {
-	background-color: #1f253d; /* BGcolor */
-	font-family: Merriweather;
-	color: #fff; /* text color */
+	background-color: #222222; /* BGcolor */
+	color: white; /* text color */
 }
 
+/*
 @font-face {
 	font-family: 'Merriweather', serif;
 	color: #fff;
 }
-
+/*
 nav {
 	position: fixed;
 	left: 1%;
@@ -27,9 +27,9 @@ nav {
 	padding-left: 65px;
 	border-radius: 20px 20px 65px 65px;
 	box-shadow: 3px 3px 10px 5px #000;
-	background-color: #394264; 
+	background-color: #394264;
 	box-sizing: border-box; /* assures the box stays in-screen */
-}
+/*}
 
 .horizontal-list {
 	margin: 0;
@@ -65,13 +65,25 @@ section {
 	padding-top: 25px;
 	padding-bottom: 25px;
 	border-radius: 5px 35px 15px 35px;
-	background-color: #394264; 
+	background-color: #394264;
 	box-shadow: 3px 3px 10px 5px #000;
 }
-
+*/
 table.page-divider {
 	margin: auto;
 	width: 80%;
+}
+
+.top-column {
+	vertical-align: top;
+	padding-bottom: 1%;
+	width: 100%;
+}
+
+.bottom-column {
+	vertical-align: bottom;
+	padding: 1%;
+	width: 100%;
 }
 
 .center-column {

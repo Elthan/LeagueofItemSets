@@ -15,7 +15,7 @@ def error(msg, err=""):
     log.error(msg)
     if (err != ""):
         log.error(err)
-   
+
 
 def check_version(region, api_key, log):
     '''
@@ -60,11 +60,19 @@ current_version : str
     except Version.DoesNotExist:
         log.warning("Could not find " + region + " in DB when checking for region")
         log.debug("Creating " + region + " in DB with version " + net_version)
-        
+
         new_entry = Version(Region=region, Version=net_version)
         new_entry.save()
 
-        return True, net_version
+        answer = input("Do you want to update? [Y/N]: ")
+        while(not (answer == "y" or answer == "n" or \
+                    answer == "Y" or answer == "N")):
+            answer = input("Please answer y or n: ")
+
+        if ("y" in answer or "Y" in answer):
+            return True, net_version
+        else:
+            return False, net_version
 
     except Version.MultipleObjectsReturned as err:
         error("Multiple objects returned when checking for region version", err=err)
@@ -81,7 +89,7 @@ current_version : str
 
     return is_new_version, current_version
 
-    
+
 def get_icons(img_type):
     '''
 Download all icons using ids in DB.
@@ -99,35 +107,36 @@ img_type : str
     else:
         error("Image type not supported for " + img_type + ". Unable to fetch icons.")
         return
-        
+
     log.debug("Fetching " + img_type + " icons.")
 
     os.makedirs("database/static/icons/" + img_type, exist_ok=True)
-    
+
     for icon_id in query:
         if (img_type == "item"):
             icon_id = str(icon_id.pk)
         elif (img_type == "champion"):
             icon_id = icon_id.Name
-        
+
         url = "http://ddragon.leagueoflegends.com/cdn/" + current_version + \
-              "/img/" + img_type + "/" + icon_id+".png"
+              "/img/" + img_type + "/" + icon_id + ".png"
 
         try:
             with urllib.request.urlopen(url) as response:
                 path = "database/static/icons/" + img_type + "/" + icon_id + ".png"
-                                
+
                 with open(path,'wb') as image_file:
                     image_file.write(response.read())
-                        
+
         except urllib.error.HTTPError as err:
-            error("Error when downloading icon id " + icon_id + "\nUsing url " + url + "\n" + err)
+            error("Error when downloading icon id " + icon_id + "\nUsing url "\
+                + url + "\n" + str(err))
             continue
 
     log.info("Done fetching all icons of type " + img_type)
 
-    
-def get_json(json_type, url, region):  
+
+def get_json(json_type, url, region):
     '''
 Fetch json file.
 
@@ -148,16 +157,16 @@ html : str
     the items for the given region.
     '''
     log.debug("Fetching " + json_type + " for " + region)
-    
+
     try:
         with urllib.request.urlopen(url) as response:
             html = response.read().decode("UTF-8")
     except urllib.error.HTTPError:
         error("HTTPError when trying to access " + url)
         return None
-            
+
     log.debug("Succesfully fetched items for " + region)
-    
+
     return html
 
 
@@ -174,11 +183,11 @@ region : str
     Region we should fetch for.
     '''
     log.debug("Beginning fetching for all json files for region " + region)
-        
+
     for json_type in url_list:
         url = url_list[json_type]
         json_string = get_json(json_type, url, region)
-        
+
         if (json_string is None):
             error("Error occured when trying to fetch items for " + region)
             continue
@@ -187,10 +196,10 @@ region : str
             os.makedirs(path, exist_ok=True)
             with open(path + region + ".json", 'w') as json_file:
                 json_file.write(json_string)
-                
+
     log.info("Fetched all items as json files for region " + region)
 
-    
+
 def update_all(api_key, cur_ver, loglvl, region, skip_icons, skip_json, skip_convert, skip_write_db):
     '''
 Master method for updating everything; icons, JSONs and DB.
@@ -216,15 +225,15 @@ skip_write_db : bool
     If we should skip writing JSON files to database.
     '''
     log.basicConfig(format="%(levelname)s: %(message)s", level=loglvl)
-     
+
     url_list = {
         "item":"https://global.api.pvp.net/api/lol/static-data/eune/v1.2/item?itemListData=all&api_key=" + api_key,
-        "champion":"https://global.api.pvp.net/api/lol/static-data/eune/v1.2/champion?champData=all&api_key=" + api_key 
+        "champion":"https://global.api.pvp.net/api/lol/static-data/eune/v1.2/champion?champData=all&api_key=" + api_key
     }
 
     global current_version
     current_version = cur_ver.strip()
-    
+
     if (skip_json):
         log.info("Skipping all json files.")
     else:
@@ -248,16 +257,16 @@ skip_write_db : bool
         call_command("dumpdata", "database", "--output=db_backup.json")
 
         json_types = ["item", "item_stats", "champion", "champ_stats"]
-        
+
         for json_type in json_types:
             path = "database/static/json/" + json_type + "/" + region + "/"
-            
+
             for path, subdirs, files in os.walk(path):
                 for name in files:
                     call_command("loaddata", path + name, '--ignorenonexistent', verbosity=0)
-             
+
             log.info("All " + json_type + " JSON files imported to the DB.")
-            
+
     if (skip_icons):
         log.info("Skipping all icons.")
     else:
