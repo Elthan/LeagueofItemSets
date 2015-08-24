@@ -17,7 +17,7 @@
 
         {% if champ_list %}
         {% load staticfiles %}
-        <form action="{% url 'lois:items' champion.Name %}" method="post">
+        <form action="{% url 'lois:items' champion.ChampID %}" method="post">
           {% csrf_token %}
           {% for champion in champ_list %}
             <input type="radio" name="champion" id="ChampID{{ champion.ChampID }}"/>

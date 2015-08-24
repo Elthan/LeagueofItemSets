@@ -31,4 +31,6 @@ def champ_select(request):
 	return render(request, 'database/champion.html', context)
 
 def item_select(request, champion_id):
-	return render(request, 'database/items.html')
+	champ_stats = get_object_or_404(ChampionStat, champion_id)
+	context = {"champ_stats": champ_stats}
+	return render(request, 'database/items.html', context)
