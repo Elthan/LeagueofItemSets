@@ -13,6 +13,36 @@ body {
 	color: white; /* text color */
 }
 
+.center {
+	margin: auto;
+	width: 30%;
+	padding: 10px;
+}
+
+#wrapper {
+	width: 100%;
+	overflow: hidden;
+}
+
+#champ {
+	width: 20%;
+	float: left;
+}
+
+#blocks {
+	width: 80%;
+	float: left;
+}
+
+#block_table {
+	width: 80%;
+	border: 1px solid white;
+}
+
+#none_text {
+	color: white;
+	font-size: 50px;
+}
 /*
 @font-face {
 	font-family: 'Merriweather', serif;
@@ -69,6 +99,7 @@ section {
 	box-shadow: 3px 3px 10px 5px #000;
 }
 */
+
 table.page-divider {
 	margin: auto;
 	width: 80%;

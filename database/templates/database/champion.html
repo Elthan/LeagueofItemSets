@@ -9,19 +9,23 @@
 <title>League of Item Sets</title>
 </head>
 <body>
+  <div class="center">
   <h1> Welcome to League of Item Sets!</h1>
   <p> Here you can make your own item sets, download them and use them in-game!
   </p>
+  <h2> To begin choose one of the champions or none.</h2>
+  <a href="{% url 'lois:items' "None" %}" id="none_text">
+    None
+  </a>
+</div>
+  <br />
   <table class="page-divider">
     <td class="center-column">
-      <section>
-        <h2> To begin choose global or one of the champions.</h2>
-        <a href="{% url 'lois:items' "Global" %}"> GLOBAL </a>
-        <br />
+        <section>
         {% if champ_list %}
           {% for champion in champ_list %}
                 <a href="{% url 'lois:items' champion.Name %}" >
-                  <img src="{% static champion.Icon %}" alt={{champion.Name}} height="80"}}
+                  <img src="{% static champion.Icon %}" alt="{{champion.Name}}" height="80"}}
                 </a>
           {% endfor %}
         </div>

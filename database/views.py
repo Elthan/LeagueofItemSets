@@ -18,19 +18,15 @@ def send_json_file(emptyarg, file_path="database", filename="test.json"):
 
     return response
 
-def test_stuff(request):
-	item_list = Item.objects.all()
-	context = {'item_list': item_list}
-	return render(request, 'database/test_page.html', context)
-
 def champ_select(request):
 	champ_list = Champion.objects.all()
 	context = {'champ_list': champ_list}
 	return render(request, 'database/champion.html', context)
 
 def item_select(request, champ_name):
-	if (champ_name == "Global"):
+	if (champ_name == "None"):
 		champ_stats = ""
+		champion = {"Name": "None", "Icon": "icons/champion/Unknown.png"}
 	else:
 		champion = get_object_or_404(Champion, Name=champ_name)
 		champ_stats = get_object_or_404(ChampionStat, ChampID=champion.ChampID)
