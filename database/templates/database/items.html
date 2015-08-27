@@ -19,8 +19,15 @@
     <p id="stat_table"></p>
   </div>
   <button type="button" onclick="new_block()">Create new block</button>
-  <div id="blocks" ondrop="handleDrop(event)" ondragover="handleDragOver(event)" ondragstart="handleDragStart(event)">
+  <button type="button" onclick="remove_block()">Remove block</button>
+  <div id="blocks">
+    <table id="blocks_table-0">
+      <tr></tr>
+    </table>
   </div>
+  <div id="next">
+    <button type="button" onclick="build_item_set()">Done</button>
+</div>
 </div>
 <div id="items">
     <br  />
@@ -28,7 +35,7 @@
       {% for item in items %}
         {% if item.Purchasable == True %}
           <img src="{% static item.Icon %}" alt="{{item.Name}}" height="60"
-              id="{{item.Name}}" draggable="true" ondragover="handleDragOver(event)" ondrop="handleDragEnter(event)" />
+              id="{{ item.ItemID }}" onclick="add_item('{% static item.Icon %}','{{item.ItemID}}')"/>
         {% endif %}
       {% endfor %}
     {% else %}

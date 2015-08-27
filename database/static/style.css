@@ -30,11 +30,16 @@ body {
 }
 
 #blocks {
-	width: 80%;
+	width: 70%;
 	float: left;
 }
 
-#block_table {
+#next {
+	width: 10%
+	float: left;
+}
+
+[id^=blocks_table-] {
 	width: 80%;
 	border: 1px solid white;
 }

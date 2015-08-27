@@ -2,23 +2,57 @@
 document.getElementById("stat_table").innerHTML = "JAVASCRIPT TABLE HERE"
 
 var number_of_blocks = 0;
+var img_id = 0;
+
+function add_item(path, item_id) {
+  var table = document.getElementById("blocks_table-" + number_of_blocks.toString());
+  var img = document.createElement('img');
+  img.src = path;
+  img.id = img_id.toString();
+  img.alt = item_id;
+  img_id++;
+  img.addEventListener('click', function() { remove_item(img.id) });
+  table.rows[0].appendChild(img);
+}
+
+function remove_item(img_id) {
+  var table = document.getElementById("blocks_table-" + number_of_blocks.toString());
+  var item = document.getElementById(img_id);
+  table.rows[0].removeChild(item);
+}
 
 function new_block() {
-  number_of_blocks++;
-
-  if (number_of_blocks > 10) {
-    return
+  if (number_of_blocks >= 10) {
+    return;
   }
 
+  number_of_blocks++;
   var tableDiv = document.getElementById("blocks");
   var table = document.createElement('table');
-  table.id = "block_table";
+  table.id = "blocks_table-" + number_of_blocks.toString();
   var tr = document.createElement('tr');
-  tr.appendChild( document.createTextNode('Drag items here') );
   table.appendChild(tr);
   tableDiv.appendChild(table)
 }
 
+function remove_block() {
+  if (number_of_blocks == 0) {
+    return;
+  }
+  var tableDiv = document.getElementById("blocks");
+  var table = document.getElementById("blocks_table-" + number_of_blocks.toString());
+  tableDiv.removeChild(table);
+  number_of_blocks--;
+}
+
+function build_item_set() {
+  for (i = 0; i <= number_of_blocks; i++) {
+    var table = document.getElementById("blocks_table-" + i.toString());
+    console.log(table);
+  }
+}
+
+/*
 function block_drop(ev) {
   ev.preventDefault();
   if (dragSrcEl != this) {
@@ -68,7 +102,7 @@ function handleDragEnter(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
-  */
+
 }
 
 function handleDragLeave(ev) {
@@ -93,3 +127,4 @@ function handleDrop(ev) {
 
   return false;
 }
+*/

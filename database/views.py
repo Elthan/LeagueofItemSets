@@ -39,3 +39,6 @@ def item_select(request, champ_name):
 		"item_stats": item_stats
 	}
 	return render(request, 'database/items.html', context)
+
+def item_set(request):
+	return render(request, 'database/item_set.html')
