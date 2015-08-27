@@ -12,6 +12,7 @@ function add_item(path, item_id) {
   img.alt = item_id;
   img_id++;
   img.addEventListener('click', function() { remove_item(img.id) });
+  cell = table.rows[0].insertCell(-1);
   table.rows[0].appendChild(img);
 }
 
@@ -48,7 +49,8 @@ function remove_block() {
 function build_item_set() {
   for (i = 0; i <= number_of_blocks; i++) {
     var table = document.getElementById("blocks_table-" + i.toString());
-    console.log(table);
+    console.log(table.childNodes);
+
   }
 }
 

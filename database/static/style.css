@@ -35,19 +35,26 @@ body {
 }
 
 #next {
+	margin: auto;
 	width: 10%
 	float: left;
 }
 
 [id^=blocks_table-] {
-	width: 80%;
+	width: 100%;
 	border: 1px solid white;
+}
+
+td {
+	height: auto;
 }
 
 #none_text {
 	color: white;
 	font-size: 50px;
 }
+
+
 /*
 @font-face {
 	font-family: 'Merriweather', serif;
