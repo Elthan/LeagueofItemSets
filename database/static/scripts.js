@@ -1,5 +1,10 @@
+function stats_table() {
+  var tableDiv = document.createElement("stats_table_div");
+  var table = document.createElement("stats_table");
 
-document.getElementById("stat_table").innerHTML = "JAVASCRIPT TABLE HERE"
+  
+  tableDiv.appendChild(table);
+}
 
 var number_of_blocks = 0;
 var img_id = 0;
