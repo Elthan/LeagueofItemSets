@@ -13,18 +13,21 @@
 <body>
 <div id="wrapper">
   <div id="champ">
-    <p> Champion: {{champ.Name}} </p>
+    <div>
+    <p> {{champ.Name}} </p>
       <img src="{% static champ.Icon %}" alt="{{champ.Name}}" height="80" />
+    </div>
     <br/>
-    <div id="stats-table-div"></div>
+    <div id="stats-table-div" data-stats="{{champ_stats}}">
+    </div>
   </div>
-  <button type="button" onclick="new_block()">Create new block</button>
+  <button type="button" onclick="add_block()">Create new block</button>
   <button type="button" onclick="remove_block()">Remove block</button>
   <div id="blocks">
   </div>
+  <button type="button" onclick="build_item_set()">Done</button>
   <select id="block-selector">
   </select>
-    <button type="button" onclick="build_item_set()">Done</button>
 </div>
 <div id="items">
     <br  />
@@ -39,6 +42,7 @@
       <p class="center"> Could not display items! </p>
     {% endif %}
 </div>
+
 <script src="{% static 'scripts.js' %}" defer></script>
 </body>
 </html>

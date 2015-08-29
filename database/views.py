@@ -3,7 +3,7 @@ import tempfile
 import json
 from django.http import HttpResponse
 from django.core.servers.basehttp import FileWrapper
-from django.shortcuts import get_object_or_404, render, get_list_or_404
+from django.shortcuts import get_object_or_404, render
 from .models import *
 
 
@@ -28,8 +28,8 @@ def item_select(request, champ_name):
 		champ_stats = ""
 		champion = {"Name": "None", "Icon": "icons/champion/Unknown.png"}
 	else:
-		champion = get_object_or_404(Champion, Name=champ_name)
-		champ_stats = get_list_or_404(ChampionStat, ChampID=champion.ChampID)
+		champion = get_object_or_404(Champion, Name = champ_name)
+		champ_stats = ChampionStat.objects.filter(ChampID = champion.ChampID).values()
 	items = Item.objects.all()
 	item_stats = ItemStat.objects.all()
 	context = {

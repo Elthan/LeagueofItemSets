@@ -39,16 +39,16 @@ caption.edit input {
 }
 
 #champ {
-	width: 20%;
+	width: 27%;
 	float: left;
 }
 
 #blocks {
-	width: 75%;
+	width: 73%;
 	float: left;
 }
 
-[id^=blocks-table-] {
+.blocks-table {
 	width: 100%;
 	border: 1px solid beige;
 }
@@ -58,6 +58,23 @@ caption.edit input {
 	font-size: 50px;
 }
 
+#stats-table {
+	border: solid beige;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.stats-header {
+	color: red;
+	border: 1px solid beige;
+	text-align: left;
+	padding: 5px;
+}
+
+.stats-cell {
+	color: white;
+	text-align: center;
+}
 
 /*
 @font-face {

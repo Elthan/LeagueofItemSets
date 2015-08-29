@@ -6,19 +6,73 @@
 
 var stats_table = {
 
-  createTable: function(champ_stats) {
+  // Convert db names to more human friendly names.
+  stats_names: {
+    "MPRegen": "Mana Regen",
+    "SpellBlock": "Magic Resist",
+    "Crit": "Critical Chance",
+    "AttackDamage": "Attack Damage",
+    "MP": "Mana",
+    "HPRegen": "Health Regen",
+    "HP": "Health",
+    "Armor": "Armor",
+    "MoveSpeed": "Move Speed"
+  },
+
+  champ_stats: "",
+  stats_table: "",
+
+  createTable: function() {
     var tableDiv = document.getElementById("stats-table-div");
     var table = document.createElement("table");
-    var champ_stats = tableDiv['data-stats'];
-    console.log(champ_stats);
-    for (stat in champ_stats) {
-      console.log(stat);
-      for (i = 0; i < 5; i++) {
+    table.id = "stats-table";
 
+    // Make an object out of the stats
+    var champ_stats = tableDiv.dataset.stats;
+    champ_stats = champ_stats.replace(/'/g, '\"');
+    champ_stats = champ_stats.replace(/Decimal\(\"([\d\.]+)\"\)/g, '$1');
+    champ_stats = JSON.parse(champ_stats)[0];
+
+    delete champ_stats["ChampID"];
+    delete champ_stats["AttackRange"];
+    delete champ_stats["AttackSpeedOffset"];
+
+    var count = 0;
+    var tr = document.createElement('tr');
+    for (stat in champ_stats) {
+      if (!~stat.indexOf("PerLevel") && stat != "ChampID") {
+        var th = document.createElement('th');
+        var td = document.createElement('td');
+
+        th.className = "stats-header";
+        td.className = "stats-cell";
+
+        th.id = stat;
+
+        th.appendChild( document.createTextNode(this.stats_names[stat]) );
+        td.appendChild( document.createTextNode(champ_stats[stat]) );
+
+        th.appendChild(td);
+        tr.appendChild(th);
+
+        count++;
+      }
+      if (count >= 3) {
+        table.appendChild(tr);
+        tr = document.createElement('tr');
+        count = 0;
       }
     }
 
+    table.appendChild(tr);
     tableDiv.appendChild(table);
+
+    this.champ_stats = champ_stats;
+    this.stats_table = table;
+  },
+
+  updateStats: function(item_stats) {
+    
   }
 }
 
@@ -74,7 +128,7 @@ var caption_edit = {
 }
 
 // Create a new block with an editable caption and a td tag inside.
-function new_block() {
+function add_block() {
   if (number_of_blocks >= 10) {
     return;
   }
@@ -82,9 +136,14 @@ function new_block() {
   var tableDiv = document.getElementById("blocks");
   var table = document.createElement('table');
   table.id = "blocks-table-" + number_of_blocks.toString();
+  table.className = "blocks-table";
 
   var tr = document.createElement('tr');
-  tr.appendChild(document.createElement('td'));
+  var input = document.createElement('input');
+  input.type = "checkbox";
+  input.value = "recmath";
+  input.title = "Click if this all the items in this block should build into the last (RecMath)";
+  tr.appendChild(input);
   table.appendChild(tr);
 
   var caption = table.createCaption();
@@ -103,9 +162,6 @@ function new_block() {
   tableDiv.appendChild(table)
 }
 
-// Create the first block
-new_block();
-
 // Remove a block. If it's the last one create a new one. Update selector.
 function remove_block() {
   var tableDiv = document.getElementById("blocks");
@@ -115,7 +171,7 @@ function remove_block() {
   selector.remove(number_of_blocks);
   number_of_blocks--;
   if (number_of_blocks  < 0) {
-    new_block();
+    add_block();
   }
 }
 
@@ -128,79 +184,6 @@ function build_item_set() {
   }
 }
 
-/*
-function block_drop(ev) {
-  ev.preventDefault();
-  if (dragSrcEl != this) {
-    var table = document.getElementById('block_table');
-    if (table.innerHTML == "Drag items here") {
-      table.innerHTML = "";
-    } else {
-      table.innerHTML += " + ";
-    }
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-  }
-}
-
-var cols = document.querySelectorAll('#items');
-[].forEach.call(cols, function(col) {
-  col.addEventListener('dragstart', handleDragStart, false);
-  col.addEventListener('dragenter', handleDragEnter, false);
-  col.addEventListener('dragover', handleDragOver, false);
-  col.addEventListener('dragleave', handleDragLeave, false);
-  col.addEventListener('drop', handleDrop, false);
-  col.addEventListener('dragend', handleDragEnd, false);
-});
-
-var dragSrcEl = null;
-
-function handleDragOver(ev) {
-  ev.preventDefault();
-  ev.dataTransfer.dropEffect = 'move';
-  return false;
-}
-
-function handleDragStart(ev) {
-  this.style.opacity = "0.7";
-  dragSrcEl = this;
-
-  ev.dataTransfer.effectAllowed = 'move';
-  ev.dataTransfer.setData("text/html", this.innerHTML);
-}
-
-function handleDragEnter(ev) {
-  this.classList.add('over');
-  /*
-  if (ev.stopPropagation) {
-    ev.stopPropagation();
-  }
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-
-}
-
-function handleDragLeave(ev) {
-  this.classList.remove('over');
-}
-
-function handleDragEnd(ev) {
-  [].forEach.call(cols, function (col) {
-      col.classList.remove('over');
-  });
-}
-
-function handleDrop(ev) {
-  if (ev.stopPropagation) {
-    ev.stopPropagation();
-  }
-
-  if (dragSrcEl != this) {
-    dragSrcEl.innerHTML = this.innerHTML;
-    this.innerHTML = ev.dataTransfer.getData("text/html");
-  }
-
-  return false;
-}
-*/
+// Run initial setup functions
+add_block();
+stats_table.createTable();
