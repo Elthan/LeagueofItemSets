@@ -2,58 +2,106 @@ function stats_table() {
   var tableDiv = document.createElement("stats_table_div");
   var table = document.createElement("stats_table");
 
-  
   tableDiv.appendChild(table);
 }
 
-var number_of_blocks = 0;
+var number_of_blocks = -1;
 var img_id = 0;
 
+// Add an item to the selected block
 function add_item(path, item_id) {
-  var table = document.getElementById("blocks_table-" + number_of_blocks.toString());
+  var selected = document.getElementById("block-selector").selectedIndex;
+  var table = document.getElementById("blocks-table-" + selected.toString());
   var img = document.createElement('img');
   img.src = path;
   img.id = img_id.toString();
   img.alt = item_id;
   img_id++;
-  img.addEventListener('click', function() { remove_item(img.id) });
-  cell = table.rows[0].insertCell(-1);
+  img.addEventListener('click', function() { remove_item(img) });
   table.rows[0].appendChild(img);
 }
 
-function remove_item(img_id) {
-  var table = document.getElementById("blocks_table-" + number_of_blocks.toString());
-  var item = document.getElementById(img_id);
-  table.rows[0].removeChild(item);
+function remove_item(item) {
+  var table = item.parentNode;
+  table.removeChild(item);
 }
 
+// Makes captions editable and updates selection.
+var caption_edit = {
+  bindEvents: function(table) {
+    table.caption.addEventListener('click', this.editCaption);
+    table.caption.children[1].addEventListener('blur', this.updateCaption);
+    table.caption.children[1].addEventListener('keypress', this.keypressCaption);
+  },
+  editCaption: function() {
+    var input = this.children[1];
+    this.className = "edit";
+    input.focus;
+    input.setSelectionRange(0, input.value.length);
+  },
+  updateCaption: function() {
+    if (this.value != "") {
+      this.previousElementSibling.innerHTML = this.value;
+      var selector = document.getElementById("block-selector");
+      var option = selector.children[id=this.parentNode.id];
+      option.innerHTML = this.value;
+    }
+    this.parentNode.className = "";
+  },
+  keypressCaption: function(event) {
+    if (event.which === 13) {
+      caption_edit.updateCaption.call(this);
+    }
+  }
+}
+
+// Create a new block with an editable caption and a td tag inside.
 function new_block() {
   if (number_of_blocks >= 10) {
     return;
   }
-
   number_of_blocks++;
   var tableDiv = document.getElementById("blocks");
   var table = document.createElement('table');
-  table.id = "blocks_table-" + number_of_blocks.toString();
+  table.id = "blocks-table-" + number_of_blocks.toString();
+
   var tr = document.createElement('tr');
+  tr.appendChild(document.createElement('td'));
   table.appendChild(tr);
+
+  var caption = table.createCaption();
+  caption.id = "block-caption-" + number_of_blocks.toString();
+  caption.innerHTML = "<span>Block</span> <input value='Block' />";
+  caption_edit.bindEvents(table);
+
+  var selector = document.getElementById("block-selector");
+  var option = document.createElement("option")
+  option.id = "block-caption-" + number_of_blocks.toString();
+  option.value = number_of_blocks;
+  option.innerHTML = caption.innerHTML;
+  selector.appendChild( option );
+  selector.selectedIndex = number_of_blocks;
+
   tableDiv.appendChild(table)
 }
 
+// Create the first block
+new_block();
+
+// Remove a block. If it's the last one create a new one.
 function remove_block() {
-  if (number_of_blocks == 0) {
-    return;
-  }
   var tableDiv = document.getElementById("blocks");
-  var table = document.getElementById("blocks_table-" + number_of_blocks.toString());
+  var table = document.getElementById("blocks-table-" + number_of_blocks.toString());
   tableDiv.removeChild(table);
   number_of_blocks--;
+  if (number_of_blocks  < 0) {
+    new_block();
+  }
 }
 
 function build_item_set() {
   for (i = 0; i <= number_of_blocks; i++) {
-    var table = document.getElementById("blocks_table-" + i.toString());
+    var table = document.getElementById("blocks-table-" + i.toString());
     console.log(table.childNodes);
 
   }

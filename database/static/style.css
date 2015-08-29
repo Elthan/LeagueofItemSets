@@ -19,6 +19,20 @@ body {
 	padding: 10px;
 }
 
+caption input {
+	display: none;
+}
+
+caption.edit span {
+	display: none;
+}
+
+caption.edit input {
+	background: inherit;
+	color: inherit;
+	display: initial;
+}
+
 #wrapper {
 	width: 100%;
 	overflow: hidden;
@@ -30,19 +44,13 @@ body {
 }
 
 #blocks {
-	width: 70%;
+	width: 75%;
 	float: left;
 }
 
-#next {
-	margin: auto;
-	width: 10%
-	float: left;
-}
-
-[id^=blocks_table-] {
+[id^=blocks-table-] {
 	width: 100%;
-	border: 1px solid white;
+	border: 1px solid beige;
 }
 
 #none_text {

@@ -6,7 +6,6 @@
 <!-- ensures proper scaling on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
-<script src="{% static 'scripts.js' %}" defer></script>
 <!-- import below is for the awesome font -->
 <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 <title>League of Item Sets</title>
@@ -17,25 +16,23 @@
     <p> Champion: {{champ.Name}} </p>
       <img src="{% static champ.Icon %}" alt="{{champ.Name}}" height="80" />
     <br/>
-    <p id="stat_table"></p>
+    <div id="stat_table"></div>
   </div>
   <button type="button" onclick="new_block()">Create new block</button>
   <button type="button" onclick="remove_block()">Remove block</button>
   <div id="blocks">
-    <table id="blocks_table-0">
       <tr></tr>
-    </table>
   </div>
-  <div id="next">
+  <select id="block-selector">
+  </select>
     <button type="button" onclick="build_item_set()">Done</button>
-</div>
 </div>
 <div id="items">
     <br  />
     {% if items %}
       {% for item in items %}
         {% if item.Purchasable == True %}
-          <img src="{% static item.Icon %}" alt="{{item.Name}}" height="60"
+        <img src="{% static item.Icon %}" alt="{{item.Name}}" height="60"
               id="{{ item.ItemID }}" onclick="add_item('{% static item.Icon %}','{{item.ItemID}}')"/>
         {% endif %}
       {% endfor %}
@@ -43,5 +40,6 @@
       <p> Could not display items! </p>
     {% endif %}
 </div>
+<script src="{% static 'scripts.js' %}" defer></script>
 </body>
 </html>
