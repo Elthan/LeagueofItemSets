@@ -112,8 +112,8 @@ function remove_block() {
   var table = document.getElementById("blocks-table-" + number_of_blocks.toString());
   tableDiv.removeChild(table);
   var selector = document.getElementById("block-selector");
-  number_of_blocks--;
   selector.remove(number_of_blocks);
+  number_of_blocks--;
   if (number_of_blocks  < 0) {
     new_block();
   }
