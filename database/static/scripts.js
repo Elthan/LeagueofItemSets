@@ -1,8 +1,25 @@
-function stats_table() {
-  var tableDiv = document.createElement("stats_table_div");
-  var table = document.createElement("stats_table");
+/***********
+*
+* Disclaimer: this is messy.
+*
+***********/
 
-  tableDiv.appendChild(table);
+var stats_table = {
+
+  createTable: function(champ_stats) {
+    var tableDiv = document.getElementById("stats-table-div");
+    var table = document.createElement("table");
+    var champ_stats = tableDiv['data-stats'];
+    console.log(champ_stats);
+    for (stat in champ_stats) {
+      console.log(stat);
+      for (i = 0; i < 5; i++) {
+
+      }
+    }
+
+    tableDiv.appendChild(table);
+  }
 }
 
 var number_of_blocks = -1;
@@ -21,6 +38,7 @@ function add_item(path, item_id) {
   table.rows[0].appendChild(img);
 }
 
+// Remove item
 function remove_item(item) {
   var table = item.parentNode;
   table.removeChild(item);
@@ -88,17 +106,20 @@ function new_block() {
 // Create the first block
 new_block();
 
-// Remove a block. If it's the last one create a new one.
+// Remove a block. If it's the last one create a new one. Update selector.
 function remove_block() {
   var tableDiv = document.getElementById("blocks");
   var table = document.getElementById("blocks-table-" + number_of_blocks.toString());
   tableDiv.removeChild(table);
+  var selector = document.getElementById("block-selector");
   number_of_blocks--;
+  selector.remove(number_of_blocks);
   if (number_of_blocks  < 0) {
     new_block();
   }
 }
 
+// Extract the information we need.
 function build_item_set() {
   for (i = 0; i <= number_of_blocks; i++) {
     var table = document.getElementById("blocks-table-" + i.toString());

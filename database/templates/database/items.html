@@ -16,12 +16,11 @@
     <p> Champion: {{champ.Name}} </p>
       <img src="{% static champ.Icon %}" alt="{{champ.Name}}" height="80" />
     <br/>
-    <div id="stat_table"></div>
+    <div id="stats-table-div"></div>
   </div>
   <button type="button" onclick="new_block()">Create new block</button>
   <button type="button" onclick="remove_block()">Remove block</button>
   <div id="blocks">
-      <tr></tr>
   </div>
   <select id="block-selector">
   </select>
@@ -37,7 +36,7 @@
         {% endif %}
       {% endfor %}
     {% else %}
-      <p> Could not display items! </p>
+      <p class="center"> Could not display items! </p>
     {% endif %}
 </div>
 <script src="{% static 'scripts.js' %}" defer></script>
