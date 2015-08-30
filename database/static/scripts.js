@@ -237,7 +237,9 @@ function remove_block() {
 // Extract the information we need.
 function build_item_set() {
   var blocks_div = document.getElementById("blocks");
-  var item_set = {}
+  var item_set = {};
+  var blocks = [];
+
   for (i = 0; i <= number_of_blocks; i++) {
     var block = {};
     var table = blocks_div.children[i];
@@ -246,11 +248,20 @@ function build_item_set() {
     block["recmath"] = table.children[1].children[0].checked ? "true" : "false";
 
     var items = {};
-    // var query = table.querySelectorAll("img");
-    // for (i = 0; i < query.length; i++) {
-    //   console.log(query[i]);
-    // }
+    var query = table.querySelectorAll("img");
+    for (i = 0; i < query.length; i++) {
+      var item = items[query[i].alt];
+      item = item == undefined ? 1 : item + 1;
+      items[query[i].alt] = item;
+    }
+
+    block["items"] = items;
+    blocks.push(block);
   }
+
+  item_set["blocks"] = blocks;
+
+  console.log(item_set);
 }
 
 // Run initial setup functions
