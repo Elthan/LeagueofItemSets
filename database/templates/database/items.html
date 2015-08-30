@@ -25,7 +25,7 @@
   <button type="button" onclick="remove_block()">Remove block</button>
   <div id="blocks">
   </div>
-  <button type="button" onclick="build_item_set()">Done</button>
+  <input type="button" onclick="location.href='{% url 'lois:itemset' 'build_item_set()' %};" value="Done" />
   <select id="block-selector" onchange="stats_table.changeBlock(this)">
   </select>
 </div>

@@ -241,18 +241,20 @@ function build_item_set() {
   var blocks = [];
 
   for (i = 0; i <= number_of_blocks; i++) {
+    console.log(number_of_blocks);
     var block = {};
     var table = blocks_div.children[i];
 
     block["name"] = table.children[0].children[0].innerHTML;
-    block["recmath"] = table.children[1].children[0].checked ? "true" : "false";
+    block["recmath"] = table.children[1].children[0].checked;
 
     var items = {};
     var query = table.querySelectorAll("img");
-    for (i = 0; i < query.length; i++) {
-      var item = items[query[i].alt];
-      item = item == undefined ? 1 : item + 1;
-      items[query[i].alt] = item;
+    for (k = 0; k < query.length; k++) {
+      var item = query[k].alt;
+      var number = items[item];
+      number = (number == undefined) ? 1 : number + 1;
+      items[item] = number;
     }
 
     block["items"] = items;
@@ -260,8 +262,11 @@ function build_item_set() {
   }
 
   item_set["blocks"] = blocks;
-
   console.log(item_set);
+  var json_item_set = JSON.stringify(item_set);
+  console.log(json_item_set);
+  // return item_set;
+  return json_item_set;
 }
 
 // Run initial setup functions
