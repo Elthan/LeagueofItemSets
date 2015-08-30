@@ -237,9 +237,19 @@ function remove_block() {
 // Extract the information we need.
 function build_item_set() {
   var blocks_div = document.getElementById("blocks");
+  var item_set = {}
   for (i = 0; i <= number_of_blocks; i++) {
+    var block = {};
     var table = blocks_div.children[i];
-    console.log(table);
+
+    block["name"] = table.children[0].children[0].innerHTML;
+    block["recmath"] = table.children[1].children[0].checked ? "true" : "false";
+
+    var items = {};
+    // var query = table.querySelectorAll("img");
+    // for (i = 0; i < query.length; i++) {
+    //   console.log(query[i]);
+    // }
   }
 }
 

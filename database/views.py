@@ -49,5 +49,6 @@ def item_select(request, champ_name):
 	}
 	return render(request, 'database/items.html', context)
 
-def item_set(request):
-	return render(request, 'database/item_set.html')
+def item_set(request, item_set):
+	context = {"item_set" : item_set}
+	return render(request, 'database/item_set.html', context)
