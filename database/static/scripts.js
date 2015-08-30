@@ -264,7 +264,7 @@ function build_item_set() {
   item_set["blocks"] = blocks;
   console.log(item_set);
   var json_item_set = JSON.stringify(item_set);
-  console.log(json_item_set);
+  console.log("{{% url 'lois:itemset' 'ASDF'}}");
   // return item_set;
   return json_item_set;
 }
