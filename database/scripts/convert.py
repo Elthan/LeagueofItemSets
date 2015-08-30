@@ -301,6 +301,7 @@ log : logging
         "model": "database.ItemStat",
         "fields": {{
 """.format(item_id)
+
         stats_len = len(item_json["stats"])-1
         index = 0
 

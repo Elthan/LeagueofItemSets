@@ -55,7 +55,7 @@ current_version : str
 
     try:
         # Read local version in DB
-        query = Version.objects.get(Region=region)
+        query = Version.objects.get(Region = region)
 
     except Version.DoesNotExist:
         log.warning("Could not find " + region + " in DB when checking for region")
@@ -263,7 +263,7 @@ skip_write_db : bool
 
             for path, subdirs, files in os.walk(path):
                 for name in files:
-                    call_command("loaddata", path + name, '--ignorenonexistent', verbosity=0)
+                    call_command("loaddata", path + name, '--ignorenonexistent', verbosity = 0)
 
             log.info("All " + json_type + " JSON files imported to the DB.")
 

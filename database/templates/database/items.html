@@ -15,7 +15,7 @@
   <div id="champ">
     <div>
     <p> {{champ.Name}} </p>
-      <img src="{% static champ.Icon %}" alt="{{champ.Name}}" height="80" />
+      <img src="{% static champ.Icon %}" alt="{{champ.Name}}" height="80" title="{{champ.Name}}" />
     </div>
     <br/>
     <div id="stats-table-div" data-stats="{{champ_stats}}">
@@ -26,16 +26,17 @@
   <div id="blocks">
   </div>
   <button type="button" onclick="build_item_set()">Done</button>
-  <select id="block-selector">
+  <select id="block-selector" onchange="stats_table.changeBlock(this)">
   </select>
 </div>
 <div id="items">
     <br  />
-    {% if items %}
-      {% for item in items %}
+    {% if item_list %}
+      {% for item, stats in item_list %}
         {% if item.Purchasable == True %}
-        <img src="{% static item.Icon %}" alt="{{item.Name}}" height="60"
-              id="{{ item.ItemID }}" onclick="add_item('{% static item.Icon %}','{{item.ItemID}}')"/>
+          <img src="{% static item.Icon %}" alt="{{item.Name}}" height="60" title="{{item.Name}}"
+            id="{{ item.ItemID }}" onclick="add_item('{% static item.Icon %}','{{item.ItemID}}', this.dataset.stats)"
+            data-stats="{{stats}}"/>
         {% endif %}
       {% endfor %}
     {% else %}
