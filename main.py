@@ -15,7 +15,7 @@ import database.scripts.convert as convert
 #
 #   League of Item Sets
 #
-#   Version: 0.3
+#   Version: 0.4
 #
 #   By: Jonas Sandbekk & Ole Harbosen
 #
@@ -42,7 +42,7 @@ if __name__ == "__main__":
                         help="Skip converting JSON to DB friendly JSON. (default: %(default)s)")
     parser.add_argument('-d', '--database', action="store_true", default=False,
                         help="Skip writing all JSON files to the database. (default: %(default)s)")
-    
+
     args = parser.parse_args()
     loglvl = args.verbose
     skip_icons = args.skipicons
@@ -50,15 +50,15 @@ if __name__ == "__main__":
     skip_convert = args.skipconvert
     skip_write_db = args.database
     force_update = args.force
-    
+
     # Set level of logging to be done
     log.basicConfig(format="%(levelname)s: %(message)s",level=loglvl)
 
     # Temporary use only eune
     #region_list = ["br","eune","euw","kr","lan","las","na","oce","ru","tr","pbe"]
     region_list = ["eune"]
-    
-    log.info("League of Item Sets v0.3")
+
+    log.info("League of Item Sets v0.4")
 
     # Get the api_key, which is hidden.
     try:
@@ -75,13 +75,13 @@ if __name__ == "__main__":
 
             for region in region_list:
                 is_new_version, current_version = update.check_version(region, api_key, log)
-                
+
                 if (is_new_version or force_update):
                     # Update all the json file from all the different regions.
                     update.update_all(api_key, current_version, "DEBUG", region,
                                       skip_icons, skip_json, skip_convert, skip_write_db)
                 else:
                     log.info("We are up to date for " + region + "!")
-                
+
     except OSError as oserr:
         log.error("Got an error message when trying to update:\n" + str(oserr))
