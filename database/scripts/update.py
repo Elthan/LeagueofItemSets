@@ -53,10 +53,11 @@ current_version : str
 
     net_version = json.loads(net_version)[0]
 
+    log.info("Latest version is " + net_version)
+
     try:
         # Read local version in DB
         query = Version.objects.get(Region = region)
-
     except Version.DoesNotExist:
         log.warning("Could not find " + region + " in DB when checking for region")
         log.debug("Creating " + region + " in DB with version " + net_version)
@@ -270,5 +271,6 @@ skip_write_db : bool
     if (skip_icons):
         log.info("Skipping all icons.")
     else:
+        log.info("Fetching icons.")
         for icon_type,url in url_list.items():
             get_icons(icon_type)

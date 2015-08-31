@@ -20,11 +20,11 @@ def champ_select(request):
 	return render(request, 'database/champion.html', context)
 
 def item_select(request, champ_name):
-	if (champ_name == "None"):
+	if (champ_name == "All"):
 		champ_stats = "[{'MPRegen': 0, 'SpellBlock': 0, 'Crit': 0, 'AttackDamage': 0, \
 						'MP': 0, 'HPRegen': 0, 'HP': 0, 'Armor': 0, 'MoveSpeed': 0, \
 						'AttackSpeedOffset': 0}]"
-		champion = {"Name": "None", "Icon": "icons/champion/Unknown.png"}
+		champion = {"Name": "All", "Icon": "icons/champion/Unknown.png"}
 	else:
 		champion = get_object_or_404(Champion, Name = champ_name)
 		champ_stats = ChampionStat.objects.filter(ChampID = champion.ChampID).values()
