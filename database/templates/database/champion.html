@@ -10,17 +10,14 @@
 </head>
 <body>
   <div class="center">
-  <h1> Welcome to League of Item Sets!</h1>
-  <p> Here you can make your own item sets, download them and use them in-game!
+  <h1 class="center-text"> Welcome to League of Item Sets!</h1>
+  <p class="center-text"> Here you can make your own item sets, download them and use them in-game!
   </p>
-  <h2> To begin choose one of the champions or none.</h2>
-  <a href="{% url 'lois:items' "None" %}" id="none_text">
-    none
-  </a>
+  <h2 class="center-text"> To begin choose one of the champions or all.</h2>
+  <a href="{% url 'lois:items' "None" %}" id="none_text"><p class="center-text">All</p></a>
 </div>
   <br />
-  <table class="page-divider">
-    <td class="center-column">
+    <div id="champion-select">
         <section>
         {% if champ_list %}
           {% for champion in champ_list %}
@@ -28,12 +25,10 @@
                   <img src="{% static champion.Icon %}" alt="{{champion.Name}}" height="80" />
                 </a>
           {% endfor %}
-        </div>
         {% else %}
           <p> Could not display champions!</p>
         {% endif %}
       </section>
-    </td>
-  </table>
+    </div>
 </body>
 </html>
