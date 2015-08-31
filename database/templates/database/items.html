@@ -21,12 +21,22 @@
     <div id="stats-table-div" data-stats="{{champ_stats}}">
     </div>
   </div>
-  <button type="button" onclick="add_block()">Create new block</button>
-  <button type="button" onclick="remove_block()">Remove block</button>
+  <button type="button" onclick="add_block()" title="Add a new block, which is a section of items in-game">Create new block</button>
+  <button type="button" onclick="remove_block()" title="Remove the last created block">Remove block</button>
+  <button type="button" onclick="build_item_set('{% url 'lois:itemset' %}')" title="If you want you can download the item set as a JSON file">Done</button>
+  <select id="map-selector" title="Choose which maps you want the item set to appear on">
+    <option value="any">All</option>
+    <option value="SR">Summoner's Rift</option>
+    <option value="HA">Howling Abyss</option>
+    <option value="TT">Twisted Treeline</option>
+    <option value="CS">Crystal Scar</option>
+  </select>
+  <select id="block-selector" onchange="stats_table.changeBlock(this)"
+        title="Choose which block you want to add items to"></select>
+  <p contenteditable="true" id="item-set-name"
+        title="Edit this to set your item set name as it appears in-game">Item Set Name</p>
   <div id="blocks">
   </div>
-  <button type="button" onclick="build_item_set('{% url 'lois:itemset' %}')">Done</button>
-  <select id="block-selector" onchange="stats_table.changeBlock(this)"></select>
 </div>
 <div id="items">
     <br  />
@@ -43,6 +53,6 @@
     {% endif %}
 </div>
 
-<script src="{% static 'items_scripts.js' %}" defer></script>
+<script src="{% static 'scripts.js' %}" defer></script>
 </body>
 </html>

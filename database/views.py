@@ -48,7 +48,7 @@ def item_select(request, champ_name):
 def item_set(request):
 	item_set = request.POST.get("item_set", "")
 	item_set_json = json.loads(item_set)
-	ism_id = ism(new_entry = True)
+	ism_id = ism(is_title = item_set_json["name"], is_map = item_set_json["map"], new_entry = True)
 
 	for block in item_set_json["blocks"]:
 		bm_id = bm(ism_id, name = block["name"], rec_math = block["recmath"], new_entry = True)

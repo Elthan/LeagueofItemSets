@@ -15,22 +15,21 @@
 <h1 class="center">Congratulations!</h1>
 <p class"center">You have succesfully created an item set! <br />
 	To use the item set, you need to download it by clicking on the Download JSON button	below	and put it in your
-	<br /><b>League of Legends\Config\Global\Recommended\</b> <br />
+	<br /> <br /><b>League of Legends\Config\Global\Recommended\</b> <br /><br />
 	folder to use it on any champion or
-	<br /><b>League of Legends\Config\Champions\{CHAMPION}\Recommended\</b> <br/>
+	<br /> <br /><b>League of Legends\Config\Champions\{CHAMPION}\Recommended\</b> <br/> <br />
 	folder to use it on a specific champion.</p>
 <p class="center">You can view the JSON yourself by clicking the View JSON button.
-	You can then copy paste that into a new file in the folders mentioned above to use it in-game.</p>
+	You can then copy paste that into a new file in the folders mentioned above to use it in-game.</p> <br />
 	<form action="{% url 'lois:download' item_set_id %}">
 		<button type="submit" class="button">Download JSON</button>
 	</form>
 	<form action="{% url 'lois:json' item_set_id %}">
 		<button type="submit" class="button">View JSON</button>
 	</form>
-	<form >
+	<!-- <form action="">
 		<button type="submit" class="button">Go back</button>
-	</form>
+	</form> -->
 </div>
-<script src="{% static 'item_set_scripts.js' %}" defer></script>
 </body>
 </html>

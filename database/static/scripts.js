@@ -209,6 +209,7 @@ function add_block() {
   var caption = table.createCaption();
   caption.id = "block-caption-" + number_of_blocks.toString();
   caption.innerHTML = "<span>Block</span> <input value='Block' />";
+  caption.title = "Click me to set the name of block";
   caption_edit.bindEvents(table);
 
   var selector = document.getElementById("block-selector");
@@ -239,11 +240,17 @@ function remove_block() {
   stats_table.changeBlock(selector);
 }
 
-// Extract the information we need.
+// Extract the information we need and send us to the next page.
 function build_item_set(path) {
   var blocks_div = document.getElementById("blocks");
   var item_set = {};
   var blocks = [];
+
+  var name = document.getElementById("item-set-name");
+  var map = document.getElementById("map-selector");
+
+  item_set["name"] = name.innerHTML;
+  item_set["map"] = map.options[map.selectedIndex].value;
 
   for (var i = 0; i <= number_of_blocks; i++) {
     var block = {};
@@ -271,6 +278,8 @@ function build_item_set(path) {
   var form = document.createElement('form');
   form.setAttribute("method", "post");
   form.setAttribute("action", path);
+
+  // Create a hidden field with the JSON file.
   var hiddenField = document.createElement("input");
   hiddenField.setAttribute("type", "hidden");
   hiddenField.setAttribute("name", "item_set");
