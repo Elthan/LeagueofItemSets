@@ -1,45 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+{% load staticfiles %}
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1"/> <!-- ensures proper scaling on mobile devices -->
-<link href="res/style.css" rel="stylesheet" />
+<!-- ensures proper scaling on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
 <!-- import below is for the awesome font -->
 <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 <title>LeagueofItemSets</title>
 </head>
-
 <body>
-<nav>
-	<ul class="horizontal-list">
-		<li><a class="header-menu-tab" href="index.html">a point</a></li>
-		<li><a class="header-menu-tab" href="index2.html">yet another point</a></li>
-	</ul>
-</nav>
-<br><br><br><br>
-
-
-<table class="page-divider">
-	<td class="center-column">
-		<!-- content placed here will live in the center column -->
-		<section>
-			placeholder content
-			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-			placeholder content
-		</section>
-	</td>
-	<td class="right-column">
-		<!-- content placed here will live in the rightmost column -->
-		<section>
-			placeholder content
-			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-			placeholder content
-		</section>
-	</td>
-</table>
-
-
-
+<div class="buttons">
+<h1 class="center">Congratulations!</h1>
+<p class"center">You have succesfully created an item set! <br />
+	To use the item set, you need to download it by clicking on the Download JSON button	below	and put it in your
+	<br /><b>League of Legends\Config\Global\Recommended\</b> <br />
+	folder to use it on any champion or
+	<br /><b>League of Legends\Config\Champions\{CHAMPION}\Recommended\</b> <br/>
+	folder to use it on a specific champion.</p>
+<p class="center">You can view the JSON yourself by clicking the View JSON button.
+	You can then copy paste that into a new file in the folders mentioned above to use it in-game.</p>
+	<form action="{% url 'lois:download' item_set_id %}">
+		<button type="submit" class="button">Download JSON</button>
+	</form>
+	<form action="{% url 'lois:json' item_set_id %}">
+		<button type="submit" class="button">View JSON</button>
+	</form>
+	<form >
+		<button type="submit" class="button">Go back</button>
+	</form>
+</div>
+<script src="{% static 'item_set_scripts.js' %}" defer></script>
 </body>
 </html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% load staticfiles %}
+<meta charset="UTF-8" />
+<!-- ensures proper scaling on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
+<!-- import below is for the awesome font -->
+<link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+<title>LeagueofItemSets</title>
+</head>
+<body>
+<div class="center">
+  {{ json }}
+</div>
+</body>
+</html>

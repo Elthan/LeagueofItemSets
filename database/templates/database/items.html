@@ -25,9 +25,8 @@
   <button type="button" onclick="remove_block()">Remove block</button>
   <div id="blocks">
   </div>
-  <button type="button" onclick="build_item_set()">Done</button>
-  <select id="block-selector" onchange="stats_table.changeBlock(this)">
-  </select>
+  <button type="button" onclick="build_item_set('{% url 'lois:itemset' %}')">Done</button>
+  <select id="block-selector" onchange="stats_table.changeBlock(this)"></select>
 </div>
 <div id="items">
     <br  />
@@ -44,6 +43,6 @@
     {% endif %}
 </div>
 
-<script src="{% static 'scripts.js' %}" defer></script>
+<script src="{% static 'items_scripts.js' %}" defer></script>
 </body>
 </html>

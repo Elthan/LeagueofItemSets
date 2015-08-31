@@ -5,19 +5,14 @@ from decimal import *
 from django.http import HttpResponse
 from django.core.servers.basehttp import FileWrapper
 from django.shortcuts import get_object_or_404, render
+from django.views.decorators.csrf import csrf_exempt
+from django.templatetags.static import static
 from .models import *
-
+from .scripts.convert import item_set_manager as ism, block_manager as bm, block_item_manager as bim
+from .scripts.convert import create_json_from_db as json_db
 
 def index(request):
 	return render(request, 'database/index.html')
-
-# Method for sending files to users
-def send_json_file(emptyarg, file_path="database", filename="test.json"):
-    json_file = open('{}/{}'.format(file_path, filename), 'rb')
-    response = HttpResponse(json_file, content_type ='application/json')
-    response["Content-Disposition"] = 'attachment; filename="' + filename + '"'
-
-    return response
 
 def champ_select(request):
 	champ_list = Champion.objects.all()
@@ -49,6 +44,27 @@ def item_select(request, champ_name):
 	}
 	return render(request, 'database/items.html', context)
 
-def item_set(request, item_set):
-	context = {"item_set" : item_set}
+@csrf_exempt
+def item_set(request):
+	item_set = request.POST.get("item_set", "")
+	item_set_json = json.loads(item_set)
+	ism_id = ism(new_entry = True)
+
+	for block in item_set_json["blocks"]:
+		bm_id = bm(ism_id, name = block["name"], rec_math = block["recmath"], new_entry = True)
+		for item in block["items"]:
+			bim(item, bm_id, count = block["items"][item],new_entry = True)
+	context = {"item_set_id": ism_id}
 	return render(request, 'database/item_set.html', context)
+
+def json_string(request, ism_id):
+	json_string = json_db(ism_id)
+	context = {"json": json_string}
+	return render(request, 'database/view_json.html', context)
+
+# Method for sending files to users
+def download(request, ism_id):
+	json_string = json_db(ism_id)
+	response = HttpResponse(json_string, content_type ='application/json')
+	response["Content-Disposition"] = 'attachment; filename="' + ism_id + '.json"'
+	return response

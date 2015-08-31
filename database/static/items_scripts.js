@@ -153,7 +153,9 @@ function remove_item(item) {
   var tr = item.parentNode;
   tr.removeChild(item);
   // If its part of the selected block, substract stats from stats table.
-  if (tr.parentNode.id == document.getElementById("block-selector").selectedIndex)
+  var selector = document.getElementById("block-selector");
+  var index = selector.selectedIndex;
+  if (tr.previousElementSibling.id == selector.options[index])
     stats_table.updateStats(false, item.dataset.stats);
 }
 
@@ -218,6 +220,8 @@ function add_block() {
   selector.selectedIndex = number_of_blocks;
 
   tableDiv.appendChild(table)
+
+  stats_table.changeBlock(selector);
 }
 
 // Remove a block. If it's the last one create a new one. Update selector.
@@ -232,16 +236,16 @@ function remove_block() {
   number_of_blocks--;
   if (number_of_blocks  < 0)
     add_block();
+  stats_table.changeBlock(selector);
 }
 
 // Extract the information we need.
-function build_item_set() {
+function build_item_set(path) {
   var blocks_div = document.getElementById("blocks");
   var item_set = {};
   var blocks = [];
 
-  for (i = 0; i <= number_of_blocks; i++) {
-    console.log(number_of_blocks);
+  for (var i = 0; i <= number_of_blocks; i++) {
     var block = {};
     var table = blocks_div.children[i];
 
@@ -250,7 +254,7 @@ function build_item_set() {
 
     var items = {};
     var query = table.querySelectorAll("img");
-    for (k = 0; k < query.length; k++) {
+    for (var k = 0; k < query.length; k++) {
       var item = query[k].alt;
       var number = items[item];
       number = (number == undefined) ? 1 : number + 1;
@@ -262,11 +266,18 @@ function build_item_set() {
   }
 
   item_set["blocks"] = blocks;
-  console.log(item_set);
   var json_item_set = JSON.stringify(item_set);
-  console.log("{{% url 'lois:itemset' 'ASDF'}}");
-  // return item_set;
-  return json_item_set;
+
+  var form = document.createElement('form');
+  form.setAttribute("method", "post");
+  form.setAttribute("action", path);
+  var hiddenField = document.createElement("input");
+  hiddenField.setAttribute("type", "hidden");
+  hiddenField.setAttribute("name", "item_set");
+  hiddenField.setAttribute("value", json_item_set);
+  form.appendChild(hiddenField);
+  document.body.appendChild(form);
+  form.submit();
 }
 
 // Run initial setup functions

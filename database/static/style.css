@@ -76,62 +76,20 @@ caption.edit input {
 	text-align: center;
 }
 
-/*
+.button {
+	width: 75%;
+	padding: 50px;
+}
+
+.buttons {
+	width: 100%;
+	text-align: center;
+}
+
 @font-face {
 	font-family: 'Merriweather', serif;
 	color: #fff;
 }
-/*
-nav {
-	position: fixed;
-	left: 1%;
-	top: 15;
-	width: 98%;
-	padding-left: 65px;
-	border-radius: 20px 20px 65px 65px;
-	box-shadow: 3px 3px 10px 5px #000;
-	background-color: #394264;
-	box-sizing: border-box; /* assures the box stays in-screen */
-/*}
-
-.horizontal-list {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-
-.horizontal-list li {
-	float: left;
-}
-
-.header-menu-tab {
-	padding: 0 27px;
-	display: block;
-	line-height: 55px;
-	text-decoration: none;
-	color: #fff;
-	border-bottom: 4px solid #50597b;
-}
-
-.header-menu-tab:hover {
-	background: #50597b;
-	border-bottom: 4px solid #11a8ab;
-	text-decoration: none;
-	box-shadow: 3px 3px 10px 5px #000 inset;
-}
-
-section {
-	margin: auto;
-	margin-top: 17px;
-	margin-bottom: 30px;
-	padding: 15px;
-	padding-top: 25px;
-	padding-bottom: 25px;
-	border-radius: 5px 35px 15px 35px;
-	background-color: #394264;
-	box-shadow: 3px 3px 10px 5px #000;
-}
-*/
 
 table.page-divider {
 	margin: auto;
