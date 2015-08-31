@@ -1,1 +1,1 @@
-# LeagueofItemSets
+# League of Item Sets
