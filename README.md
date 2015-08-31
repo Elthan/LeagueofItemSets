@@ -7,7 +7,7 @@ It is a website built with a python and django backend. On this website you can 
 
 Where can I use the site?
 --
-The site is currently not being hosted anywhere as we never got that far, but you can download the repo and run it yourself if you want to. The requirments are Python 3.4+ and Django 1.8+. From there on you need a "settings" file in the main folder containing the text "_API_KEY: \<your api key here\>_" and "_SECRET_KEY: \<a secret key for django here\>_" .Then you need to setup the database with "_manage.py makemigrations database_" and "_manage.py migrate_". You can then run main.py which will download the required files and update the database for you.
+The site is currently not being hosted anywhere as we never got that far, but you can download the repo and run it yourself if you want to. The requirments are Python 3.4+ and Django 1.8+. From there on you need a "settings" file in the main folder containing the text "_API_KEY: \<your api key here\>_" and "_SECRET_KEY: \<a secret key for django here\>_" .Then you need to setup the database with "_manage.py migrate_". You can then run main.py which will download the required files and update the database for you.
 
 Why is it not the most beautiful creation known to mankind?
 --
