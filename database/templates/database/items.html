@@ -4,42 +4,43 @@
 {% load staticfiles %}
 <meta charset="UTF-8" />
 <!-- ensures proper scaling on mobile devices -->
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'items_style.css' %}" />
 <!-- import below is for the awesome font -->
 <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 <title>League of Item Sets</title>
 </head>
 <body>
-<div id="wrapper">
-  <div id="champ">
-    <div>
-    <p> {{champ.Name}} </p>
-      <img src="{% static champ.Icon %}" alt="{{champ.Name}}" height="80" title="{{champ.Name}}" />
+<div class="head">
+  <section class="left-side">
+    <div class="icon">
+      <p> {{champ.Name}} </p>
+      <img id="champ-icon" src="{% static champ.Icon %}" alt="{{champ.Name}}" height="80" title="{{champ.Name}}" />
     </div>
-    <br/>
-    <div id="stats-table-div" data-stats="{{champ_stats}}">
-    </div>
-  </div>
-  <button type="button" onclick="add_block()" title="Add a new block, which is a section of items in-game">Create new block</button>
-  <button type="button" onclick="remove_block()" title="Remove the last created block">Remove block</button>
-  <button type="button" onclick="build_item_set('{% url 'lois:itemset' %}')" title="If you want you can download the item set as a JSON file">Done</button>
-  <select id="map-selector" title="Choose which maps you want the item set to appear on">
-    <option value="any">All</option>
-    <option value="SR">Summoner's Rift</option>
-    <option value="HA">Howling Abyss</option>
-    <option value="TT">Twisted Treeline</option>
-    <option value="CS">Crystal Scar</option>
-  </select>
-  <select id="block-selector" onchange="stats_table.changeBlock(this)"
-        title="Choose which block you want to add items to"></select>
-  <p contenteditable="true" id="item-set-name"
-        title="Edit this to set your item set name as it appears in-game">Item Set Name</p>
-  <div id="blocks">
-  </div>
+    <div id="stats-table-div" data-stats="{{champ_stats}}"></div>
+  </section>
+  <section class="right-side">
+    <button type="button" onclick="add_block()" class="buttons"
+            title="Add a new block, which is a section of items in-game">Create new block</button>
+    <button type="button" onclick="remove_block()" class="buttons"
+            title="Remove the last created block">Remove block</button>
+    <button type="button" onclick="build_item_set('{% url 'lois:itemset' %}')" class="buttons"
+            title="If you want you can download the item set as a JSON file">Done</button>
+    <select class="buttons" id="map-selector" title="Choose which maps you want the item set to appear on">
+      <option value="any">All</option>
+      <option value="SR">Summoner's Rift</option>
+      <option value="HA">Howling Abyss</option>
+      <option value="TT">Twisted Treeline</option>
+      <option value="CS">Crystal Scar</option>
+    </select>
+    <select class="buttons" id="block-selector" onchange="stats_table.changeBlock(this)"
+          title="Choose which block you want to add items to"></select>
+    <input type="text" id="item-set-name" value="Item set name"
+      title="Edit this to set your item set name as it appears in-game" />
+  <div id="blocks"></div>
 </div>
-<div id="items">
-    <br  />
+<div class="items">
     {% if item_list %}
       {% for item, stats in item_list %}
         {% if item.Purchasable == True %}
@@ -52,7 +53,6 @@
       <p class="center"> Could not display items! </p>
     {% endif %}
 </div>
-
 <script src="{% static 'scripts.js' %}" defer></script>
 </body>
 </html>

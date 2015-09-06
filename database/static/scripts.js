@@ -137,6 +137,7 @@ var img_id = 0;
 function add_item(path, item_id, item_stats) {
   var selected = document.getElementById("block-selector").selectedIndex;
   var table = document.getElementById("blocks-table-" + selected.toString());
+  var td = document.createElement('td');
   var img = document.createElement('img');
   img.src = path;
   img.id = img_id.toString();
@@ -144,14 +145,15 @@ function add_item(path, item_id, item_stats) {
   img.dataset.stats = item_stats;
   img_id++;
   img.addEventListener('click', function() { remove_item(img) });
-  table.rows[0].appendChild(img);
+  td.appendChild(img);
+  table.rows[0].appendChild(td);
   stats_table.updateStats(true, item_stats);
 }
 
 // Remove item
 function remove_item(item) {
-  var tr = item.parentNode;
-  tr.removeChild(item);
+  var tr = item.parentNode.parentNode;
+  tr.removeChild(item.parentNode);
   // If its part of the selected block, substract stats from stats table.
   var selector = document.getElementById("block-selector");
   var index = selector.selectedIndex;
@@ -202,12 +204,14 @@ function add_block() {
   var input = document.createElement('input');
   input.type = "checkbox";
   input.value = "recmath";
-  input.title = "Click if this all the items in this block should build into the last. (RecMath)";
-  tr.appendChild(input);
+  input.title = "Click if this all the items in this block should build into the last.";
+  table.appendChild(input);
+  table.appendChild( document.createTextNode("Recmath") );
   table.appendChild(tr);
 
   var caption = table.createCaption();
   caption.id = "block-caption-" + number_of_blocks.toString();
+  caption.className = 'block-caption';
   caption.innerHTML = "<span>Block</span> <input value='Block' />";
   caption.title = "Click me to set the name of block";
   caption_edit.bindEvents(table);
@@ -257,7 +261,7 @@ function build_item_set(path) {
     var table = blocks_div.children[i];
 
     block["name"] = table.children[0].children[0].innerHTML;
-    block["recmath"] = table.children[1].children[0].checked;
+    block["recmath"] = table.children[1].checked;
 
     var items = {};
     var query = table.querySelectorAll("img");

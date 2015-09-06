@@ -12,12 +12,9 @@ from .scripts.convert import item_set_manager as ism, block_manager as bm, block
 from .scripts.convert import create_json_from_db as json_db
 
 def index(request):
-	return render(request, 'database/index.html')
-
-def champ_select(request):
 	champ_list = Champion.objects.all()
 	context = {'champ_list': champ_list}
-	return render(request, 'database/champion.html', context)
+	return render(request, 'database/index.html', context)
 
 def item_select(request, champ_name):
 	if (champ_name == "All"):

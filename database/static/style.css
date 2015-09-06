@@ -9,10 +9,21 @@
 */
 
 body {
-	background-color: #222222; /* BGcolor */
-	color: white; /* text color */
+  font-family: Merriweather, arial, sans-serif;
+  background-color: #000;
+  color: white;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*
 .center {
 	margin: auto;
 	width: 40%;
@@ -71,7 +82,7 @@ caption.edit input {
 #stats-table {
 	border: solid beige;
 	border-collapse: collapse;
-	width: 100%;
+	width: 100%;	
 }
 
 .stats-header {

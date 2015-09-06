@@ -2,7 +2,6 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^championselect$', views.champ_select, name='champion'),
     url(r'^itemset$', views.item_set, name='itemset'),
     url(r'^json&id=([\w\d]+)$', views.json_string, name='json'),
     url(r'^download&id=([\w\d]+)$', views.download, name='download'),
