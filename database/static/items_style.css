@@ -1,0 +1,150 @@
+.head {
+  width: 100%;
+  display: block;
+  padding-bottom: 1%;
+  font-family: inherit;
+  overflow: auto;
+}
+
+.left-side {
+  float: left;
+  position: relative;
+  width: 30%;
+}
+
+.right-side {
+  width: 70%;
+  position: relative;
+  float: right;
+  overflow: auto;
+}
+
+.icon {
+  text-align: center;
+  padding-bottom: 10px;
+  width: 100%;
+  height: 50%;
+  font-size: 1.3em;
+  display: block;
+  float: left;
+}
+
+#champ-icon {
+  border: 1px solid #222;
+}
+
+#stats-table-div {
+  width: 100%;
+}
+
+#stats-table {
+  text-align: left;
+  border: 1px solid #222;
+  color: white;
+  border-collapse: collapse;
+}
+
+#stats-table th {
+  border: 1px solid #222;
+  padding: 5px;
+  opacity: 0.9;
+}
+
+#stats-table td {
+  color: white;
+  opacity: 0.75;
+}
+
+
+.items {
+  text-align: center;
+  padding-top: 1%;
+  padding-right: 5px;
+}
+
+.items img {
+  padding: 1px;
+  border: 1px solid #222;
+  opacity: 0.65;
+}
+
+.items img:hover {
+  opacity: 1;
+}
+
+.buttons {
+  padding: 0px 16px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid #222;
+  background-color: #222;
+  color: #757575;
+  margin: 11px 2px;
+  height: 36px;
+}
+
+.buttons:hover {
+  background-color: #444;
+  color: white;
+}
+
+#item-set-name {
+  width: 100%;
+  padding: 10px 0px;
+  display: block;
+  border: none;
+  background-color: inherit;
+  color: inherit;
+  font-size: 1em;
+  font-family: inherit;
+  margin: 20px 0;
+  text-align: center;
+}
+
+#block {
+  overflow: scroll;
+}
+
+.blocks-table {
+  width: 100%;
+  height: 60px;
+}
+
+.blocks-table tr {
+  height: 60px;
+}
+
+.blocks-table td {
+  float: left;
+}
+
+.blocks-table img {
+  border: 1px solid #222;
+  margin: 2px;
+  padding: 1px;
+  opacity: 0.75;
+}
+
+.blocks-table img:hover {
+  opacity: 1;
+}
+
+caption input {
+  display: none;
+  width: 50%;
+}
+
+caption.edit span {
+  display: none;
+}
+
+caption.edit input {
+	background: inherit;
+	color: inherit;
+	display: initial;
+  border: none;
+  padding: 5px;
+  font-size: inherit - 1;
+  font-family: inherit;
+  text-align: center;
+}

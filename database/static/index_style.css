@@ -1,0 +1,20 @@
+.text {
+  margin: auto;
+  text-align: center;
+  display: block;
+  padding-top: 15%;
+}
+
+.champions {
+  text-align: center;
+}
+
+#all-text {
+  font-size: 2em;
+  display: block;
+  padding: 30px;
+}
+
+#champ-icons {
+  /*display: none;*/
+}
