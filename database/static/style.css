@@ -12,6 +12,7 @@ body {
   font-family: Merriweather, arial, sans-serif;
   background-color: #000;
   color: white;
+  /*background: linear-gradient(120deg, #222, 1%, #000 );*/
 }
 
 a {
@@ -82,7 +83,7 @@ caption.edit input {
 #stats-table {
 	border: solid beige;
 	border-collapse: collapse;
-	width: 100%;	
+	width: 100%;
 }
 
 .stats-header {

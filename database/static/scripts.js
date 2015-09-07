@@ -1,6 +1,6 @@
 /***********
 *
-* Warning: this is messy.
+* Now a little bit cleaner
 *
 ***********/
 
@@ -51,8 +51,8 @@ var stats_table = {
         var th = document.createElement('th');
         var td = document.createElement('td');
 
-        th.className = "stats-header";
-        td.className = "stats-cell";
+        th.classList.add("stats-header");
+        td.classList.add("stats-cell");
 
         th.id = stat;
 
@@ -120,7 +120,7 @@ var stats_table = {
       }
     }
 
-    var selected = selector.selectedIndex.toString();
+    var selected = selector.value;
     var table = document.getElementById("blocks-table-" + selected);
     var items = table.querySelectorAll("img");
 
@@ -135,16 +135,22 @@ var img_id = 0;
 
 // Add an item to the selected block
 function add_item(path, item_id, item_stats) {
-  var selected = document.getElementById("block-selector").selectedIndex;
-  var table = document.getElementById("blocks-table-" + selected.toString());
+  var selected = document.getElementById("block-selector").value;
+  var table = document.getElementById("blocks-table-" + selected);
   var td = document.createElement('td');
   var img = document.createElement('img');
+
   img.src = path;
   img.id = img_id.toString();
   img.alt = item_id;
   img.dataset.stats = item_stats;
   img_id++;
   img.addEventListener('click', function() { remove_item(img) });
+
+  if (table.rows[0].children.length > 0) {
+    td.appendChild( document.createTextNode('+') );
+  }
+
   td.appendChild(img);
   table.rows[0].appendChild(td);
   stats_table.updateStats(true, item_stats);
@@ -153,11 +159,18 @@ function add_item(path, item_id, item_stats) {
 // Remove item
 function remove_item(item) {
   var tr = item.parentNode.parentNode;
+  var next = item.parentNode.nextSibling;
+
+  // If it's the first item remove the + sign from the now first item
+  if (tr.children[0] === item.parentNode && next) {
+      next.removeChild(next.childNodes[0]);
+  }
   tr.removeChild(item.parentNode);
+
   // If its part of the selected block, substract stats from stats table.
   var selector = document.getElementById("block-selector");
   var index = selector.selectedIndex;
-  if (tr.previousElementSibling.id == selector.options[index])
+  if (tr.parentNode.children[0].id == selector.options[index].id)
     stats_table.updateStats(false, item.dataset.stats);
 }
 
@@ -170,7 +183,7 @@ var caption_edit = {
   },
   editCaption: function() {
     var input = this.children[1];
-    this.className = "edit";
+    this.classList.add("edit");
     input.focus;
     input.setSelectionRange(0, input.value.length);
   },
@@ -181,7 +194,7 @@ var caption_edit = {
       var option = selector.children[id=this.parentNode.id];
       option.innerHTML = this.value;
     }
-    this.parentNode.className = "";
+    this.parentNode.classList.remove("edit");
   },
   keypressCaption: function(event) {
     if (event.which === 13)
@@ -191,57 +204,102 @@ var caption_edit = {
 
 // Create a new block with an editable caption and a td tag inside.
 function add_block() {
-  if (number_of_blocks >= 10) {
+  var tableDiv = document.getElementById("blocks");
+
+  // Maximum number of blocks is 10.
+  if (tableDiv.childElementCount >= 9) {
     return;
   }
+
   number_of_blocks++;
-  var tableDiv = document.getElementById("blocks");
+
+  // Create new table with unique id.
   var table = document.createElement('table');
   table.id = "blocks-table-" + number_of_blocks.toString();
-  table.className = "blocks-table";
+  table.classList.add("blocks-table");
+  // table.classList.add("hide");
+  // table.classList.toggle("hide");
 
+  // Create a row and the recmath checbox.
   var tr = document.createElement('tr');
   var input = document.createElement('input');
   input.type = "checkbox";
   input.value = "recmath";
   input.title = "Click if this all the items in this block should build into the last.";
   table.appendChild(input);
-  table.appendChild( document.createTextNode("Recmath") );
+
+  // Text next to the checkbox
+  var recmath = document.createElement('p');
+  recmath.title = "Should all the items in this block build into the last?";
+  recmath.classList.add("recmath-text");
+  recmath.innerHTML = "Recmath";
+  table.appendChild(recmath);
   table.appendChild(tr);
 
+  // Create the caption which is the block name.
   var caption = table.createCaption();
   caption.id = "block-caption-" + number_of_blocks.toString();
-  caption.className = 'block-caption';
+  caption.classList.add('block-caption');
   caption.innerHTML = "<span>Block</span> <input value='Block' />";
   caption.title = "Click me to set the name of block";
   caption_edit.bindEvents(table);
 
+  // Update the selector with the new table.
   var selector = document.getElementById("block-selector");
   var option = document.createElement("option")
   option.id = "block-caption-" + number_of_blocks.toString();
   option.value = number_of_blocks;
   option.innerHTML = caption.innerHTML;
   selector.appendChild( option );
-  selector.selectedIndex = number_of_blocks;
+  selector.selectedIndex = selector.length - 1;
+
+  //Hide all other tables.
+  for (i = 0; i < tableDiv.children.length; i++) {
+    var visible_table = tableDiv.children[i];
+    hide_table(visible_table);
+  }
 
   tableDiv.appendChild(table)
-
   stats_table.changeBlock(selector);
 }
 
 // Remove a block. If it's the last one create a new one. Update selector.
 function remove_block() {
   var tableDiv = document.getElementById("blocks");
-  var table = document.getElementById("blocks-table-" + number_of_blocks.toString());
-  tableDiv.removeChild(table);
-
   var selector = document.getElementById("block-selector");
-  selector.remove(number_of_blocks);
+  var table = document.getElementById("blocks-table-" + selector.value);
 
-  number_of_blocks--;
-  if (number_of_blocks  < 0)
+  // Remove the block and the entry in the selector.
+  tableDiv.removeChild(table);
+  selector.remove(selector.selectedIndex);
+
+  // We always want to have at least one block.
+  if (tableDiv.childElementCount === 0)
     add_block();
+
+  // Set the selector to the last entry in it.
+  selector.selectedIndex = selector.length - 1;
   stats_table.changeBlock(selector);
+}
+
+// Hide table a create a button to show it.
+var hide_table = function (table) {
+  table.classList.add("hide");
+  // var toggle_button = document.createElement("button");
+  // toggle_button.classList.add("buttons");
+  // toggle_button.innerHTML = "Show";
+  // toggle_button.addEventListener('click', function(){
+  //   show_table(table);
+  // });
+  // var tableDiv = document.getElementById("blocks");
+  // tableDiv.insertBefore(toggle_button, table);
+  // tableDiv.appendChild(toggle_button);
+}
+
+// Show the table again.
+var show_table = function(table) {
+  table.classList.remove("hide");
+  this.parentNode.remove(this);
 }
 
 // Extract the information we need and send us to the next page.
@@ -293,6 +351,38 @@ function build_item_set(path) {
   form.submit();
 }
 
+
+var add_listeners = function() {
+  var build = document.getElementById("build");
+  build.addEventListener('click', function() {
+    build_item_set(build.dataset.url);
+  });
+
+  var add = document.getElementById("add");
+  add.addEventListener('click', function() {
+    add_block();
+  });
+
+  var remove = document.getElementById("remove");
+  remove.addEventListener('click', function() {
+    remove_block();
+  });
+
+  var selector = document.getElementById("block-selector");
+  selector.addEventListener('change', function() {
+    stats_table.changeBlock(this);
+  });
+
+  var items = document.getElementById("items").children;
+  for (i = 0; i < items.length; i++) {
+    item = items[i];
+    item.addEventListener('click', function() {
+      add_item( this.dataset.icon, this.dataset.id, this.dataset.stats );
+    });
+  }
+};
+
 // Run initial setup functions
 add_block();
 stats_table.createTable();
+add_listeners();

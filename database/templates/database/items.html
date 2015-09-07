@@ -7,6 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
 <link rel="stylesheet" type="text/css" href="{% static 'items_style.css' %}" />
+<script src="{% static 'jquery-dev.js' %}" defer></script>
+<script src="{% static 'scripts.js' %}" defer></script>
 <!-- import below is for the awesome font -->
 <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 <title>League of Item Sets</title>
@@ -21,31 +23,33 @@
     <div id="stats-table-div" data-stats="{{champ_stats}}"></div>
   </section>
   <section class="right-side">
-    <button type="button" onclick="add_block()" class="buttons"
-            title="Add a new block, which is a section of items in-game">Create new block</button>
-    <button type="button" onclick="remove_block()" class="buttons"
-            title="Remove the last created block">Remove block</button>
-    <button type="button" onclick="build_item_set('{% url 'lois:itemset' %}')" class="buttons"
-            title="If you want you can download the item set as a JSON file">Done</button>
-    <select class="buttons" id="map-selector" title="Choose which maps you want the item set to appear on">
-      <option value="any">All</option>
-      <option value="SR">Summoner's Rift</option>
-      <option value="HA">Howling Abyss</option>
-      <option value="TT">Twisted Treeline</option>
-      <option value="CS">Crystal Scar</option>
-    </select>
-    <select class="buttons" id="block-selector" onchange="stats_table.changeBlock(this)"
-          title="Choose which block you want to add items to"></select>
+    <div class="buttons-container">
+      <button type="button" id="build" data-url="{% url 'lois:itemset' %}" class="buttons"
+              title="If you want you can download the item set as a JSON file">Done</button>
+      <button type="button" id="add" class="buttons"
+              title="Add a new block, which is a section of items in-game">Create new block</button>
+      <button type="button" id="remove" class="buttons"
+              title="Remove the selected block">Remove block</button>
+      <select class="buttons" id="map-selector" title="Choose which maps you want the item set to appear on">
+        <option value="any">Any map</option>
+        <option value="SR">Summoner's Rift</option>
+        <option value="HA">Howling Abyss</option>
+        <option value="TT">Twisted Treeline</option>
+        <option value="CS">Crystal Scar</option>
+      </select>
+      <select class="buttons" id="block-selector"
+            title="Choose which block you want to add items to"></select>
+    </div>
     <input type="text" id="item-set-name" value="Item set name"
-      title="Edit this to set your item set name as it appears in-game" />
+            title="Edit this to set your item set name as it appears in-game" />
   <div id="blocks"></div>
 </div>
-<div class="items">
+<div class="items" id="items">
     {% if item_list %}
       {% for item, stats in item_list %}
         {% if item.Purchasable == True %}
           <img src="{% static item.Icon %}" alt="{{item.Name}}" height="60" title="{{item.Name}}"
-            id="{{ item.ItemID }}" onclick="add_item('{% static item.Icon %}','{{item.ItemID}}', this.dataset.stats)"
+            data-icon="{% static item.Icon %}" data-id="{{item.ItemID}}" id="{{ item.ItemID }}"
             data-stats="{{stats}}"/>
         {% endif %}
       {% endfor %}
@@ -53,6 +57,5 @@
       <p class="center"> Could not display items! </p>
     {% endif %}
 </div>
-<script src="{% static 'scripts.js' %}" defer></script>
 </body>
 </html>
