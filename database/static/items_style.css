@@ -169,3 +169,17 @@ caption.edit input {
 .hide {
   display: none;
 }
+
+.hide-buttons {
+  font-size: 0.8em;
+  text-align: center;
+  border: 1px solid #222;
+  background-color: #222;
+  color: #757575;
+  padding: 2px 7px;
+}
+
+.hide-buttons:hover {
+  background-color: #444;
+  color: white;
+}

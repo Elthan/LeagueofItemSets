@@ -233,6 +233,13 @@ function add_block() {
   recmath.title = "Should all the items in this block build into the last?";
   recmath.classList.add("recmath-text");
   recmath.innerHTML = "Recmath";
+  recmath.addEventListener('click', function (){
+    var is_checked = input.checked;
+    if (is_checked)
+      input.checked = false;
+    else
+      input.checked = true;
+  });
   table.appendChild(recmath);
   table.appendChild(tr);
 
@@ -244,6 +251,22 @@ function add_block() {
   caption.title = "Click me to set the name of block";
   caption_edit.bindEvents(table);
 
+  // Create a button that hides the item set.
+  var hide_button = document.createElement('button');
+  hide_button.classList.add('hide-buttons');
+  hide_button.innerHTML = "V";
+  hide_button.title = "Toggle hiding of item set";
+  hide_button.addEventListener('click', function() {
+    table.rows[0].classList.toggle('hide');
+    recmath.classList.toggle('hide');
+    input.classList.toggle('hide');
+    if (hide_button.innerHTML === "V")
+      hide_button.innerHTML = ">";
+    else
+      hide_button.innerHTML = "V";
+  });
+  table.insertBefore(hide_button, caption);
+
   // Update the selector with the new table.
   var selector = document.getElementById("block-selector");
   var option = document.createElement("option")
@@ -252,12 +275,6 @@ function add_block() {
   option.innerHTML = caption.innerHTML;
   selector.appendChild( option );
   selector.selectedIndex = selector.length - 1;
-
-  //Hide all other tables.
-  for (i = 0; i < tableDiv.children.length; i++) {
-    var visible_table = tableDiv.children[i];
-    hide_table(visible_table);
-  }
 
   tableDiv.appendChild(table)
   stats_table.changeBlock(selector);
@@ -280,26 +297,6 @@ function remove_block() {
   // Set the selector to the last entry in it.
   selector.selectedIndex = selector.length - 1;
   stats_table.changeBlock(selector);
-}
-
-// Hide table a create a button to show it.
-var hide_table = function (table) {
-  table.classList.add("hide");
-  // var toggle_button = document.createElement("button");
-  // toggle_button.classList.add("buttons");
-  // toggle_button.innerHTML = "Show";
-  // toggle_button.addEventListener('click', function(){
-  //   show_table(table);
-  // });
-  // var tableDiv = document.getElementById("blocks");
-  // tableDiv.insertBefore(toggle_button, table);
-  // tableDiv.appendChild(toggle_button);
-}
-
-// Show the table again.
-var show_table = function(table) {
-  table.classList.remove("hide");
-  this.parentNode.remove(this);
 }
 
 // Extract the information we need and send us to the next page.
@@ -351,7 +348,7 @@ function build_item_set(path) {
   form.submit();
 }
 
-
+// Add listeners to the buttons.
 var add_listeners = function() {
   var build = document.getElementById("build");
   build.addEventListener('click', function() {
