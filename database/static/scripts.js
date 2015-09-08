@@ -26,6 +26,7 @@ var stats_table = {
   champ_stats: "",
   stats_table: "",
 
+  // Create the table.
   createTable: function() {
     var tableDiv = document.getElementById("stats-table-div");
     var table = document.createElement("table");
@@ -78,6 +79,7 @@ var stats_table = {
     this.stats_table = table;
   },
 
+  // Update the table with by either adding or removing item stats.
   updateStats: function(adding, item_stats) {
     item_stats = this.convertJSON(item_stats)
 
@@ -217,8 +219,6 @@ function add_block() {
   var table = document.createElement('table');
   table.id = "blocks-table-" + number_of_blocks.toString();
   table.classList.add("blocks-table");
-  // table.classList.add("hide");
-  // table.classList.toggle("hide");
 
   // Create a row and the recmath checbox.
   var tr = document.createElement('tr');
@@ -257,13 +257,7 @@ function add_block() {
   hide_button.innerHTML = ">";
   hide_button.title = "Toggle hiding of item set";
   hide_button.addEventListener('click', function() {
-    table.rows[0].classList.toggle('hide');
-    recmath.classList.toggle('hide');
-    input.classList.toggle('hide');
-    if (hide_button.innerHTML === "V")
-      hide_button.innerHTML = ">";
-    else
-      hide_button.innerHTML = "V";
+    toggle_block(table, recmath, input, caption, this);
   });
   table.insertBefore(hide_button, caption);
 
@@ -299,6 +293,37 @@ function remove_block() {
   stats_table.changeBlock(selector);
 }
 
+// Show or hide the block.
+function toggle_block(table, recmath, input, caption, button) {
+    table.rows[0].classList.toggle('hide');
+    recmath.classList.toggle('hide');
+    input.classList.toggle('hide');
+    caption.classList.toggle('shrink');
+    if (button.innerHTML === "V")
+      button.innerHTML = ">";
+    else
+      button.innerHTML = "V";
+}
+
+// Show or hide items.
+function toggle_items(button) {
+  var items_div = document.getElementById("items-div");
+  items_div.classList.toggle('hide');
+  if (button.innerHTML == "^")
+    button.innerHTML = "V";
+  else
+    button.innerHTML = "^";
+
+  var toggle_div = button.parentNode;
+  if (toggle_div.classList.contains('toggle-items')) {
+    toggle_div.classList.add('toggle-items-hidden');
+    toggle_div.classList.remove('toggle-items');
+  } else {
+    toggle_div.classList.add('toggle-items');
+    toggle_div.classList.remove('toggle-items-hidden');
+  }
+}
+
 // Extract the information we need and send us to the next page.
 function build_item_set(path) {
   var blocks_div = document.getElementById("blocks");
@@ -309,14 +334,14 @@ function build_item_set(path) {
   var map = document.getElementById("map-selector");
 
   item_set["name"] = name.innerHTML;
-  item_set["map"] = map.options[map.selectedIndex].value;
+  item_set["map"] = map.value;
 
   for (var i = 0; i <= number_of_blocks; i++) {
     var block = {};
     var table = blocks_div.children[i];
 
-    block["name"] = table.children[1].children[0].innerHTML;
-    block["recmath"] = table.children[2].checked;
+    block["name"] = table.querySelector("caption").querySelector("span").innerHTML;
+    block["recmath"] = table.querySelector("input").checked;
 
     var items = {};
     var query = table.querySelectorAll("img");
@@ -370,31 +395,17 @@ var add_listeners = function() {
     stats_table.changeBlock(this);
   });
 
-  var items = document.getElementById("items").querySelectorAll("img");
-  for (i = 0; i < items.length; i++) {
-    item = items[i];
+  var items_div = document.getElementById("items-div").querySelectorAll("img");
+  for (i = 0; i < items_div.length; i++) {
+    item = items_div[i];
     item.addEventListener('click', function() {
       add_item( this.dataset.icon, this.dataset.id, this.dataset.stats );
     });
   }
 
-  var toggle_items = document.getElementById("items-button");
-  toggle_items.addEventListener('click', function(){
-    var item_div = document.getElementById("items");
-    item_div.classList.toggle('hide');
-    if (toggle_items.innerHTML == "^")
-      toggle_items.innerHTML = "V";
-    else
-      toggle_items.innerHTML = "^";
-
-    var toggle_div = toggle_items.parentNode;
-    if (toggle_div.classList.contains('toggle-items')) {
-      toggle_div.classList.add('toggle-items-hidden');
-      toggle_div.classList.remove('toggle-items');
-    } else {
-      toggle_div.classList.add('toggle-items');
-      toggle_div.classList.remove('toggle-items-hidden');
-    }
+  var toggle_items_button = document.getElementById("items-button");
+  toggle_items_button.addEventListener('click', function(){
+    toggle_items(this);
   });
 };
 

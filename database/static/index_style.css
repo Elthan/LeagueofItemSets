@@ -15,6 +15,7 @@
   padding: 30px;
 }
 
-#champ-icons {
-  /*display: none;*/
+.icons {
+  height: 80px;
+  width: 80px;
 }

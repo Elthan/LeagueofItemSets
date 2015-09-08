@@ -47,11 +47,11 @@
 <div class="toggle-items">
   <button type="button" id="items-button" class="hide-buttons" title="Toggle items">V</button>
 </div>
-<div class="items" id="items">
+<div class="items-div" id="items-div">
     {% if item_list %}
       {% for item, stats in item_list %}
         {% if item.Purchasable == True %}
-          <img src="{% static item.Icon %}" alt="{{item.Name}}" height="60" title="{{item.Name}}"
+          <img src="{% static item.Icon %}" alt="{{item.Name}}" title="{{item.Name}}"
             data-icon="{% static item.Icon %}" id="{{ item.ItemID }}"
             data-stats="{{stats}}"/>
         {% endif %}

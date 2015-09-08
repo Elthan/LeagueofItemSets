@@ -55,7 +55,7 @@
   opacity: 0.75;
 }
 
-.items {
+.items-div {
   border-top: 2px solid #222;
   border-radius: 5px;
   text-align: center;
@@ -72,13 +72,15 @@
   box-sizing: border-box;
 }
 
-.items img {
+.items-div img {
   padding: 1px;
   border: 1px solid #222;
   opacity: 0.65;
+  height: 60px;
+  width: 60px;
 }
 
-.items img:hover {
+.items-div img:hover {
   opacity: 1;
 }
 
@@ -94,8 +96,8 @@
   padding: 0px 16px;
   text-align: center;
   font-weight: bold;
-  border: 1px solid #222;
-  background-color: #222;
+  border: none;
+  background-color: #222222;
   color: #757575;
   margin: 0px 2px 7px 2px;
   height: 36px;
@@ -130,9 +132,6 @@
 
 .blocks-table {
   width: 100%;
-  height: 60px;
-  max-width: 100%;
-  max-height: none;
   overflow: hidden;
 }
 
@@ -181,10 +180,17 @@ caption.edit input {
   display: none;
 }
 
+.shrink {
+  display: inline-block;
+  width: 20%;
+  text-align: left;
+  margin-left: 10px;
+}
+
 .hide-buttons {
   font-size: 0.8em;
   text-align: center;
-  border: 1px solid #222;
+  border: none;
   background-color: #222;
   color: #757575;
   padding: 2px 7px;
@@ -203,11 +209,8 @@ caption.edit input {
 
 .toggle-items-hidden {
   right: 20px;
-  /*font-weight: bold;*/
-  /*width: 100%;*/
   position: fixed;
   bottom: 2px;
-  /*border-bottom: 2px solid #222;*/
 }
 
 #items-button {
