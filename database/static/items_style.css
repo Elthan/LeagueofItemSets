@@ -56,9 +56,20 @@
 }
 
 .items {
+  border-top: 2px solid #222;
+  border-radius: 5px;
   text-align: center;
   padding-top: 1%;
   padding-right: 5px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  height: 33%;
+  background-color: #000;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .items img {
@@ -182,4 +193,17 @@ caption.edit input {
 .hide-buttons:hover {
   background-color: #444;
   color: white;
+}
+
+.toggle-items {
+  position: fixed;
+  bottom: 33%;
+}
+
+.toggle-items-hidden {
+  font-weight: bold;
+  width: 100%;
+  position: fixed;
+  bottom: 2px;
+  border-bottom: 2px solid #222;
 }

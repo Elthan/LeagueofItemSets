@@ -254,7 +254,7 @@ function add_block() {
   // Create a button that hides the item set.
   var hide_button = document.createElement('button');
   hide_button.classList.add('hide-buttons');
-  hide_button.innerHTML = "V";
+  hide_button.innerHTML = ">";
   hide_button.title = "Toggle hiding of item set";
   hide_button.addEventListener('click', function() {
     table.rows[0].classList.toggle('hide');
@@ -315,8 +315,8 @@ function build_item_set(path) {
     var block = {};
     var table = blocks_div.children[i];
 
-    block["name"] = table.children[0].children[0].innerHTML;
-    block["recmath"] = table.children[1].checked;
+    block["name"] = table.children[1].children[0].innerHTML;
+    block["recmath"] = table.children[2].checked;
 
     var items = {};
     var query = table.querySelectorAll("img");
@@ -370,13 +370,32 @@ var add_listeners = function() {
     stats_table.changeBlock(this);
   });
 
-  var items = document.getElementById("items").children;
+  var items = document.getElementById("items").querySelectorAll("img");
   for (i = 0; i < items.length; i++) {
     item = items[i];
     item.addEventListener('click', function() {
       add_item( this.dataset.icon, this.dataset.id, this.dataset.stats );
     });
   }
+
+  var toggle_items = document.getElementById("items-button");
+  toggle_items.addEventListener('click', function(){
+    var item_div = document.getElementById("items");
+    item_div.classList.toggle('hide');
+    if (toggle_items.innerHTML == "^")
+      toggle_items.innerHTML = "V";
+    else
+      toggle_items.innerHTML = "^";
+
+    var toggle_div = toggle_items.parentNode;
+    if (toggle_div.classList.contains('toggle-items')) {
+      toggle_div.classList.add('toggle-items-hidden');
+      toggle_div.classList.remove('toggle-items');
+    } else {
+      toggle_div.classList.add('toggle-items');
+      toggle_div.classList.remove('toggle-items-hidden');
+    }
+  });
 };
 
 // Run initial setup functions
