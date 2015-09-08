@@ -198,12 +198,19 @@ caption.edit input {
 .toggle-items {
   position: fixed;
   bottom: 33%;
+  right: 20px;
 }
 
 .toggle-items-hidden {
-  font-weight: bold;
-  width: 100%;
+  right: 20px;
+  /*font-weight: bold;*/
+  /*width: 100%;*/
   position: fixed;
   bottom: 2px;
-  border-bottom: 2px solid #222;
+  /*border-bottom: 2px solid #222;*/
+}
+
+#items-button {
+  padding: 3px 15px;
+  font-weight: bold;
 }
