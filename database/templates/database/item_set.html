@@ -5,31 +5,28 @@
 <meta charset="UTF-8" />
 <!-- ensures proper scaling on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'css/itemset_style.css' %}" rel="stylesheet" type="text/css"/>
 <!-- import below is for the awesome font -->
 <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 <title>LeagueofItemSets</title>
 </head>
 <body>
-<div class="buttons">
-<h1 class="center">Congratulations!</h1>
-<p class"center">You have succesfully created an item set! <br />
-	To use the item set, you need to download it by clicking on the Download JSON button	below	and put it in your
-	<br /> <br /><b>League of Legends\Config\Global\Recommended\</b> <br /><br />
-	folder to use it on any champion or
-	<br /> <br /><b>League of Legends\Config\Champions\{CHAMPION}\Recommended\</b> <br/> <br />
-	folder to use it on a specific champion.</p>
-<p class="center">You can view the JSON yourself by clicking the View JSON button.
-	You can then copy paste that into a new file in the folders mentioned above to use it in-game.</p> <br />
+<div class="content">
+	<h1>Congratulations!</h1>
+	<p>You have succesfully created an item set! <br />
+		To use the item set, you need to download it by clicking on the Download JSON button	below	and put it in your
+		<br /> <br /><b>Riot Games\League of Legends\Config\Global\Recommended\</b> <br /><br />
+		folder to use it on any champion or
+		<br /> <br /><b>Riot Games\League of Legends\Config\Champions\{CHAMPION}\Recommended\</b> <br/> <br />
+		folder to use it on a specific champion.</p>
+	<p>You can view the JSON yourself by clicking the View JSON button or opening the downloaded file in any text editor.</p> <br />
 	<form action="{% url 'lois:download' item_set_id %}">
-		<button type="submit" class="button">Download JSON</button>
+		<button type="submit" id="download-json" class="button">Download JSON</button>
 	</form>
 	<form action="{% url 'lois:json' item_set_id %}">
-		<button type="submit" class="button">View JSON</button>
+		<button type="submit" id="view-json" class="button">View JSON</button>
 	</form>
-	<!-- <form action="">
-		<button type="submit" class="button">Go back</button>
-	</form> -->
 </div>
 </body>
 </html>

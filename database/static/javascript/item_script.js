@@ -133,7 +133,6 @@ var stats_table = {
 }
 
 var number_of_blocks = -1;
-var img_id = 0;
 
 // Add an item to the selected block
 function add_item(path, item_id, item_stats) {
@@ -143,10 +142,8 @@ function add_item(path, item_id, item_stats) {
   var img = document.createElement('img');
 
   img.src = path;
-  img.id = img_id.toString();
-  img.alt = item_id;
+  img.id = item_id;
   img.dataset.stats = item_stats;
-  img_id++;
   img.addEventListener('click', function() { remove_item(img) });
 
   if (table.rows[0].children.length > 0) {
@@ -333,7 +330,7 @@ function build_item_set(path) {
   var name = document.getElementById("item-set-name");
   var map = document.getElementById("map-selector");
 
-  item_set["name"] = name.innerHTML;
+  item_set["name"] = name.value;
   item_set["map"] = map.value;
 
   for (var i = 0; i <= number_of_blocks; i++) {
@@ -346,7 +343,7 @@ function build_item_set(path) {
     var items = {};
     var query = table.querySelectorAll("img");
     for (var k = 0; k < query.length; k++) {
-      var item = query[k].alt;
+      var item = query[k].id;
       var number = items[item];
       number = (number == undefined) ? 1 : number + 1;
       items[item] = number;
@@ -368,6 +365,7 @@ function build_item_set(path) {
   hiddenField.setAttribute("type", "hidden");
   hiddenField.setAttribute("name", "item_set");
   hiddenField.setAttribute("value", json_item_set);
+  console.log(json_item_set);
   form.appendChild(hiddenField);
   document.body.appendChild(form);
   form.submit();
@@ -399,7 +397,7 @@ var add_listeners = function() {
   for (i = 0; i < items_div.length; i++) {
     item = items_div[i];
     item.addEventListener('click', function() {
-      add_item( this.dataset.icon, this.dataset.id, this.dataset.stats );
+      add_item( this.dataset.icon, this.id, this.dataset.stats );
     });
   }
 

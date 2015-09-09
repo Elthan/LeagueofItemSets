@@ -1,0 +1,20 @@
+.content {
+  text-align: center;
+  width: 100%;
+}
+
+.button {
+  padding: 24px 32px;
+  text-align: center;
+  font-weight: bold;
+  border: none;
+  background-color: #222;
+  color: #757575;
+  margin: 10px;
+  width: 20%;
+}
+
+.button:hover {
+  background-color: #444;
+  color: white;
+}
