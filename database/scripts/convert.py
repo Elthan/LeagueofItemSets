@@ -519,12 +519,14 @@ log : logging
                     "ChampID": {champ_id},
                     "Name": "{champ_name}",
                     "Key": "{champ_key}",
-                    "Icon": "{icon_path}"
+                    "Icon": "{icon_path}",
+                    "Tags": "{champ_tags}"
                     """.format(
                         champ_id = champ_json["id"],
                         champ_name = champ_json["name"],
                         champ_key = champ_key,
-                        icon_path = "icons/champion/" + champ_key + ".png"
+                        icon_path = "icons/champion/" + champ_key + ".png",
+                        champ_tags = champ_json["tags"]
                     )
                     json_db_string +=  """
                 }

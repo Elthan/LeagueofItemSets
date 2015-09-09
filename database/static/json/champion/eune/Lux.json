@@ -6,7 +6,8 @@
                     "ChampID": 99,
                     "Name": "Lux",
                     "Key": "Lux",
-                    "Icon": "icons/champion/Lux.png"
+                    "Icon": "icons/champion/Lux.png",
+                    "Tags": "['Mage', 'Support']"
                     
                 }
             }

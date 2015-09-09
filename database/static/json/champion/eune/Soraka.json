@@ -6,7 +6,8 @@
                     "ChampID": 16,
                     "Name": "Soraka",
                     "Key": "Soraka",
-                    "Icon": "icons/champion/Soraka.png"
+                    "Icon": "icons/champion/Soraka.png",
+                    "Tags": "['Support', 'Mage']"
                     
                 }
             }

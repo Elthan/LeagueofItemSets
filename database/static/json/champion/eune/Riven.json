@@ -6,7 +6,8 @@
                     "ChampID": 92,
                     "Name": "Riven",
                     "Key": "Riven",
-                    "Icon": "icons/champion/Riven.png"
+                    "Icon": "icons/champion/Riven.png",
+                    "Tags": "['Fighter', 'Assassin']"
                     
                 }
             }

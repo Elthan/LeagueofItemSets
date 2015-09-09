@@ -6,7 +6,8 @@
                     "ChampID": 238,
                     "Name": "Zed",
                     "Key": "Zed",
-                    "Icon": "icons/champion/Zed.png"
+                    "Icon": "icons/champion/Zed.png",
+                    "Tags": "['Assassin', 'Fighter']"
                     
                 }
             }

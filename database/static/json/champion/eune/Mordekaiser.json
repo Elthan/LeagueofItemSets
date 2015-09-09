@@ -6,7 +6,8 @@
                     "ChampID": 82,
                     "Name": "Mordekaiser",
                     "Key": "Mordekaiser",
-                    "Icon": "icons/champion/Mordekaiser.png"
+                    "Icon": "icons/champion/Mordekaiser.png",
+                    "Tags": "['Fighter', 'Mage']"
                     
                 }
             }

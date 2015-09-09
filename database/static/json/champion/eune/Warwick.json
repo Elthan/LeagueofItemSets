@@ -6,7 +6,8 @@
                     "ChampID": 19,
                     "Name": "Warwick",
                     "Key": "Warwick",
-                    "Icon": "icons/champion/Warwick.png"
+                    "Icon": "icons/champion/Warwick.png",
+                    "Tags": "['Fighter', 'Tank']"
                     
                 }
             }

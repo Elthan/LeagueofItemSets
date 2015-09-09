@@ -6,7 +6,8 @@
                     "ChampID": 32,
                     "Name": "Amumu",
                     "Key": "Amumu",
-                    "Icon": "icons/champion/Amumu.png"
+                    "Icon": "icons/champion/Amumu.png",
+                    "Tags": "['Tank', 'Mage']"
                     
                 }
             }

@@ -6,7 +6,8 @@
                     "ChampID": 24,
                     "Name": "Jax",
                     "Key": "Jax",
-                    "Icon": "icons/champion/Jax.png"
+                    "Icon": "icons/champion/Jax.png",
+                    "Tags": "['Fighter', 'Assassin']"
                     
                 }
             }

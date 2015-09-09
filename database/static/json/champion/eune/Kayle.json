@@ -6,7 +6,8 @@
                     "ChampID": 10,
                     "Name": "Kayle",
                     "Key": "Kayle",
-                    "Icon": "icons/champion/Kayle.png"
+                    "Icon": "icons/champion/Kayle.png",
+                    "Tags": "['Fighter', 'Support']"
                     
                 }
             }

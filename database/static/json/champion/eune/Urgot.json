@@ -6,7 +6,8 @@
                     "ChampID": 6,
                     "Name": "Urgot",
                     "Key": "Urgot",
-                    "Icon": "icons/champion/Urgot.png"
+                    "Icon": "icons/champion/Urgot.png",
+                    "Tags": "['Marksman', 'Fighter']"
                     
                 }
             }

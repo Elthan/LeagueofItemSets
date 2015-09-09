@@ -6,7 +6,8 @@
                     "ChampID": 78,
                     "Name": "Poppy",
                     "Key": "Poppy",
-                    "Icon": "icons/champion/Poppy.png"
+                    "Icon": "icons/champion/Poppy.png",
+                    "Tags": "['Fighter', 'Assassin']"
                     
                 }
             }

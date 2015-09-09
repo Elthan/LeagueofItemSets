@@ -6,7 +6,8 @@
                     "ChampID": 121,
                     "Name": "Kha'Zix",
                     "Key": "Khazix",
-                    "Icon": "icons/champion/Khazix.png"
+                    "Icon": "icons/champion/Khazix.png",
+                    "Tags": "['Assassin', 'Fighter']"
                     
                 }
             }

@@ -6,7 +6,8 @@
                     "ChampID": 67,
                     "Name": "Vayne",
                     "Key": "Vayne",
-                    "Icon": "icons/champion/Vayne.png"
+                    "Icon": "icons/champion/Vayne.png",
+                    "Tags": "['Marksman', 'Assassin']"
                     
                 }
             }

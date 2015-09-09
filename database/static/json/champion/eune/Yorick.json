@@ -6,7 +6,8 @@
                     "ChampID": 83,
                     "Name": "Yorick",
                     "Key": "Yorick",
-                    "Icon": "icons/champion/Yorick.png"
+                    "Icon": "icons/champion/Yorick.png",
+                    "Tags": "['Fighter', 'Mage']"
                     
                 }
             }

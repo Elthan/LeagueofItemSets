@@ -6,7 +6,8 @@
                     "ChampID": 122,
                     "Name": "Darius",
                     "Key": "Darius",
-                    "Icon": "icons/champion/Darius.png"
+                    "Icon": "icons/champion/Darius.png",
+                    "Tags": "['Fighter', 'Tank']"
                     
                 }
             }

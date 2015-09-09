@@ -6,7 +6,8 @@
                     "ChampID": 223,
                     "Name": "Tahm Kench",
                     "Key": "TahmKench",
-                    "Icon": "icons/champion/TahmKench.png"
+                    "Icon": "icons/champion/TahmKench.png",
+                    "Tags": "['Support', 'Tank']"
                     
                 }
             }

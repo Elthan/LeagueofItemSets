@@ -6,7 +6,8 @@
                     "ChampID": 1,
                     "Name": "Annie",
                     "Key": "Annie",
-                    "Icon": "icons/champion/Annie.png"
+                    "Icon": "icons/champion/Annie.png",
+                    "Tags": "['Mage']"
                     
                 }
             }

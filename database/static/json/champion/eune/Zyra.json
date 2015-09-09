@@ -6,7 +6,8 @@
                     "ChampID": 143,
                     "Name": "Zyra",
                     "Key": "Zyra",
-                    "Icon": "icons/champion/Zyra.png"
+                    "Icon": "icons/champion/Zyra.png",
+                    "Tags": "['Mage', 'Support']"
                     
                 }
             }

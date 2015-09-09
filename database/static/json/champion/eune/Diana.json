@@ -6,7 +6,8 @@
                     "ChampID": 131,
                     "Name": "Diana",
                     "Key": "Diana",
-                    "Icon": "icons/champion/Diana.png"
+                    "Icon": "icons/champion/Diana.png",
+                    "Tags": "['Fighter', 'Mage']"
                     
                 }
             }

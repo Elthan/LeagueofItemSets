@@ -6,7 +6,8 @@
                     "ChampID": 26,
                     "Name": "Zilean",
                     "Key": "Zilean",
-                    "Icon": "icons/champion/Zilean.png"
+                    "Icon": "icons/champion/Zilean.png",
+                    "Tags": "['Support', 'Mage']"
                     
                 }
             }

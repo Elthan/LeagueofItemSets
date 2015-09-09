@@ -6,7 +6,8 @@
                     "ChampID": 115,
                     "Name": "Ziggs",
                     "Key": "Ziggs",
-                    "Icon": "icons/champion/Ziggs.png"
+                    "Icon": "icons/champion/Ziggs.png",
+                    "Tags": "['Mage']"
                     
                 }
             }

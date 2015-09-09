@@ -6,7 +6,8 @@
                     "ChampID": 58,
                     "Name": "Renekton",
                     "Key": "Renekton",
-                    "Icon": "icons/champion/Renekton.png"
+                    "Icon": "icons/champion/Renekton.png",
+                    "Tags": "['Fighter', 'Tank']"
                     
                 }
             }

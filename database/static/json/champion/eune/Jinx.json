@@ -6,7 +6,8 @@
                     "ChampID": 222,
                     "Name": "Jinx",
                     "Key": "Jinx",
-                    "Icon": "icons/champion/Jinx.png"
+                    "Icon": "icons/champion/Jinx.png",
+                    "Tags": "['Marksman']"
                     
                 }
             }

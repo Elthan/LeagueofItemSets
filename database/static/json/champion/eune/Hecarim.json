@@ -6,7 +6,8 @@
                     "ChampID": 120,
                     "Name": "Hecarim",
                     "Key": "Hecarim",
-                    "Icon": "icons/champion/Hecarim.png"
+                    "Icon": "icons/champion/Hecarim.png",
+                    "Tags": "['Fighter', 'Tank']"
                     
                 }
             }

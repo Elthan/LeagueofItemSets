@@ -6,7 +6,8 @@
                     "ChampID": 43,
                     "Name": "Karma",
                     "Key": "Karma",
-                    "Icon": "icons/champion/Karma.png"
+                    "Icon": "icons/champion/Karma.png",
+                    "Tags": "['Mage', 'Support']"
                     
                 }
             }

@@ -129,6 +129,7 @@ class Champion(models.Model):
         Name = models.CharField(max_length=200, default="Tweemo")
         Key = models.CharField(max_length=200, default="Tweemo")
         Icon = models.CharField(max_length=200, default="icons/champion/Unknown.png")
+        Tags = models.CharField(max_length=200, default="");
 
         #to determine returned value
         def __str__(self):

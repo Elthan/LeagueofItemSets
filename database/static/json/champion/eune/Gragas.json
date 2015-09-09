@@ -6,7 +6,8 @@
                     "ChampID": 79,
                     "Name": "Gragas",
                     "Key": "Gragas",
-                    "Icon": "icons/champion/Gragas.png"
+                    "Icon": "icons/champion/Gragas.png",
+                    "Tags": "['Fighter', 'Mage']"
                     
                 }
             }

@@ -6,7 +6,8 @@
                     "ChampID": 60,
                     "Name": "Elise",
                     "Key": "Elise",
-                    "Icon": "icons/champion/Elise.png"
+                    "Icon": "icons/champion/Elise.png",
+                    "Tags": "['Mage', 'Fighter']"
                     
                 }
             }

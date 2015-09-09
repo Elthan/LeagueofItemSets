@@ -6,7 +6,8 @@
                     "ChampID": 429,
                     "Name": "Kalista",
                     "Key": "Kalista",
-                    "Icon": "icons/champion/Kalista.png"
+                    "Icon": "icons/champion/Kalista.png",
+                    "Tags": "['Marksman']"
                     
                 }
             }

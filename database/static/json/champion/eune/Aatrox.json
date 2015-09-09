@@ -6,7 +6,8 @@
                     "ChampID": 266,
                     "Name": "Aatrox",
                     "Key": "Aatrox",
-                    "Icon": "icons/champion/Aatrox.png"
+                    "Icon": "icons/champion/Aatrox.png",
+                    "Tags": "['Fighter', 'Tank']"
                     
                 }
             }

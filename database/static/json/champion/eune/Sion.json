@@ -6,7 +6,8 @@
                     "ChampID": 14,
                     "Name": "Sion",
                     "Key": "Sion",
-                    "Icon": "icons/champion/Sion.png"
+                    "Icon": "icons/champion/Sion.png",
+                    "Tags": "['Tank', 'Fighter']"
                     
                 }
             }

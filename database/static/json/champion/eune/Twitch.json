@@ -6,7 +6,8 @@
                     "ChampID": 29,
                     "Name": "Twitch",
                     "Key": "Twitch",
-                    "Icon": "icons/champion/Twitch.png"
+                    "Icon": "icons/champion/Twitch.png",
+                    "Tags": "['Marksman', 'Assassin']"
                     
                 }
             }

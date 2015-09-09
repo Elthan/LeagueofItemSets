@@ -6,7 +6,8 @@
                     "ChampID": 57,
                     "Name": "Maokai",
                     "Key": "Maokai",
-                    "Icon": "icons/champion/Maokai.png"
+                    "Icon": "icons/champion/Maokai.png",
+                    "Tags": "['Tank', 'Mage']"
                     
                 }
             }

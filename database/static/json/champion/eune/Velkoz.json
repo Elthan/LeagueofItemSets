@@ -6,7 +6,8 @@
                     "ChampID": 161,
                     "Name": "Vel'Koz",
                     "Key": "Velkoz",
-                    "Icon": "icons/champion/Velkoz.png"
+                    "Icon": "icons/champion/Velkoz.png",
+                    "Tags": "['Mage']"
                     
                 }
             }

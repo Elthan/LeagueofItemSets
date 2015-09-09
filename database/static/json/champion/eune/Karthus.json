@@ -6,7 +6,8 @@
                     "ChampID": 30,
                     "Name": "Karthus",
                     "Key": "Karthus",
-                    "Icon": "icons/champion/Karthus.png"
+                    "Icon": "icons/champion/Karthus.png",
+                    "Tags": "['Mage']"
                     
                 }
             }

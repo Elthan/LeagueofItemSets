@@ -6,7 +6,8 @@
                     "ChampID": 254,
                     "Name": "Vi",
                     "Key": "Vi",
-                    "Icon": "icons/champion/Vi.png"
+                    "Icon": "icons/champion/Vi.png",
+                    "Tags": "['Fighter', 'Assassin']"
                     
                 }
             }

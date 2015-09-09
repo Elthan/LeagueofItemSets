@@ -6,7 +6,8 @@
                     "ChampID": 35,
                     "Name": "Shaco",
                     "Key": "Shaco",
-                    "Icon": "icons/champion/Shaco.png"
+                    "Icon": "icons/champion/Shaco.png",
+                    "Tags": "['Assassin']"
                     
                 }
             }

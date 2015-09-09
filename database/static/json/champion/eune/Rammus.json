@@ -6,7 +6,8 @@
                     "ChampID": 33,
                     "Name": "Rammus",
                     "Key": "Rammus",
-                    "Icon": "icons/champion/Rammus.png"
+                    "Icon": "icons/champion/Rammus.png",
+                    "Tags": "['Tank', 'Fighter']"
                     
                 }
             }

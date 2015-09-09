@@ -6,7 +6,8 @@
                     "ChampID": 76,
                     "Name": "Nidalee",
                     "Key": "Nidalee",
-                    "Icon": "icons/champion/Nidalee.png"
+                    "Icon": "icons/champion/Nidalee.png",
+                    "Tags": "['Assassin', 'Fighter']"
                     
                 }
             }

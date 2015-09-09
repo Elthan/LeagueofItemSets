@@ -6,7 +6,8 @@
                     "ChampID": 81,
                     "Name": "Ezreal",
                     "Key": "Ezreal",
-                    "Icon": "icons/champion/Ezreal.png"
+                    "Icon": "icons/champion/Ezreal.png",
+                    "Tags": "['Marksman', 'Mage']"
                     
                 }
             }

@@ -6,7 +6,8 @@
                     "ChampID": 245,
                     "Name": "Ekko",
                     "Key": "Ekko",
-                    "Icon": "icons/champion/Ekko.png"
+                    "Icon": "icons/champion/Ekko.png",
+                    "Tags": "['Assassin', 'Fighter']"
                     
                 }
             }

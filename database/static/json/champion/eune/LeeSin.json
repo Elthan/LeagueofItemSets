@@ -6,7 +6,8 @@
                     "ChampID": 64,
                     "Name": "Lee Sin",
                     "Key": "LeeSin",
-                    "Icon": "icons/champion/LeeSin.png"
+                    "Icon": "icons/champion/LeeSin.png",
+                    "Tags": "['Fighter', 'Assassin']"
                     
                 }
             }

@@ -6,7 +6,8 @@
                     "ChampID": 91,
                     "Name": "Talon",
                     "Key": "Talon",
-                    "Icon": "icons/champion/Talon.png"
+                    "Icon": "icons/champion/Talon.png",
+                    "Tags": "['Assassin', 'Fighter']"
                     
                 }
             }

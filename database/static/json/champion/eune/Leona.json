@@ -6,7 +6,8 @@
                     "ChampID": 89,
                     "Name": "Leona",
                     "Key": "Leona",
-                    "Icon": "icons/champion/Leona.png"
+                    "Icon": "icons/champion/Leona.png",
+                    "Tags": "['Tank', 'Support']"
                     
                 }
             }

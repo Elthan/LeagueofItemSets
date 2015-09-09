@@ -6,7 +6,8 @@
                     "ChampID": 110,
                     "Name": "Varus",
                     "Key": "Varus",
-                    "Icon": "icons/champion/Varus.png"
+                    "Icon": "icons/champion/Varus.png",
+                    "Tags": "['Marksman', 'Mage']"
                     
                 }
             }

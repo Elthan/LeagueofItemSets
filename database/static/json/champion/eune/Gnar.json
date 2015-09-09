@@ -6,7 +6,8 @@
                     "ChampID": 150,
                     "Name": "Gnar",
                     "Key": "Gnar",
-                    "Icon": "icons/champion/Gnar.png"
+                    "Icon": "icons/champion/Gnar.png",
+                    "Tags": "['Fighter', 'Tank']"
                     
                 }
             }

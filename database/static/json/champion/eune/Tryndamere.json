@@ -6,7 +6,8 @@
                     "ChampID": 23,
                     "Name": "Tryndamere",
                     "Key": "Tryndamere",
-                    "Icon": "icons/champion/Tryndamere.png"
+                    "Icon": "icons/champion/Tryndamere.png",
+                    "Tags": "['Fighter', 'Assassin']"
                     
                 }
             }

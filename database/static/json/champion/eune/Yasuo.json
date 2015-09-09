@@ -6,7 +6,8 @@
                     "ChampID": 157,
                     "Name": "Yasuo",
                     "Key": "Yasuo",
-                    "Icon": "icons/champion/Yasuo.png"
+                    "Icon": "icons/champion/Yasuo.png",
+                    "Tags": "['Fighter', 'Assassin']"
                     
                 }
             }

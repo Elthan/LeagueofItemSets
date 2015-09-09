@@ -6,7 +6,8 @@
                     "ChampID": 62,
                     "Name": "Wukong",
                     "Key": "MonkeyKing",
-                    "Icon": "icons/champion/MonkeyKing.png"
+                    "Icon": "icons/champion/MonkeyKing.png",
+                    "Tags": "['Fighter', 'Tank']"
                     
                 }
             }

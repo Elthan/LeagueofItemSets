@@ -6,7 +6,8 @@
                     "ChampID": 80,
                     "Name": "Pantheon",
                     "Key": "Pantheon",
-                    "Icon": "icons/champion/Pantheon.png"
+                    "Icon": "icons/champion/Pantheon.png",
+                    "Tags": "['Fighter', 'Assassin']"
                     
                 }
             }

@@ -6,7 +6,8 @@
                     "ChampID": 34,
                     "Name": "Anivia",
                     "Key": "Anivia",
-                    "Icon": "icons/champion/Anivia.png"
+                    "Icon": "icons/champion/Anivia.png",
+                    "Tags": "['Mage', 'Support']"
                     
                 }
             }

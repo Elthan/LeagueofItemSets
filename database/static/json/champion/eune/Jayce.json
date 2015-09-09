@@ -6,7 +6,8 @@
                     "ChampID": 126,
                     "Name": "Jayce",
                     "Key": "Jayce",
-                    "Icon": "icons/champion/Jayce.png"
+                    "Icon": "icons/champion/Jayce.png",
+                    "Tags": "['Fighter', 'Marksman']"
                     
                 }
             }

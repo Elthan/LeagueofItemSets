@@ -6,7 +6,8 @@
                     "ChampID": 101,
                     "Name": "Xerath",
                     "Key": "Xerath",
-                    "Icon": "icons/champion/Xerath.png"
+                    "Icon": "icons/champion/Xerath.png",
+                    "Tags": "['Mage', 'Assassin']"
                     
                 }
             }

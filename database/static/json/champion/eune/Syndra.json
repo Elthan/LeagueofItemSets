@@ -6,7 +6,8 @@
                     "ChampID": 134,
                     "Name": "Syndra",
                     "Key": "Syndra",
-                    "Icon": "icons/champion/Syndra.png"
+                    "Icon": "icons/champion/Syndra.png",
+                    "Tags": "['Mage', 'Support']"
                     
                 }
             }

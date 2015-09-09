@@ -6,7 +6,8 @@
                     "ChampID": 412,
                     "Name": "Thresh",
                     "Key": "Thresh",
-                    "Icon": "icons/champion/Thresh.png"
+                    "Icon": "icons/champion/Thresh.png",
+                    "Tags": "['Support', 'Fighter']"
                     
                 }
             }

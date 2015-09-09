@@ -6,7 +6,8 @@
                     "ChampID": 15,
                     "Name": "Sivir",
                     "Key": "Sivir",
-                    "Icon": "icons/champion/Sivir.png"
+                    "Icon": "icons/champion/Sivir.png",
+                    "Tags": "['Marksman']"
                     
                 }
             }

@@ -6,7 +6,8 @@
                     "ChampID": 72,
                     "Name": "Skarner",
                     "Key": "Skarner",
-                    "Icon": "icons/champion/Skarner.png"
+                    "Icon": "icons/champion/Skarner.png",
+                    "Tags": "['Fighter', 'Tank']"
                     
                 }
             }

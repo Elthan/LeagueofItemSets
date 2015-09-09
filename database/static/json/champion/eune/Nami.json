@@ -6,7 +6,8 @@
                     "ChampID": 267,
                     "Name": "Nami",
                     "Key": "Nami",
-                    "Icon": "icons/champion/Nami.png"
+                    "Icon": "icons/champion/Nami.png",
+                    "Tags": "['Support', 'Mage']"
                     
                 }
             }

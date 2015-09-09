@@ -6,7 +6,8 @@
                     "ChampID": 154,
                     "Name": "Zac",
                     "Key": "Zac",
-                    "Icon": "icons/champion/Zac.png"
+                    "Icon": "icons/champion/Zac.png",
+                    "Tags": "['Tank', 'Fighter']"
                     
                 }
             }

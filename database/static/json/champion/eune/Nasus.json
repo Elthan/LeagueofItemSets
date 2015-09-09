@@ -6,7 +6,8 @@
                     "ChampID": 75,
                     "Name": "Nasus",
                     "Key": "Nasus",
-                    "Icon": "icons/champion/Nasus.png"
+                    "Icon": "icons/champion/Nasus.png",
+                    "Tags": "['Fighter', 'Tank']"
                     
                 }
             }

@@ -6,7 +6,8 @@
                     "ChampID": 18,
                     "Name": "Tristana",
                     "Key": "Tristana",
-                    "Icon": "icons/champion/Tristana.png"
+                    "Icon": "icons/champion/Tristana.png",
+                    "Tags": "['Marksman', 'Assassin']"
                     
                 }
             }

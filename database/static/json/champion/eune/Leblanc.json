@@ -6,7 +6,8 @@
                     "ChampID": 7,
                     "Name": "LeBlanc",
                     "Key": "Leblanc",
-                    "Icon": "icons/champion/Leblanc.png"
+                    "Icon": "icons/champion/Leblanc.png",
+                    "Tags": "['Assassin', 'Mage']"
                     
                 }
             }

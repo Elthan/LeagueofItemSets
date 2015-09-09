@@ -6,7 +6,8 @@
                     "ChampID": 69,
                     "Name": "Cassiopeia",
                     "Key": "Cassiopeia",
-                    "Icon": "icons/champion/Cassiopeia.png"
+                    "Icon": "icons/champion/Cassiopeia.png",
+                    "Tags": "['Mage']"
                     
                 }
             }

@@ -3,9 +3,9 @@
         "pk": 3187,
         "model": "database.ItemStat",
         "fields": {
-		"FlatHPPoolMod": 225.0,
+		"FlatArmorMod": 25.0,
 		"FlatMPPoolMod": 250.0,
-		"FlatArmorMod": 25.0
+		"FlatHPPoolMod": 225.0
         }
     }
 ]

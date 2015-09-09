@@ -6,7 +6,8 @@
                     "ChampID": 119,
                     "Name": "Draven",
                     "Key": "Draven",
-                    "Icon": "icons/champion/Draven.png"
+                    "Icon": "icons/champion/Draven.png",
+                    "Tags": "['Marksman']"
                     
                 }
             }

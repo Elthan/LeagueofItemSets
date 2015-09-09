@@ -6,7 +6,8 @@
                     "ChampID": 11,
                     "Name": "Master Yi",
                     "Key": "MasterYi",
-                    "Icon": "icons/champion/MasterYi.png"
+                    "Icon": "icons/champion/MasterYi.png",
+                    "Tags": "['Assassin', 'Fighter']"
                     
                 }
             }

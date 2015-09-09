@@ -6,7 +6,8 @@
                     "ChampID": 53,
                     "Name": "Blitzcrank",
                     "Key": "Blitzcrank",
-                    "Icon": "icons/champion/Blitzcrank.png"
+                    "Icon": "icons/champion/Blitzcrank.png",
+                    "Tags": "['Tank', 'Fighter']"
                     
                 }
             }

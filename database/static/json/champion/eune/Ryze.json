@@ -6,7 +6,8 @@
                     "ChampID": 13,
                     "Name": "Ryze",
                     "Key": "Ryze",
-                    "Icon": "icons/champion/Ryze.png"
+                    "Icon": "icons/champion/Ryze.png",
+                    "Tags": "['Mage', 'Fighter']"
                     
                 }
             }

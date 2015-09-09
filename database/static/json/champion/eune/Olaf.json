@@ -6,7 +6,8 @@
                     "ChampID": 2,
                     "Name": "Olaf",
                     "Key": "Olaf",
-                    "Icon": "icons/champion/Olaf.png"
+                    "Icon": "icons/champion/Olaf.png",
+                    "Tags": "['Fighter', 'Tank']"
                     
                 }
             }

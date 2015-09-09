@@ -6,7 +6,8 @@
                     "ChampID": 77,
                     "Name": "Udyr",
                     "Key": "Udyr",
-                    "Icon": "icons/champion/Udyr.png"
+                    "Icon": "icons/champion/Udyr.png",
+                    "Tags": "['Fighter', 'Tank']"
                     
                 }
             }

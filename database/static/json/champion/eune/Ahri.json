@@ -6,7 +6,8 @@
                     "ChampID": 103,
                     "Name": "Ahri",
                     "Key": "Ahri",
-                    "Icon": "icons/champion/Ahri.png"
+                    "Icon": "icons/champion/Ahri.png",
+                    "Tags": "['Mage', 'Assassin']"
                     
                 }
             }

@@ -6,7 +6,8 @@
                     "ChampID": 20,
                     "Name": "Nunu",
                     "Key": "Nunu",
-                    "Icon": "icons/champion/Nunu.png"
+                    "Icon": "icons/champion/Nunu.png",
+                    "Tags": "['Support', 'Fighter']"
                     
                 }
             }

@@ -6,7 +6,8 @@
                     "ChampID": 114,
                     "Name": "Fiora",
                     "Key": "Fiora",
-                    "Icon": "icons/champion/Fiora.png"
+                    "Icon": "icons/champion/Fiora.png",
+                    "Tags": "['Fighter', 'Assassin']"
                     
                 }
             }

@@ -6,7 +6,8 @@
                     "ChampID": 44,
                     "Name": "Taric",
                     "Key": "Taric",
-                    "Icon": "icons/champion/Taric.png"
+                    "Icon": "icons/champion/Taric.png",
+                    "Tags": "['Support', 'Fighter']"
                     
                 }
             }

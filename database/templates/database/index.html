@@ -18,7 +18,7 @@
   </div>
   <br />
   <div class="champions">
-    <span id="all-text"><a href="{% url 'lois:items' "All" %}">All</a></span>
+    <span class="big-text" id="all-text"><a href="{% url 'lois:items' "All" %}">All</a></span>
     <div class="filter" id="filter-div">
       <span>Filter champions</span>
       <input type="text" id="filter-champs" title="Filter champions"/>
@@ -27,10 +27,10 @@
       {% if champ_list %}
         {% for champion in champ_list %}
           <a href="{% url 'lois:items' champion.Key %}" ><img src="{% static champion.Icon %}"
-                title="{{champion.Name}}" alt="{{champion.Name}}" class="icons" /></a>
+                title="{{champion.Name}}" alt="{{champion.Name}}" data-tags="{{champion.Tags}}" class="icons" /></a>
         {% endfor %}
       {% else %}
-        <p id="all-text"> Could not display champions!</p>
+        <p class="big-text"> Could not display champions!</p>
       {% endif %}
     </section>
   </div>

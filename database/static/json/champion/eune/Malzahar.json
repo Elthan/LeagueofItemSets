@@ -6,7 +6,8 @@
                     "ChampID": 90,
                     "Name": "Malzahar",
                     "Key": "Malzahar",
-                    "Icon": "icons/champion/Malzahar.png"
+                    "Icon": "icons/champion/Malzahar.png",
+                    "Tags": "['Mage', 'Assassin']"
                     
                 }
             }

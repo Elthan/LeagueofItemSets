@@ -6,7 +6,8 @@
                     "ChampID": 84,
                     "Name": "Akali",
                     "Key": "Akali",
-                    "Icon": "icons/champion/Akali.png"
+                    "Icon": "icons/champion/Akali.png",
+                    "Tags": "['Assassin']"
                     
                 }
             }

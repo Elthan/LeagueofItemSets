@@ -6,7 +6,8 @@
                     "ChampID": 37,
                     "Name": "Sona",
                     "Key": "Sona",
-                    "Icon": "icons/champion/Sona.png"
+                    "Icon": "icons/champion/Sona.png",
+                    "Tags": "['Support', 'Mage']"
                     
                 }
             }

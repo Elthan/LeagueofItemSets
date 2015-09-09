@@ -6,7 +6,8 @@
                     "ChampID": 3,
                     "Name": "Galio",
                     "Key": "Galio",
-                    "Icon": "icons/champion/Galio.png"
+                    "Icon": "icons/champion/Galio.png",
+                    "Tags": "['Tank', 'Mage']"
                     
                 }
             }

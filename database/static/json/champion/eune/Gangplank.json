@@ -6,7 +6,8 @@
                     "ChampID": 41,
                     "Name": "Gangplank",
                     "Key": "Gangplank",
-                    "Icon": "icons/champion/Gangplank.png"
+                    "Icon": "icons/champion/Gangplank.png",
+                    "Tags": "['Fighter']"
                     
                 }
             }

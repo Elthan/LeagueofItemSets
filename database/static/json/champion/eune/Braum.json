@@ -6,7 +6,8 @@
                     "ChampID": 201,
                     "Name": "Braum",
                     "Key": "Braum",
-                    "Icon": "icons/champion/Braum.png"
+                    "Icon": "icons/champion/Braum.png",
+                    "Tags": "['Support', 'Tank']"
                     
                 }
             }

@@ -6,7 +6,8 @@
                     "ChampID": 112,
                     "Name": "Viktor",
                     "Key": "Viktor",
-                    "Icon": "icons/champion/Viktor.png"
+                    "Icon": "icons/champion/Viktor.png",
+                    "Tags": "['Mage']"
                     
                 }
             }

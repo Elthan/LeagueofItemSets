@@ -6,7 +6,8 @@
                     "ChampID": 55,
                     "Name": "Katarina",
                     "Key": "Katarina",
-                    "Icon": "icons/champion/Katarina.png"
+                    "Icon": "icons/champion/Katarina.png",
+                    "Tags": "['Assassin', 'Mage']"
                     
                 }
             }

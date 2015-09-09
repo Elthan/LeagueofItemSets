@@ -6,7 +6,8 @@
                     "ChampID": 74,
                     "Name": "Heimerdinger",
                     "Key": "Heimerdinger",
-                    "Icon": "icons/champion/Heimerdinger.png"
+                    "Icon": "icons/champion/Heimerdinger.png",
+                    "Tags": "['Mage', 'Support']"
                     
                 }
             }

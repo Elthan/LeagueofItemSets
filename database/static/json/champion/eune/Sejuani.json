@@ -6,7 +6,8 @@
                     "ChampID": 113,
                     "Name": "Sejuani",
                     "Key": "Sejuani",
-                    "Icon": "icons/champion/Sejuani.png"
+                    "Icon": "icons/champion/Sejuani.png",
+                    "Tags": "['Tank', 'Fighter']"
                     
                 }
             }

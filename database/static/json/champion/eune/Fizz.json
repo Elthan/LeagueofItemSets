@@ -6,7 +6,8 @@
                     "ChampID": 105,
                     "Name": "Fizz",
                     "Key": "Fizz",
-                    "Icon": "icons/champion/Fizz.png"
+                    "Icon": "icons/champion/Fizz.png",
+                    "Tags": "['Assassin', 'Fighter']"
                     
                 }
             }

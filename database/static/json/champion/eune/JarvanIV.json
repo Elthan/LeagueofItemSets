@@ -6,7 +6,8 @@
                     "ChampID": 59,
                     "Name": "Jarvan IV",
                     "Key": "JarvanIV",
-                    "Icon": "icons/champion/JarvanIV.png"
+                    "Icon": "icons/champion/JarvanIV.png",
+                    "Tags": "['Tank', 'Fighter']"
                     
                 }
             }

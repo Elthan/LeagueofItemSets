@@ -6,7 +6,8 @@
                     "ChampID": 45,
                     "Name": "Veigar",
                     "Key": "Veigar",
-                    "Icon": "icons/champion/Veigar.png"
+                    "Icon": "icons/champion/Veigar.png",
+                    "Tags": "['Mage']"
                     
                 }
             }

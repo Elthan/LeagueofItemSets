@@ -6,7 +6,8 @@
                     "ChampID": 127,
                     "Name": "Lissandra",
                     "Key": "Lissandra",
-                    "Icon": "icons/champion/Lissandra.png"
+                    "Icon": "icons/champion/Lissandra.png",
+                    "Tags": "['Mage']"
                     
                 }
             }

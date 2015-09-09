@@ -6,7 +6,8 @@
                     "ChampID": 63,
                     "Name": "Brand",
                     "Key": "Brand",
-                    "Icon": "icons/champion/Brand.png"
+                    "Icon": "icons/champion/Brand.png",
+                    "Tags": "['Mage']"
                     
                 }
             }

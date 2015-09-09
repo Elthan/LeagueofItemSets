@@ -6,7 +6,8 @@
                     "ChampID": 39,
                     "Name": "Irelia",
                     "Key": "Irelia",
-                    "Icon": "icons/champion/Irelia.png"
+                    "Icon": "icons/champion/Irelia.png",
+                    "Tags": "['Fighter', 'Assassin']"
                     
                 }
             }

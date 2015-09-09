@@ -6,7 +6,8 @@
                     "ChampID": 61,
                     "Name": "Orianna",
                     "Key": "Orianna",
-                    "Icon": "icons/champion/Orianna.png"
+                    "Icon": "icons/champion/Orianna.png",
+                    "Tags": "['Mage', 'Support']"
                     
                 }
             }

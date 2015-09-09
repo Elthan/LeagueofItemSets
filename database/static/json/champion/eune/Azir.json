@@ -6,7 +6,8 @@
                     "ChampID": 268,
                     "Name": "Azir",
                     "Key": "Azir",
-                    "Icon": "icons/champion/Azir.png"
+                    "Icon": "icons/champion/Azir.png",
+                    "Tags": "['Mage', 'Marksman']"
                     
                 }
             }

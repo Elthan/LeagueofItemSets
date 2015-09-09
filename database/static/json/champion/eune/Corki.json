@@ -6,7 +6,8 @@
                     "ChampID": 42,
                     "Name": "Corki",
                     "Key": "Corki",
-                    "Icon": "icons/champion/Corki.png"
+                    "Icon": "icons/champion/Corki.png",
+                    "Tags": "['Marksman']"
                     
                 }
             }

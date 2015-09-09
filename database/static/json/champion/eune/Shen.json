@@ -6,7 +6,8 @@
                     "ChampID": 98,
                     "Name": "Shen",
                     "Key": "Shen",
-                    "Icon": "icons/champion/Shen.png"
+                    "Icon": "icons/champion/Shen.png",
+                    "Tags": "['Tank', 'Fighter']"
                     
                 }
             }

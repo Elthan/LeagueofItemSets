@@ -6,7 +6,8 @@
                     "ChampID": 432,
                     "Name": "Bard",
                     "Key": "Bard",
-                    "Icon": "icons/champion/Bard.png"
+                    "Icon": "icons/champion/Bard.png",
+                    "Tags": "['Support', 'Mage']"
                     
                 }
             }

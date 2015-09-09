@@ -6,7 +6,8 @@
                     "ChampID": 421,
                     "Name": "Rek'Sai",
                     "Key": "RekSai",
-                    "Icon": "icons/champion/RekSai.png"
+                    "Icon": "icons/champion/RekSai.png",
+                    "Tags": "['Fighter']"
                     
                 }
             }

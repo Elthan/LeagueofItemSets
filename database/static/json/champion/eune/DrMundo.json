@@ -6,7 +6,8 @@
                     "ChampID": 36,
                     "Name": "Dr. Mundo",
                     "Key": "DrMundo",
-                    "Icon": "icons/champion/DrMundo.png"
+                    "Icon": "icons/champion/DrMundo.png",
+                    "Tags": "['Fighter', 'Tank']"
                     
                 }
             }
