@@ -4,7 +4,7 @@
                 "model" : "database.Champion",
                 "fields" : {
                     "ChampID": 59,
-                    "Name": "JarvanIV",
+                    "Name": "Jarvan IV",
                     "Icon": "icons/champion/JarvanIV.png"
                     
                 }

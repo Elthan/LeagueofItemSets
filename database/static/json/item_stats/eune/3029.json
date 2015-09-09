@@ -4,8 +4,8 @@
         "model": "database.ItemStat",
         "fields": {
 		"FlatMagicDamageMod": 60.0,
-		"FlatMPPoolMod": 450.0,
-		"FlatHPPoolMod": 450.0
+		"FlatHPPoolMod": 450.0,
+		"FlatMPPoolMod": 450.0
         }
     }
 ]

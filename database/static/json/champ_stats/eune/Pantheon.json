@@ -8,7 +8,7 @@
             "AttackDamage": 55.572,
             "AttackDamagePerLevel": 2.9,
             "AttackRange": 150.0,
-            "AttackSpeedOffset": 0.0,
+            "AttackSpeedOffset": -0.03,
             "AttackSpeedPerLevel": 2.95,
             "Crit": 0.0,
             "CritPerLevel": 0.0,

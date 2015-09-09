@@ -2,7 +2,7 @@
   margin: auto;
   text-align: center;
   display: block;
-  padding-top: 15%;
+  padding-top: 7%;
 }
 
 .champions {
@@ -12,10 +12,50 @@
 #all-text {
   font-size: 2em;
   display: block;
-  padding: 30px;
 }
 
 .icons {
   height: 80px;
   width: 80px;
+  opacity: 0.65;
+}
+
+.icons:hover {
+  opacity: 1;
+}
+
+.filter input {
+  display: none;
+  width: 30%;
+  height: 2.3em;
+}
+
+.filter span {
+  padding-top: 9px;
+  display: inline-block;
+}
+
+.filter.edit span {
+  display: none;
+}
+
+.filter.edit input {
+  box-sizing: border-box;
+	background: inherit;
+	color: inherit;
+	display: initial;
+  border: 1px solid #222;
+  padding: 10px;
+  font-size: inherit;
+  font-family: inherit;
+  text-align: center;
+}
+
+.filter {
+  margin: 15px 0 0;
+  height: 13%;
+}
+
+.hide {
+  display: none;
 }

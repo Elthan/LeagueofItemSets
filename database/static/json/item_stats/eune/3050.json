@@ -5,8 +5,7 @@
         "fields": {
 		"FlatMagicDamageMod": 50.0,
 		"FlatArmorMod": 35.0,
-		"FlatMPPoolMod": 250.0,
-		"FlatHPPoolMod": 250.0
+		"FlatMPPoolMod": 250.0
         }
     }
 ]

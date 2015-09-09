@@ -413,15 +413,15 @@ log : logging
     So we can log what is happening.
     '''
       champ_id = champ_json["id"]
-      champ_name = champ_json["name"]
+      champ_key = champ_json["key"]
 
-      log.debug("Creating JSON file for champion stats for champion " + champ_name)
+      log.debug("Creating JSON file for champion stats for champion " + champ_key)
 
       path = "database/static/json/champ_stats/" + region + "/"
 
       os.makedirs(path, exist_ok=True)
 
-      path = path + champ_name + ".json"
+      path = path + champ_key + ".json"
 
       with open(path, 'w') as champ_stats_file:
           champ_stats = champ_json["stats"]
@@ -501,14 +501,14 @@ log : logging
 
             os.makedirs("database/static/json/champion/" + region + "/", exist_ok=True)
 
-            for champ_name in champs_json["data"]:
-                champ_json = champs_json["data"][champ_name]
+            for champ_key in champs_json["data"]:
+                champ_json = champs_json["data"][champ_key]
 
                 create_db_json_champ_stats(champ_json, region, log)
 
-                path = "database/static/json/champion/" + region + "/" + champ_name + ".json"
+                path = "database/static/json/champion/" + region + "/" + champ_key + ".json"
 
-                log.debug("Creating JSON file for " + champ_name + " in region " + region)
+                log.debug("Creating JSON file for " + champ_key + " in region " + region)
 
                 with open(path, 'w') as champ_json_file:
                     json_db_string = """[
@@ -521,8 +521,8 @@ log : logging
                     "Icon": "{icon_path}"
                     """.format(
                         champ_id = champ_json["id"],
-                        champ_name = champ_name,
-                        icon_path = "icons/champion/" + champ_name + ".png"
+                        champ_name = champ_json["name"],
+                        icon_path = "icons/champion/" + champ_key + ".png"
                     )
                     json_db_string +=  """
                 }

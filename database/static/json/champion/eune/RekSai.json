@@ -4,7 +4,7 @@
                 "model" : "database.Champion",
                 "fields" : {
                     "ChampID": 421,
-                    "Name": "RekSai",
+                    "Name": "Rek'Sai",
                     "Icon": "icons/champion/RekSai.png"
                     
                 }
