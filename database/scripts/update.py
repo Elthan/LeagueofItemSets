@@ -117,7 +117,7 @@ img_type : str
         if (img_type == "item"):
             icon_id = str(icon_id.pk)
         elif (img_type == "champion"):
-            icon_id = icon_id.Name
+            icon_id = icon_id.Key
 
         url = "http://ddragon.leagueoflegends.com/cdn/" + current_version + \
               "/img/" + img_type + "/" + icon_id + ".png"
