@@ -5,6 +5,7 @@
                 "fields" : {
                     "ChampID": 127,
                     "Name": "Lissandra",
+                    "Key": "Lissandra",
                     "Icon": "icons/champion/Lissandra.png"
                     
                 }

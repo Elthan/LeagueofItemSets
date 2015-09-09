@@ -518,10 +518,12 @@ log : logging
                 "fields" : {{
                     "ChampID": {champ_id},
                     "Name": "{champ_name}",
+                    "Key": "{champ_key}",
                     "Icon": "{icon_path}"
                     """.format(
                         champ_id = champ_json["id"],
                         champ_name = champ_json["name"],
+                        champ_key = champ_key,
                         icon_path = "icons/champion/" + champ_key + ".png"
                     )
                     json_db_string +=  """

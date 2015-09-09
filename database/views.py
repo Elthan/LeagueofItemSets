@@ -16,14 +16,14 @@ def index(request):
 	context = {'champ_list': champ_list}
 	return render(request, 'database/index.html', context)
 
-def item_select(request, champ_name):
-	if (champ_name == "All"):
+def item_select(request, champ_key):
+	if (champ_key == "All"):
 		champ_stats = "[{'MPRegen': 0, 'SpellBlock': 0, 'Crit': 0, 'AttackDamage': 0, \
 						'MP': 0, 'HPRegen': 0, 'HP': 0, 'Armor': 0, 'MoveSpeed': 0, \
 						'AttackSpeedOffset': 0}]"
 		champion = {"Name": "All", "Icon": "icons/champion/Unknown.png"}
 	else:
-		champion = get_object_or_404(Champion, Name = champ_name)
+		champion = get_object_or_404(Champion, Key = champ_key)
 		champ_stats = ChampionStat.objects.filter(ChampID = champion.ChampID).values()
 	items = Item.objects.all()
 	item_stats = ItemStat.objects.all().values()

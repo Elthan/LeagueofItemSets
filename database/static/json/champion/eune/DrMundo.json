@@ -5,6 +5,7 @@
                 "fields" : {
                     "ChampID": 36,
                     "Name": "Dr. Mundo",
+                    "Key": "DrMundo",
                     "Icon": "icons/champion/DrMundo.png"
                     
                 }

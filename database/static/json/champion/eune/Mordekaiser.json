@@ -5,6 +5,7 @@
                 "fields" : {
                     "ChampID": 82,
                     "Name": "Mordekaiser",
+                    "Key": "Mordekaiser",
                     "Icon": "icons/champion/Mordekaiser.png"
                     
                 }

@@ -26,7 +26,7 @@
     <section id="champ-icons">
       {% if champ_list %}
         {% for champion in champ_list %}
-          <a href="{% url 'lois:items' champion.Name %}" ><img src="{% static champion.Icon %}"
+          <a href="{% url 'lois:items' champion.Key %}" ><img src="{% static champion.Icon %}"
                 title="{{champion.Name}}" alt="{{champion.Name}}" class="icons" /></a>
         {% endfor %}
       {% else %}

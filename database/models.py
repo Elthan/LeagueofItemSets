@@ -127,6 +127,7 @@ class ChampionStat(models.Model):
 class Champion(models.Model):
         ChampID = models.IntegerField(primary_key=True, default=0)
         Name = models.CharField(max_length=200, default="Tweemo")
+        Key = models.CharField(max_length=200, default="Tweemo")
         Icon = models.CharField(max_length=200, default="icons/champion/Unknown.png")
 
         #to determine returned value

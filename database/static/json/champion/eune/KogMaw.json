@@ -5,6 +5,7 @@
                 "fields" : {
                     "ChampID": 96,
                     "Name": "Kog'Maw",
+                    "Key": "KogMaw",
                     "Icon": "icons/champion/KogMaw.png"
                     
                 }
