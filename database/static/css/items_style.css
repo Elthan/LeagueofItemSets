@@ -58,7 +58,7 @@
 .items-div {
   border-top: 2px solid #222;
   border-radius: 5px;
-  text-align: center;
+  /*text-align: center;*/
   padding-top: 1%;
   padding-right: 5px;
   position: fixed;
@@ -73,8 +73,18 @@
   z-index: 9;
 }
 
+.filter {
+  margin: 10px 10px 20px 10px;
+  width: 50%;
+  height: auto;
+  text-align: center;
+}
+
+.filter input {
+  width: 90%;
+}
+
 .items-div img {
-  padding: 1px;
   border: 1px solid #222;
   opacity: 0.65;
   height: 60px;
@@ -83,6 +93,24 @@
 
 .items-div img:hover {
   opacity: 1;
+}
+
+.item-icons {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+.item-icon {
+  padding: 5px;
+  /*display: inline-block;*/
+  height: 80px;
+  width: 60px;
+  float: left;
+}
+
+.item-icon span {
+  font-style: italic;
 }
 
 .buttons-container {
@@ -173,10 +201,6 @@ caption.edit input {
   font-size: inherit;
   font-family: inherit;
   text-align: center;
-}
-
-.hide {
-  display: none;
 }
 
 .shrink {

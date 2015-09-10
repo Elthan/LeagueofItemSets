@@ -3,7 +3,8 @@
         "pk": 3112,
         "model": "database.ItemStat",
         "fields": {
-		"FlatSpellBlockMod": 70.0
+			"BaseHPRegenMod": 100,
+			"FlatSpellBlockMod": 70.0
         }
     }
 ]

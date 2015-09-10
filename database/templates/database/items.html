@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
 <link rel="stylesheet" type="text/css" href="{% static 'css/items_style.css' %}" />
-<!--<script src="{% static 'jquery-dev.js' %}" defer></script>-->
+<script src="{% static 'javascript/common_script.js' %}" defer></script>
 <script src="{% static 'javascript/item_script.js' %}" defer></script>
 <!-- import below is for the awesome font -->
 <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
@@ -48,17 +48,26 @@
   <button type="button" id="items-button" class="hide-buttons" title="Toggle items">V</button>
 </div>
 <div class="items-div" id="items-div">
+  <div class="filter" id="filter-div">
+    <span>Filter items</span>
+    <input type="text" id="filter-items" title="Filter items"></input>
+  </div>
+  <div class="item-icons">
     {% if item_list %}
       {% for item, stats in item_list %}
         {% if item.Purchasable == True %}
-          <img src="{% static item.Icon %}" alt="{{item.Name}}" title="{{item.Name}}"
-            data-icon="{% static item.Icon %}" id="{{ item.ItemID }}"
-            data-stats="{{stats}}"/>
+          <div class="item-icon" id="item-icon">
+            <img src="{% static item.Icon %}" alt="{{item.Name}}" title="{{item.Name}}"
+                data-icon="{% static item.Icon %}" id="{{ item.ItemID }}" data-tags="{{item.Tags}}"
+                data-stats="{{stats}}"/>
+            <span>{{item.GoldBase}}</span>
+          </div>
         {% endif %}
       {% endfor %}
     {% else %}
       <p> Could not display items! </p>
     {% endif %}
+  </div>
 </div>
 <div class="footer">
   <p>League of Item Sets isn’t endorsed by Riot Games and doesn’t reflect the views

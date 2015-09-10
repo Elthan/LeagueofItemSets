@@ -73,6 +73,8 @@ class ItemStat(models.Model):
         PercentPhysicalDamageMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
         PercentSpellBlockMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
         PercentSpellVampMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        BaseHPRegenMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
+        BaseMPRegenMod = models.DecimalField(max_digits=11, decimal_places=5, default=0)
 
         #to determine returned value
         def __str__(self):
@@ -85,7 +87,7 @@ class Item(models.Model):
         GoldTotal = models.SmallIntegerField(default=0)
         GoldBase = models.SmallIntegerField(default=0)
         Name = models.CharField(max_length=200, default="item_name")
-        Tags = models.CharField(max_length=200, default=["all", "them", "tags"])
+        Tags = models.CharField(max_length=200, default=[""])
         Icon = models.CharField(max_length=200, default="icons/item/3460.png")
         Stacks = models.IntegerField(default=1)
         Into = models.CharField(max_length=200, default=[""])

@@ -89,8 +89,12 @@ var stats_table = {
       stat = index_stat;
 
       // Check if it contains various things, then remove or rename it if it does.
+      // stat.indexOf() equals -1 if it can't find it, ~ flips it so it's 0 (false).
+      var base = ~stat.indexOf("Base") ? true : false;
+      stat = base ? stat.slice(4) : stat;
       var flat = ~stat.indexOf("Flat") ? true : false;
-      stat = flat ? stat.slice(4) : stat.slice(7);
+      if (!base)
+        stat = flat ? stat.slice(4) : stat.slice(7);
       stat = stat.slice(0,-3);
       stat = ~stat.indexOf("Pool") ? stat.slice(0,-4) : stat;
       stat = ~stat.indexOf("PhysicalDamage") ? "AttackDamage" : stat;
@@ -99,7 +103,11 @@ var stats_table = {
 
       var td = document.getElementById(stat).children[0];
       var prev_val = parseFloat(td.innerHTML);
-      var stat_val = stat == "Crit" || stat == "LifeSteal" ? item_stats[index_stat]*100 : item_stats[index_stat];
+      var stat_val = 0;
+      if (base)
+        stat_val += (this.champ_stats[stat] * (item_stats[index_stat]) / 100);
+      else
+        stat_val = (stat == "Crit" || stat == "LifeSteal") ? item_stats[index_stat]*100 : item_stats[index_stat];
       var new_val = adding ? prev_val + stat_val : prev_val - stat_val;
       td.innerHTML = new_val.toFixed(3);
     }
@@ -169,7 +177,7 @@ function remove_item(item) {
   // If its part of the selected block, substract stats from stats table.
   var selector = document.getElementById("block-selector");
   var index = selector.selectedIndex;
-  if (tr.parentNode.children[0].id == selector.options[index].id)
+  if (tr.parentNode.querySelector("caption").id == selector.options[index].id)
     stats_table.updateStats(false, item.dataset.stats);
 }
 
@@ -396,7 +404,7 @@ var add_listeners = function() {
   var items_div = document.getElementById("items-div").querySelectorAll("img");
   for (i = 0; i < items_div.length; i++) {
     item = items_div[i];
-    item.addEventListener('click', function() {
+    item.addEventListener('dblclick', function() {
       add_item( this.dataset.icon, this.id, this.dataset.stats );
     });
   }
@@ -405,6 +413,9 @@ var add_listeners = function() {
   toggle_items_button.addEventListener('click', function(){
     toggle_items(this);
   });
+
+  var filter_div = document.getElementById("filter-div");
+  filter_edit.bindEvents(filter_div, "items");
 };
 
 // Run initial setup functions

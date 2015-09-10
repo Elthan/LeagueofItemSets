@@ -3,7 +3,7 @@
         "pk": 1001,
         "model": "database.ItemStat",
         "fields": {
-		"FlatMovementSpeedMod": 25.0
+			"FlatMovementSpeedMod": 25.0
         }
     }
 ]

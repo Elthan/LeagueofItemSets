@@ -3,7 +3,8 @@
         "pk": 3073,
         "model": "database.ItemStat",
         "fields": {
-		"FlatMPPoolMod": 250.0
+			"BaseMPRegenMod": 25,
+			"FlatMPPoolMod": 250.0
         }
     }
 ]

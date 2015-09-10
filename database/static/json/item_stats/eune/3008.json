@@ -3,8 +3,9 @@
         "pk": 3008,
         "model": "database.ItemStat",
         "fields": {
-		"FlatPhysicalDamageMod": 25.0,
-		"FlatMPPoolMod": 250.0
+			"BaseMPRegenMod": 25,
+			"FlatPhysicalDamageMod": 25.0,
+			"FlatMPPoolMod": 250.0
         }
     }
 ]

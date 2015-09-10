@@ -3,7 +3,8 @@
         "pk": 3069,
         "model": "database.ItemStat",
         "fields": {
-
+			"BaseHPRegenMod": 100,
+			"BaseMPRegenMod": 100
         }
     }
 ]

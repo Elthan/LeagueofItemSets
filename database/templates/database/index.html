@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
 <link rel="stylesheet" type="text/css" href="{% static 'css/index_style.css' %}" />
 <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+<script src="{% static 'javascript/common_script.js' %}" defer></script>
 <script src="{% static 'javascript/index_script.js' %}" defer></script>
 <title>League of Item Sets</title>
 </head>
@@ -20,10 +21,10 @@
   <div class="champions">
     <span class="big-text" id="all-text"><a href="{% url 'lois:items' "All" %}">All</a></span>
     <div class="filter" id="filter-div">
-      <span>Filter champions</span>
+      <span>Filter by name or tag</span>
       <input type="text" id="filter-champs" title="Filter champions"/>
     </div>
-    <section id="champ-icons">
+    <div id="champ-div">
       {% if champ_list %}
         {% for champion in champ_list %}
           <a href="{% url 'lois:items' champion.Key %}" ><img src="{% static champion.Icon %}"
@@ -32,10 +33,10 @@
       {% else %}
         <p class="big-text"> Could not display champions!</p>
       {% endif %}
-    </section>
+    </div>
   </div>
   <div class="footer">
-    <p>League of Item Sets isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of 
+    <p>League of Item Sets isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of
       Riot Games or anyone officially involved in producing or managing League of Legends.
       League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc.
       League of Legends © Riot Games, Inc.</p>

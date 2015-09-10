@@ -2,6 +2,7 @@
 import json
 import os
 import uuid
+import re
 from django.utils import timezone
 from database.models import PlayerItemSet, Block, BlockItem
 
@@ -308,9 +309,21 @@ log : logging
         stats_len = len(item_json["stats"])-1
         index = 0
 
+        has_hpregen = "Base Health Regen" in item_json["sanitizedDescription"]
+        has_mpregen = "Base Mana Regen" in item_json["sanitizedDescription"]
+
+        if (has_hpregen):
+            modifier = re.search(r"([\d]+)\%\sBase\sHealth\sRegen", item_json["sanitizedDescription"]).group(1)
+            json_db_string += "\t\t\t\"BaseHPRegenMod\": " + modifier + (",\n" if (stats_len+1 > 0 or has_mpregen) else "")
+
+        if (has_mpregen):
+            modifier = re.search(r"\+(\d+)\% Base Mana Regen", item_json["sanitizedDescription"]).group(1)
+            json_db_string += "\t\t\t\"BaseMPRegenMod\": " + modifier + (",\n" if stats_len+1 > 0 else "")
+
+
         # Add all the stats the item has. Don't add ,\n on last stat.
         for key, value in item_json["stats"].items():
-            json_db_string += "\t\t\"" + key + "\": " + str(value) + \
+            json_db_string += "\t\t\t\"" + key + "\": " + str(value) + \
                               (",\n" if index < stats_len else "")
             index += 1
         json_db_string += """

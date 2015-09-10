@@ -3,8 +3,8 @@
         "pk": 3104,
         "model": "database.ItemStat",
         "fields": {
-		"FlatCritChanceMod": 0.25,
-		"FlatPhysicalDamageMod": 80.0
+			"FlatCritChanceMod": 0.25,
+			"FlatPhysicalDamageMod": 80.0
         }
     }
 ]

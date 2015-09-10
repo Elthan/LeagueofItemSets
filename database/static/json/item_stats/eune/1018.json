@@ -3,7 +3,7 @@
         "pk": 1018,
         "model": "database.ItemStat",
         "fields": {
-		"FlatCritChanceMod": 0.15
+			"FlatCritChanceMod": 0.15
         }
     }
 ]

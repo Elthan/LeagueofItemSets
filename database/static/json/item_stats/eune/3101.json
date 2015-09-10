@@ -3,7 +3,7 @@
         "pk": 3101,
         "model": "database.ItemStat",
         "fields": {
-		"PercentAttackSpeedMod": 0.4
+			"PercentAttackSpeedMod": 0.4
         }
     }
 ]

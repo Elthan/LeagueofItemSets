@@ -3,8 +3,9 @@
         "pk": 3745,
         "model": "database.ItemStat",
         "fields": {
-		"FlatHPPoolMod": 250.0,
-		"FlatSpellBlockMod": 25.0
+			"BaseMPRegenMod": 50,
+			"FlatSpellBlockMod": 25.0,
+			"FlatHPPoolMod": 250.0
         }
     }
 ]

@@ -3,9 +3,9 @@
         "pk": 1075,
         "model": "database.ItemStat",
         "fields": {
-		"FlatHPPoolMod": 70.0,
-		"FlatPhysicalDamageMod": 7.0,
-		"PercentLifeStealMod": 0.03
+			"PercentLifeStealMod": 0.03,
+			"FlatPhysicalDamageMod": 7.0,
+			"FlatHPPoolMod": 70.0
         }
     }
 ]

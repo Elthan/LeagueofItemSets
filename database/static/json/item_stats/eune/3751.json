@@ -3,7 +3,7 @@
         "pk": 3751,
         "model": "database.ItemStat",
         "fields": {
-		"FlatHPPoolMod": 300.0
+			"FlatHPPoolMod": 300.0
         }
     }
 ]

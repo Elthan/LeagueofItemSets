@@ -3,7 +3,7 @@
         "pk": 1031,
         "model": "database.ItemStat",
         "fields": {
-		"FlatArmorMod": 40.0
+			"FlatArmorMod": 40.0
         }
     }
 ]
