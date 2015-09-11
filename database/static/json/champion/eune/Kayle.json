@@ -6,7 +6,7 @@
                     "ChampID": 10,
                     "Name": "Kayle",
                     "Key": "Kayle",
-                    "Icon": "icons/champion/Kayle.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Kayle.png",
                     "Tags": "['Fighter', 'Support']"
                     
                 }

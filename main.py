@@ -34,8 +34,6 @@ if __name__ == "__main__":
                         help="Force update even if it's up to date. (default: %(default)s)")
     parser.add_argument('-v', '--verbose', action="store_const", const="DEBUG",
                         default="INFO", help="Set output level to DEBUG.")
-    parser.add_argument('-i', '--skipicons', action="store_true", default=False,
-                        help="Skip downloading icons. (default: %(default)s)")
     parser.add_argument('-j', '--skipjson', action="store_true", default=False,
                         help="Skip downloading JSON files. (default: %(default)s)")
     parser.add_argument('-c', '--skipconvert', action="store_true", default=False,
@@ -45,7 +43,6 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     loglvl = args.verbose
-    skip_icons = args.skipicons
     skip_json = args.skipjson
     skip_convert = args.skipconvert
     skip_write_db = args.database
@@ -79,7 +76,7 @@ if __name__ == "__main__":
                 if (is_new_version or force_update):
                     # Update all the json file from all the different regions.
                     update.update_all(api_key, current_version, "DEBUG", region,
-                                      skip_icons, skip_json, skip_convert, skip_write_db)
+                                      skip_json, skip_convert, skip_write_db)
                 else:
                     log.info("We are up to date for " + region + "!")
 

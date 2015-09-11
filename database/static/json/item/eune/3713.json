@@ -9,7 +9,7 @@
                     "GoldTotal": 850,
                     "GoldBase": 450,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3713.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3713.png" ,
 	 "Into": ["3723", "3724", "3725", "3726"] ,
 	 "Tags": ["Damage", "HealthRegen", "Jungle", "ManaRegen", "OnHit"] 
             }

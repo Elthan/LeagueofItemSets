@@ -6,7 +6,7 @@
                     "ChampID": 33,
                     "Name": "Rammus",
                     "Key": "Rammus",
-                    "Icon": "icons/champion/Rammus.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Rammus.png",
                     "Tags": "['Tank', 'Fighter']"
                     
                 }

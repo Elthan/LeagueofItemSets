@@ -6,7 +6,7 @@
                     "ChampID": 117,
                     "Name": "Lulu",
                     "Key": "Lulu",
-                    "Icon": "icons/champion/Lulu.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Lulu.png",
                     "Tags": "['Support', 'Mage']"
                     
                 }

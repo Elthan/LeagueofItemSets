@@ -6,7 +6,7 @@
                     "ChampID": 42,
                     "Name": "Corki",
                     "Key": "Corki",
-                    "Icon": "icons/champion/Corki.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Corki.png",
                     "Tags": "['Marksman']"
                     
                 }

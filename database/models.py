@@ -130,7 +130,7 @@ class Champion(models.Model):
         ChampID = models.IntegerField(primary_key=True, default=0)
         Name = models.CharField(max_length=200, default="Tweemo")
         Key = models.CharField(max_length=200, default="Tweemo")
-        Icon = models.CharField(max_length=200, default="icons/champion/Unknown.png")
+        Icon = models.CharField(max_length=200, default="http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Teemo.png")
         Tags = models.CharField(max_length=200, default="");
 
         #to determine returned value

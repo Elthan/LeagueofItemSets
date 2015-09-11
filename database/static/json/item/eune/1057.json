@@ -9,7 +9,7 @@
                     "GoldTotal": 800,
                     "GoldBase": 350,
                     "Purchasable": "True",
-                    "Icon": "icons/item/1057.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/1057.png" ,
 	 "Into": ["3001", "3026", "3112", "3170", "3180", "3512"] ,
 	 "Tags": ["SpellBlock"] 
             }

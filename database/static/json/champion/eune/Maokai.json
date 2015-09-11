@@ -6,7 +6,7 @@
                     "ChampID": 57,
                     "Name": "Maokai",
                     "Key": "Maokai",
-                    "Icon": "icons/champion/Maokai.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Maokai.png",
                     "Tags": "['Tank', 'Mage']"
                     
                 }

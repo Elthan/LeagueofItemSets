@@ -6,7 +6,7 @@
                     "ChampID": 76,
                     "Name": "Nidalee",
                     "Key": "Nidalee",
-                    "Icon": "icons/champion/Nidalee.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Nidalee.png",
                     "Tags": "['Assassin', 'Fighter']"
                     
                 }

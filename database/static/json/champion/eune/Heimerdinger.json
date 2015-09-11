@@ -6,7 +6,7 @@
                     "ChampID": 74,
                     "Name": "Heimerdinger",
                     "Key": "Heimerdinger",
-                    "Icon": "icons/champion/Heimerdinger.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Heimerdinger.png",
                     "Tags": "['Mage', 'Support']"
                     
                 }

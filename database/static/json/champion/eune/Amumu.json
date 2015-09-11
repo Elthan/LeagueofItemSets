@@ -6,7 +6,7 @@
                     "ChampID": 32,
                     "Name": "Amumu",
                     "Key": "Amumu",
-                    "Icon": "icons/champion/Amumu.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Amumu.png",
                     "Tags": "['Tank', 'Mage']"
                     
                 }

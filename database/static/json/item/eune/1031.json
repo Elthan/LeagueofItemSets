@@ -9,7 +9,7 @@
                     "GoldTotal": 750,
                     "GoldBase": 450,
                     "Purchasable": "True",
-                    "Icon": "icons/item/1031.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/1031.png" ,
 	 "Into": ["3075", "3068", "3026", "3742"] ,
 	 "Tags": ["Armor"] 
             }

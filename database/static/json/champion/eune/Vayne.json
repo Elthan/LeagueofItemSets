@@ -6,7 +6,7 @@
                     "ChampID": 67,
                     "Name": "Vayne",
                     "Key": "Vayne",
-                    "Icon": "icons/champion/Vayne.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Vayne.png",
                     "Tags": "['Marksman', 'Assassin']"
                     
                 }

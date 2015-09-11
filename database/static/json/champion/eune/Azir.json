@@ -6,7 +6,7 @@
                     "ChampID": 268,
                     "Name": "Azir",
                     "Key": "Azir",
-                    "Icon": "icons/champion/Azir.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Azir.png",
                     "Tags": "['Mage', 'Marksman']"
                     
                 }

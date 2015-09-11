@@ -9,7 +9,7 @@
                     "GoldTotal": 1100,
                     "GoldBase": 200,
                     "Purchasable": "True",
-                    "Icon": "icons/item/1043.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/1043.png" ,
 	 "Into": ["3091", "3153", "3085", "3710", "3718", "3726", "3722"] ,
 	 "Tags": ["AttackSpeed"] 
             }

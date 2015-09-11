@@ -6,7 +6,7 @@
                     "ChampID": 92,
                     "Name": "Riven",
                     "Key": "Riven",
-                    "Icon": "icons/champion/Riven.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Riven.png",
                     "Tags": "['Fighter', 'Assassin']"
                     
                 }

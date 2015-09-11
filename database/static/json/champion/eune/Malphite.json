@@ -6,7 +6,7 @@
                     "ChampID": 54,
                     "Name": "Malphite",
                     "Key": "Malphite",
-                    "Icon": "icons/champion/Malphite.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Malphite.png",
                     "Tags": "['Tank', 'Fighter']"
                     
                 }

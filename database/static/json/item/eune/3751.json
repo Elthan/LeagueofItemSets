@@ -9,7 +9,7 @@
                     "GoldTotal": 1000,
                     "GoldBase": 600,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3751.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3751.png" ,
 	 "Into": ["3068", "3709", "3717", "3721", "3725"] ,
 	 "Tags": ["Health"] 
             }

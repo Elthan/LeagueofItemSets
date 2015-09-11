@@ -6,7 +6,7 @@
                     "ChampID": 11,
                     "Name": "Master Yi",
                     "Key": "MasterYi",
-                    "Icon": "icons/champion/MasterYi.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/MasterYi.png",
                     "Tags": "['Assassin', 'Fighter']"
                     
                 }

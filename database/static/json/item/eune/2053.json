@@ -9,7 +9,7 @@
                     "GoldTotal": 1100,
                     "GoldBase": 620,
                     "Purchasable": "True",
-                    "Icon": "icons/item/2053.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/2053.png" ,
 	 "Into": ["3056", "3512"] ,
 	 "Tags": ["Armor", "HealthRegen", "NonbootsMovement"] 
             }

@@ -6,7 +6,7 @@
                     "ChampID": 110,
                     "Name": "Varus",
                     "Key": "Varus",
-                    "Icon": "icons/champion/Varus.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Varus.png",
                     "Tags": "['Marksman', 'Mage']"
                     
                 }

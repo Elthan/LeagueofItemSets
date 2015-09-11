@@ -6,7 +6,7 @@
                     "ChampID": 68,
                     "Name": "Rumble",
                     "Key": "Rumble",
-                    "Icon": "icons/champion/Rumble.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Rumble.png",
                     "Tags": "['Fighter', 'Mage']"
                     
                 }

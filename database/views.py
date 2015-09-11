@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.core.servers.basehttp import FileWrapper
 from django.shortcuts import get_object_or_404, render
 from django.views.decorators.csrf import csrf_exempt
-from django.templatetags.static import static
+from django.conf import settings
 from .models import *
 from .scripts.convert import item_set_manager as ism, block_manager as bm, block_item_manager as bim
 from .scripts.convert import create_json_from_db as json_db
@@ -21,7 +21,7 @@ def item_select(request, champ_key):
 		champ_stats = "[{'MPRegen': 0, 'SpellBlock': 0, 'Crit': 0, 'AttackDamage': 0, \
 						'MP': 0, 'HPRegen': 0, 'HP': 0, 'Armor': 0, 'MoveSpeed': 0, \
 						'AttackSpeedOffset': 0}]"
-		champion = {"Name": "All", "Icon": "icons/champion/Unknown.png"}
+		champion = {"Name": "All", "Icon": os.path.join(settings.BASE_DIR,settings.STATIC_URL,"Unknown.png")}
 	else:
 		champion = get_object_or_404(Champion, Key = champ_key)
 		champ_stats = ChampionStat.objects.filter(ChampID = champion.ChampID).values()

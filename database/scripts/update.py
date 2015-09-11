@@ -91,52 +91,6 @@ current_version : str
     return is_new_version, current_version
 
 
-def get_icons(img_type):
-    '''
-Download all icons using ids in DB.
-
-Parameters
--------------
-img_type : str
-    What type of icon should we fetch (ex. champion or item).
-    '''
-
-    if (img_type == "item"):
-        query = Item.objects.all()
-    elif (img_type == "champion"):
-        query = Champion.objects.all()
-    else:
-        error("Image type not supported for " + img_type + ". Unable to fetch icons.")
-        return
-
-    log.debug("Fetching " + img_type + " icons.")
-
-    os.makedirs("database/static/icons/" + img_type, exist_ok=True)
-
-    for icon_id in query:
-        if (img_type == "item"):
-            icon_id = str(icon_id.pk)
-        elif (img_type == "champion"):
-            icon_id = icon_id.Key
-
-        url = "http://ddragon.leagueoflegends.com/cdn/" + current_version + \
-              "/img/" + img_type + "/" + icon_id + ".png"
-
-        try:
-            with urllib.request.urlopen(url) as response:
-                path = "database/static/icons/" + img_type + "/" + icon_id + ".png"
-
-                with open(path,'wb') as image_file:
-                    image_file.write(response.read())
-
-        except urllib.error.HTTPError as err:
-            error("Error when downloading icon id " + icon_id + "\nUsing url "\
-                + url + "\n" + str(err))
-            continue
-
-    log.info("Done fetching all icons of type " + img_type)
-
-
 def get_json(json_type, url, region):
     '''
 Fetch json file.
@@ -201,7 +155,7 @@ region : str
     log.info("Fetched all items as json files for region " + region)
 
 
-def update_all(api_key, cur_ver, loglvl, region, skip_icons, skip_json, skip_convert, skip_write_db):
+def update_all(api_key, cur_ver, loglvl, region, skip_json, skip_convert, skip_write_db):
     '''
 Master method for updating everything; icons, JSONs and DB.
 
@@ -216,8 +170,6 @@ loglvl : str
 region : str
     What region we should update data for. This doesn't matter
     for icons.
-skip_icons : bool
-    If we should skip downloading icons.
 skip_json : bool
     If we should skip downloading JSON files.
 skip_convert : bool
@@ -267,10 +219,3 @@ skip_write_db : bool
                     call_command("loaddata", path + name, '--ignorenonexistent', verbosity = 0)
 
             log.info("All " + json_type + " JSON files imported to the DB.")
-
-    if (skip_icons):
-        log.info("Skipping all icons.")
-    else:
-        log.info("Fetching icons.")
-        for icon_type,url in url_list.items():
-            get_icons(icon_type)

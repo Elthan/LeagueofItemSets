@@ -18,7 +18,7 @@
   <section class="left-side">
     <div class="icon">
       <p> {{champ.Name}} </p>
-      <img id="champ-icon" src="{% static champ.Icon %}" alt="{{champ.Name}}" height="80" title="{{champ.Name}}" />
+      <img id="champ-icon" src="{{champ.Icon}}" alt="{{champ.Name}}" height="80" title="{{champ.Name}}" />
     </div>
     <div id="stats-table-div" data-stats="{{champ_stats}}"></div>
   </section>
@@ -75,8 +75,8 @@
       {% for item, stats in item_list %}
         {% if item.Purchasable == True %}
           <div class="item-icon" id="item-icon">
-            <img src="{% static item.Icon %}" alt="{{item.Name}}" title="{{item.Name}}"
-                data-icon="{% static item.Icon %}" id="{{ item.ItemID }}" data-tags="{{item.Tags}}"
+            <img src="{{item.Icon}}" alt="{{item.Name}}" title="{{item.Name}}"
+                data-icon="{{item.Icon}}" id="{{ item.ItemID }}" data-tags="{{item.Tags}}"
                 data-stats="{{stats}}" data-into="{{item.Into}}" data-description="{{item.Description}}"
                 data-cost="{{item.GoldBase}}" />
             <span>{{item.GoldBase}}</span>

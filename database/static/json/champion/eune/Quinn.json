@@ -6,7 +6,7 @@
                     "ChampID": 133,
                     "Name": "Quinn",
                     "Key": "Quinn",
-                    "Icon": "icons/champion/Quinn.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Quinn.png",
                     "Tags": "['Marksman', 'Fighter']"
                     
                 }

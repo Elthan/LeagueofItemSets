@@ -6,7 +6,7 @@
                     "ChampID": 56,
                     "Name": "Nocturne",
                     "Key": "Nocturne",
-                    "Icon": "icons/champion/Nocturne.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Nocturne.png",
                     "Tags": "['Assassin', 'Fighter']"
                     
                 }

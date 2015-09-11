@@ -9,7 +9,7 @@
                     "GoldTotal": 2250,
                     "GoldBase": 2250,
                     "Purchasable": "False",
-                    "Icon": "icons/item/3933.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3933.png" ,
 	 "Tags": ["AttackSpeed", "Damage", "Jungle", "OnHit"] 
             }
         }

@@ -6,7 +6,7 @@
                     "ChampID": 266,
                     "Name": "Aatrox",
                     "Key": "Aatrox",
-                    "Icon": "icons/champion/Aatrox.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Aatrox.png",
                     "Tags": "['Fighter', 'Tank']"
                     
                 }

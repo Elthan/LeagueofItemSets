@@ -6,7 +6,7 @@
                     "ChampID": 58,
                     "Name": "Renekton",
                     "Key": "Renekton",
-                    "Icon": "icons/champion/Renekton.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Renekton.png",
                     "Tags": "['Fighter', 'Tank']"
                     
                 }

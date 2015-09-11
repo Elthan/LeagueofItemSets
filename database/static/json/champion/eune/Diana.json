@@ -6,7 +6,7 @@
                     "ChampID": 131,
                     "Name": "Diana",
                     "Key": "Diana",
-                    "Icon": "icons/champion/Diana.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Diana.png",
                     "Tags": "['Fighter', 'Mage']"
                     
                 }

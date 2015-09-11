@@ -9,7 +9,7 @@
                     "GoldTotal": 1500,
                     "GoldBase": 665,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3136.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3136.png" ,
 	 "Into": ["3151", "3829"] ,
 	 "Tags": ["Health", "MagicPenetration", "SpellDamage"] 
             }

@@ -6,7 +6,7 @@
                     "ChampID": 64,
                     "Name": "Lee Sin",
                     "Key": "LeeSin",
-                    "Icon": "icons/champion/LeeSin.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/LeeSin.png",
                     "Tags": "['Fighter', 'Assassin']"
                     
                 }

@@ -6,7 +6,7 @@
                     "ChampID": 14,
                     "Name": "Sion",
                     "Key": "Sion",
-                    "Icon": "icons/champion/Sion.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Sion.png",
                     "Tags": "['Tank', 'Fighter']"
                     
                 }

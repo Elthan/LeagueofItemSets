@@ -9,7 +9,7 @@
                     "GoldTotal": 2550,
                     "GoldBase": 1190,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3053.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3053.png" ,
 	 "Tags": ["Damage", "Health", "LifeSteal"] 
             }
         }

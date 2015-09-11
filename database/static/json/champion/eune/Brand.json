@@ -6,7 +6,7 @@
                     "ChampID": 63,
                     "Name": "Brand",
                     "Key": "Brand",
-                    "Icon": "icons/champion/Brand.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Brand.png",
                     "Tags": "['Mage']"
                     
                 }

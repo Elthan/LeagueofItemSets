@@ -6,7 +6,7 @@
                     "ChampID": 21,
                     "Name": "Miss Fortune",
                     "Key": "MissFortune",
-                    "Icon": "icons/champion/MissFortune.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/MissFortune.png",
                     "Tags": "['Marksman']"
                     
                 }

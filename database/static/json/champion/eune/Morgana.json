@@ -6,7 +6,7 @@
                     "ChampID": 25,
                     "Name": "Morgana",
                     "Key": "Morgana",
-                    "Icon": "icons/champion/Morgana.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Morgana.png",
                     "Tags": "['Mage', 'Support']"
                     
                 }

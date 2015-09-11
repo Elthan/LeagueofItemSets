@@ -6,7 +6,7 @@
                     "ChampID": 157,
                     "Name": "Yasuo",
                     "Key": "Yasuo",
-                    "Icon": "icons/champion/Yasuo.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Yasuo.png",
                     "Tags": "['Fighter', 'Assassin']"
                     
                 }

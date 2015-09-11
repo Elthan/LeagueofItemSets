@@ -9,7 +9,7 @@
                     "GoldTotal": 2700,
                     "GoldBase": 545,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3174.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3174.png" ,
 	 "Tags": ["CooldownReduction", "ManaRegen", "SpellBlock", "SpellDamage"] 
             }
         }

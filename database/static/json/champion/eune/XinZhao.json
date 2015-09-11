@@ -6,7 +6,7 @@
                     "ChampID": 5,
                     "Name": "Xin Zhao",
                     "Key": "XinZhao",
-                    "Icon": "icons/champion/XinZhao.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/XinZhao.png",
                     "Tags": "['Fighter', 'Assassin']"
                     
                 }

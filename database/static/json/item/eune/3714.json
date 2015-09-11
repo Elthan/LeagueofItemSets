@@ -9,7 +9,7 @@
                     "GoldTotal": 2250,
                     "GoldBase": 63,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3714.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3714.png" ,
 	 "Tags": ["ArmorPenetration", "CooldownReduction", "Damage", "Jungle"] 
             }
         }

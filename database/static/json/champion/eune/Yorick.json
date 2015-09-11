@@ -6,7 +6,7 @@
                     "ChampID": 83,
                     "Name": "Yorick",
                     "Key": "Yorick",
-                    "Icon": "icons/champion/Yorick.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Yorick.png",
                     "Tags": "['Fighter', 'Mage']"
                     
                 }

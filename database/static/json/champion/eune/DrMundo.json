@@ -6,7 +6,7 @@
                     "ChampID": 36,
                     "Name": "Dr. Mundo",
                     "Key": "DrMundo",
-                    "Icon": "icons/champion/DrMundo.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/DrMundo.png",
                     "Tags": "['Fighter', 'Tank']"
                     
                 }

@@ -6,7 +6,7 @@
                     "ChampID": 55,
                     "Name": "Katarina",
                     "Key": "Katarina",
-                    "Icon": "icons/champion/Katarina.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Katarina.png",
                     "Tags": "['Assassin', 'Mage']"
                     
                 }

@@ -6,7 +6,7 @@
                     "ChampID": 120,
                     "Name": "Hecarim",
                     "Key": "Hecarim",
-                    "Icon": "icons/champion/Hecarim.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Hecarim.png",
                     "Tags": "['Fighter', 'Tank']"
                     
                 }

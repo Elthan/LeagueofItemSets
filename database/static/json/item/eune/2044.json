@@ -9,7 +9,7 @@
                     "GoldTotal": 75,
                     "GoldBase": 75,
                     "Purchasable": "True",
-                    "Icon": "icons/item/2044.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/2044.png" ,
 	 "Tags": ["Consumable", "Lane", "Vision"] 
             }
         }

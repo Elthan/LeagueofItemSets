@@ -6,7 +6,7 @@
                     "ChampID": 82,
                     "Name": "Mordekaiser",
                     "Key": "Mordekaiser",
-                    "Icon": "icons/champion/Mordekaiser.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Mordekaiser.png",
                     "Tags": "['Fighter', 'Mage']"
                     
                 }

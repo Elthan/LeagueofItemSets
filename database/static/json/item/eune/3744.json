@@ -9,7 +9,7 @@
                     "GoldTotal": 1635,
                     "GoldBase": 300,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3744.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3744.png" ,
 	 "Tags": ["Active", "Bilgewater", "CooldownReduction", "SpellDamage"] 
             }
         }

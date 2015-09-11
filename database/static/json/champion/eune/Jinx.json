@@ -6,7 +6,7 @@
                     "ChampID": 222,
                     "Name": "Jinx",
                     "Key": "Jinx",
-                    "Icon": "icons/champion/Jinx.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Jinx.png",
                     "Tags": "['Marksman']"
                     
                 }

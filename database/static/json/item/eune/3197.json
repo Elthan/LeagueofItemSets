@@ -9,7 +9,7 @@
                     "GoldTotal": 2000,
                     "GoldBase": 1000,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3197.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3197.png" ,
 	 "Into": ["3198"] ,
 	 "Tags": ["Mana", "SpellDamage"] 
             }

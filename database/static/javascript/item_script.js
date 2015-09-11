@@ -363,7 +363,7 @@ function build_item_set(path) {
   item_set["name"] = name.value;
   item_set["map"] = map.value;
 
-  for (var i = 0; i <= number_of_blocks; i++) {
+  for (var i = 0; i <= blocks_div.childElementCount; i++) {
     var block = {};
     var table = blocks_div.children[i];
 

@@ -6,7 +6,7 @@
                     "ChampID": 50,
                     "Name": "Swain",
                     "Key": "Swain",
-                    "Icon": "icons/champion/Swain.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Swain.png",
                     "Tags": "['Mage', 'Fighter']"
                     
                 }

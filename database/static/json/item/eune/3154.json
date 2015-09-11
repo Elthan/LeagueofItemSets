@@ -9,7 +9,7 @@
                     "GoldTotal": 1775,
                     "GoldBase": 215,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3154.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3154.png" ,
 	 "Tags": ["Active", "AttackSpeed", "Damage", "GoldPer", "OnHit", "Vision"] 
             }
         }

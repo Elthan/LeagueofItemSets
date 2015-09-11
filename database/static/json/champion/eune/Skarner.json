@@ -6,7 +6,7 @@
                     "ChampID": 72,
                     "Name": "Skarner",
                     "Key": "Skarner",
-                    "Icon": "icons/champion/Skarner.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Skarner.png",
                     "Tags": "['Fighter', 'Tank']"
                     
                 }

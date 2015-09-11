@@ -9,7 +9,7 @@
                     "GoldTotal": 850,
                     "GoldBase": 415,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3113.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3113.png" ,
 	 "Into": ["3023", "3290", "3100", "3285", "3504"] ,
 	 "Tags": ["NonbootsMovement", "SpellDamage"] 
             }

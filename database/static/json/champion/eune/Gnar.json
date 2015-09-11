@@ -6,7 +6,7 @@
                     "ChampID": 150,
                     "Name": "Gnar",
                     "Key": "Gnar",
-                    "Icon": "icons/champion/Gnar.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Gnar.png",
                     "Tags": "['Fighter', 'Tank']"
                     
                 }

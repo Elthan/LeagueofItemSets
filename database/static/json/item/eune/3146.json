@@ -9,7 +9,7 @@
                     "GoldTotal": 3400,
                     "GoldBase": 800,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3146.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3146.png" ,
 	 "Tags": ["Active", "Damage", "LifeSteal", "Slow", "SpellDamage", "SpellVamp"] 
             }
         }

@@ -6,7 +6,7 @@
                     "ChampID": 4,
                     "Name": "Twisted Fate",
                     "Key": "TwistedFate",
-                    "Icon": "icons/champion/TwistedFate.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/TwistedFate.png",
                     "Tags": "['Mage']"
                     
                 }

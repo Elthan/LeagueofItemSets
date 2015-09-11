@@ -9,7 +9,7 @@
                     "GoldTotal": 820,
                     "GoldBase": 385,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3108.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3108.png" ,
 	 "Into": ["3174", "3092", "3115", "3023", "3165", "3152", "3060", "3290", "3433"] ,
 	 "Tags": ["CooldownReduction", "SpellDamage"] 
             }

@@ -6,7 +6,7 @@
                     "ChampID": 2,
                     "Name": "Olaf",
                     "Key": "Olaf",
-                    "Icon": "icons/champion/Olaf.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Olaf.png",
                     "Tags": "['Fighter', 'Tank']"
                     
                 }

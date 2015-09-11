@@ -9,7 +9,7 @@
                     "GoldTotal": 250,
                     "GoldBase": 250,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3363.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3363.png" ,
 	 "Tags": ["Active", "Trinket", "Vision"] 
             }
         }

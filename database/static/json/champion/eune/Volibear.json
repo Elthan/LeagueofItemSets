@@ -6,7 +6,7 @@
                     "ChampID": 106,
                     "Name": "Volibear",
                     "Key": "Volibear",
-                    "Icon": "icons/champion/Volibear.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Volibear.png",
                     "Tags": "['Fighter', 'Tank']"
                     
                 }

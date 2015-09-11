@@ -6,7 +6,7 @@
                     "ChampID": 43,
                     "Name": "Karma",
                     "Key": "Karma",
-                    "Icon": "icons/champion/Karma.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Karma.png",
                     "Tags": "['Mage', 'Support']"
                     
                 }

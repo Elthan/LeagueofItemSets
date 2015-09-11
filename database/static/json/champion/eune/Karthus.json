@@ -6,7 +6,7 @@
                     "ChampID": 30,
                     "Name": "Karthus",
                     "Key": "Karthus",
-                    "Icon": "icons/champion/Karthus.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Karthus.png",
                     "Tags": "['Mage']"
                     
                 }

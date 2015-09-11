@@ -6,7 +6,7 @@
                     "ChampID": 37,
                     "Name": "Sona",
                     "Key": "Sona",
-                    "Icon": "icons/champion/Sona.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Sona.png",
                     "Tags": "['Support', 'Mage']"
                     
                 }

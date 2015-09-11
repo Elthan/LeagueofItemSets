@@ -6,7 +6,7 @@
                     "ChampID": 53,
                     "Name": "Blitzcrank",
                     "Key": "Blitzcrank",
-                    "Icon": "icons/champion/Blitzcrank.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Blitzcrank.png",
                     "Tags": "['Tank', 'Fighter']"
                     
                 }

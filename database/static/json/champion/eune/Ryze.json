@@ -6,7 +6,7 @@
                     "ChampID": 13,
                     "Name": "Ryze",
                     "Key": "Ryze",
-                    "Icon": "icons/champion/Ryze.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Ryze.png",
                     "Tags": "['Mage', 'Fighter']"
                     
                 }

@@ -9,7 +9,7 @@
                     "GoldTotal": 3703,
                     "GoldBase": 78,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3078.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3078.png" ,
 	 "Tags": ["AttackSpeed", "CriticalStrike", "Damage", "Health", "Mana", "NonbootsMovement", "OnHit", "SpellDamage"] 
             }
         }

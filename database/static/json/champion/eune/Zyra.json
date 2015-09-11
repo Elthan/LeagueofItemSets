@@ -6,7 +6,7 @@
                     "ChampID": 143,
                     "Name": "Zyra",
                     "Key": "Zyra",
-                    "Icon": "icons/champion/Zyra.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Zyra.png",
                     "Tags": "['Mage', 'Support']"
                     
                 }

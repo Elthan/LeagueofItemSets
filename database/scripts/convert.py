@@ -384,7 +384,7 @@ log : logging
                         gold_base = item_json["gold"]["base"],
                         purchasable = item_json["gold"]["purchasable"],
                         icon = "http://ddragon.leagueoflegends.com/cdn/" + items_json["version"] + \
-                              "/img/item/" + icon_id + ".png"
+                              "/img/item/" + item_id + ".png"
                         #"icons/item/" + item_id + ".png"
                     )
                     # Not all items build into something.
@@ -540,7 +540,9 @@ log : logging
                         champ_id = champ_json["id"],
                         champ_name = champ_json["name"],
                         champ_key = champ_key,
-                        icon_path = "icons/champion/" + champ_key + ".png",
+                        icon_path = "http://ddragon.leagueoflegends.com/cdn/" + champs_json["version"] + \
+                              "/img/champion/" + champ_key + ".png",
+                        #"icons/champion/" + champ_key + ".png",
                         champ_tags = champ_json["tags"]
                     )
                     json_db_string +=  """

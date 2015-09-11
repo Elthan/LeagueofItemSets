@@ -9,7 +9,7 @@
                     "GoldTotal": 1200,
                     "GoldBase": 425,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3111.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3111.png" ,
 	 "Into": ["1321", "1323", "1320", "1322", "1324", "1339"] ,
 	 "Tags": ["Boots", "SpellBlock", "Tenacity"] 
             }

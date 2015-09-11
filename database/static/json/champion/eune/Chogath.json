@@ -6,7 +6,7 @@
                     "ChampID": 31,
                     "Name": "Cho'Gath",
                     "Key": "Chogath",
-                    "Icon": "icons/champion/Chogath.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Chogath.png",
                     "Tags": "['Tank', 'Mage']"
                     
                 }

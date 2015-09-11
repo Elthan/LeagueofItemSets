@@ -6,7 +6,7 @@
                     "ChampID": 432,
                     "Name": "Bard",
                     "Key": "Bard",
-                    "Icon": "icons/champion/Bard.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Bard.png",
                     "Tags": "['Support', 'Mage']"
                     
                 }

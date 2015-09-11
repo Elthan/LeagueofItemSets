@@ -9,7 +9,7 @@
                     "GoldTotal": 1100,
                     "GoldBase": 250,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3086.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3086.png" ,
 	 "Into": ["3046", "3078", "3087"] ,
 	 "Tags": ["AttackSpeed", "CriticalStrike", "NonbootsMovement"] 
             }

@@ -6,7 +6,7 @@
                     "ChampID": 127,
                     "Name": "Lissandra",
                     "Key": "Lissandra",
-                    "Icon": "icons/champion/Lissandra.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Lissandra.png",
                     "Tags": "['Mage']"
                     
                 }

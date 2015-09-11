@@ -9,7 +9,7 @@
                     "GoldTotal": 325,
                     "GoldBase": 325,
                     "Purchasable": "True",
-                    "Icon": "icons/item/1001.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/1001.png" ,
 	 "Into": ["3006", "3047", "3020", "3158", "3111", "3117", "3009"] ,
 	 "Tags": ["Boots"] 
             }

@@ -6,7 +6,7 @@
                     "ChampID": 103,
                     "Name": "Ahri",
                     "Key": "Ahri",
-                    "Icon": "icons/champion/Ahri.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Ahri.png",
                     "Tags": "['Mage', 'Assassin']"
                     
                 }

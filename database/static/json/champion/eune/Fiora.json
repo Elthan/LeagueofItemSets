@@ -6,7 +6,7 @@
                     "ChampID": 114,
                     "Name": "Fiora",
                     "Key": "Fiora",
-                    "Icon": "icons/champion/Fiora.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Fiora.png",
                     "Tags": "['Fighter', 'Assassin']"
                     
                 }

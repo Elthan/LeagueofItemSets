@@ -9,7 +9,7 @@
                     "GoldTotal": 2200,
                     "GoldBase": 485,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3401.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3401.png" ,
 	 "Tags": ["CooldownReduction", "GoldPer", "Health", "HealthRegen"] 
             }
         }

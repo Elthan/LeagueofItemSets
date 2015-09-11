@@ -6,7 +6,7 @@
                     "ChampID": 24,
                     "Name": "Jax",
                     "Key": "Jax",
-                    "Icon": "icons/champion/Jax.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Jax.png",
                     "Tags": "['Fighter', 'Assassin']"
                     
                 }

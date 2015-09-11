@@ -9,7 +9,7 @@
                     "GoldTotal": 865,
                     "GoldBase": 500,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3841.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3841.png" ,
 	 "Into": ["3840"] ,
 	 "Tags": ["Bilgewater", "CooldownReduction", "GoldPer", "ManaRegen"] 
             }

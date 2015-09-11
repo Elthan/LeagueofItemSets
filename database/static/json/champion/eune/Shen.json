@@ -6,7 +6,7 @@
                     "ChampID": 98,
                     "Name": "Shen",
                     "Key": "Shen",
-                    "Icon": "icons/champion/Shen.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Shen.png",
                     "Tags": "['Tank', 'Fighter']"
                     
                 }

@@ -6,7 +6,7 @@
                     "ChampID": 77,
                     "Name": "Udyr",
                     "Key": "Udyr",
-                    "Icon": "icons/champion/Udyr.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Udyr.png",
                     "Tags": "['Fighter', 'Tank']"
                     
                 }

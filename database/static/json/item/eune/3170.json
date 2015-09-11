@@ -9,7 +9,7 @@
                     "GoldTotal": 2570,
                     "GoldBase": 570,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3170.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3170.png" ,
 	 "Tags": ["Armor", "SpellBlock", "SpellDamage", "Tenacity"] 
             }
         }

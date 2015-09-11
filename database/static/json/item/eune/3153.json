@@ -9,7 +9,7 @@
                     "GoldTotal": 3200,
                     "GoldBase": 700,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3153.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3153.png" ,
 	 "Tags": ["Active", "AttackSpeed", "Damage", "LifeSteal", "NonbootsMovement", "OnHit"] 
             }
         }

@@ -9,7 +9,7 @@
                     "GoldTotal": 1325,
                     "GoldBase": 565,
                     "Purchasable": "True",
-                    "Icon": "icons/item/3044.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3044.png" ,
 	 "Into": ["3078", "3071", "3184"] ,
 	 "Tags": ["Damage", "Health", "NonbootsMovement", "OnHit"] 
             }

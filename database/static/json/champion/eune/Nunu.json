@@ -6,7 +6,7 @@
                     "ChampID": 20,
                     "Name": "Nunu",
                     "Key": "Nunu",
-                    "Icon": "icons/champion/Nunu.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Nunu.png",
                     "Tags": "['Support', 'Fighter']"
                     
                 }

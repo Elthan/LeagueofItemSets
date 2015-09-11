@@ -6,7 +6,7 @@
                     "ChampID": 245,
                     "Name": "Ekko",
                     "Key": "Ekko",
-                    "Icon": "icons/champion/Ekko.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Ekko.png",
                     "Tags": "['Assassin', 'Fighter']"
                     
                 }

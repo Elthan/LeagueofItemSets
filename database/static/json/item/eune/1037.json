@@ -9,7 +9,7 @@
                     "GoldTotal": 875,
                     "GoldBase": 875,
                     "Purchasable": "True",
-                    "Icon": "icons/item/1037.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/1037.png" ,
 	 "Into": ["3035", "3124", "3031", "3156", "3077", "3104", "3184", "3004", "3008", "3022", "3150", "3172", "3181", "3652"] ,
 	 "Tags": ["Damage"] 
             }

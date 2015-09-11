@@ -6,7 +6,7 @@
                     "ChampID": 267,
                     "Name": "Nami",
                     "Key": "Nami",
-                    "Icon": "icons/champion/Nami.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Nami.png",
                     "Tags": "['Support', 'Mage']"
                     
                 }

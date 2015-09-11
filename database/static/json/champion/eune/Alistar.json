@@ -6,7 +6,7 @@
                     "ChampID": 12,
                     "Name": "Alistar",
                     "Key": "Alistar",
-                    "Icon": "icons/champion/Alistar.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Alistar.png",
                     "Tags": "['Tank', 'Support']"
                     
                 }

@@ -6,7 +6,7 @@
                     "ChampID": 34,
                     "Name": "Anivia",
                     "Key": "Anivia",
-                    "Icon": "icons/champion/Anivia.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Anivia.png",
                     "Tags": "['Mage', 'Support']"
                     
                 }

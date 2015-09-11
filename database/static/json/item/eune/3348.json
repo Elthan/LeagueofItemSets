@@ -9,7 +9,7 @@
                     "GoldTotal": 0,
                     "GoldBase": 0,
                     "Purchasable": "False",
-                    "Icon": "icons/item/3348.png" ,
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3348.png" ,
 	 "Tags": ["Active", "Stealth", "Trinket", "Vision"] 
             }
         }

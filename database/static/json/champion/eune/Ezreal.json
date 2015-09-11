@@ -6,7 +6,7 @@
                     "ChampID": 81,
                     "Name": "Ezreal",
                     "Key": "Ezreal",
-                    "Icon": "icons/champion/Ezreal.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Ezreal.png",
                     "Tags": "['Marksman', 'Mage']"
                     
                 }

@@ -6,7 +6,7 @@
                     "ChampID": 44,
                     "Name": "Taric",
                     "Key": "Taric",
-                    "Icon": "icons/champion/Taric.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Taric.png",
                     "Tags": "['Support', 'Fighter']"
                     
                 }

@@ -6,7 +6,7 @@
                     "ChampID": 18,
                     "Name": "Tristana",
                     "Key": "Tristana",
-                    "Icon": "icons/champion/Tristana.png",
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/Tristana.png",
                     "Tags": "['Marksman', 'Assassin']"
                     
                 }

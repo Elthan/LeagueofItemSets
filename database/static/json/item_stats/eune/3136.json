@@ -3,8 +3,8 @@
         "pk": 3136,
         "model": "database.ItemStat",
         "fields": {
-			"FlatMagicDamageMod": 25.0,
-			"FlatHPPoolMod": 200.0
+			"FlatHPPoolMod": 200.0,
+			"FlatMagicDamageMod": 25.0
         }
     }
 ]
