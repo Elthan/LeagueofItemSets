@@ -146,15 +146,20 @@ var stats_table = {
 var number_of_blocks = -1;
 
 // Add an item to the selected block
-function add_item(path, item_id, item_stats) {
+function add_item(item) {
   var selected = document.getElementById("block-selector").value;
   var table = document.getElementById("blocks-table-" + selected);
+  var gold_cost = table.querySelector(".gold-cost");
   var td = document.createElement('td');
   var img = document.createElement('img');
 
-  img.src = path;
-  img.id = item_id;
-  img.dataset.stats = item_stats;
+  var prev_cost = parseInt(gold_cost.innerHTML);
+  gold_cost.innerHTML = prev_cost + parseInt(item.dataset.cost);
+
+  img.src = item.dataset.icon;
+  img.id = item.id;
+  img.dataset.stats = item.dataset.stats;
+  img.dataset.cost = item.dataset.cost;
   img.addEventListener('click', function() { remove_item(img) });
 
   if (table.rows[0].children.length > 0) {
@@ -163,7 +168,7 @@ function add_item(path, item_id, item_stats) {
 
   td.appendChild(img);
   table.rows[0].appendChild(td);
-  stats_table.updateStats(true, item_stats);
+  stats_table.updateStats(true, item.dataset.stats);
 }
 
 // Remove item
@@ -176,6 +181,10 @@ function remove_item(item) {
       next.removeChild(next.childNodes[0]);
   }
   tr.removeChild(item.parentNode);
+
+  var gold_cost = tr.parentNode.querySelector(".gold-cost");
+  var prev_cost = parseInt(gold_cost.innerHTML);
+  gold_cost.innerHTML = prev_cost - parseInt(item.dataset.cost);
 
   // If its part of the selected block, substract stats from stats table.
   var selector = document.getElementById("block-selector");
@@ -212,7 +221,7 @@ var caption_edit = {
   }
 }
 
-// Create a new block with an editable caption and a td tag inside.
+// Create a new block.
 function add_block() {
   var tableDiv = document.getElementById("blocks");
 
@@ -249,7 +258,15 @@ function add_block() {
       input.checked = true;
   });
   table.appendChild(recmath);
+
+  // Total gold cost of items
+  var gold_cost = document.createElement('p');
+  gold_cost.title = "Total gold cost of all the items in this block.";
+  gold_cost.classList.add('gold-cost');
+  gold_cost.appendChild( document.createTextNode(0) );
+  table.appendChild(gold_cost);
   table.appendChild(tr);
+
 
   // Create the caption which is the block name.
   var caption = table.createCaption();
@@ -265,7 +282,7 @@ function add_block() {
   hide_button.innerHTML = ">";
   hide_button.title = "Toggle hiding of item set";
   hide_button.addEventListener('click', function() {
-    toggle_block(table, recmath, input, caption, this);
+    toggle_block(table, recmath, input, caption, gold_cost, this);
   });
   table.insertBefore(hide_button, caption);
 
@@ -302,11 +319,13 @@ function remove_block() {
 }
 
 // Show or hide the block.
-function toggle_block(table, recmath, input, caption, button) {
+function toggle_block(table, recmath, input, caption, gold, button) {
     table.rows[0].classList.toggle('hide');
     recmath.classList.toggle('hide');
     input.classList.toggle('hide');
     caption.classList.toggle('shrink');
+    gold.classList.toggle('gold-cost-shrink');
+    button.classList.toggle('hide-buttons-shrink');
     if (button.innerHTML === "V")
       button.innerHTML = ">";
     else
@@ -396,7 +415,7 @@ function item_info(item)  {
   var clone_icon = item.parentNode.cloneNode(true);
   var clone_icon_image = clone_icon.querySelector("img");
   clone_icon_image.addEventListener('click', function() {
-    add_item(this.dataset.icon, this.id, this.dataset.stats);
+    add_item(this);
   });
   item_icon.appendChild(clone_icon);
 
@@ -481,7 +500,7 @@ var add_listeners = function() {
       item_info(this);
     });
     item.addEventListener('dblclick', function() {
-      add_item( this.dataset.icon, this.id, this.dataset.stats );
+      add_item(this);
     });
   }
 

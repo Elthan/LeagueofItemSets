@@ -77,7 +77,8 @@
           <div class="item-icon" id="item-icon">
             <img src="{% static item.Icon %}" alt="{{item.Name}}" title="{{item.Name}}"
                 data-icon="{% static item.Icon %}" id="{{ item.ItemID }}" data-tags="{{item.Tags}}"
-                data-stats="{{stats}}" data-into="{{item.Into}}" data-description="{{item.Description}}" />
+                data-stats="{{stats}}" data-into="{{item.Into}}" data-description="{{item.Description}}"
+                data-cost="{{item.GoldBase}}" />
             <span>{{item.GoldBase}}</span>
           </div>
         {% endif %}
