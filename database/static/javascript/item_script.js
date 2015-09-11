@@ -20,7 +20,7 @@ var stats_table = {
     "AttackSpeed": "Attack Speed",
     "LifeSteal": "Life steal",
     "SpellVamp": "Spellvamp",
-    "MagicDamage": "Ability Points"
+    "MagicDamage": "Ability Power"
   },
 
   champ_stats: "",
@@ -79,28 +79,31 @@ var stats_table = {
     this.stats_table = table;
   },
 
+  // Make the stats presentable.
+  trimStats: function(stat) {
+    // Check if it contains various things, then remove or rename it if it does.
+    // stat.indexOf() equals -1 if it can't find it, ~ flips it so it's 0 (false).
+    var base = ~stat.indexOf("Base") ? true : false;
+    stat = base ? stat.slice(4) : stat;
+    var flat = ~stat.indexOf("Flat") ? true : false;
+    if (!base)
+      stat = flat ? stat.slice(4) : stat.slice(7);
+    stat = stat.slice(0,-3);
+    stat = ~stat.indexOf("Pool") ? stat.slice(0,-4) : stat;
+    stat = ~stat.indexOf("PhysicalDamage") ? "AttackDamage" : stat;
+    stat = ~stat.indexOf("MovementSpeed") ? "MoveSpeed" : stat;
+    stat = ~stat.indexOf("CritChance") ? "Crit" : stat;
+    return stat;
+  },
+
   // Update the table with by either adding or removing item stats.
   updateStats: function(adding, item_stats) {
     item_stats = this.convertJSON(item_stats)
-
-    delete item_stats["ItemID"]
-
+    delete item_stats["ItemID"];
     for (index_stat in item_stats) {
-      stat = index_stat;
-
-      // Check if it contains various things, then remove or rename it if it does.
-      // stat.indexOf() equals -1 if it can't find it, ~ flips it so it's 0 (false).
-      var base = ~stat.indexOf("Base") ? true : false;
-      stat = base ? stat.slice(4) : stat;
-      var flat = ~stat.indexOf("Flat") ? true : false;
-      if (!base)
-        stat = flat ? stat.slice(4) : stat.slice(7);
-      stat = stat.slice(0,-3);
-      stat = ~stat.indexOf("Pool") ? stat.slice(0,-4) : stat;
-      stat = ~stat.indexOf("PhysicalDamage") ? "AttackDamage" : stat;
-      stat = ~stat.indexOf("MovementSpeed") ? "MoveSpeed" : stat;
-      stat = ~stat.indexOf("CritChance") ? "Crit" : stat;
-
+      var base = ~index_stat.indexOf("Base") ? true : false;
+      var flat = ~index_stat.indexOf("Flat") ? true : false;
+      var stat = this.trimStats(index_stat);
       var td = document.getElementById(stat).children[0];
       var prev_val = parseFloat(td.innerHTML);
       var stat_val = 0;
@@ -373,10 +376,51 @@ function build_item_set(path) {
   hiddenField.setAttribute("type", "hidden");
   hiddenField.setAttribute("name", "item_set");
   hiddenField.setAttribute("value", json_item_set);
-  console.log(json_item_set);
   form.appendChild(hiddenField);
   document.body.appendChild(form);
   form.submit();
+}
+
+// Populate with information about the item.
+function item_info(item)  {
+  var item_name = document.getElementById("item-info-name");
+  while(item_name.lastChild)
+    item_name.removeChild(item_name.lastChild);
+  item_name.appendChild( document.createTextNode(item.alt) );
+
+  var item_description = document.getElementById("item-info-description");
+  while(item_description.lastChild)
+    item_description.removeChild(item_description.lastChild);
+  item_description.appendChild( document.createTextNode(item.dataset.description) );
+
+  var item_stats_field = document.getElementById("item-info-stats");
+  var index_stats = stats_table.convertJSON(item.dataset.stats);
+  delete index_stats["ItemID"];
+  var stats_string = "";
+  for (stats in index_stats)
+    stats_string += "<p class=\"item-info-left\">" +
+                    stats_table.stats_names[stats_table.trimStats(stats)] +
+                    ":</p><p class=\"item-info-right\">"
+                    + index_stats[stats] + "</p><br />";
+  item_stats_field.innerHTML = stats_string;
+
+  var field = document.getElementById("item-builds-field");
+  while (field.lastChild)
+    field.removeChild(field.lastChild);
+  var into = JSON.parse(item.dataset.into.replace(/'/g, "\""));
+  if (into[0] != "") {
+    for (i = 0; i < into.length; i++) {
+      var into_item = document.getElementById(into[i]);
+
+      field.appendChild(into_item.parentNode.cloneNode(true));
+    }
+  }
+}
+
+// Remove unwanted items.
+function remove_items() {
+  var items = document.getElementById("item-icons").querySelectorAll("img");
+  // TODO: Find out what needs to be removed.
 }
 
 // Add listeners to the buttons.
@@ -404,6 +448,9 @@ var add_listeners = function() {
   var items_div = document.getElementById("items-div").querySelectorAll("img");
   for (i = 0; i < items_div.length; i++) {
     item = items_div[i];
+    item.addEventListener('click', function() {
+      item_info(this);
+    });
     item.addEventListener('dblclick', function() {
       add_item( this.dataset.icon, this.id, this.dataset.stats );
     });
@@ -416,6 +463,24 @@ var add_listeners = function() {
 
   var filter_div = document.getElementById("filter-div");
   filter_edit.bindEvents(filter_div, "items");
+
+  var filter_all = document.getElementById("filter-all");
+  filter_all.addEventListener('click', function() {
+    var filter_div = document.getElementById("filter-div");
+    filter_div.querySelector("span").innerHTML = "";
+    filter_div.querySelector("input").value = "";
+    filter("", "items");
+  });
+
+  var filter_attack = document.getElementById("filter-attack");
+  filter_attack.addEventListener('click', function() {
+
+  });
+
+  var filter_armor = document.getElementById("filter-armor");
+  filter_armor.addEventListener('click', function() {
+    
+  });
 };
 
 // Run initial setup functions

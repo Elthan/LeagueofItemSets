@@ -48,9 +48,23 @@
   <button type="button" id="items-button" class="hide-buttons" title="Toggle items">V</button>
 </div>
 <div class="items-div" id="items-div">
+    <div class="filter-buttons">
+      <p class="filter-button" id="filter-all">All</p>
+      <p class="filter-button" id="filter-attack">Attack Damage</p>
+      <p class="filter-button" id="filter-armor">Armor</p>
+      <p class="filter-button" id="filter-boots">Boots</p>
+      <p class="filter-button" id="filter-nonboots">Nonboots Movement</p>
+    </div>
   <div class="filter" id="filter-div">
     <span>Filter items</span>
     <input type="text" id="filter-items" title="Filter items"></input>
+  </div>
+  <div class="item-info">
+    <span>Item Info</span>
+    <p id="item-info-name"></p>
+    <p id="item-info-description"></p>
+    <p>Stats</p>
+    <p id="item-info-stats"></p>
   </div>
   <div class="item-icons">
     {% if item_list %}
@@ -59,7 +73,7 @@
           <div class="item-icon" id="item-icon">
             <img src="{% static item.Icon %}" alt="{{item.Name}}" title="{{item.Name}}"
                 data-icon="{% static item.Icon %}" id="{{ item.ItemID }}" data-tags="{{item.Tags}}"
-                data-stats="{{stats}}"/>
+                data-stats="{{stats}}" data-into="{{item.Into}}" data-description="{{item.Description}}" />
             <span>{{item.GoldBase}}</span>
           </div>
         {% endif %}
@@ -67,6 +81,10 @@
     {% else %}
       <p> Could not display items! </p>
     {% endif %}
+  </div>
+  <div class="item-builds">
+    <span>Builds into</span>
+    <p id="item-builds-field"></p>
   </div>
 </div>
 <div class="footer">

@@ -27,3 +27,36 @@
 #champ-div {
   padding: 10px 0;
 }
+
+.filter {
+  margin-top: 10px;
+  height: 13%;
+}
+
+.filter input {
+  display: none;
+  width: 30%;
+  height: 2.3em;
+}
+
+.filter span {
+  padding-top: 9px;
+  display: inline-block;
+  font-style: italic;
+}
+
+.filter.edit span {
+  display: none;
+}
+
+.filter.edit input {
+  box-sizing: border-box;
+	background: inherit;
+	color: inherit;
+	display: initial;
+  border: 1px solid #222;
+  padding: 10px;
+  font-size: inherit;
+  font-family: inherit;
+  text-align: center;
+}
