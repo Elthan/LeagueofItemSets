@@ -195,7 +195,7 @@ region : str
         else:
             path = "database/static/json/" + json_type + "/"
             os.makedirs(path, exist_ok=True)
-            with open(path + region + ".json", 'w') as json_file:
+            with open(path + region + ".json", 'w', encoding="utf-8") as json_file:
                 json_file.write(json_string)
 
     log.info("Fetched all items as json files for region " + region)

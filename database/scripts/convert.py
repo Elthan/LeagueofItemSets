@@ -383,7 +383,9 @@ log : logging
                         gold_total = item_json["gold"]["total"],
                         gold_base = item_json["gold"]["base"],
                         purchasable = item_json["gold"]["purchasable"],
-                        icon = "icons/item/" + item_id + ".png"
+                        icon = "http://ddragon.leagueoflegends.com/cdn/" + items_json["version"] + \
+                              "/img/item/" + icon_id + ".png"
+                        #"icons/item/" + item_id + ".png"
                     )
                     # Not all items build into something.
                     try:
@@ -509,7 +511,7 @@ log : logging
     log.debug("Opening database/static/json/champion/" + region + ".json")
 
     try:
-        with open("database/static/json/champion/" + region + ".json", 'r') as champs_file:
+        with open("database/static/json/champion/" + region + ".json", 'r', encoding="utf-8") as champs_file:
             champs_json = json.load(champs_file)
 
             os.makedirs("database/static/json/champion/" + region + "/", exist_ok=True)

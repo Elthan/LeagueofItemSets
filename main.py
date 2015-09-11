@@ -15,7 +15,7 @@ import database.scripts.convert as convert
 #
 #   League of Item Sets
 #
-#   Version: 0.4
+#   Version: 0.5
 #
 #   By: Jonas Sandbekk & Ole Harbosen
 #
@@ -58,7 +58,7 @@ if __name__ == "__main__":
     #region_list = ["br","eune","euw","kr","lan","las","na","oce","ru","tr","pbe"]
     region_list = ["eune"]
 
-    log.info("League of Item Sets v0.4")
+    log.info("League of Item Sets v0.5")
 
     # Get the api_key, which is hidden.
     try:
