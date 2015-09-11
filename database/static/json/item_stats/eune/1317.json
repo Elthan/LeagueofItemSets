@@ -3,8 +3,8 @@
         "pk": 1317,
         "model": "database.ItemStat",
         "fields": {
-			"FlatArmorMod": 25.0,
-			"FlatMovementSpeedMod": 45.0
+			"FlatMovementSpeedMod": 45.0,
+			"FlatArmorMod": 25.0
         }
     }
 ]
