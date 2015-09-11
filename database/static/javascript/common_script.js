@@ -1,14 +1,28 @@
 // Hide all links and images of champions that does not match query.
 var filter = function(value, img_type) {
-  var icons = document.getElementById(img_type+"-div").querySelectorAll("img");
+  var icons = document.getElementById(img_type+"-icons-div").querySelectorAll("img");
+  var value_list = value.split(" ");
 
-  for (i = 0; i < icons.length; i++){
-    var icon = icons[i];
-    if (icon.alt.toLowerCase().indexOf(value) > -1 ||
-        icon.dataset.tags.toLowerCase().indexOf(value) > -1) {
-      icon.parentNode.classList.remove('hide');
-    } else {
-      icon.parentNode.classList.add('hide');
+  for (k = 0; k < icons.length; k++) {
+    var icon = icons[k];
+    var alt = icon.alt.toLowerCase();
+    var tags = icon.dataset.tags.toLowerCase();
+
+    for (i = 0; i < value_list.length; i++) {
+      var filter_val = value_list[i];
+      var minus = filter_val[0] == "-" ? true : false;
+      if (minus)
+        filter_val = filter_val.slice(1);
+      var contains = (alt.indexOf(filter_val) > -1 || tags.indexOf(filter_val) > -1) ? true : false;
+
+      if (!minus && !contains) {
+        icon.parentNode.classList.add('hide');
+      } else if (!minus && contains) {
+        icon.parentNode.classList.remove('hide');
+      } else if (minus && contains) {
+        icon.parentNode.classList.add('hide');
+        break;
+      }
     }
   }
 }

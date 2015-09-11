@@ -1,3 +1,4 @@
+/* Containers */
 .head {
   width: 100%;
   display: block;
@@ -19,6 +20,7 @@
   overflow: auto;
 }
 
+/* Champion icon */
 .icon {
   text-align: center;
   padding-bottom: 10px;
@@ -33,6 +35,7 @@
   border: 1px solid #222;
 }
 
+/* Champion stats table */
 #stats-table-div {
   width: 100%;
 }
@@ -55,11 +58,10 @@
   opacity: 0.75;
 }
 
+/* Items */
 .items-div {
   border-top: 2px solid #222;
   border-radius: 5px;
-  /*text-align: center;*/
-  /*padding-top: 1%;*/
   padding-right: 5px;
   position: fixed;
   bottom: 0;
@@ -79,6 +81,7 @@
   height: 65%;
 }
 
+/* Items filter */
 .filter {
   float: left;
   display: inline-block;
@@ -130,11 +133,15 @@
 .filter-button {
   cursor: pointer;
   font-size: 1em;
-  /*height: 1.5em;*/
   padding: 8px;
   height: auto;
 }
 
+.filter-button:hover {
+  text-decoration: underline;
+}
+
+/* Items icons */
 .items-div img {
   border: 1px solid #222;
   opacity: 0.65;
@@ -153,7 +160,6 @@
   text-align: center;
   box-sizing: border-box;
   margin: 0 10px;
-  /*position: relative;*/
 }
 
 .item-icon {
@@ -165,14 +171,17 @@
 
 .item-icon span {
   font-style: italic;
+  color: #FFFF00;
+  opacity: 0.65;
 }
 
+/* Item information */
 .item-info {
   text-align: center;
   display: inline-block;
   float: right;
-  padding: 0% 1% 2% 0%;
-  margin: 15px;
+  /*padding: 0% 1% 2% 0%;*/
+  margin: 10px;
   box-sizing: border-box;
   width: 40%;
   /*height: 30%;*/
@@ -191,22 +200,38 @@
   opacity: 0.65;
 }
 
+#item-info-icon {
+  width: 100%;
+}
+
+#item-info-icon div {
+  display: block;
+  width: 100%;
+  float: none;
+  text-align: center;
+  height: auto;
+}
+
+#item-info-icon div span {
+  display: block;
+}
+
 #item-info-description {
   font-style: italic;
   font-size: 0.8em;
 }
 
+/* Item builds */
 .item-builds {
   box-sizing: border-box;
-  display: inline-block;
+  /*display: inline-block;*/
   float: right;
   width: 40%;
-  margin: 15px;
-  padding: 0% 1% 2% 0%;
-  /*right: 0;*/
+  margin: 10px;
   text-align: center;
 }
 
+/* Buttons */
 .buttons-container {
   width: 100%;
   text-align: center;
@@ -230,6 +255,7 @@
   color: white;
 }
 
+/* Item set name */
 #item-set-name {
   width: 100%;
   padding: 10px 10px;
@@ -244,17 +270,14 @@
   box-sizing: border-box;
 }
 
-.recmath-text {
-  display: inline-block;
-}
-
+/* Block tables */
 #block {
-  overflow: scroll;
+  /*overflow: scroll;*/
 }
 
 .blocks-table {
   width: 100%;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 .blocks-table tr {
@@ -277,6 +300,11 @@
   opacity: 1;
 }
 
+.recmath-text {
+  display: inline-block;
+}
+
+/* Block name edit */
 caption input {
   display: none;
   width: 100%;
@@ -298,13 +326,7 @@ caption.edit input {
   text-align: center;
 }
 
-.shrink {
-  display: inline-block;
-  width: 20%;
-  text-align: left;
-  margin-left: 10px;
-}
-
+/* Hide table buttons */
 .hide-buttons {
   font-size: 0.8em;
   text-align: center;
@@ -335,4 +357,11 @@ caption.edit input {
 #items-button {
   padding: 3px 15px;
   font-weight: bold;
+}
+
+.shrink {
+  display: inline-block;
+  width: 20%;
+  text-align: left;
+  margin-left: 10px;
 }

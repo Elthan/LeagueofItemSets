@@ -5,8 +5,8 @@
 <meta charset="UTF-8" />
 <!-- ensures proper scaling on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
 <link rel="stylesheet" type="text/css" href="{% static 'css/items_style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
 <script src="{% static 'javascript/common_script.js' %}" defer></script>
 <script src="{% static 'javascript/item_script.js' %}" defer></script>
 <!-- import below is for the awesome font -->
@@ -48,10 +48,13 @@
   <button type="button" id="items-button" class="hide-buttons" title="Toggle items">V</button>
 </div>
 <div class="items-div" id="items-div">
-    <div class="filter-buttons">
+    <div class="filter-buttons" id="filter-buttons-div">
       <p class="filter-button" id="filter-all">All</p>
       <p class="filter-button" id="filter-attack">Attack Damage</p>
       <p class="filter-button" id="filter-armor">Armor</p>
+      <p class="filter-button" id="filter-health">Health</p>
+      <p class="filter-button" id="filter-mana">Mana</p>
+      <p class="filter-button" id="filter-consumable">Consumable</p>
       <p class="filter-button" id="filter-boots">Boots</p>
       <p class="filter-button" id="filter-nonboots">Nonboots Movement</p>
     </div>
@@ -62,11 +65,12 @@
   <div class="item-info">
     <span>Item Info</span>
     <p id="item-info-name"></p>
+    <p id="item-info-icon"></p>
     <p id="item-info-description"></p>
     <p>Stats</p>
     <p id="item-info-stats"></p>
   </div>
-  <div class="item-icons">
+  <div class="item-icons" id="item-icons-div">
     {% if item_list %}
       {% for item, stats in item_list %}
         {% if item.Purchasable == True %}
@@ -82,7 +86,7 @@
       <p> Could not display items! </p>
     {% endif %}
   </div>
-  <div class="item-builds">
+  <div class="item-builds hide">
     <span>Builds into</span>
     <p id="item-builds-field"></p>
   </div>

@@ -383,16 +383,30 @@ function build_item_set(path) {
 
 // Populate with information about the item.
 function item_info(item)  {
+  // Add the items name.
   var item_name = document.getElementById("item-info-name");
   while(item_name.lastChild)
     item_name.removeChild(item_name.lastChild);
   item_name.appendChild( document.createTextNode(item.alt) );
 
+  // Add the items icon.
+  var item_icon = document.getElementById("item-info-icon");
+  while(item_icon.lastChild)
+    item_icon.removeChild(item_icon.lastChild);
+  var clone_icon = item.parentNode.cloneNode(true);
+  var clone_icon_image = clone_icon.querySelector("img");
+  clone_icon_image.addEventListener('click', function() {
+    add_item(this.dataset.icon, this.id, this.dataset.stats);
+  });
+  item_icon.appendChild(clone_icon);
+
+  // Add items description.
   var item_description = document.getElementById("item-info-description");
   while(item_description.lastChild)
     item_description.removeChild(item_description.lastChild);
   item_description.appendChild( document.createTextNode(item.dataset.description) );
 
+  // Add items stats.
   var item_stats_field = document.getElementById("item-info-stats");
   var index_stats = stats_table.convertJSON(item.dataset.stats);
   delete index_stats["ItemID"];
@@ -404,16 +418,24 @@ function item_info(item)  {
                     + index_stats[stats] + "</p><br />";
   item_stats_field.innerHTML = stats_string;
 
+  // Add the items that the item builds into.
   var field = document.getElementById("item-builds-field");
   while (field.lastChild)
     field.removeChild(field.lastChild);
   var into = JSON.parse(item.dataset.into.replace(/'/g, "\""));
   if (into[0] != "") {
+    field.parentNode.classList.remove('hide');
     for (i = 0; i < into.length; i++) {
       var into_item = document.getElementById(into[i]);
-
-      field.appendChild(into_item.parentNode.cloneNode(true));
+      var clone_into = into_item.parentNode.cloneNode(true);
+      var clone_into_image = clone_into.querySelector("img");
+      clone_into_image.addEventListener('click', function() {
+        item_info(this);
+      });
+      field.appendChild(clone_into);
     }
+  } else {
+    field.parentNode.classList.add('hide');
   }
 }
 
@@ -421,6 +443,13 @@ function item_info(item)  {
 function remove_items() {
   var items = document.getElementById("item-icons").querySelectorAll("img");
   // TODO: Find out what needs to be removed.
+}
+
+function filter_string(value) {
+  var filter_div = document.getElementById("filter-div");
+  filter_div.querySelector("span").innerHTML = value;
+  filter_div.querySelector("input").value = value;
+  filter(value, "item");
 }
 
 // Add listeners to the buttons.
@@ -445,7 +474,7 @@ var add_listeners = function() {
     stats_table.changeBlock(this);
   });
 
-  var items_div = document.getElementById("items-div").querySelectorAll("img");
+  var items_div = document.getElementById("item-icons-div").querySelectorAll("img");
   for (i = 0; i < items_div.length; i++) {
     item = items_div[i];
     item.addEventListener('click', function() {
@@ -462,24 +491,48 @@ var add_listeners = function() {
   });
 
   var filter_div = document.getElementById("filter-div");
-  filter_edit.bindEvents(filter_div, "items");
+  filter_edit.bindEvents(filter_div, "item");
 
-  var filter_all = document.getElementById("filter-all");
+  var filter_buttons_div = document.getElementById("filter-buttons-div");
+
+  var filter_all = filter_buttons_div.querySelector("#filter-all");
   filter_all.addEventListener('click', function() {
-    var filter_div = document.getElementById("filter-div");
-    filter_div.querySelector("span").innerHTML = "";
-    filter_div.querySelector("input").value = "";
-    filter("", "items");
+    filter_string("");
   });
 
-  var filter_attack = document.getElementById("filter-attack");
+  var filter_attack = filter_buttons_div.querySelector("#filter-attack");
   filter_attack.addEventListener('click', function() {
-
+    filter_string("damage -spelldamage");
   });
 
-  var filter_armor = document.getElementById("filter-armor");
+  var filter_armor = filter_buttons_div.querySelector("#filter-armor");
   filter_armor.addEventListener('click', function() {
-    
+    filter_string("armor");
+  });
+
+  var filter_health = filter_buttons_div.querySelector("#filter-health");
+  filter_health.addEventListener('click', function() {
+    filter_string("health");
+  });
+
+  var filter_mana = filter_buttons_div.querySelector("#filter-mana");
+  filter_mana.addEventListener('click', function() {
+    filter_string("mana");
+  });
+
+  var filter_consumable = filter_buttons_div.querySelector("#filter-consumable");
+  filter_consumable.addEventListener('click', function() {
+    filter_string("consumable");
+  });
+
+  var filter_boots = filter_buttons_div.querySelector("#filter-boots");
+  filter_boots.addEventListener('click', function() {
+    filter_string("boots -nonbootsmovement");
+  });
+
+  var filter_nonboots = filter_buttons_div.querySelector("#filter-nonboots");
+  filter_nonboots.addEventListener('click', function() {
+    filter_string("nonbootsmovement");
   });
 };
 
