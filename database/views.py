@@ -1,7 +1,6 @@
 import os
 import tempfile
 import json
-from decimal import *
 from django.http import HttpResponse
 from django.core.servers.basehttp import FileWrapper
 from django.shortcuts import get_object_or_404, render
@@ -24,9 +23,11 @@ def item_select(request, champ_key):
 		champion = {"Name": "All", "Icon": os.path.join(settings.BASE_DIR,settings.STATIC_URL,"Unknown.png")}
 	else:
 		champion = get_object_or_404(Champion, Key = champ_key)
-		champ_stats = ChampionStat.objects.filter(ChampID = champion.ChampID).values()
+		champ_stats = champion.championstat
 	items = Item.objects.all()
 	item_stats = ItemStat.objects.all().values()
+	print(item_stats)
+	"""
 	item_stats = [item for item in item_stats]
 	for item in item_stats:
 		for key, value in list(item.items()):
@@ -39,6 +40,8 @@ def item_select(request, champ_key):
 		"champ_stats": champ_stats,
 		"item_list": item_list
 	}
+	"""
+	context = {}
 	return render(request, 'database/items.html', context)
 
 @csrf_exempt

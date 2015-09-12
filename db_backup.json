@@ -1,1 +1,1 @@
-[{"pk": "eune", "fields": {"Version": "5.17.1"}, "model": "database.version"}]
+[{"pk": "eune", "model": "database.version", "fields": {"Version": "5.17.1"}}]
