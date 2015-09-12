@@ -80,7 +80,7 @@
 .items-div:hover {
   /*-webkit-transition: height 0.5s;*/
   transition: height 0.5s;
-  height: 65%;
+  height: 58%;
 }
 
 /* Items filter */
