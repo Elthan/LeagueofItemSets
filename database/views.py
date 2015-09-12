@@ -1,12 +1,10 @@
-import os
-import tempfile
+import os.path as path
 import json
 from django.http import HttpResponse
-from django.core.servers.basehttp import FileWrapper
 from django.shortcuts import get_object_or_404, render
 from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
-from .models import *
+from .models import Champion, ChampionStat, Item, ItemStat
 from .scripts.convert import item_set_manager as ism, block_manager as bm, block_item_manager as bim
 from .scripts.convert import create_json_from_db as json_db
 
@@ -20,18 +18,17 @@ def item_select(request, champ_key):
 		champ_stats = "[{'MPRegen': 0, 'SpellBlock': 0, 'Crit': 0, 'AttackDamage': 0, \
 						'MP': 0, 'HPRegen': 0, 'HP': 0, 'Armor': 0, 'MoveSpeed': 0, \
 						'AttackSpeedOffset': 0}]"
-		champion = {"Name": "All", "Icon": os.path.join(settings.BASE_DIR,settings.STATIC_URL,"Unknown.png")}
+		champion = {"Name": "All", "Icon": path.join(settings.STATIC_URL,"Unknown.png")}
 	else:
 		champion = get_object_or_404(Champion, Key = champ_key)
-		champ_stats = champion.championstat
+		champ_stats = ChampionStat.objects.filter(pk = champion.ChampID).values()
 	items = Item.objects.all()
 	item_stats = ItemStat.objects.all().values()
-	print(item_stats)
-	"""
 	item_stats = [item for item in item_stats]
+
 	for item in item_stats:
 		for key, value in list(item.items()):
-			if value == 0.00000:
+			if value == None:
 				item.pop(key)
 
 	item_list = zip(items, item_stats)
@@ -40,8 +37,6 @@ def item_select(request, champ_key):
 		"champ_stats": champ_stats,
 		"item_list": item_list
 	}
-	"""
-	context = {}
 	return render(request, 'database/items.html', context)
 
 @csrf_exempt

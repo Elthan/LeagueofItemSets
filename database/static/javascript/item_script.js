@@ -36,9 +36,9 @@ var stats_table = {
     var champ_stats = tableDiv.dataset.stats;
     champ_stats = this.convertJSON(champ_stats)[0]
 
-    delete champ_stats["ChampID"];
+    delete champ_stats["ChampID_id"];
     delete champ_stats["AttackRange"];
-    champ_stats["AttackSpeed"] = 0.625 / (1 + parseInt(champ_stats["AttackSpeedOffset"]));
+    champ_stats["AttackSpeed"] = (0.625 / (1 + parseFloat(champ_stats["AttackSpeedOffset"])) ).toFixed(3);
     delete champ_stats["AttackSpeedOffset"];
     champ_stats["MagicDamage"] = 0;
     champ_stats["LifeSteal"] = 0;
@@ -99,7 +99,7 @@ var stats_table = {
   // Update the table with by either adding or removing item stats.
   updateStats: function(adding, item_stats) {
     item_stats = this.convertJSON(item_stats)
-    delete item_stats["ItemID"];
+    delete item_stats["ItemID_id"];
     for (index_stat in item_stats) {
       var base = ~index_stat.indexOf("Base") ? true : false;
       var flat = ~index_stat.indexOf("Flat") ? true : false;
@@ -118,7 +118,7 @@ var stats_table = {
 
   // Convert the stats string to a Javascript object we can use.
   convertJSON: function(stat_string) {
-    stat_string = stat_string.replace(/Decimal\(\'([\-\d\.]+)\'\)/g, '$1');
+    // stat_string = stat_string.replace(/Decimal\(\'([\-\d\.]+)\'\)/g, '$1');
     stat_string = stat_string.replace(/'/g, '\"');
     stat_string = JSON.parse(stat_string);
     return stat_string

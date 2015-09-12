@@ -3,8 +3,8 @@
         "pk": 3137,
         "model": "database.ItemStat",
         "fields": {
-			"PercentAttackSpeedMod": 0.5,
-			"FlatSpellBlockMod": 45.0
+			"FlatSpellBlockMod": 45.0,
+			"PercentAttackSpeedMod": 0.5
         }
     }
 ]
