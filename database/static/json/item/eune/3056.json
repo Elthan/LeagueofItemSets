@@ -10,6 +10,7 @@
                     "GoldBase": 650,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3056.png" ,
+	 "From": ["2053", "3067"] ,
 	 "Tags": ["Active", "Armor", "CooldownReduction", "Health", "HealthRegen", "NonbootsMovement"] 
             }
         }

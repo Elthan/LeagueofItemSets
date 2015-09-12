@@ -11,6 +11,7 @@
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3028.png" ,
 	 "Into": ["3174", "3222", "3744", "3745"] ,
+	 "From": ["1004", "1033", "1004"] ,
 	 "Tags": ["ManaRegen", "SpellBlock"] 
             }
         }

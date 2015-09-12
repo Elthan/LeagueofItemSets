@@ -11,6 +11,7 @@
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3136.png" ,
 	 "Into": ["3151", "3829"] ,
+	 "From": ["1028", "1052"] ,
 	 "Tags": ["Health", "MagicPenetration", "SpellDamage"] 
             }
         }

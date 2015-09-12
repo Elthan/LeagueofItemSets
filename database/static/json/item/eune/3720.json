@@ -10,6 +10,7 @@
                     "GoldBase": 200,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3720.png" ,
+	 "From": ["3711", "3057"] ,
 	 "Tags": ["CooldownReduction", "Jungle", "Mana", "SpellDamage"] 
             }
         }

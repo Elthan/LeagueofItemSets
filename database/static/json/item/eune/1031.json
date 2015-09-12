@@ -11,6 +11,7 @@
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/1031.png" ,
 	 "Into": ["3075", "3068", "3026", "3742"] ,
+	 "From": ["1029"] ,
 	 "Tags": ["Armor"] 
             }
         }

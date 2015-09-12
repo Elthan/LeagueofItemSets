@@ -9,7 +9,8 @@
                     "GoldTotal": 1475,
                     "GoldBase": 475,
                     "Purchasable": "True",
-                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/1331.png" 
+                    "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/1331.png" ,
+	 "From": ["3158"] 
             }
         }
 ]

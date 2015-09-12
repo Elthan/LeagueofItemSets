@@ -10,6 +10,7 @@
                     "GoldBase": 600,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3110.png" ,
+	 "From": ["3082", "3024"] ,
 	 "Tags": ["Armor", "Aura", "CooldownReduction", "Mana"] 
             }
         }

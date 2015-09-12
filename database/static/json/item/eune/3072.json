@@ -10,6 +10,7 @@
                     "GoldBase": 1150,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3072.png" ,
+	 "From": ["1053", "1038"] ,
 	 "Tags": ["Damage", "LifeSteal"] 
             }
         }

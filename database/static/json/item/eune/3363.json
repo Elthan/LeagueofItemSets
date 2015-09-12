@@ -10,6 +10,7 @@
                     "GoldBase": 250,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3363.png" ,
+	 "From": ["3342"] ,
 	 "Tags": ["Active", "Trinket", "Vision"] 
             }
         }

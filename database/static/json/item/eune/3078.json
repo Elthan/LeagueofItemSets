@@ -10,6 +10,7 @@
                     "GoldBase": 78,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3078.png" ,
+	 "From": ["3086", "3057", "3044"] ,
 	 "Tags": ["AttackSpeed", "CriticalStrike", "Damage", "Health", "Mana", "NonbootsMovement", "OnHit", "SpellDamage"] 
             }
         }

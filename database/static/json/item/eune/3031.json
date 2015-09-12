@@ -10,6 +10,7 @@
                     "GoldBase": 645,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3031.png" ,
+	 "From": ["1038", "1037", "1018"] ,
 	 "Tags": ["CriticalStrike", "Damage"] 
             }
         }

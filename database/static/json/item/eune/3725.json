@@ -10,6 +10,7 @@
                     "GoldBase": 400,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3725.png" ,
+	 "From": ["3713", "3751"] ,
 	 "Tags": ["Health", "Jungle"] 
             }
         }

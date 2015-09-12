@@ -11,6 +11,7 @@
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3710.png" ,
 	 "Into": ["3930"] ,
+	 "From": ["3706", "1043"] ,
 	 "Tags": ["AttackSpeed", "Damage", "Jungle", "OnHit"] 
             }
         }

@@ -235,7 +235,13 @@
   width: 40%;
   margin: 10px;
   text-align: center;
+  font-size: 0.9em;
+  font-weight: bold;
 }
+
+/*.item-builds img {
+  margin: 5%;
+}*/
 
 /* Buttons */
 .buttons-container {

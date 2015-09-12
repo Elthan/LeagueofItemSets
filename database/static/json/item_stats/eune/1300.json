@@ -3,8 +3,8 @@
         "pk": 1300,
         "model": "database.ItemStat",
         "fields": {
-			"PercentAttackSpeedMod": 0.25,
-			"FlatMovementSpeedMod": 45.0
+			"FlatMovementSpeedMod": 45.0,
+			"PercentAttackSpeedMod": 0.25
         }
     }
 ]

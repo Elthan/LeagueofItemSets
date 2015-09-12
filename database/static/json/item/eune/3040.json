@@ -10,6 +10,7 @@
                     "GoldBase": 3000,
                     "Purchasable": "False",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3040.png" ,
+	 "From": ["3003"] ,
 	 "Tags": ["Active"] 
             }
         }

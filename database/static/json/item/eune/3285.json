@@ -10,6 +10,7 @@
                     "GoldBase": 900,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3285.png" ,
+	 "From": ["1058", "3113"] ,
 	 "Tags": ["NonbootsMovement", "OnHit", "SpellDamage"] 
             }
         }

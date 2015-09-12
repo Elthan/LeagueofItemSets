@@ -10,6 +10,7 @@
                     "GoldBase": 450,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3745.png" ,
+	 "From": ["3028", "3067"] ,
 	 "Tags": ["Active", "Bilgewater", "CooldownReduction", "Health", "ManaRegen", "OnHit", "SpellBlock", "SpellDamage"] 
             }
         }

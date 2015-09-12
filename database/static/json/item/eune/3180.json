@@ -10,6 +10,7 @@
                     "GoldBase": 450,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3180.png" ,
+	 "From": ["1057", "3010"] ,
 	 "Tags": ["Active", "Health", "Mana", "SpellBlock"] 
             }
         }

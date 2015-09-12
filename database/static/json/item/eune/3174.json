@@ -10,6 +10,7 @@
                     "GoldBase": 545,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3174.png" ,
+	 "From": ["3108", "3028", "1052"] ,
 	 "Tags": ["CooldownReduction", "ManaRegen", "SpellBlock", "SpellDamage"] 
             }
         }

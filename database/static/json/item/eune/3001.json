@@ -10,6 +10,7 @@
                     "GoldBase": 780,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3001.png" ,
+	 "From": ["1026", "1057"] ,
 	 "Tags": ["Aura", "SpellBlock", "SpellDamage"] 
             }
         }

@@ -11,6 +11,7 @@
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/2053.png" ,
 	 "Into": ["3056", "3512"] ,
+	 "From": ["1006", "1029"] ,
 	 "Tags": ["Armor", "HealthRegen", "NonbootsMovement"] 
             }
         }

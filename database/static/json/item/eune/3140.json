@@ -11,6 +11,7 @@
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3140.png" ,
 	 "Into": ["3139", "3137"] ,
+	 "From": ["1033"] ,
 	 "Tags": ["Active", "SpellBlock"] 
             }
         }

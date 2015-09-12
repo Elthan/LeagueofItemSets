@@ -11,6 +11,7 @@
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3006.png" ,
 	 "Into": ["1301", "1303", "1300", "1302", "1304", "1335"] ,
+	 "From": ["1001", "1042"] ,
 	 "Tags": ["AttackSpeed", "Boots"] 
             }
         }

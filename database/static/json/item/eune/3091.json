@@ -10,6 +10,7 @@
                     "GoldBase": 600,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3091.png" ,
+	 "From": ["1043", "1033", "1042"] ,
 	 "Tags": ["AttackSpeed", "OnHit", "SpellBlock"] 
             }
         }

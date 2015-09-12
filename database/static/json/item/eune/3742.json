@@ -10,6 +10,7 @@
                     "GoldBase": 1000,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3742.png" ,
+	 "From": ["1031", "1011"] ,
 	 "Tags": ["Armor", "Bilgewater", "Health", "NonbootsMovement", "OnHit"] 
             }
         }

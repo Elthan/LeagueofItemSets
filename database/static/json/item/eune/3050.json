@@ -10,6 +10,7 @@
                     "GoldBase": 480,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3050.png" ,
+	 "From": ["1052", "3024", "1052"] ,
 	 "Tags": ["Armor", "Aura", "CooldownReduction", "Mana", "SpellDamage"] 
             }
         }

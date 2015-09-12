@@ -11,6 +11,7 @@
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/1053.png" ,
 	 "Into": ["3144", "3181", "3072", "3074", "3508", "3150", "3924"] ,
+	 "From": ["1036"] ,
 	 "Tags": ["Damage", "LifeSteal"] 
             }
         }

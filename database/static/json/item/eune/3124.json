@@ -10,6 +10,7 @@
                     "GoldBase": 865,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3124.png" ,
+	 "From": ["1026", "1037"] ,
 	 "Tags": ["AttackSpeed", "Damage", "LifeSteal", "OnHit", "SpellDamage", "SpellVamp"] 
             }
         }

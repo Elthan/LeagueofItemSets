@@ -11,6 +11,7 @@
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3020.png" ,
 	 "Into": ["1311", "1313", "1310", "1312", "1314", "1337"] ,
+	 "From": ["1001"] ,
 	 "Tags": ["Boots", "MagicPenetration"] 
             }
         }

@@ -10,6 +10,7 @@
                     "GoldBase": 825,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3071.png" ,
+	 "From": ["3044", "3067"] ,
 	 "Tags": ["ArmorPenetration", "CooldownReduction", "Damage", "Health", "NonbootsMovement", "OnHit"] 
             }
         }

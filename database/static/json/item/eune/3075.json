@@ -10,6 +10,7 @@
                     "GoldBase": 1250,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3075.png" ,
+	 "From": ["1029", "1031"] ,
 	 "Tags": ["Armor"] 
             }
         }

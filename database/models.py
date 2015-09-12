@@ -48,6 +48,7 @@ class Item(models.Model):
         Icon = models.CharField(max_length=200, default="http://ddragon.leagueoflegends.com/cdn/5.17.1/img/champion/1001.png")
         Stacks = models.IntegerField(default=1)
         Into = models.CharField(max_length=200, default=[""])
+        From = models.CharField(max_length=200, default=[""])
         Purchasable = models.BooleanField(default=False)
 
         #to determine returned value

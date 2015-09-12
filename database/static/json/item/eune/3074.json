@@ -10,6 +10,7 @@
                     "GoldBase": 600,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3074.png" ,
+	 "From": ["3077", "1053"] ,
 	 "Tags": ["Active", "Damage", "HealthRegen", "LifeSteal", "OnHit"] 
             }
         }

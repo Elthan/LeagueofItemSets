@@ -11,6 +11,7 @@
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3086.png" ,
 	 "Into": ["3046", "3078", "3087"] ,
+	 "From": ["1051", "1042"] ,
 	 "Tags": ["AttackSpeed", "CriticalStrike", "NonbootsMovement"] 
             }
         }

@@ -11,6 +11,7 @@
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3105.png" ,
 	 "Into": ["3190", "3060"] ,
+	 "From": ["1033", "3801"] ,
 	 "Tags": ["Aura", "Health", "HealthRegen", "SpellBlock"] 
             }
         }

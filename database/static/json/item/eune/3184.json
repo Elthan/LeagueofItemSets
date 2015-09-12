@@ -10,6 +10,7 @@
                     "GoldBase": 500,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3184.png" ,
+	 "From": ["3044", "1037"] ,
 	 "Tags": ["Active", "Damage", "Health", "NonbootsMovement", "Slow"] 
             }
         }

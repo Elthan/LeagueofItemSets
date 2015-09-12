@@ -10,6 +10,7 @@
                     "GoldBase": 600,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3143.png" ,
+	 "From": ["3082", "1011"] ,
 	 "Tags": ["Active", "Armor", "Health", "Slow"] 
             }
         }

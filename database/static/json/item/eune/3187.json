@@ -10,6 +10,7 @@
                     "GoldBase": 330,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3187.png" ,
+	 "From": ["3024", "3067"] ,
 	 "Tags": ["Active", "Armor", "CooldownReduction", "Health", "Mana", "Stealth", "Vision"] 
             }
         }

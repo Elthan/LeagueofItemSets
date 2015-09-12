@@ -10,6 +10,7 @@
                     "GoldBase": 180,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3159.png" ,
+	 "From": ["3106", "1036", "1042"] ,
 	 "Tags": ["Active", "AttackSpeed", "Damage", "GoldPer", "OnHit", "Stealth", "Vision"] 
             }
         }

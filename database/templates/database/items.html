@@ -63,11 +63,11 @@
     <input type="text" id="filter-items" title="Filter items"></input>
   </div>
   <div class="item-info">
-    <span>Item Info</span>
+    <!-- <span>Item Info</span> -->
     <p id="item-info-name"></p>
     <p id="item-info-icon"></p>
     <p id="item-info-description"></p>
-    <p>Stats</p>
+    <!-- <p>Stats</p> -->
     <p id="item-info-stats"></p>
   </div>
   <div class="item-icons" id="item-icons-div">
@@ -76,9 +76,9 @@
         {% if item.Purchasable == True %}
           <div class="item-icon" id="item-icon">
             <img src="{{item.Icon}}" alt="{{item.Name}}" title="{{item.Name}}"
-                data-icon="{{item.Icon}}" id="{{ item.ItemID }}" data-tags="{{item.Tags}}"
+                data-icon="{{item.Icon}}" id="item-{{item.ItemID}}" data-tags="{{item.Tags}}"
                 data-stats="{{stats}}" data-into="{{item.Into}}" data-description="{{item.Description}}"
-                data-cost="{{item.GoldBase}}" />
+                data-cost="{{item.GoldBase}}" data-from="{{item.From}}"/>
             <span>{{item.GoldBase}}</span>
           </div>
         {% endif %}
@@ -89,7 +89,11 @@
   </div>
   <div class="item-builds hide">
     <span>Builds into</span>
-    <p id="item-builds-field"></p>
+    <p id="item-builds-into-field"></p>
+  </div>
+  <div class="item-builds hide">
+    <span>Builds from</span>
+    <p id="item-builds-from-field"></p>
   </div>
 </div>
 <div class="footer">

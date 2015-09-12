@@ -394,6 +394,13 @@ log : logging
                     except KeyError:
                         pass
 
+                    # Not all items build from something.
+                    try:
+                        build_from = item_json["from"]
+                        json_db_string += ",\n\t" + """ "From": {} """.format(json.dumps(build_from))
+                    except KeyError:
+                        pass
+
                     # Not all items have a tag.
                     try:
                         tags = item_json["tags"]

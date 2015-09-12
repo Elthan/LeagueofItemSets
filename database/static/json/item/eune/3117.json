@@ -11,6 +11,7 @@
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3117.png" ,
 	 "Into": ["1326", "1328", "1325", "1327", "1329", "1340"] ,
+	 "From": ["1001"] ,
 	 "Tags": ["Boots"] 
             }
         }

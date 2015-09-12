@@ -11,6 +11,7 @@
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3057.png" ,
 	 "Into": ["3078", "3100", "3025", "3708", "3716", "3720", "3724"] ,
+	 "From": ["1027", "1052"] ,
 	 "Tags": ["Mana", "SpellDamage"] 
             }
         }

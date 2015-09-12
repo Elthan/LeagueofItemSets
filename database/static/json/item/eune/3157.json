@@ -10,6 +10,7 @@
                     "GoldBase": 550,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3157.png" ,
+	 "From": ["3191", "1058"] ,
 	 "Tags": ["Active", "Armor", "SpellDamage"] 
             }
         }

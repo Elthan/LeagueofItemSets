@@ -10,6 +10,7 @@
                     "GoldBase": 850,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3512.png" ,
+	 "From": ["2053", "1057"] ,
 	 "Tags": ["Armor", "HealthRegen", "NonbootsMovement", "SpellBlock"] 
             }
         }

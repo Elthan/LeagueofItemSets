@@ -10,6 +10,7 @@
                     "GoldBase": 965,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3089.png" ,
+	 "From": ["1026", "1058", "1052"] ,
 	 "Tags": ["SpellDamage"] 
             }
         }

@@ -10,6 +10,7 @@
                     "GoldBase": 330,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3060.png" ,
+	 "From": ["3105", "3108"] ,
 	 "Tags": ["Active", "Aura", "CooldownReduction", "Health", "HealthRegen", "SpellBlock", "SpellDamage"] 
             }
         }

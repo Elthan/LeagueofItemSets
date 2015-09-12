@@ -10,6 +10,7 @@
                     "GoldBase": 730,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3290.png" ,
+	 "From": ["3108", "3113"] ,
 	 "Tags": ["Active", "CooldownReduction", "NonbootsMovement", "Slow", "SpellDamage", "Stealth", "Vision"] 
             }
         }

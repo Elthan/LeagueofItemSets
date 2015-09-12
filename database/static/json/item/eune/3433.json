@@ -11,6 +11,7 @@
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3433.png" ,
 	 "Into": ["3430", "3431", "3434"] ,
+	 "From": ["3108", "3114"] ,
 	 "Tags": ["Bilgewater", "CooldownReduction", "ManaRegen", "SpellDamage"] 
             }
         }

@@ -11,6 +11,7 @@
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3801.png" ,
 	 "Into": ["3105", "3083", "3084", "3102", "3800", "3911"] ,
+	 "From": ["1028", "1006"] ,
 	 "Tags": ["Health", "HealthRegen"] 
             }
         }

@@ -11,6 +11,7 @@
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3122.png" ,
 	 "Into": ["3104", "3185"] ,
+	 "From": ["1051", "1036"] ,
 	 "Tags": ["CriticalStrike", "Damage", "OnHit"] 
             }
         }

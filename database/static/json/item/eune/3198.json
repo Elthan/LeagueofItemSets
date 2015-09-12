@@ -10,6 +10,7 @@
                     "GoldBase": 1000,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3198.png" ,
+	 "From": ["3197"] ,
 	 "Tags": ["Mana", "SpellDamage"] 
             }
         }

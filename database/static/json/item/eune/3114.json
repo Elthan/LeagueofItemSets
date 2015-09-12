@@ -11,6 +11,7 @@
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3114.png" ,
 	 "Into": ["3069", "3165", "3222", "3433", "3504", "3840"] ,
+	 "From": ["1004", "1004"] ,
 	 "Tags": ["CooldownReduction", "ManaRegen"] 
             }
         }

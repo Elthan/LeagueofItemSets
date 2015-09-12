@@ -11,6 +11,7 @@
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3073.png" ,
 	 "Into": ["3007", "3008"] ,
+	 "From": ["1027", "1004"] ,
 	 "Tags": ["Mana", "ManaRegen"] 
             }
         }

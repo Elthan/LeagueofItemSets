@@ -10,6 +10,7 @@
                     "GoldBase": 400,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3911.png" ,
+	 "From": ["3801", "3067"] ,
 	 "Tags": ["Bilgewater", "CooldownReduction", "Health", "HealthRegen"] 
             }
         }

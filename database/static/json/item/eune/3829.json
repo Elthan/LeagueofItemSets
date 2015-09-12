@@ -10,6 +10,7 @@
                     "GoldBase": 215,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3829.png" ,
+	 "From": ["3136", "1028"] ,
 	 "Tags": ["Active", "Bilgewater", "Health", "MagicPenetration", "NonbootsMovement", "SpellDamage"] 
             }
         }

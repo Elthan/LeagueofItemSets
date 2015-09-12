@@ -10,6 +10,7 @@
                     "GoldBase": 740,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3029.png" ,
+	 "From": ["3010", "1026"] ,
 	 "Tags": ["Health", "HealthRegen", "Mana", "ManaRegen", "SpellDamage"] 
             }
         }

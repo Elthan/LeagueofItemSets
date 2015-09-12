@@ -11,6 +11,7 @@
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3101.png" ,
 	 "Into": ["3115", "3172", "3137"] ,
+	 "From": ["1042", "1042"] ,
 	 "Tags": ["AttackSpeed", "CooldownReduction"] 
             }
         }

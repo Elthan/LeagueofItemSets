@@ -10,6 +10,7 @@
                     "GoldBase": 900,
                     "Purchasable": "True",
                     "Icon": "http://ddragon.leagueoflegends.com/cdn/5.17.1/img/item/3102.png" ,
+	 "From": ["3211", "3801"] ,
 	 "Tags": ["Health", "HealthRegen", "SpellBlock"] 
             }
         }

@@ -400,6 +400,32 @@ function build_item_set(path) {
   form.submit();
 }
 
+// Add the items that the item builds into or from.
+function item_info_build(build_type, info_item) {
+  var field = document.getElementById("item-builds-"+build_type+"-field");
+  while (field.lastChild)
+    field.removeChild(field.lastChild);
+
+  var info_set = build_type == "into" ? info_item.dataset.into : info_item.dataset.from;
+  var build = JSON.parse(info_set.replace(/'/g, "\""));
+
+  if (build[0] != "") {
+    field.parentNode.classList.remove('hide');
+    for (i = 0; i < build.length; i++) {
+      var build_item = document.getElementById("item-icons-div").querySelector("#item-"+build[i]);
+      var clone_build = build_item.parentNode.cloneNode(true);
+      var clone_build_image = clone_build.querySelector("img");
+      clone_build_image.addEventListener('click', function() {
+        item_info(this);
+      });
+      clone_build.classList.remove('hide');
+      field.appendChild(clone_build);
+    }
+  } else {
+    field.parentNode.classList.add('hide');
+  }
+}
+
 // Populate with information about the item.
 function item_info(item)  {
   // Add the items name.
@@ -428,7 +454,7 @@ function item_info(item)  {
   // Add items stats.
   var item_stats_field = document.getElementById("item-info-stats");
   var index_stats = stats_table.convertJSON(item.dataset.stats);
-  delete index_stats["ItemID"];
+  delete index_stats["ItemID_id"];
   var stats_string = "";
   for (stats in index_stats)
     stats_string += "<p class=\"item-info-left\">" +
@@ -437,25 +463,8 @@ function item_info(item)  {
                     + index_stats[stats] + "</p><br />";
   item_stats_field.innerHTML = stats_string;
 
-  // Add the items that the item builds into.
-  var field = document.getElementById("item-builds-field");
-  while (field.lastChild)
-    field.removeChild(field.lastChild);
-  var into = JSON.parse(item.dataset.into.replace(/'/g, "\""));
-  if (into[0] != "") {
-    field.parentNode.classList.remove('hide');
-    for (i = 0; i < into.length; i++) {
-      var into_item = document.getElementById(into[i]);
-      var clone_into = into_item.parentNode.cloneNode(true);
-      var clone_into_image = clone_into.querySelector("img");
-      clone_into_image.addEventListener('click', function() {
-        item_info(this);
-      });
-      field.appendChild(clone_into);
-    }
-  } else {
-    field.parentNode.classList.add('hide');
-  }
+  item_info_build("into", item);
+  item_info_build("from", item);
 }
 
 // Remove unwanted items.
