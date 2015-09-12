@@ -4,8 +4,8 @@
         "model": "database.ItemStat",
         "fields": {
 			"FlatPhysicalDamageMod": 60.0,
-			"FlatCritChanceMod": 0.15,
-			"PercentLifeStealMod": 0.12
+			"PercentLifeStealMod": 0.12,
+			"FlatCritChanceMod": 0.15
         }
     }
 ]

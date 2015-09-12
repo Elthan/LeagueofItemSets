@@ -38,6 +38,8 @@
 /* Champion stats table */
 #stats-table-div {
   width: 100%;
+  padding-left: 15%;
+  box-sizing: border-box;
 }
 
 #stats-table {
@@ -202,6 +204,10 @@
 
 #item-info-icon {
   width: 100%;
+}
+
+#item-info-icon img {
+  opacity: 1;
 }
 
 #item-info-icon div {

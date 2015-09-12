@@ -4,8 +4,8 @@
         "model": "database.ItemStat",
         "fields": {
 			"BaseHPRegenMod": 150,
-			"FlatArmorMod": 50.0,
-			"FlatHPPoolMod": 300.0
+			"FlatHPPoolMod": 300.0,
+			"FlatArmorMod": 50.0
         }
     }
 ]

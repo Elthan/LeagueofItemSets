@@ -4,8 +4,8 @@
         "model": "database.ItemStat",
         "fields": {
 			"BaseHPRegenMod": 100,
-			"FlatHPPoolMod": 450.0,
-			"FlatSpellBlockMod": 60.0
+			"FlatSpellBlockMod": 60.0,
+			"FlatHPPoolMod": 450.0
         }
     }
 ]
