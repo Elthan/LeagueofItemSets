@@ -1,9 +1,4 @@
-/***********
-*
-* Now a little bit cleaner
-*
-***********/
-
+// Everything connected to the champion stats table.
 var stats_table = {
 
   // Convert db names to more human friendly names.
