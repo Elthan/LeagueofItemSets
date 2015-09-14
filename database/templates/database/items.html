@@ -71,21 +71,20 @@
     <p id="item-info-stats"></p>
   </div>
   <div class="item-icons" id="item-icons-div">
-    {% if item_list %}
-      {% for item, stats in item_list %}
-        {% if item.Purchasable == True %}
-          <div class="item-icon" id="item-icon">
-            <img src="{{item.Icon}}" alt="{{item.Name}}" title="{{item.Name}}"
-                data-icon="{{item.Icon}}" id="item-{{item.ItemID}}" data-tags="{{item.Tags}}"
-                data-stats="{{stats}}" data-into="{{item.Into}}" data-description="{{item.Description}}"
-                data-cost="{{item.GoldBase}}" data-from="{{item.From}}"/>
-            <span>{{item.GoldBase}}</span>
-          </div>
-        {% endif %}
-      {% endfor %}
-    {% else %}
-      <p> Could not display items! </p>
-    {% endif %}
+    {% for item, stats in item_list %}
+      {% if item.Purchasable == True %}
+        <div class="item-icon" id="item-icon">
+          <img src="{{item.Icon}}" alt="{{item.Name}}" title="{{item.Name}}"
+              data-icon="{{item.Icon}}" id="item-{{item.ItemID}}" data-tags="{{item.Tags}}"
+              data-stats="{{stats}}" data-into="{{item.Into}}" data-description="{{item.Description}}"
+              data-cost="{{item.GoldBase}}" data-from="{{item.From}}"/>
+          <span>{{item.GoldBase}}</span>
+        </div>
+      {% endif %}
+    {% empty %}
+        <p> Could not display items! </p>
+    {% endfor %}
+
   </div>
   <div class="item-builds hide">
     <span>Builds into</span>
