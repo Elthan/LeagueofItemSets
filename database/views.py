@@ -48,7 +48,7 @@ def item_set(request):
 	for block in item_set_json["blocks"]:
 		bm_id = bm(ism_id, name = block["name"], rec_math = block["recmath"], new_entry = True)
 		for item in block["items"]:
-			bim(item, bm_id, count = block["items"][item],new_entry = True)
+			bim(item, bm_id, count = block["items"][item] ,new_entry = True)
 	context = {"item_set_id": ism_id}
 	return render(request, 'database/item_set.html', context)
 

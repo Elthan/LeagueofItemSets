@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" type="text/css" href="{% static 'css/items_style.css' %}" defer/>
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" defer/>
-<script src="{% static 'javascript/common_script.js' %}" defer></script>
+<!-- <script src="{% static 'javascript/common_script.js' %}" defer></script> -->
 <script src="{% static 'javascript/item_script.js' %}" defer></script>
 <!-- import below is for the awesome font -->
 <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
@@ -63,11 +63,9 @@
     <input type="text" id="filter-items" title="Filter items"></input>
   </div>
   <div class="item-info">
-    <!-- <span>Item Info</span> -->
     <p id="item-info-name"></p>
     <p id="item-info-icon"></p>
     <p id="item-info-description"></p>
-    <!-- <p>Stats</p> -->
     <p id="item-info-stats"></p>
   </div>
   <div class="item-icons" id="item-icons-div">
@@ -84,7 +82,6 @@
     {% empty %}
         <p> Could not display items! </p>
     {% endfor %}
-
   </div>
   <div class="item-builds hide">
     <span>Builds into</span>
@@ -100,6 +97,9 @@
      or opinions of Riot Games or anyone officially involved in producing or managing
      League of Legends. League of Legends and Riot Games are trademarks or registered
      trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.</p>
+</div>
+<div class="hide">
+  <input type="hidden" name="csrftoken" value="{{ csrf_token }}" />
 </div>
 </body>
 </html>

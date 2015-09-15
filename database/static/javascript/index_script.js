@@ -1,8 +1,1 @@
-// Bind listeners to the div surrounding the filter input.
-var add_listeners = function() {
-  var filter_div = document.getElementById("filter-div");
-  filter_edit.bindEvents(filter_div, "champ");
-}
-
-// Inital call when javascript loads.
-add_listeners();
+var filter=function(e,t){var s=document.getElementById(t+"-icons-div").querySelectorAll("img"),r=e.split(" ");for(k=0;k<s.length;k++){var d=s[k],l=d.alt.toLowerCase(),n=d.dataset.tags.toLowerCase();for(i=0;i<r.length;i++){var a=r[i],o="-"==a[0]?!0:!1;o&&(a=a.slice(1));var c=l.indexOf(a)>-1||n.indexOf(a)>-1?!0:!1;if(o||c){if(!o&&c)d.parentNode.classList.remove("hide");else if(o&&c){d.parentNode.classList.add("hide");break}}else d.parentNode.classList.add("hide")}}},filter_edit={img_type:"",bindEvents:function(e,t){this.img_type=t,e.addEventListener("click",this.editFilter);var i=e.querySelector("input");i.addEventListener("blur",this.updateFilter),i.addEventListener("keypress",this.keypressFilter)},editFilter:function(){var e=this.children[1];this.classList.add("edit"),e.focus,e.setSelectionRange(0,e.value.length)},updateFilter:function(){this.previousElementSibling.innerHTML=this.value,this.parentNode.classList.remove("edit"),filter(this.value.toLowerCase(),filter_edit.img_type)},keypressFilter:function(e){13===e.which&&filter_edit.updateFilter.call(this)}},add_listeners=function(){var e=document.getElementById("filter-div");filter_edit.bindEvents(e,"champ")};add_listeners();
