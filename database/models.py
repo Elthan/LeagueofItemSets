@@ -51,6 +51,9 @@ class Item(models.Model):
         From = models.CharField(max_length=200, default=[""])
         Purchasable = models.BooleanField(default=False)
 
+        def get_stats(self):
+            return self.itemstat.nonempty_stats()
+
         #to determine returned value
         def __str__(self):
                 return self.Name
@@ -93,6 +96,16 @@ class ItemStat(models.Model):
         PercentSpellVampMod = models.FloatField(null=True, blank=True)
         BaseHPRegenMod = models.FloatField(null=True, blank=True)
         BaseMPRegenMod = models.FloatField(null=True, blank=True)
+
+        def nonempty_stats(self):
+            stat_list = {}
+            for field in self._meta.get_fields():
+                if (field.name is "ItemID"):
+                    continue
+                value = getattr(self, field.name)
+                if (value is not None):
+                    stat_list[field.name] = value
+            return stat_list
 
         #to determine returned value
         def __str__(self):

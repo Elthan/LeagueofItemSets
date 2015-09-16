@@ -94,7 +94,7 @@ var stats_table = {
   // Update the table with by either adding or removing item stats.
   updateStats: function(adding, item_stats) {
     item_stats = this.convertJSON(item_stats)
-    delete item_stats["ItemID_id"];
+
     for (index_stat in item_stats) {
       var base = ~index_stat.indexOf("Base") ? true : false;
       var flat = ~index_stat.indexOf("Flat") ? true : false;
@@ -113,7 +113,6 @@ var stats_table = {
 
   // Convert the stats string to a Javascript object we can use.
   convertJSON: function(stat_string) {
-    // stat_string = stat_string.replace(/Decimal\(\'([\-\d\.]+)\'\)/g, '$1');
     stat_string = stat_string.replace(/'/g, '\"');
     stat_string = JSON.parse(stat_string);
     return stat_string
@@ -261,7 +260,6 @@ function add_block() {
   gold_cost.appendChild( document.createTextNode(0) );
   table.appendChild(gold_cost);
   table.appendChild(tr);
-
 
   // Create the caption which is the block name.
   var caption = table.createCaption();

@@ -23,19 +23,11 @@ def item_select(request, champ_key):
 		champion = get_object_or_404(Champion, Key = champ_key)
 		champ_stats = ChampionStat.objects.filter(pk = champion.ChampID).values()
 	items = Item.objects.all()
-	item_stats = ItemStat.objects.all().values()
-	item_stats = [item for item in item_stats]
 
-	for item in item_stats:
-		for key, value in list(item.items()):
-			if value == None:
-				item.pop(key)
-
-	item_list = zip(items, item_stats)
 	context = {
 		"champ": champion,
 		"champ_stats": champ_stats,
-		"item_list": item_list
+		"item_list": items
 	}
 	return render(request, 'database/items.html', context)
 
