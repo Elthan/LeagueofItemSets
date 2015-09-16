@@ -366,7 +366,7 @@ function build_item_set(path) {
     var items = {};
     var query = table.querySelectorAll("img");
     for (var k = 0; k < query.length; k++) {
-      var item = query[k].id;
+      var item = query[k].id.slice(5);
       var number = items[item];
       number = (number == undefined) ? 1 : number + 1;
       items[item] = number;
